@@ -1,0 +1,2 @@
+# nsis-tool
+NSIS Tool
