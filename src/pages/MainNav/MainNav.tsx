@@ -1,18 +1,19 @@
-import { BasicPage } from '../components/BasicPage';
-import ConsumerDemand from '../img/ConsumerDemand.png';
-import EnablingEnvironment from '../img/EnablingEnvironment.png';
-import Production from '../img/Production.png';
-import FoodRetailing from '../img/FoodRetailing.png';
-import FoodTradeAndMarketing from '../img/FoodTradeAndMarketing.png';
-import FoodProcessing from '../img/FoodProcessing.png';
+import { BasicPage } from '../../components/BasicPage';
+import ConsumerDemand from '../../img/ConsumerDemand.png';
+import EnablingEnvironment from '../../img/EnablingEnvironment.png';
+import Production from '../../img/Production.png';
+import FoodRetailing from '../../img/FoodRetailing.png';
+import FoodTradeAndMarketing from '../../img/FoodTradeAndMarketing.png';
+import FoodProcessing from '../../img/FoodProcessing.png';
 import './MainNav.css'
+import { Link } from 'react-router-dom';
 
 export function MainNav() {
   const content =
     <div>
       <div className="navRow">
         <div className="navButton">
-          <img src={Production} className="navButtonImg" />
+          <Link to="/production"><img src={Production} className="navButtonImg" /></Link>
         </div>
         <div className="navButton">
           <img src={FoodTradeAndMarketing} className="navButtonImg" />

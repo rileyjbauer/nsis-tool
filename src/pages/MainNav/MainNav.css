@@ -1,0 +1,11 @@
+@import url(../../Base.css);
+
+.navButton {
+  float: left;
+  padding: 0;
+  text-align: center;
+}
+
+.navButtonImg {
+  height: 200px;
+}
