@@ -1,0 +1,18 @@
+@import url(../Base.css);
+
+.navRow {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.navButton {
+  float: left;
+  margin-right: -1px;
+  margin-top: -1px;
+  padding: 0;
+  text-align: center;
+}
+
+.navButtonImg {
+  height: 200px;
+}

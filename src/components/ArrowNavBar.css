@@ -1,0 +1,9 @@
+.arrow-bar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.arrow-button {
+  color: var(--main-theme-blue);
+}

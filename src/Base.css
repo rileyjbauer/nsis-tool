@@ -1,0 +1,35 @@
+:root {
+  --main-theme-white: #ffffff;
+  --main-theme-blue: #002e5d;
+  --main-theme-orange: #fe8200;
+  --main-theme-teal: #2eccd3;
+  --main-theme-gray: #999999;
+}
+
+h1 {
+  color: var(--main-theme-blue);
+  font-size: 48px;
+  font-weight: normal;
+}
+
+h2 {
+  color: var(--main-theme-teal);
+  font-size: 32px;
+  font-weight: normal;
+}
+
+h3 {
+  color: var(--main-theme-gray);
+  font-size: 24px;
+  font-weight: normal;
+}
+
+p {
+  color: var(--main-theme-gray);
+  font-size: 20px;
+}
+
+html {
+  background-color: var(--main-theme-blue);
+  font-family: Arial, Helvetica, sans-serif;
+}

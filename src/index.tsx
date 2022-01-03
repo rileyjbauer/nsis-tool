@@ -3,10 +3,23 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { Welcome } from './pages/Welcome';
+import { Preface } from './pages/Preface';
+import { Directions } from './pages/Directions';
+import { MainNav } from './pages/MainNav';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<App />} />
+        <Route path="welcome" element={<Welcome />} />
+        <Route path="preface" element={<Preface />} />
+        <Route path="directions" element={<Directions />} />
+        <Route path="mainNav" element={<MainNav />} />
+      </Routes>
+    </BrowserRouter>,
   </React.StrictMode>,
   document.getElementById('root')
 );
