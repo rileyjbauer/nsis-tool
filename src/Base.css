@@ -10,24 +10,28 @@ h1 {
   color: var(--main-theme-blue);
   font-size: 48px;
   font-weight: normal;
+  margin-top: 0px;
 }
 
 .h1-smaller {
   color: var(--main-theme-blue);
   font-size: 24px;
   font-weight: normal;
+  margin-top: 0px;
 }
 
 h2 {
   color: var(--main-theme-teal);
   font-size: 32px;
   font-weight: normal;
+  margin-top: 0px;
 }
 
 h3 {
   color: var(--main-theme-gray);
   font-size: 24px;
   font-weight: normal;
+  margin-top: 0px;
 }
 
 p {
@@ -72,7 +76,7 @@ thead {
 
 button {
   border: none;
-  cursor:pointer;
+  cursor: pointer;
 }
 
 .navRow {

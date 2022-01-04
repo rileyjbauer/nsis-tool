@@ -1,3 +1,5 @@
+@import url(../Base.css);
+
 .arrow-bar {
   width: 100%;
   display: flex;
@@ -6,4 +8,5 @@
 
 .arrow-button {
   color: var(--main-theme-blue);
+  cursor: pointer;
 }

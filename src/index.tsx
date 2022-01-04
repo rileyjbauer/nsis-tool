@@ -8,10 +8,22 @@ import { Welcome } from './pages/Welcome';
 import { Preface } from './pages/Preface';
 import { Directions } from './pages/Directions';
 import { MainNav } from './pages/MainNav/MainNav';
-import { Production } from './pages/Production';
-import { AgroInputSupplyAndService } from './pages/AgroInputSupplyAndService';
-import { IncreasingEquitableAccess } from './pages/IncreasingEquitableAccess';
-import { CapacityDevelopmentOfDeliveryActors } from './pages/CapacityDevelopmentOfDeliveryActors';
+import { Production } from './pages/production/Production';
+import { AgroInputSupplyAndService } from './pages/production/agroInput/AgroInputSupplyAndService';
+import { IncreasingEquitableAccess } from './pages/production/agroInput/IncreasingEquitableAccess';
+import { CapacityDevelopmentOfDeliveryActors } from './pages/production/agroInput/CapacityDevelopmentOfDeliveryActors';
+import { ProducerFarmerOragnizationDevelopment } from './pages/production/producerFarmerOrganization/ProducerFarmerOragnizationDevelopment';
+import { WomensParticipationInProducerOrganization } from './pages/production/producerFarmerOrganization/WomensParticipationInProducerOrganization';
+import { MarketingOfftakeDevelopment } from './pages/production/producerFarmerOrganization/MarketingOfftakeDevelopment';
+import { DiversificationOfOperationsOfferings } from './pages/production/producerFarmerOrganization/DiversificationOfOperationsOfferings';
+import { DevelopmentOfStorageFacilities } from './pages/production/producerFarmerOrganization/DevelopmentOfStorageFacilities';
+import { ProducerOrganizationMemberTraining } from './pages/production/producerFarmerOrganization/ProducerOrganizationMemberTraining';
+import { FarmAndHouseholdTrainingOnAgriculture } from './pages/production/farmAndHouseholdTraining/AgroInputSupplyAndService';
+import { AccessToInputsAndServices } from './pages/production/farmAndHouseholdTraining/AccessToInputsAndServices';
+import { TrainingOnGoodPractices } from './pages/production/farmAndHouseholdTraining/TrainingOnGoodPractices';
+import { TrainingOnHouseholdLevelProcessing } from './pages/production/farmAndHouseholdTraining/TrainingOnHouseholdLevelProcessing';
+import { ValueChainSelection } from './pages/production/valueChainSelection/ValueChainSelection';
+import { InterventionTemplate } from './components/InterventionTemplate';
 
 function NoMatch() {
   return (
@@ -28,16 +40,36 @@ ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<App />} />
-        <Route path="welcome" element={<Welcome />} />
-        <Route path="preface" element={<Preface />} />
-        <Route path="directions" element={<Directions />} />
-        <Route path="mainNav" element={<MainNav />} />
-        <Route path="production" element={<Production />} />
-        <Route path="agroInputSupplyAndService" element={<AgroInputSupplyAndService />}>
+        <Route path='/' element={<App />} />
+        <Route path='welcome' element={<Welcome />} />
+        <Route path='preface' element={<Preface />} />
+        <Route path='directions' element={<Directions />} />
+        <Route path='mainNav' element={<MainNav />} />
+        <Route path='production' element={<Production />} />
+        <Route path='agroInputSupplyAndService' element={<AgroInputSupplyAndService />}>
           <Route path='increasingEquitableAccess' element={<IncreasingEquitableAccess />} />
           <Route path='capacityDevelopmentOfDeliveryActors' element={<CapacityDevelopmentOfDeliveryActors />} />
         </Route>
+        {/* Interventions */}
+        <Route path='interventions/:interventionId' element={<InterventionTemplate />} />
+        {/* <Route path='increaseAccessToSafeStorage' element={<IncreaseAccessToSafeStorage />} /> */}
+
+        <Route path='producerFarmerOragnizationDevelopment' element={<ProducerFarmerOragnizationDevelopment />}>
+          <Route path='marketingOfftakeDevelopment' element={<MarketingOfftakeDevelopment />} />
+          <Route path='diversificationOfOfferings' element={<DiversificationOfOperationsOfferings />} />
+          <Route path='developmentOfStorageFacilities' element={<DevelopmentOfStorageFacilities />} />
+          <Route path='producerOrganizationMemberTraining' element={<ProducerOrganizationMemberTraining />} />
+          <Route path='womensParticipationInProducerOrganization' element={<WomensParticipationInProducerOrganization />} />
+        </Route>
+        {/* Interventions */}
+        {/* <Route path='integrateNutritionMessaging' element={<IntegrateNutritionMessaging />} /> */}
+
+        <Route path='farmAndHouseholdTraining' element={<FarmAndHouseholdTrainingOnAgriculture />}>
+          <Route path='accessToInputsAndServices' element={<AccessToInputsAndServices />} />
+          <Route path='trainingOnGoodPractices' element={<TrainingOnGoodPractices />} />
+          <Route path='trainingOnHouseholdLevelProcessing' element={<TrainingOnHouseholdLevelProcessing />} />
+        </Route>
+        <Route path='valueChainSelection' element={<ValueChainSelection />} />
         {/* Catch all other paths and display placeholder page */}
         <Route path="*" element={<NoMatch />} />
       </Routes>
