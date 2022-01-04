@@ -30,7 +30,7 @@ export function IncreasingEquitableAccess() {
           </tr>
           <tr>
             <td>
-              <Link to='/interventions/2'>
+              <Link to='/interventions/4'>
                 Increase access to inputs that will increase yield of nutrient-rich commodities
               </Link>
             </td>
