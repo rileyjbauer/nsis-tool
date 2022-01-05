@@ -115,7 +115,10 @@
         10,
         11
       ],
-      "foodEnvironmentDomainsAffected": []
+      "foodEnvironmentDomainsAffected": [
+        "Affordability",
+        "Desirability"
+      ]
     },
     {
       "id": 9,
@@ -128,7 +131,10 @@
         10,
         11
       ],
-      "foodEnvironmentDomainsAffected": []
+      "foodEnvironmentDomainsAffected": [
+        "Availability",
+        "Accessibility"
+      ]
     },
     {
       "id": 10,
@@ -140,7 +146,12 @@
         47,
         52
       ],
-      "foodEnvironmentDomainsAffected": []
+      "foodEnvironmentDomainsAffected": [
+        "Availability",
+        "Accessibility",
+        "Affordability",
+        "Price"
+      ]
     },
     {
       "id": 11,
@@ -152,13 +163,16 @@
         8,
         9
       ],
-      "foodEnvironmentDomainsAffected": []
+      "foodEnvironmentDomainsAffected": [
+        "Availability",
+        "Accessibility"
+      ]
     },
     {
       "id": 12,
       "title": "Support Producer Organizations (PO) to process commodities into a more desirable, shelf-stable, and/or nutritious food item ",
       "rationale": "Processing raw commodities into a new product can provide a variety of benefits both in terms of profits and competitiveness in markets as well as increasing accessibility, safety, and desirability of food, especially nutritious food, available in local and regional markets. Further, increasing the shelf life of produce through preservation methods, improved packaging, or transformation into convenient food products, extends marketing opportunities. Implementers can support POs to process their target crops and livestock products into products that are more desirable to local consumers, shelf-stable, and/or nutrition.",
-      "operationalizing": "To implement this intervention, implementers should first determine where there are opportunities for value-addition of local commodities. Identifying products to be processed will be a factor of what raw foods are available for processing and with what regularity (e.g., seasonality and storage facility access – see intervention #13), the capacity of the PO to afford, operate, and maintain processing equipment, and viable markets for the processed products. Assessing these factors will help guide the product identification and development process. After determining the target raw commodity, the implementer should then determine the gaps of POs to process the commodities into a more desirable, shelf-stable, and/or nutritious food item. After the determination of the barriers POs face, the implementer can design strategies to address these. Constraints may include access to technology, technical skills to process the target commodity, marketing of the processed product, etc. Please see the below interventions for approaches on how to address potential barriers. ",
+      "operationalizing": "To implement this intervention, implementers should first determine where there are opportunities for value-addition of local commodities. Identifying products to be processed will be a factor of what raw foods are available for processing and with what regularity (e.g., seasonality and storage facility access - see intervention #13), the capacity of the PO to afford, operate, and maintain processing equipment, and viable markets for the processed products. Assessing these factors will help guide the product identification and development process. After determining the target raw commodity, the implementer should then determine the gaps of POs to process the commodities into a more desirable, shelf-stable, and/or nutritious food item. After the determination of the barriers POs face, the implementer can design strategies to address these. Constraints may include access to technology, technical skills to process the target commodity, marketing of the processed product, etc. Please see the below interventions for approaches on how to address potential barriers. ",
       "stepsForOperationalizing": [],
       "relatedInterventionIds": [
         34,
@@ -169,7 +183,12 @@
         39,
         41
       ],
-      "foodEnvironmentDomainsAffected": []
+      "foodEnvironmentDomainsAffected": [
+        "Availability",
+        "Accessibility",
+        "Desirability",
+        "Convenience"
+      ]
     },
     {
       "id": 13,
@@ -181,7 +200,11 @@
         14,
         23
       ],
-      "foodEnvironmentDomainsAffected": []
+      "foodEnvironmentDomainsAffected": [
+        "Availability",
+        "Accessibility",
+        "Convenience"
+      ]
     },
     {
       "id": 14,
@@ -193,7 +216,10 @@
         13,
         23
       ],
-      "foodEnvironmentDomainsAffected": []
+      "foodEnvironmentDomainsAffected": [
+        "Availability",
+        "Accessibility"
+      ]
     },
     {
       "id": 15,
@@ -202,7 +228,9 @@
       "operationalizing": "To implement this nutrition intervention, implementers should determine their target behavior, such as production of the target nutritious food or consumption of the target nutritious food. The implementer should then determine which barriers and motivators of the target can be addressed through the integration into member trainings. Implementers can then work with the producer organization leadership to integrate the target nutrition messages into the trainings OR if the implementer is providing the training, integrate the nutrition messages into existing training material.",
       "stepsForOperationalizing": [],
       "relatedInterventionIds": [],
-      "foodEnvironmentDomainsAffected": []
+      "foodEnvironmentDomainsAffected": [
+        "Desirability"
+      ]
     },
     {
       "id": 16,
@@ -213,7 +241,9 @@
       "relatedInterventionIds": [
         17
       ],
-      "foodEnvironmentDomainsAffected": []
+      "foodEnvironmentDomainsAffected": [
+        "Women's empowerment"
+      ]
     },
     {
       "id": 17,
@@ -224,7 +254,9 @@
       "relatedInterventionIds": [
         16
       ],
-      "foodEnvironmentDomainsAffected": []
+      "foodEnvironmentDomainsAffected": [
+        "Women's empowerment"
+      ]
     },
     {
       "id": 18,
@@ -235,7 +267,9 @@
       "relatedInterventionIds": [
         7
       ],
-      "foodEnvironmentDomainsAffected": []
+      "foodEnvironmentDomainsAffected": [
+        "Women's empowerment"
+      ]
     },
     {
       "id": 19,
@@ -244,7 +278,10 @@
       "operationalizing": "Changing gender norms around household decision-making can be a difficult, but starting with a well-formed understanding of cultural contexts and social norms will help improve effectiveness of trainings and sensitization of household members. Implementers should assess current household budgeting practices, spending practices, and decision-making around the use of money among households in the local context. These assessments will help the implementer better target their household budget training material. Implementers should determine if there are any locally available materials that have been developed that can be utilized. If not, implementers can design their own training modules which might include setting financial goals and examining money management; describing the importance of a budget; making a budge; and budgeting for livelihoods and nutrition. Note: implementers should consider what potential negative impacts of this intervention could be, such as increased disagreement and potentially abuse in the household and determine if the approaches to reduce these risks. The implementer should take necessary monitoring steps to determine if any adverse effects are occurring.",
       "stepsForOperationalizing": [],
       "relatedInterventionIds": [],
-      "foodEnvironmentDomainsAffected": []
+      "foodEnvironmentDomainsAffected": [
+        "Affordability",
+        "Women's empowerment"
+      ]
     },
     {
       "id": 20,
@@ -253,7 +290,11 @@
       "operationalizing": "Implementers should assess current agricultural practices and identify what changes in production practices, if adopted, could increase productivity. Once determined, implementers can design standalone trainings and/or messages that can be integrated into ongoing activities that aim to increase the adoption of the target good agricultural practices. Further, the implementer should consider integrating messages on keeping a portion of production for own-consumption or using income from sale to purchase nutritious food.",
       "stepsForOperationalizing": [],
       "relatedInterventionIds": [],
-      "foodEnvironmentDomainsAffected": []
+      "foodEnvironmentDomainsAffected": [
+        "Availability",
+        "Accessibility",
+        "Women's empowerment"
+      ]
     },
     {
       "id": 21,
@@ -262,7 +303,11 @@
       "operationalizing": "To implement this nutrition intervention, implementers should determine their target nutrient-rich commodity they want producers to produce more of (see intervention #1) and which nutrition messages would be relevant to include. Implementers should then modify their existing materials, particularly in the case of training manuals, to integrate the nutrition messages. Implementers should utilize social and behavior change best practices when formulating the messages and trainings, helping to ensure seamless integration and increase the applicability of messages to the target food systems actors.",
       "stepsForOperationalizing": [],
       "relatedInterventionIds": [],
-      "foodEnvironmentDomainsAffected": []
+      "foodEnvironmentDomainsAffected": [
+        "Availability",
+        "Accessibility",
+        "Desirability"
+      ]
     },
     {
       "id": 22,
@@ -273,7 +318,11 @@
       "relatedInterventionIds": [
         33
       ],
-      "foodEnvironmentDomainsAffected": []
+      "foodEnvironmentDomainsAffected": [
+        "Availability",
+        "Desirability",
+        "Food Safety"
+      ]
     },
     {
       "id": 23,

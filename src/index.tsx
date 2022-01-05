@@ -10,12 +10,7 @@ import { Directions } from './pages/Directions';
 import { MainNav } from './pages/MainNav/MainNav';
 import { Production } from './pages/production/Production';
 import { AgroInputSupplyAndService } from './pages/production/AgroInputSupplyAndService';
-import { ProducerFarmerOragnizationDevelopment } from './pages/production/producerFarmerOrganization/ProducerFarmerOragnizationDevelopment';
-import { WomensParticipationInProducerOrganization } from './pages/production/producerFarmerOrganization/WomensParticipationInProducerOrganization';
-import { MarketingOfftakeDevelopment } from './pages/production/producerFarmerOrganization/MarketingOfftakeDevelopment';
-import { DiversificationOfOperationsOfferings } from './pages/production/producerFarmerOrganization/DiversificationOfOperationsOfferings';
-import { DevelopmentOfStorageFacilities } from './pages/production/producerFarmerOrganization/DevelopmentOfStorageFacilities';
-import { ProducerOrganizationMemberTraining } from './pages/production/producerFarmerOrganization/ProducerOrganizationMemberTraining';
+import { ProducerFarmerOragnizationDevelopment } from './pages/production/ProducerFarmerOragnizationDevelopment';
 import { FarmAndHouseholdTrainingOnAgriculture } from './pages/production/farmAndHouseholdTraining/AgroInputSupplyAndService';
 import { AccessToInputsAndServices } from './pages/production/farmAndHouseholdTraining/AccessToInputsAndServices';
 import { TrainingOnGoodPractices } from './pages/production/farmAndHouseholdTraining/TrainingOnGoodPractices';
@@ -53,11 +48,7 @@ ReactDOM.render(
         {/* <Route path='increaseAccessToSafeStorage' element={<IncreaseAccessToSafeStorage />} /> */}
 
         <Route path='producerFarmerOragnizationDevelopment' element={<ProducerFarmerOragnizationDevelopment />}>
-          <Route path='marketingOfftakeDevelopment' element={<MarketingOfftakeDevelopment />} />
-          <Route path='diversificationOfOfferings' element={<DiversificationOfOperationsOfferings />} />
-          <Route path='developmentOfStorageFacilities' element={<DevelopmentOfStorageFacilities />} />
-          <Route path='producerOrganizationMemberTraining' element={<ProducerOrganizationMemberTraining />} />
-          <Route path='womensParticipationInProducerOrganization' element={<WomensParticipationInProducerOrganization />} />
+          <Route path='drillDown' element={<DrillDownTemplate />} />
         </Route>
         {/* Interventions */}
         {/* <Route path='integrateNutritionMessaging' element={<IntegrateNutritionMessaging />} /> */}
