@@ -2,6 +2,7 @@ import { BasicPage } from "./BasicPage";
 import Interventions from '../interventions.json';
 import './InterventionTemplate.css';
 import { Link, useParams } from "react-router-dom";
+import { ErrorElement } from "./ErrorElement";
 
 type Intervention = {
   id: number;
@@ -10,6 +11,7 @@ type Intervention = {
   operationalizing?: string;
   stepsForOperationalizing: string[];
   relatedInterventionIds: number[];
+  foodEnvironmentDomainsAffected: string[];
 }
 
 interface RelatedInterventions {
@@ -28,9 +30,7 @@ export function InterventionTemplate() {
   if (!thisIntervention) {
     console.log(`Error: Unable to find intervention with ID: ${params.interventionId}`);
     return (
-      <div>
-        Error: Unable to find intervention with ID: {interventionID}
-      </div>
+      <ErrorElement message={`Error: Unable to find intervention with ID: ${interventionID}`} />
     );
   }
 

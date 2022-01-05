@@ -9,9 +9,7 @@ import { Preface } from './pages/Preface';
 import { Directions } from './pages/Directions';
 import { MainNav } from './pages/MainNav/MainNav';
 import { Production } from './pages/production/Production';
-import { AgroInputSupplyAndService } from './pages/production/agroInput/AgroInputSupplyAndService';
-import { IncreasingEquitableAccess } from './pages/production/agroInput/IncreasingEquitableAccess';
-import { CapacityDevelopmentOfDeliveryActors } from './pages/production/agroInput/CapacityDevelopmentOfDeliveryActors';
+import { AgroInputSupplyAndService } from './pages/production/AgroInputSupplyAndService';
 import { ProducerFarmerOragnizationDevelopment } from './pages/production/producerFarmerOrganization/ProducerFarmerOragnizationDevelopment';
 import { WomensParticipationInProducerOrganization } from './pages/production/producerFarmerOrganization/WomensParticipationInProducerOrganization';
 import { MarketingOfftakeDevelopment } from './pages/production/producerFarmerOrganization/MarketingOfftakeDevelopment';
@@ -24,6 +22,7 @@ import { TrainingOnGoodPractices } from './pages/production/farmAndHouseholdTrai
 import { TrainingOnHouseholdLevelProcessing } from './pages/production/farmAndHouseholdTraining/TrainingOnHouseholdLevelProcessing';
 import { ValueChainSelection } from './pages/production/valueChainSelection/ValueChainSelection';
 import { InterventionTemplate } from './components/InterventionTemplate';
+import { DrillDownTemplate } from './components/DrillDownTemplate';
 
 function NoMatch() {
   return (
@@ -47,8 +46,7 @@ ReactDOM.render(
         <Route path='mainNav' element={<MainNav />} />
         <Route path='production' element={<Production />} />
         <Route path='agroInputSupplyAndService' element={<AgroInputSupplyAndService />}>
-          <Route path='increasingEquitableAccess' element={<IncreasingEquitableAccess />} />
-          <Route path='capacityDevelopmentOfDeliveryActors' element={<CapacityDevelopmentOfDeliveryActors />} />
+          <Route path='drillDown' element={<DrillDownTemplate />} />
         </Route>
         {/* Interventions */}
         <Route path='interventions/:interventionId' element={<InterventionTemplate />} />

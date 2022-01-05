@@ -6,7 +6,8 @@
       "rationale": "Producers and consumers rely on local production for a portion of their food needs. Increasing the production of nutritious foods can support households to consume more diverse, nutritious diets, thereby supporting improved nutrition. During the selection of value chains or when determining focus commodities, implementers can select nutritious commodities that if increased in productivity, will increase the availability, accessibility, and affordability of nutritious foods at the household and/or market-level. ",
       "operationalizing": "To implement this nutrition intervention, implementers should first assess what a typical diet consists of, determining the nutrient gaps in local diets. To do so, the implementer can consider implementing a diet quality survey, such as Minimum Dietary Diversity for Women (MDD-W) or Household Dietary Diversity Score (HDDS). Alternatively, the implementer can collaborate with the Ministry of Public Health, Ministry of Agriculture, Livestock, and/or Fisheries, or other programming working in nutrition-sensitive agriculture or food systems activities to utilize already collected data to determine which foods groups are largely missing from diets and where nutrient gaps exist. Note: the implementer can use the survey tools, referenced below, as a resource to understand what food groups and foods within food groups make up a nutritious diet. After determining which food groups are areas of improvement, the implementer can consider which commodities that if produced, could help fill gaps in the missing food groups. These commodities can be considered as focus commodities/value chains for the program to increase productivity of, thereby increasing local availability, accessibility, and affordability of a nutrient-rich food.",
       "stepsForOperationalizing": [],
-      "relatedInterventionIds": []
+      "relatedInterventionIds": [],
+      "foodEnvironmentDomainsAffected": []
     },
     {
       "id": 2,
@@ -17,17 +18,10 @@
       "relatedInterventionIds": [
         4,
         5
-      ]
-    },
-    {
-      "id": 4,
-      "title": "Increase access to inputs that will increase yield of nutrient-rich commodities",
-      "rationale": "The use of inputs, including seeds, can increase the productivity of nutrient-rich food. In some contexts, the availability of inputs is low, hampering the productivity of producers. In other instances, nutrient-rich foods that could be produced in the project area but are not, may be due to the lack of necessary inputs altogether, like the seeds. Increasing access to inputs increases the likelihood that farmers will produce nutrient rich foods, and their yields will be increased. In turn, this will increase the availability of nutrient-rich foods at both the household and local market levels, leading to increased accessibility and affordability. Increased access to high-quality inputs, seeds, and knowledge around input use is particularly important for farmers that historically have lacked access to high-quality inputs, such as women, youth, and social minorities as these populations are often more at risk for poor diets and thus stand to benefit more from increased production of nutrient-rich commodities.",
-      "operationalizing": "To implement interventions that increase access to inputs for more efficient nutrient-rich food, the implementer should first assess the current barriers to access, especially for marginalized groups. Barriers of access might take the form of shop locations or hours of operation, social stigmas that prevent certain groups from traveling to locations where inputs are accessed, or lack of knowledge about when and how to access the inputs. If market connections are weak, inputs may not even be available in local shops, or those which are available may not be affordable, especially to marginalized groups that may lack access to financing or cash on hand. Implementers can work with agriculture and livestock input firms to increase the availability of critical inputs. The implementer can sensitize the agriculture and livestock firms on the potential benefits of diversifying their marketing strategies to the unreached project areas and support the development of last-mile marketing strategies, like use of local extension agents or agro-dealers to sell inputs.",
-      "stepsForOperationalizing": [],
-      "relatedInterventionIds": [
-        2,
-        5
+      ],
+      "foodEnvironmentDomainsAffected": [
+        "Availability",
+        "Women's empowerment"
       ]
     },
     {
@@ -39,6 +33,27 @@
       "relatedInterventionIds": [
         24,
         25
+      ],
+      "foodEnvironmentDomainsAffected": [
+        "Availability",
+        "Accessibility",
+        "Women's empowerment"
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Increase access to inputs that will increase yield of nutrient-rich commodities",
+      "rationale": "The use of inputs, including seeds, can increase the productivity of nutrient-rich food. In some contexts, the availability of inputs is low, hampering the productivity of producers. In other instances, nutrient-rich foods that could be produced in the project area but are not, may be due to the lack of necessary inputs altogether, like the seeds. Increasing access to inputs increases the likelihood that farmers will produce nutrient rich foods, and their yields will be increased. In turn, this will increase the availability of nutrient-rich foods at both the household and local market levels, leading to increased accessibility and affordability. Increased access to high-quality inputs, seeds, and knowledge around input use is particularly important for farmers that historically have lacked access to high-quality inputs, such as women, youth, and social minorities as these populations are often more at risk for poor diets and thus stand to benefit more from increased production of nutrient-rich commodities.",
+      "operationalizing": "To implement interventions that increase access to inputs for more efficient nutrient-rich food, the implementer should first assess the current barriers to access, especially for marginalized groups. Barriers of access might take the form of shop locations or hours of operation, social stigmas that prevent certain groups from traveling to locations where inputs are accessed, or lack of knowledge about when and how to access the inputs. If market connections are weak, inputs may not even be available in local shops, or those which are available may not be affordable, especially to marginalized groups that may lack access to financing or cash on hand. Implementers can work with agriculture and livestock input firms to increase the availability of critical inputs. The implementer can sensitize the agriculture and livestock firms on the potential benefits of diversifying their marketing strategies to the unreached project areas and support the development of last-mile marketing strategies, like use of local extension agents or agro-dealers to sell inputs.",
+      "stepsForOperationalizing": [],
+      "relatedInterventionIds": [
+        2,
+        5
+      ],
+      "foodEnvironmentDomainsAffected": [
+        "Availability",
+        "Accessibility",
+        "Women's empowerment"
       ]
     },
     {
@@ -55,6 +70,9 @@
         2,
         4,
         72
+      ],
+      "foodEnvironmentDomainsAffected": [
+        "Desirability"
       ]
     },
     {
@@ -67,6 +85,10 @@
         1,
         5,
         7
+      ],
+      "foodEnvironmentDomainsAffected": [
+        "Availability",
+        "Desirability"
       ]
     },
     {
@@ -75,7 +97,12 @@
       "rationale": "The use of inputs, including seeds, can increase the productivity of nutrient-rich food. Increasing the access to and adoption of inputs can increase productivity for producers, which supports improved availability and accessibility to foods. Increased access to and adoption of high-quality inputs, seeds, and knowledge around input use is particularly important for producers that historically have lacked access to high-quality inputs, such as women. Agro-input and service providers can increase the adoption of inputs among female producers by improving their marketing strategies to consider the particular barriers female producers face. In addition to expanding access to a new consumer base and increasing consumer loyalty by ensuring that both men and women can access services and products, agro-input and service delivery actors can further expand their outreach and inclusion to women in ways that promote social transformation.",
       "operationalizing": "To implement this intervention, the implementer should first consider identifying the root causes that inhibit women’s ability to equitably access inputs/ technologies. Implementers can then assess which barriers could be addressed through improved service provision by the agro-input and service delivery providers. The implementer, in conjunction with the relevant input/service actors then can design activities to address the identified barriers. These might include hiring and training women as agro-dealers and service providers, sensitizing agro-dealers and service providers on strategies to better reach female producers, such as times of day, etc. It can increase availability of products in remote areas and increase direct access for women to inputs and services, breaking down the social constraints that previously limited them. The implementer can support the development and implementation new marketing strategies.",
       "stepsForOperationalizing": [],
-      "relatedInterventionIds": []
+      "relatedInterventionIds": [],
+      "foodEnvironmentDomainsAffected": [
+        "Availability",
+        "Accessibility",
+        "Women's empowerment"
+      ]
     },
     {
       "id": 8,
@@ -87,7 +114,8 @@
         9,
         10,
         11
-      ]
+      ],
+      "foodEnvironmentDomainsAffected": []
     },
     {
       "id": 9,
@@ -99,7 +127,8 @@
         8,
         10,
         11
-      ]
+      ],
+      "foodEnvironmentDomainsAffected": []
     },
     {
       "id": 10,
@@ -110,7 +139,8 @@
       "relatedInterventionIds": [
         47,
         52
-      ]
+      ],
+      "foodEnvironmentDomainsAffected": []
     },
     {
       "id": 11,
@@ -121,7 +151,8 @@
       "relatedInterventionIds": [
         8,
         9
-      ]
+      ],
+      "foodEnvironmentDomainsAffected": []
     },
     {
       "id": 12,
@@ -137,7 +168,8 @@
         38,
         39,
         41
-      ]
+      ],
+      "foodEnvironmentDomainsAffected": []
     },
     {
       "id": 13,
@@ -148,7 +180,8 @@
       "relatedInterventionIds": [
         14,
         23
-      ]
+      ],
+      "foodEnvironmentDomainsAffected": []
     },
     {
       "id": 14,
@@ -159,7 +192,8 @@
       "relatedInterventionIds": [
         13,
         23
-      ]
+      ],
+      "foodEnvironmentDomainsAffected": []
     },
     {
       "id": 15,
@@ -167,7 +201,8 @@
       "rationale": "Implementers can integrate nutrition messaging into their member trainings to better tie agricultural and other food systems activities to nutrition (e.g., trainings on the adoption of good agricultural practices can include the importance of consuming the target commodity for improved family nutrition). These activities can help increase the desirability for nutritious foods. Further, improving the quality of producer household diets can improve their overall productivity and health, leading to increased incomes and increased strength and resilience of the PO as a group.",
       "operationalizing": "To implement this nutrition intervention, implementers should determine their target behavior, such as production of the target nutritious food or consumption of the target nutritious food. The implementer should then determine which barriers and motivators of the target can be addressed through the integration into member trainings. Implementers can then work with the producer organization leadership to integrate the target nutrition messages into the trainings OR if the implementer is providing the training, integrate the nutrition messages into existing training material.",
       "stepsForOperationalizing": [],
-      "relatedInterventionIds": []
+      "relatedInterventionIds": [],
+      "foodEnvironmentDomainsAffected": []
     },
     {
       "id": 16,
@@ -177,7 +212,8 @@
       "stepsForOperationalizing": [],
       "relatedInterventionIds": [
         17
-      ]
+      ],
+      "foodEnvironmentDomainsAffected": []
     },
     {
       "id": 17,
@@ -187,7 +223,8 @@
       "stepsForOperationalizing": [],
       "relatedInterventionIds": [
         16
-      ]
+      ],
+      "foodEnvironmentDomainsAffected": []
     },
     {
       "id": 18,
@@ -197,7 +234,8 @@
       "stepsForOperationalizing": [],
       "relatedInterventionIds": [
         7
-      ]
+      ],
+      "foodEnvironmentDomainsAffected": []
     },
     {
       "id": 19,
@@ -205,7 +243,8 @@
       "rationale": "Individual members of a household often have different priorities about how resources such as time, machinery, and income should be allocated, which can hinder productivity and use of income for nutritious foods. Implementers can promote improved communication, more equitable decision-making, and better use of income through the implementation of household budgeting trainings.",
       "operationalizing": "Changing gender norms around household decision-making can be a difficult, but starting with a well-formed understanding of cultural contexts and social norms will help improve effectiveness of trainings and sensitization of household members. Implementers should assess current household budgeting practices, spending practices, and decision-making around the use of money among households in the local context. These assessments will help the implementer better target their household budget training material. Implementers should determine if there are any locally available materials that have been developed that can be utilized. If not, implementers can design their own training modules which might include setting financial goals and examining money management; describing the importance of a budget; making a budge; and budgeting for livelihoods and nutrition. Note: implementers should consider what potential negative impacts of this intervention could be, such as increased disagreement and potentially abuse in the household and determine if the approaches to reduce these risks. The implementer should take necessary monitoring steps to determine if any adverse effects are occurring.",
       "stepsForOperationalizing": [],
-      "relatedInterventionIds": []
+      "relatedInterventionIds": [],
+      "foodEnvironmentDomainsAffected": []
     },
     {
       "id": 20,
@@ -213,7 +252,8 @@
       "rationale": "In many regions, significant effort has been made to ensure farmers have access to seeds, inputs, and services that enhance the yields of staple cereals crops. However, training on best practices for nutrient-rich commodities is often limited to larger scale operations that produce for commercial sale. Increasing productivity through best-practices is often less resource-intensive than interventions that increase yields primarily through adoption of purchased seeds or inputs, allowing for even poorer households to experience yield enhancements for nutrient-rich commodities.",
       "operationalizing": "Implementers should assess current agricultural practices and identify what changes in production practices, if adopted, could increase productivity. Once determined, implementers can design standalone trainings and/or messages that can be integrated into ongoing activities that aim to increase the adoption of the target good agricultural practices. Further, the implementer should consider integrating messages on keeping a portion of production for own-consumption or using income from sale to purchase nutritious food.",
       "stepsForOperationalizing": [],
-      "relatedInterventionIds": []
+      "relatedInterventionIds": [],
+      "foodEnvironmentDomainsAffected": []
     },
     {
       "id": 21,
@@ -221,7 +261,8 @@
       "rationale": "Implementers can integrate nutrition messaging into ongoing activities to better tie agricultural and other food systems activities to nutrition. Specifically, implementers can use the benefits about the nutritional value of a commodity as a motivator for households to produce the target nutrient-rich commodities.",
       "operationalizing": "To implement this nutrition intervention, implementers should determine their target nutrient-rich commodity they want producers to produce more of (see intervention #1) and which nutrition messages would be relevant to include. Implementers should then modify their existing materials, particularly in the case of training manuals, to integrate the nutrition messages. Implementers should utilize social and behavior change best practices when formulating the messages and trainings, helping to ensure seamless integration and increase the applicability of messages to the target food systems actors.",
       "stepsForOperationalizing": [],
-      "relatedInterventionIds": []
+      "relatedInterventionIds": [],
+      "foodEnvironmentDomainsAffected": []
     },
     {
       "id": 22,
@@ -231,7 +272,8 @@
       "stepsForOperationalizing": [],
       "relatedInterventionIds": [
         33
-      ]
+      ],
+      "foodEnvironmentDomainsAffected": []
     },
     {
       "id": 23,
@@ -242,7 +284,8 @@
       "relatedInterventionIds": [
         13,
         14
-      ]
+      ],
+      "foodEnvironmentDomainsAffected": []
     },
     {
       "id": 24,
@@ -253,7 +296,8 @@
       "relatedInterventionIds": [
         3,
         25
-      ]
+      ],
+      "foodEnvironmentDomainsAffected": []
     },
     {
       "id": 25,
@@ -264,7 +308,8 @@
       "relatedInterventionIds": [
         3,
         24
-      ]
+      ],
+      "foodEnvironmentDomainsAffected": []
     },
     {
       "id": 26,
@@ -272,7 +317,8 @@
       "rationale": "",
       "operationalizing": "",
       "stepsForOperationalizing": [],
-      "relatedInterventionIds": []
+      "relatedInterventionIds": [],
+      "foodEnvironmentDomainsAffected": []
     },
     {
       "id": 27,
@@ -282,7 +328,8 @@
       "stepsForOperationalizing": [],
       "relatedInterventionIds": [
         49
-      ]
+      ],
+      "foodEnvironmentDomainsAffected": []
     },
     {
       "id": 28,
@@ -292,7 +339,8 @@
       "stepsForOperationalizing": [],
       "relatedInterventionIds": [
         49
-      ]
+      ],
+      "foodEnvironmentDomainsAffected": []
     },
     {
       "id": 29,
@@ -302,7 +350,8 @@
       "stepsForOperationalizing": [],
       "relatedInterventionIds": [
         49
-      ]
+      ],
+      "foodEnvironmentDomainsAffected": []
     },
     {
       "id": 30,
@@ -310,7 +359,8 @@
       "rationale": "",
       "operationalizing": "",
       "stepsForOperationalizing": [],
-      "relatedInterventionIds": []
+      "relatedInterventionIds": [],
+      "foodEnvironmentDomainsAffected": []
     },
     {
       "id": 31,
@@ -321,7 +371,8 @@
       "relatedInterventionIds": [
         48,
         58
-      ]
+      ],
+      "foodEnvironmentDomainsAffected": []
     },
     {
       "id": 32,
@@ -332,7 +383,8 @@
       "relatedInterventionIds": [
         48,
         58
-      ]
+      ],
+      "foodEnvironmentDomainsAffected": []
     },
     {
       "id": 33,
@@ -342,7 +394,8 @@
       "stepsForOperationalizing": [],
       "relatedInterventionIds": [
         22
-      ]
+      ],
+      "foodEnvironmentDomainsAffected": []
     },
     {
       "id": 34,
@@ -355,7 +408,8 @@
         37,
         38,
         39
-      ]
+      ],
+      "foodEnvironmentDomainsAffected": []
     },
     {
       "id": 35,
@@ -366,7 +420,8 @@
       "relatedInterventionIds": [
         34,
         36
-      ]
+      ],
+      "foodEnvironmentDomainsAffected": []
     },
     {
       "id": 36,
@@ -376,7 +431,8 @@
       "stepsForOperationalizing": [],
       "relatedInterventionIds": [
         35
-      ]
+      ],
+      "foodEnvironmentDomainsAffected": []
     },
     {
       "id": 37,
@@ -386,7 +442,8 @@
       "stepsForOperationalizing": [],
       "relatedInterventionIds": [
         34
-      ]
+      ],
+      "foodEnvironmentDomainsAffected": []
     },
     {
       "id": 38,
@@ -396,7 +453,8 @@
       "stepsForOperationalizing": [],
       "relatedInterventionIds": [
         34
-      ]
+      ],
+      "foodEnvironmentDomainsAffected": []
     },
     {
       "id": 39,
@@ -406,7 +464,8 @@
       "stepsForOperationalizing": [],
       "relatedInterventionIds": [
         34
-      ]
+      ],
+      "foodEnvironmentDomainsAffected": []
     },
     {
       "id": 40,
@@ -414,7 +473,8 @@
       "rationale": "",
       "operationalizing": "",
       "stepsForOperationalizing": [],
-      "relatedInterventionIds": []
+      "relatedInterventionIds": [],
+      "foodEnvironmentDomainsAffected": []
     },
     {
       "id": 41,
@@ -428,7 +488,8 @@
         56,
         57,
         58
-      ]
+      ],
+      "foodEnvironmentDomainsAffected": []
     },
     {
       "id": 42,
@@ -442,7 +503,8 @@
         56,
         57,
         58
-      ]
+      ],
+      "foodEnvironmentDomainsAffected": []
     },
     {
       "id": 43,
@@ -453,7 +515,8 @@
       "relatedInterventionIds": [
         44,
         55
-      ]
+      ],
+      "foodEnvironmentDomainsAffected": []
     },
     {
       "id": 44,
@@ -464,7 +527,8 @@
       "relatedInterventionIds": [
         43,
         55
-      ]
+      ],
+      "foodEnvironmentDomainsAffected": []
     },
     {
       "id": 45,
@@ -474,7 +538,8 @@
       "stepsForOperationalizing": [],
       "relatedInterventionIds": [
         54
-      ]
+      ],
+      "foodEnvironmentDomainsAffected": []
     },
     {
       "id": 46,
@@ -482,7 +547,8 @@
       "rationale": "",
       "operationalizing": "",
       "stepsForOperationalizing": [],
-      "relatedInterventionIds": []
+      "relatedInterventionIds": [],
+      "foodEnvironmentDomainsAffected": []
     },
     {
       "id": 47,
@@ -493,7 +559,8 @@
       "relatedInterventionIds": [
         10,
         52
-      ]
+      ],
+      "foodEnvironmentDomainsAffected": []
     },
     {
       "id": 48,
@@ -507,7 +574,8 @@
       ],
       "relatedInterventionIds": [
         49
-      ]
+      ],
+      "foodEnvironmentDomainsAffected": []
     },
     {
       "id": 49,
@@ -520,7 +588,8 @@
         28,
         29,
         48
-      ]
+      ],
+      "foodEnvironmentDomainsAffected": []
     },
     {
       "id": 50,
@@ -528,7 +597,8 @@
       "rationale": "Data shows that households that live further away from markets are more likely to suffer from poorer dietary diversity. Developing markets is an opportunity to attract more vendors, distributors, processors, consumers, and other food systems actors to sell and purchase foods. An important aspect of a healthy, functioning market is its infrastructure. Good market infrastructure, such as sufficient room, stalls for vending foods, live animal areas, handwashing stations, etc., can serve as an attraction to food systems actors and grow the market, as well as increase the availability and accessibility to nutritious foods. Some programming has found that with improved market infrastructure, more food retailers are attracted, and the diversity of food sold improves.",
       "operationalizing": "To implement this nutrition intervention, implementers should first determine market improvement opportunities. It is suggested that implementers complete interviews with market actors, including vendors, traders, and representatives from the market management bodies, or similar body. Depending on the scope of the project, the implementer can either financially support the development of market infrastructure or support local actors and market managing bodies to invest in the market. To increase investment in the market, the implementer can work with the market management bodies to improve their tax and fee collection systems, better identify market priorities to fund, and earmark funds for improvements in market infrastructure. The implementer should work with local relevant actors, including the vendors, food safety enforcement bodies, etc., to inform the specific market strategies.",
       "stepsForOperationalizing": [],
-      "relatedInterventionIds": []
+      "relatedInterventionIds": [],
+      "foodEnvironmentDomainsAffected": []
     },
     {
       "id": 51,
@@ -536,7 +606,8 @@
       "rationale": "Markets and vendors can use marketing strategies that better highlight target nutritious foods to increase its accessibility. Market segmentation can be used to clearly indicate where a target commodity is in the marketplace (e.g., dairy products sold in one portion of the market). This can improve consumers’ awareness of where to purchase the target commodities and improve accessibility. In addition to increasing desirability, the use of stalls and/or separated areas for target commodities can improve food safety. Foodborne illnesses have negatives effects on human health, productivity, and consumer trust in food retailers. Implementers can support the implementation of separated food areas to keep perishable foods more prone to carrying foodborne pathogens, like animal source foods, away from ready-to-eat foods, like fruits and vegetables. Improvements in food safety can also increase the desirability of the target nutritious food.",
       "operationalizing": "Depending on the scope of the project, the implementer can either financially support the development of separated areas and/or market stalls or support local actors and managing bodies to invest in the market. To increase investment by the market managing bodies, the implementer can work with the market management bodies to improve their tax and fee collection systems, better identify market priorities to fund, and earmark funds for improvements in market infrastructure for stalls and separated areas. The implementer can provide technical assistance to market infrastructure improvements that would support increase food safety, desirability, and accessibility. The implementer should work with local relevant actors, including the vendors, food safety enforcement bodies, etc., to inform the specific market strategies.",
       "stepsForOperationalizing": [],
-      "relatedInterventionIds": []
+      "relatedInterventionIds": [],
+      "foodEnvironmentDomainsAffected": []
     },
     {
       "id": 52,
@@ -550,7 +621,8 @@
       ],
       "relatedInterventionIds": [
         73
-      ]
+      ],
+      "foodEnvironmentDomainsAffected": []
     },
     {
       "id": 53,
@@ -558,7 +630,8 @@
       "rationale": "",
       "operationalizing": "",
       "stepsForOperationalizing": [],
-      "relatedInterventionIds": []
+      "relatedInterventionIds": [],
+      "foodEnvironmentDomainsAffected": []
     },
     {
       "id": 54,
@@ -568,7 +641,8 @@
       "stepsForOperationalizing": [],
       "relatedInterventionIds": [
         45
-      ]
+      ],
+      "foodEnvironmentDomainsAffected": []
     },
     {
       "id": 55,
@@ -579,7 +653,8 @@
       "relatedInterventionIds": [
         43,
         44
-      ]
+      ],
+      "foodEnvironmentDomainsAffected": []
     },
     {
       "id": 56,
@@ -593,7 +668,8 @@
         48,
         57,
         58
-      ]
+      ],
+      "foodEnvironmentDomainsAffected": []
     },
     {
       "id": 57,
@@ -607,7 +683,8 @@
         48,
         56,
         58
-      ]
+      ],
+      "foodEnvironmentDomainsAffected": []
     },
     {
       "id": 58,
@@ -625,7 +702,8 @@
         48,
         56,
         57
-      ]
+      ],
+      "foodEnvironmentDomainsAffected": []
     },
     {
       "id": 59,
@@ -633,7 +711,8 @@
       "rationale": "Foodborne illnesses have negatives effects on human health, productivity, and consumer trust in food retailers. Research suggests that a large portion of contamination is happening at the point of sale of food. The implementation of frequent and proper handwashing practices is one best practice to decrease the risk of contamination. However, many markets lack public handwashing stations that vendors, traders, food processors, and other food systems actors that handle food can use. Implementers can support the implementation of handwashing stations to increase food safety.",
       "operationalizing": "Depending on the scope of the project, the implementer can either financially support the installation of handwashing stations and/or support local actors and market managing bodies to invest stations themselves. To increase investment in the market, the implementer can work with the market management bodies to improve their tax and fee collection systems, better identify market priorities to fund, and earmark funds for improvements in market infrastructure including hand-washing stations. Additionally, the implementer can sensitize the key local stakeholders in charge of funding decisions about the importance of improved food safety and how handwashing stations contribute.",
       "stepsForOperationalizing": [],
-      "relatedInterventionIds": []
+      "relatedInterventionIds": [],
+      "foodEnvironmentDomainsAffected": []
     },
     {
       "id": 60,
@@ -641,7 +720,8 @@
       "rationale": "Improving food safety is a key strategy to reducing incidence of food-borne illnesses that weaken the immune and digestive systems, while also increasing food shelf-life and quality. There are opportunities to improve food safety along the entire food value chain, but particularly during food distribution, processing, and retailing, where there is often excessive handling of food and where prepared food is often kept without temperature controls for an extended period of time. While after the point of sale at home, there is strong evidence that a large share of foods (both raw and ready-to-eat) sold in many African markets are contaminated at the point of purchase and that actions taken by consumers while preparing their food have not been sufficient to reduce risk to acceptable levels. Market managing bodies can support local food systems actors to implement food safety best practices to improve consumer health and have positive effects on their business.",
       "operationalizing": "With market managing bodies, the implementer should determine the highest food safety risks, by implementing a risk analysis or reviewing existing research. Based on the prioritized hazards, or areas that if addressed can have improvements in the safety of the target commodities, implementers and market managing bodies design interventions to increase adoption of food safety best practices in their market. Implementers can facilitate a training-of-trainers session to market managing bodies and other relevant actors around the prioritized practices. Implementers should use social and behavior change best practices during trainings or sensitization, and ensure messages take into account the specific constraints and barriers that food systems actors face in implementing the prioritized practices to improve food safety. Further, implementers can work with local actors, such as Ministry of Public Health, Ministry of Agriculture, Livestock, and Fisheries, or other relevant actors.",
       "stepsForOperationalizing": [],
-      "relatedInterventionIds": []
+      "relatedInterventionIds": [],
+      "foodEnvironmentDomainsAffected": []
     },
     {
       "id": 61,
@@ -649,7 +729,8 @@
       "rationale": "",
       "operationalizing": "",
       "stepsForOperationalizing": [],
-      "relatedInterventionIds": []
+      "relatedInterventionIds": [],
+      "foodEnvironmentDomainsAffected": []
     },
     {
       "id": 62,
@@ -661,7 +742,8 @@
         "Craft the key messages that market managing bodies can use to sensitize consumers to increase their consumption of the target nutritious food item",
         "Train market managing bodies and food vendors on the relevance on integrating messages into their outreach to consumers, the messages, and best practices for sensitizing consumers"
       ],
-      "relatedInterventionIds": []
+      "relatedInterventionIds": [],
+      "foodEnvironmentDomainsAffected": []
     },
     {
       "id": 63,
@@ -669,7 +751,8 @@
       "rationale": "Implementers can support the improvement of food availability and price in order to increase the accessibility and affordability of target nutritious foods. In some instances, market management bodies and local governmental departments have a large role in influencing the performance of a market, which can affect food availability and price. Implementers can support local market managing bodies and/or local governmental departments to improve the enabling environment to increase the processing, trading, and sale of target nutritious foods in the local market.",
       "operationalizing": "To implement this nutrition intervention, implementers should identify the key constraints food systems actors face in processing, trading, and selling target nutritious foods in the marketplace within the enabling environment. Based on the findings, implementers can work with local market managing bodies and/or local governmental departments to understand the findings, including review of the barriers to processing, trading, and selling nutritious foods in the local market, and design solutions to address the barriers. In some instances, this will require the implementer to advocate for reform to local policies and processes - such as the tax structure for traders outside of the implementation area. The implementer should sensitize the market managing bodies and/or the local governmental departments on the importance of improved food environments, aiming to align objectives with national strategies, and how their adaptations could support achievement towards objectives.",
       "stepsForOperationalizing": [],
-      "relatedInterventionIds": []
+      "relatedInterventionIds": [],
+      "foodEnvironmentDomainsAffected": []
     },
     {
       "id": 64,
@@ -681,7 +764,8 @@
         "Craft the key messages that target food systems actors can use to sensitize consumers to increase their adoption of the target nutrition-sensitive behavior",
         "Train target food systems actors on the relevance of integrating messages into their outreach to consumers, the messages, and best practices for sensitizing consumers"
       ],
-      "relatedInterventionIds": []
+      "relatedInterventionIds": [],
+      "foodEnvironmentDomainsAffected": []
     },
     {
       "id": 65,
@@ -689,7 +773,8 @@
       "rationale": "Implementers can integrate nutrition messaging into ongoing activities to better tie agricultural and other food systems activities to nutrition (e.g., trainings on the adoption of good agricultural practices can include the importance of consuming the target commodity for improved family nutrition). These activities can help increase the desirability for nutritious foods, which can help pull on productivity for target food systems actors. ",
       "operationalizing": "To implement this nutrition intervention, implementers should determine their target behavior, such as production of the target nutritious food or consumption of the target nutritious food. The implementer should then determine which activities would be relevant to integrate nutrition messages that address the barriers and motivators of the target behavior, such as training to food processors, cooperative development activities, etc., Implementers should then modify their existing materials, particularly in the case of training manuals, to integrate the nutrition messages. Implementers should utilize social and behavior change best practices when formulating the messages and trainings, helping to ensure seamless integration and increase the applicability of messages to the target food systems actors.",
       "stepsForOperationalizing": [],
-      "relatedInterventionIds": []
+      "relatedInterventionIds": [],
+      "foodEnvironmentDomainsAffected": []
     },
     {
       "id": 66,
@@ -697,7 +782,8 @@
       "rationale": "Implementers already implementing social and behavior change communication activities, like SMS or mass media, can integrate nutrition messaging into those activities, where there is relevance. The integration of nutrition messaging can increase the desirability for the production and/or consumption of the target nutritious foods.",
       "operationalizing": "To implement this nutrition intervention, implementers should determine which ongoing agriculture and food systems activities are potentially relevant to add nutrition messaging. Ongoing activities where nutrition messaging could be integrated may include: ICT platforms that agriculture and food systems actors use; SMS campaigns, particularly related to productivity; radio and/or TV activities; and/or dissemination of printed materials. Depending on the target activities, implementers can determine which focus areas may be appropriate to integrate. Please see X areas for message integration. Depending on the target area, implementers should consider the barriers and motivators regarding the target behavior and select the ones most salient to integrate into ongoing activities. Implementers then will need to craft the key messages that can be integrated into ongoing activities and upload/draft the updated materials appropriately.",
       "stepsForOperationalizing": [],
-      "relatedInterventionIds": []
+      "relatedInterventionIds": [],
+      "foodEnvironmentDomainsAffected": []
     },
     {
       "id": 67,
@@ -705,7 +791,8 @@
       "rationale": "In addition to message integration into other activities, implementers can also host standalone nutrition trainings/discussion sessions to disseminate nutrition message to target producers, consumers, and decision markers. Standalone sessions/discussions can be useful to sensitize the target audience about producing and/or consuming the target nutritious foods, by increasing the desirability of the target nutritious food. Further, standalone sessions/discussions can reach producers, consumers, and other decision-makers that other activities may not reach, like mothers-in-laws or spouses, who may not be reached by the project’s typical activities.",
       "operationalizing": "To implement this nutrition intervention, implementers should determine their target behavior, such as production of the target nutritious food or consumption of the target nutritious food. The implementer should then determine which barriers and motivators of behavior change can be addressed in a standalone session, such as increasing perceived positive consequences about implementing the behavior or how to implement the behavior. Additionally, the implementer should determine the key influencers of the target behavior, such as husbands, mother-in-laws, children, etc. The implementer should then develop out the session plan. When designing the session plan, research shows that implementers should ensure that 1) they are crafting a session that responds to the needs of the target group and 2) they will engage participants in a way that helps them learn, remember, and apply it in their lives. Implementers can facilitate the session on their own and/or work with the local nutrition or agriculture champions, community leaders, representatives from local government, etc.",
       "stepsForOperationalizing": [],
-      "relatedInterventionIds": []
+      "relatedInterventionIds": [],
+      "foodEnvironmentDomainsAffected": []
     },
     {
       "id": 68,
@@ -713,7 +800,8 @@
       "rationale": "",
       "operationalizing": "",
       "stepsForOperationalizing": [],
-      "relatedInterventionIds": []
+      "relatedInterventionIds": [],
+      "foodEnvironmentDomainsAffected": []
     },
     {
       "id": 69,
@@ -721,7 +809,8 @@
       "rationale": "Community health workers are often trusted and relied-upon sources of information for health within the communities they serve. Integrating nutrition into their curricula can be an effective and efficient way to disseminate messages on the importance of healthy and diverse diets to vulnerable and remote populations, therefore increasing the desirability of nutritious food. These messages may help advance the outcomes they are working towards, as improved diets can help improve health outcomes, especially around pregnancy, lactation, and child growth.",
       "operationalizing": "There are several resources available to guide the planning and implementation of nutrition integration into CHW training. One useful tool in particular is USAID SPRING’s Community Health Worker Nutrition Advocacy Tool, which guides implementers through understanding the legal and human resource capabilities of CHWs to provide nutrition advice, avoiding overburdening CHWs, and assessing the impact of nutrition integration into CHW programs.",
       "stepsForOperationalizing": [],
-      "relatedInterventionIds": []
+      "relatedInterventionIds": [],
+      "foodEnvironmentDomainsAffected": []
     },
     {
       "id": 70,
@@ -733,7 +822,8 @@
         "In conjunction with religious leaders, craft the key messages that religious leaders can use to sensitize the community on the target behavior",
         "Train religious leaders on the relevance on integrating messages into their outreach to the community, the messages, and best practices for sensitizing households"
       ],
-      "relatedInterventionIds": []
+      "relatedInterventionIds": [],
+      "foodEnvironmentDomainsAffected": []
     },
     {
       "id": 71,
@@ -741,7 +831,8 @@
       "rationale": "Implementers can facilitate cooking demonstrations to increase consumer desirability for the target nutritious food. Depending on what is affecting consumers’ desirability for the target nutritious food, there may be opportunity to improve food preparation practices to decrease time and energy burdens and/or improve the taste of the food item, which can increase desire to consume the target food item. Cooking demonstrations are a way to sensitize community members on the nutritional value of the target nutritious food, transfer knowledge potentially necessary to prepare the target nutritious food, and offer consumers an opportunity to try a food.",
       "operationalizing": "To implement this nutrition intervention, implementers should determine what is impacting desirability of the target nutritious food that can be addressed in a cooking demonstration. Potential influencers of desirability of preparing and consuming the food item include taste, time and energy it takes to prepare, and/or consumer’s ability to prepare the food item. Based on the most salient influencers of desirability, the implementer should determine what type of food preparation techniques could address the influencers and increase consumers’ willingness and desire to prepare and consume the target nutritious food. Implementers can implement cooking demonstrations as standalone sessions or during community events, like market days or following a community meeting. Implementers can facilitate the session on their own and/or work with the local nutrition or agriculture champions, community leaders, representatives from local government, etc.",
       "stepsForOperationalizing": [],
-      "relatedInterventionIds": []
+      "relatedInterventionIds": [],
+      "foodEnvironmentDomainsAffected": []
     },
     {
       "id": 72,
@@ -757,7 +848,8 @@
         2,
         4,
         5
-      ]
+      ],
+      "foodEnvironmentDomainsAffected": []
     },
     {
       "id": 73,
@@ -771,7 +863,8 @@
       ],
       "relatedInterventionIds": [
         52
-      ]
+      ],
+      "foodEnvironmentDomainsAffected": []
     },
     {
       "id": 74,
@@ -779,7 +872,8 @@
       "rationale": "Government and institutional policies and practices that support nutrition objectives throughout the food system can help create a more enabling environment for the production, processing, and sale of nutrient-rich foods. Enactment of these policies and practices is more likely when there are dedicated funds budgeted for their implementation.",
       "operationalizing": "Implementers should first determine which policies and regulations within the current frameworks would contribute most to enabling nutrient-rich food supply chains. Implementers can use enabling environment analyses, such as the Agriculture Commercial, Legal, and Institutional Reform (AgCLIR) framework, which enables multi-sectoral analysis of the enabling environment and guides implementers to prioritize the most salient actions. Implementers should determine which analysis is most relevant for them and can reference the Feed the Future Enabling Environment for Food Security Project Enabling Environment in Market Systems Technical Note for additional resources. Following the determination of most salient activities, implementers can design an action plan which details their steps to address the prioritized policies/regulations, which key stakeholders will be engaged and how, and approaches for monitoring and evaluating progress.",
       "stepsForOperationalizing": [],
-      "relatedInterventionIds": []
+      "relatedInterventionIds": [],
+      "foodEnvironmentDomainsAffected": []
     },
     {
       "id": 75,
@@ -787,7 +881,8 @@
       "rationale": "Government and institutional policies and practices shape the type of support that is available to food producers, including the supply, distribution, and sale of inputs, and the type, quality, and accessibility of extension agent support. Working to encourage governments, especially local governments that often dictate expenditures and priorities for agriculture support, to adopt nutrition-sensitive agriculture practices, can help increase adoption of these practices.",
       "operationalizing": "Implementers should first determine which policies and regulations within the current frameworks are dictating the flow of resources to agriculture support. Implementers should also determine what level of government is primarily responsible for decisions about resource allocation and effort prioritization for agriculture support. These findings will define the government bodies to work with going forward. To identify which policies should be targeted for nutrition-sensitive integration, implementers can use enabling environment analyses, such as the Agriculture Commercial, Legal, and Institutional Reform (AgCLIR) framework, which enables multi-sectoral analysis of the enabling environment and guides implementers to prioritize the most salient actions. Implementers should determine which analysis is most relevant for them and can reference the Feed the Future Enabling Environment for Food Security Project Enabling Environment in Market Systems Technical Note for additional resources. Following the determination of most salient activities, implementers can design an action plan which details their steps to integrate nutrition-sensitive agriculture into existing policies, and the new nutrition-sensitive agriculture policies and practices to promote. Implementers should also detail which key stakeholders will be engaged and how, and approaches for monitoring and evaluating progress.",
       "stepsForOperationalizing": [],
-      "relatedInterventionIds": []
+      "relatedInterventionIds": [],
+      "foodEnvironmentDomainsAffected": []
     },
     {
       "id": 76,
@@ -795,7 +890,8 @@
       "rationale": "Implementers can work within the enabling environment for improved policies and regulations that support the production of nutrient-rich foods. Countries often have national, sub-national, and/or local policies, regulations, and/or administrative processes that affect the certification, production, and distribution of agriculture and livestock inputs, such as seed, vaccines, etc. In some instances, these policies and regulations can serve as barriers to increased availability of critical inputs/services for producers, such as burdensome certification for retailing inputs or importation of quality inputs.",
       "operationalizing": "To implement this nutrition-sensitive intervention, implementers should first determine which policies and regulations are most inhibitive of production of nutrient-rich foods. Implementers can use enabling environment analyses, such as the Agriculture Commercial, Legal, and Institutional Reform (AgCLIR) framework, which enables multi-sectoral analysis of the enabling environment and guides implementers to prioritize the most salient actions. Implementers should determine which analysis is most relevant for them and can reference the Feed the Future Enabling Environment for Food Security Project Enabling Environment in Market Systems Technical Note for additional resources. Following the determination of most salient activities, implementers can design an action plan which details their steps to address the prioritized policies/regulations, which key stakeholders will be engaged and how, and approaches for monitoring and evaluating progress.",
       "stepsForOperationalizing": [],
-      "relatedInterventionIds": []
+      "relatedInterventionIds": [],
+      "foodEnvironmentDomainsAffected": []
     },
     {
       "id": 77,
@@ -803,7 +899,8 @@
       "rationale": "Implementers can work within the enabling environment for improved policies and regulations that support the improved performance of the food system for improved production, distribution, processing, retailing, and consumption of nutrient-rich foods. Developing countries often have national, sub-national, and/or local policies, regulations, and/or administrative processes that do not adequately guide or support processing and food handling to ensure food safety. While many countries have adopted food safety standards that set maximum levels for contaminants, it underdeveloped regions there is often little technical support, access to financing, or development of input supply to help food system actors achieve these targets. Coupled with a lack of oversight, these standards are often neglected, leading to unsafe foods and consumer distrust.",
       "operationalizing": "To implement this nutrition-sensitive intervention, implementers should first determine which policies and regulations determine food safety regulations and enforcement. Implementers can use enabling environment analyses, such as the Agriculture Commercial, Legal, and Institutional Reform (AgCLIR) framework, which enables multi-sectoral analysis of the enabling environment and guides implementers to prioritize the most salient actions. Implementers should determine which analysis is most relevant for them and can reference the Feed the Future Enabling Environment for Food Security Project Enabling Environment in Market Systems Technical Note for additional resources. Implementers should work with groups that advocate for, or if appropriate, advocate themselves, for coupling regulatory policies with frameworks and budgets that allow capacity building of food system actors to achieve the food safety targets set. If a country has not adopted minimum food safety standards, these also should be advocated for. Following the determination of most salient activities, implementers can design an action plan which details their steps to address the prioritized policies/regulations, which key stakeholders will be engaged and how, and approaches for monitoring and evaluating progress.",
       "stepsForOperationalizing": [],
-      "relatedInterventionIds": []
+      "relatedInterventionIds": [],
+      "foodEnvironmentDomainsAffected": []
     },
     {
       "id": 78,
@@ -811,7 +908,8 @@
       "rationale": "Implementers can work within the enabling environment for improved policies and regulations that support the improved performance of the food system for improved production, distribution, processing, retailing, and consumption of nutrient-rich foods. Countries often have national, sub-national, and/or local policies, regulations, and/or administrative processes that create barriers to entry for new food systems actors, make it difficult to implement new business strategies due to certification processes, such as processing, and/or do not support food systems actors to access the resources they need.",
       "operationalizing": "To implement this nutrition-sensitive intervention, implementers should first determine which policies and regulations are most inhibitive a nutritious food system. Implementers can use enabling environment analyses, such as the Agriculture Commercial, Legal, and Institutional Reform (AgCLIR) framework, which enables multi-sectoral analysis of the enabling environment and guides implementers to prioritize the most salient actions. Implementers should determine which analysis is most relevant for them and can reference the Feed the Future Enabling Environment for Food Security Project Enabling Environment in Market Systems Technical Note for additional resources. Following the determination of most salient activities, implementers can design an action plan which details their steps to address the prioritized policies/regulations, which key stakeholders will be engaged and how, and approaches for monitoring and evaluating progress.",
       "stepsForOperationalizing": [],
-      "relatedInterventionIds": []
+      "relatedInterventionIds": [],
+      "foodEnvironmentDomainsAffected": []
     },
     {
       "id": 79,
@@ -828,7 +926,8 @@
         4,
         80,
         81
-      ]
+      ],
+      "foodEnvironmentDomainsAffected": []
     },
     {
       "id": 80,
@@ -845,7 +944,8 @@
         4,
         79,
         81
-      ]
+      ],
+      "foodEnvironmentDomainsAffected": []
     },
     {
       "id": 81,
@@ -862,7 +962,8 @@
         4,
         79,
         80
-      ]
+      ],
+      "foodEnvironmentDomainsAffected": []
     },
     {
       "id": 82,
@@ -870,7 +971,8 @@
       "rationale": "Developing countries often have national, sub-national, and/or local policies, regulations, and/or administrative processes that do not adequately guide or support food processors and food handlers/retailers to ensure food safety. While many developing countries have adopted food safety standards that set maximum levels for contaminants, there is often little technical support, access to financing, or development of input supply to help food system actors achieve these targets. Coupled with a lack of oversight, these standards are often neglected, leading to unsafe foods and consumer distrust. Building relationships and enhancing coordination between agents responsible for food safety oversight in local contexts (such as the local agencies responsible for inspecting prepared food establishments, food processing facilities including slaughterhouses, and food markets for compliance) and the actors themselves can help increase understanding and compliance to the requirements, and alert agencies to areas where additional technical support or training is needed to increase food safety.",
       "operationalizing": "The implementer’s approach should depend on the current capacity of food safety agents and the existing relationships with food system actors. Improving the communication and coordination between agents and actors may require facilitating communication platforms such as regular events with industry associations, social media, or SMS/messaging-based groups if no existing platform exists. Engaging agents and actors in two-way communication about food safety requirements, challenges and barriers to those requirements, and training, technical support, and capacity building to overcome those challenges. In some cases, it may be necessary to work with regulating agencies to ensure that food safety requirements are harmonized across localities and to build agent capacity to understand and communicate requirements effectively to food system actors. Following the determination of most salient activities, implementers can design an action plan which details their steps to address the prioritized policies/regulations, which key stakeholders will be engaged and how, and approaches for monitoring and evaluating progress.",
       "stepsForOperationalizing": [],
-      "relatedInterventionIds": []
+      "relatedInterventionIds": [],
+      "foodEnvironmentDomainsAffected": []
     },
     {
       "id": 83,
@@ -878,7 +980,8 @@
       "rationale": "Research on best practices, new technologies, and other innovations in agriculture, distribution and storage, food processing, retailing, and consumer demand can be scaled to increase the reach and adoption of research that can have positive effects on the food system. Implementers can work with public, private, research, and other relevant actors to scale and commercialize research to better reach food systems actors.",
       "operationalizing": "To implement this nutrition-sensitive intervention, implementers can foster information sharing between public, private, research, and other relevant stakeholders. The implementer should determine if there is a relevant platform within the project area and/or within the country/region where research on food systems innovations and best practices are shared among relevant stakeholders. These might include working groups, steering committees, associations, etc. It is suggested that if the goal is to commercialize technologies and innovations, that the implementer determine whether or not the private sector is currently engaged in these platforms. Depending on platforms that exist and whether the relevant target stakeholders participate, the implementer can promote the extension of current, relevant platforms or host separate information sessions. To implement information sharing sessions, the implementer should work with the research entity, which has an innovation/technology to share, to determine who the target actors would be for scale-up. The implementer and research entities should then design the session relevant to the target adopters and scalers.\n\nIn addition to increasing communication between relevant actors, implementers should consider whether other commercialization strategies are relevant. Visit The Feed the Future Food Security Innovation Center (FSIC) leads USAID’s implementation of the Feed the Future Research Strategy through seven interlinked research, policy and capacity programs aimed at sustainably transforming agricultural production systems. Visit www.feedthefuture.gov/research to learn more.",
       "stepsForOperationalizing": [],
-      "relatedInterventionIds": []
+      "relatedInterventionIds": [],
+      "foodEnvironmentDomainsAffected": []
     },
     {
       "id": 84,
@@ -886,7 +989,8 @@
       "rationale": "",
       "operationalizing": "",
       "stepsForOperationalizing": [],
-      "relatedInterventionIds": []
+      "relatedInterventionIds": [],
+      "foodEnvironmentDomainsAffected": []
     },
     {
       "id": 85,
@@ -894,7 +998,8 @@
       "rationale": "Good nutrition is critical for supporting learning and without it, children are at risk of poor attention, lower education attainment, and becoming sick and missing school. An estimated 300 million students in low- and middle-income countries suffer from anemia and 73 million go to school hungry. Nutritious and safe school meals are an effective strategy to improve nutrition for school-going children. Additionally, school meals serve as another end-market opportunity for food systems actors working in nutritious foods.",
       "operationalizing": "Implementers can facilitate linkages between food systems actors that sell the target nutritious food and schools that want to procure the target nutritious food. Implementers should determine the needs of the school meal programs in the project area and/or in the surrounding areas. To do so, implementers can meet with schools individually, the Ministry of Public Health or government department that oversees school meals, and/or other relevant stakeholders. Depending on the needs, implementers can work with the relevant food systems actors that can supply the target nutritious food(s) to the school. To do so, the implementer can host business-to-business meetings or other more informal linkage activities with the producers, distributors, processors, and/or retailers and the schools to increase connectivity, develop procurement contracts, and broker the sale of foods.",
       "stepsForOperationalizing": [],
-      "relatedInterventionIds": []
+      "relatedInterventionIds": [],
+      "foodEnvironmentDomainsAffected": []
     },
     {
       "id": 86,
@@ -902,7 +1007,8 @@
       "rationale": "The growth of food systems actors is often hampered due to financial and non-financial factors, such as technical and business skills. Implementers can promote competitiveness and growth of the food systems actors they are working with by supporting them to access business development services.",
       "operationalizing": "To implement this nutrition-sensitive intervention, implementers should support the supply and demand of business development services with target food systems actors and business development service providers. Implementers can host business-to-business meetings or other more informal linkage activities between food systems actors and business development service providers and/or support these actors to better market or demand their services. Further, implementers can develop the pool of business development service providers to better meet the needs of food systems actors. The implementer can assess the needs of the food systems actors and work with business development service providers to better meet these needs via technical assistance to business development service providers.",
       "stepsForOperationalizing": [],
-      "relatedInterventionIds": []
+      "relatedInterventionIds": [],
+      "foodEnvironmentDomainsAffected": []
     },
     {
       "id": 87,
@@ -912,7 +1018,8 @@
       "stepsForOperationalizing": [],
       "relatedInterventionIds": [
         88
-      ]
+      ],
+      "foodEnvironmentDomainsAffected": []
     },
     {
       "id": 88,
@@ -922,7 +1029,8 @@
       "stepsForOperationalizing": [],
       "relatedInterventionIds": [
         87
-      ]
+      ],
+      "foodEnvironmentDomainsAffected": []
     },
     {
       "id": 89,
@@ -930,7 +1038,8 @@
       "rationale": "The active involvement of food systems actors, including consumers, in local governance can support the achievement of a nutritious food system. Food systems actors, including consumers, can advocate for regulations, policies, and/or programs that promote a nutritious food system. Implementers can support food systems actors and community members to embrace social accountability to advocate for necessary change, provide feedback, and become more engaged.",
       "operationalizing": "The implementer will need to determine which social accountability approaches are most relevant for their scope of work and the local context in their project area. Potential social accountability approaches include 1) transparency interventions, which advocate for more transparency in local governance; 2) community-driven development, which positions community voices at the center of decision-making processes; 3) participatory budgeting, planning, and monitoring, where community members are actively engaged in specific processes; 4) government sanctions, audits, or monitoring; and 5) democratic elections. Implementers interested in implementing social accountability interventions should review the Social Accountability Resources and Tools report.",
       "stepsForOperationalizing": [],
-      "relatedInterventionIds": []
+      "relatedInterventionIds": [],
+      "foodEnvironmentDomainsAffected": []
     }
   ]
 }
