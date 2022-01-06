@@ -8,7 +8,7 @@ export function ConsumerDemand() {
   const content =
     <div>
       <p>
-        Select the box below that reflects the focus of your work in food trade/marketing:
+        Select the box below that reflects the primary focus of your work in consumer demand:
       </p>
       <div>
         <div>

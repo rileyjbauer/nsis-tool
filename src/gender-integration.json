@@ -1,0 +1,21 @@
+{
+  "genderConsiderations": [
+    {
+      "id": 1,
+      "integration": "Roles and responsibilities in crop production and livestock rearing tend to be assigned according to traditional gender roles. Recognizing the different roles men and women play, and their different levels of access to/control over resources, decision-making, and time burdens is important to consider in the selection of crop and livestock varieties.",
+      "keyConsiderations": [
+        "Women often have less access to and control over water, energy, and land, which limits their ability to develop, manage, and upgrade livestock or specific crop varieties.",
+        "Women, men, boys, and girls often carry out different tasks in crop and livestock production, often assigned by gender and age.",
+        "Consider whether proposed crops or livestock activities could increase time burdens, drudgery, or resources (such as fetching more water from access points that are distant from the home) that cause additional burdens to women without alleviating others through time or cost saved in other areas.",
+        "Women often face greater financial constraints, limited access to technologies and information (including extension services)."
+      ],
+      "transformative": "In addition to selecting crop and livestock varieties with attention to women’s current engagement in those value chains or with those varieties, consider ways to address the gender and social norms that prevent women from engaging in an important role or value chain. Collect information about social norms and opportunities for positive change through participatory methods that enable stakeholders at different levels to reflect on the needs of smallholders and articulate solutions. For example, if a project analysis identifies market-driven opportunities to improve household nutrition and income through goat production, but women are traditionally excluded from rearing goats, work with communities to develop activities that build opportunities to shift this norm. Consider working with leaders to sensitize communities to support women’s expanded roles, including women in trainings, and supporting women’s entry into beyond production roles"
+    },
+    {
+      "id": 0,
+      "integration": "",
+      "keyConsiderations": [],
+      "transformative": ""
+    }
+  ]
+}

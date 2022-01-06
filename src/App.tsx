@@ -13,6 +13,8 @@ function App() {
         IGNITE: Building Technical Innovation in Nutrition-Sensitive and Gender-Integrated Agriculture
       </h2>
       <Link to="/welcome" className="App-start-link">Let's get started!</Link>
+      <div style={{ margin: '30px' }} />
+      <Link to="/mainNav" className="App-start-link">Or jump straight to the Main Menu</Link>
     </div>
   );
 }

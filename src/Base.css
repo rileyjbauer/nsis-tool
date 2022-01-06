@@ -94,7 +94,7 @@ button {
   display: flex;
 }
 
-.left-nav-button { 
+.left-nav-button {
   padding: 10px;
   margin: 10px;
   background-color: var(--main-theme-orange);
@@ -117,10 +117,11 @@ button {
 }
 
 .float-nav-button {
+  padding: 20px;
   float: left;
   margin: 10px;
   background-color: var(--main-theme-orange);
-  height: 100px;
+  height: 90px;
   width: 300px;
   text-align: center;
 }
