@@ -9,13 +9,6 @@ import { Preface } from './pages/Preface';
 import { Directions } from './pages/Directions';
 import { MainNav } from './pages/MainNav/MainNav';
 import { Production } from './pages/production/Production';
-import { AgroInputSupplyAndService } from './pages/production/AgroInputSupplyAndService';
-import { ProducerFarmerOragnizationDevelopment } from './pages/production/ProducerFarmerOragnizationDevelopment';
-import { FarmAndHouseholdTrainingOnAgriculture } from './pages/production/farmAndHouseholdTraining/FarmAndHouseholdTrainingOnAgriculture';
-import { AccessToInputsAndServices } from './pages/production/farmAndHouseholdTraining/AccessToInputsAndServices';
-import { TrainingOnGoodPractices } from './pages/production/farmAndHouseholdTraining/TrainingOnGoodPractices';
-import { TrainingOnHouseholdLevelProcessing } from './pages/production/farmAndHouseholdTraining/TrainingOnHouseholdLevelProcessing';
-import { ValueChainSelection } from './pages/production/valueChainSelection/ValueChainSelection';
 import { InterventionTemplate } from './components/InterventionTemplate';
 import { DrillDownTemplate } from './components/DrillDownTemplate';
 import { ActivityPageTemplate } from './pages/ActivityPageTemplate';
@@ -53,20 +46,7 @@ ReactDOM.render(
 
         {/* Interventions */}
         <Route path='interventions/:interventionId' element={<InterventionTemplate />} />
-        {/* <Route path='increaseAccessToSafeStorage' element={<IncreaseAccessToSafeStorage />} /> */}
 
-        <Route path='producerFarmerOragnizationDevelopment' element={<ProducerFarmerOragnizationDevelopment />}>
-          <Route path='drillDown' element={<DrillDownTemplate />} />
-        </Route>
-        {/* Interventions */}
-        {/* <Route path='integrateNutritionMessaging' element={<IntegrateNutritionMessaging />} /> */}
-
-        <Route path='farmAndHouseholdTraining' element={<FarmAndHouseholdTrainingOnAgriculture />}>
-          <Route path='accessToInputsAndServices' element={<AccessToInputsAndServices />} />
-          <Route path='trainingOnGoodPractices' element={<TrainingOnGoodPractices />} />
-          <Route path='trainingOnHouseholdLevelProcessing' element={<TrainingOnHouseholdLevelProcessing />} />
-        </Route>
-        <Route path='valueChainSelection' element={<ValueChainSelection />} />
         {/* Catch all other paths and display placeholder page */}
         <Route path="*" element={<NoMatch />} />
       </Routes>

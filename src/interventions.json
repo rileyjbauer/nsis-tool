@@ -7,7 +7,11 @@
       "operationalizing": "To implement this nutrition intervention, implementers should first assess what a typical diet consists of, determining the nutrient gaps in local diets. To do so, the implementer can consider implementing a diet quality survey, such as Minimum Dietary Diversity for Women (MDD-W) or Household Dietary Diversity Score (HDDS). Alternatively, the implementer can collaborate with the Ministry of Public Health, Ministry of Agriculture, Livestock, and/or Fisheries, or other programming working in nutrition-sensitive agriculture or food systems activities to utilize already collected data to determine which foods groups are largely missing from diets and where nutrient gaps exist. Note: the implementer can use the survey tools, referenced below, as a resource to understand what food groups and foods within food groups make up a nutritious diet. After determining which food groups are areas of improvement, the implementer can consider which commodities that if produced, could help fill gaps in the missing food groups. These commodities can be considered as focus commodities/value chains for the program to increase productivity of, thereby increasing local availability, accessibility, and affordability of a nutrient-rich food.",
       "stepsForOperationalizing": [],
       "relatedInterventionIds": [],
-      "foodEnvironmentDomainsAffected": []
+      "foodEnvironmentDomainsAffected": [
+        "Availability",
+        "Accessibility",
+        "Affordability"
+      ]
     },
     {
       "id": 2,

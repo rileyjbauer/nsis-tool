@@ -14,7 +14,6 @@ export interface ActivityTemplateProps {
   activities: Activity[];
   pageTitle: string;
   navBackwardPath: string;
-  urlPath: string;
 }
 
 function getURL(thisActivityKey: string, activity: Activity): string {

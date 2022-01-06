@@ -10,6 +10,7 @@ export const Activities = {
   AGRO_INPUT_SUPPLY: 'agro_input_supply',
   PRODUCER_FARMER_ORGANIZATION_DEVELOPMENT: 'producer_farmer_organization_development',
   FARM_AND_HOUSEHOLD_TRAINING: 'farm_and_household_training',
+  VALUE_CHAIN_SELECTION: 'value_chain_selection',
 }
 
 export const PRODUCTION_PAGE_MAP: { [key: string]: ActivityTemplateProps } = {
@@ -26,7 +27,6 @@ export const PRODUCTION_PAGE_MAP: { [key: string]: ActivityTemplateProps } = {
     ],
     pageTitle: 'Agro-Input Supply and Service Delivery',
     navBackwardPath: 'production',
-    urlPath: 'agroInputSupplyAndService'
   },
   [Activities.PRODUCER_FARMER_ORGANIZATION_DEVELOPMENT]: {
     activities: [
@@ -53,7 +53,6 @@ export const PRODUCTION_PAGE_MAP: { [key: string]: ActivityTemplateProps } = {
     ],
     pageTitle: 'Producer/Farmer Organization Development',
     navBackwardPath: 'production',
-    urlPath: 'producerFarmerOragnizationDevelopment'
   },
   [Activities.FARM_AND_HOUSEHOLD_TRAINING]: {
     activities: [
@@ -72,7 +71,16 @@ export const PRODUCTION_PAGE_MAP: { [key: string]: ActivityTemplateProps } = {
     ],
     pageTitle: 'Farm/Household Training on Agriculture',
     navBackwardPath: 'production',
-    urlPath: 'farmAndHouseholdTraining'
+  },
+  [Activities.VALUE_CHAIN_SELECTION]: {
+    activities: [
+      {
+        activityTitle: 'Value Chain Selection',
+        interventionIds: [1]
+      },
+    ],
+    pageTitle: 'Value Chain Selection',
+    navBackwardPath: 'production',
   }
 }
 
@@ -85,70 +93,17 @@ export function Production() {
         Select the box below that reflects the focus of your work in agriculture/livestock production:
       </p>
       <div>
-        <div className='navRow'>
+        <div>
           {Object.values(Activities).map((v, i) =>
             <Link key={i} to={`/productionActivity?${PRODUCTION_ACTIVITY_PARAM}=${v}`}>
               <div className='float-nav-button'>
                 <p>{PRODUCTION_PAGE_MAP[v].pageTitle}</p>
               </div>
             </Link>)}
-          {/* <Link to={`/productionActivity?${PRODUCTION_ACTIVITY_PARAM}=${Activities.AGRO_INPUT_SUPPLY}`}>
-            <div className='float-nav-button'>
-              <p>{PRODUCTION_PAGE_MAP[Activities.AGRO_INPUT_SUPPLY].pageTitle}</p>
-            </div>
-          </Link>
-          <Link to='/farmAndHouseholdTraining'>
-            <div className='float-nav-button'>
-              <p>Farm/Household Training on Agriculture</p>
-            </div>
-          </Link> */}
         </div>
-        {/* <div>
-          <Link to='/producerFarmerOragnizationDevelopment'>
-            <div className='float-nav-button'>
-              <p>Producer/Farmer Organization Development</p>
-            </div>
-          </Link>
-          <Link to='/valueChainSelection'>
-            <div className='float-nav-button'>
-              <p>Value Chain Selection</p>
-            </div>
-          </Link>
-        </div> */}
       </div>
     </div>;
-  // const content =
-  //   <div>
-  //     <p>
-  //       Select the box below that reflects the focus of your work in agriculture/livestock production:
-  //     </p>
-  //     <div>
-  //       <div className='navRow'>
-  //         <Link to='/agroInputSupplyAndService'>
-  //           <div className='float-nav-button'>
-  //             <p>Agro-Input Supply and Service Delivery</p>
-  //           </div>
-  //         </Link>
-  //         <Link to='/farmAndHouseholdTraining'>
-  //           <div className='float-nav-button'>
-  //             <p>Farm/Household Training on Agriculture</p>
-  //           </div>
-  //         </Link>
-  //       </div>
-  //       <div>
-  //         <Link to='/producerFarmerOragnizationDevelopment'>
-  //           <div className='float-nav-button'>
-  //             <p>Producer/Farmer Organization Development</p>
-  //           </div>
-  //         </Link>
-  //         <Link to='/valueChainSelection'>
-  //           <div className='float-nav-button'>
-  //             <p>Value Chain Selection</p>
-  //           </div>
-  //         </Link>
-  //       </div>
-  //     </div>
-  //   </div>;
+
 
   return (
     <BasicPage
