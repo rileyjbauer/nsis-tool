@@ -16,7 +16,7 @@ export function MainNav() {
           <Link to="/production"><img src={Production} className="navButtonImg" /></Link>
         </div>
         <div className="navButton">
-          <img src={FoodTradeAndMarketing} className="navButtonImg" />
+          <Link to="/foodTradeAndMarketing"><img src={FoodTradeAndMarketing} className="navButtonImg" /></Link>
         </div>
         <div className="navButton">
           <img src={FoodProcessing} className="navButtonImg" />

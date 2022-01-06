@@ -338,7 +338,11 @@
         13,
         14
       ],
-      "foodEnvironmentDomainsAffected": []
+      "foodEnvironmentDomainsAffected": [
+        "Food Safety",
+        "Availability",
+        "Accessibility"
+      ]
     },
     {
       "id": 24,
@@ -350,7 +354,11 @@
         3,
         25
       ],
-      "foodEnvironmentDomainsAffected": []
+      "foodEnvironmentDomainsAffected": [
+        "Food Safety",
+        "Availability",
+        "Accessibility"
+      ]
     },
     {
       "id": 25,
@@ -362,7 +370,9 @@
         3,
         24
       ],
-      "foodEnvironmentDomainsAffected": []
+      "foodEnvironmentDomainsAffected": [
+        "Food Safety"
+      ]
     },
     {
       "id": 26,
@@ -382,7 +392,11 @@
       "relatedInterventionIds": [
         49
       ],
-      "foodEnvironmentDomainsAffected": []
+      "foodEnvironmentDomainsAffected": [
+        "Availability",
+        "Price",
+        "Accessibility"
+      ]
     },
     {
       "id": 28,
@@ -393,7 +407,11 @@
       "relatedInterventionIds": [
         49
       ],
-      "foodEnvironmentDomainsAffected": []
+      "foodEnvironmentDomainsAffected": [
+        "Availability",
+        "Price",
+        "Accessibility"
+      ]
     },
     {
       "id": 29,
@@ -404,7 +422,11 @@
       "relatedInterventionIds": [
         49
       ],
-      "foodEnvironmentDomainsAffected": []
+      "foodEnvironmentDomainsAffected": [
+        "Availability",
+        "Price",
+        "Accessibility"
+      ]
     },
     {
       "id": 30,
@@ -425,7 +447,9 @@
         48,
         58
       ],
-      "foodEnvironmentDomainsAffected": []
+      "foodEnvironmentDomainsAffected": [
+        "Food Safety"
+      ]
     },
     {
       "id": 32,
@@ -437,7 +461,9 @@
         48,
         58
       ],
-      "foodEnvironmentDomainsAffected": []
+      "foodEnvironmentDomainsAffected": [
+        "Food Safety"
+      ]
     },
     {
       "id": 33,
@@ -613,7 +639,11 @@
         10,
         52
       ],
-      "foodEnvironmentDomainsAffected": []
+      "foodEnvironmentDomainsAffected": [
+        "Availability",
+        "Price",
+        "Accessibility"
+      ]
     },
     {
       "id": 48,

@@ -8,10 +8,11 @@ import { Welcome } from './pages/Welcome';
 import { Preface } from './pages/Preface';
 import { Directions } from './pages/Directions';
 import { MainNav } from './pages/MainNav/MainNav';
-import { Production } from './pages/production/Production';
+import { Production } from './pages/sectors/Production';
 import { InterventionTemplate } from './components/InterventionTemplate';
 import { DrillDownTemplate } from './components/DrillDownTemplate';
 import { ActivityPageTemplate } from './pages/ActivityPageTemplate';
+import { FoodTradeAndMarketing } from './pages/sectors/FoodTradeAndMarketing';
 
 function NoMatch() {
   return (
@@ -33,14 +34,16 @@ ReactDOM.render(
         <Route path='preface' element={<Preface />} />
         <Route path='directions' element={<Directions />} />
         <Route path='mainNav' element={<MainNav />} />
+
         <Route path='production' element={<Production />} >
           {/* <Route path='productionActivity' element={<ActivityPageTemplate />}>
             <Route path='drillDown' element={<DrillDownTemplate />} />
           </Route> */}
         </Route>
+        <Route path='foodTradeAndMarketing' element={<FoodTradeAndMarketing />} />
 
         {/* TODO: This should be nested under 'production route, but for some reason that isn't working */}
-        <Route path='productionActivity' element={<ActivityPageTemplate />}>
+        <Route path='activity' element={<ActivityPageTemplate />}>
           <Route path='drillDown' element={<DrillDownTemplate />} />
         </Route>
 

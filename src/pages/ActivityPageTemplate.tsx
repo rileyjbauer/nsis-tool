@@ -3,7 +3,10 @@ import { Link, Outlet, useSearchParams } from 'react-router-dom';
 import { makeQueryString } from '../components/DrillDownTemplate';
 import { useState } from 'react';
 import { ErrorElement } from '../components/ErrorElement';
-import { PRODUCTION_ACTIVITY_PARAM, PRODUCTION_PAGE_MAP } from './production/Production';
+import { SECTOR_MAP } from './Maps';
+
+export const ACTIVITY_PARAM = 'activity';
+export const SECTOR_PARAM = 'sector';
 
 export type Activity = {
   activityTitle: string;
@@ -16,30 +19,36 @@ export interface ActivityTemplateProps {
   navBackwardPath: string;
 }
 
-function getURL(thisActivityKey: string, activity: Activity): string {
+function getURL(thisSectorKey: string, thisActivityKey: string, activity: Activity): string {
   let params = makeQueryString(activity);
-  params.append(PRODUCTION_ACTIVITY_PARAM, thisActivityKey);
+  params.append(SECTOR_PARAM, thisSectorKey);
+  params.append(ACTIVITY_PARAM, thisActivityKey);
   return 'drillDown?' + params.toString();
 }
 
 export function ActivityPageTemplate() {
   let [navButtonSelected, setNavButtonSelected] = useState(-1);
   const [searchParams, setSearchParams] = useSearchParams();
-  const thisActivityKey = searchParams.get(PRODUCTION_ACTIVITY_PARAM);
 
-  if (!thisActivityKey) {
-    return <ErrorElement message={`URL missing search param: ${PRODUCTION_ACTIVITY_PARAM}`} />
+  const thisSectorKey = searchParams.get(SECTOR_PARAM);
+  if (!thisSectorKey) {
+    return <ErrorElement message={`URL missing search param: ${SECTOR_PARAM}`} />
   }
 
-  const thisActivity = PRODUCTION_PAGE_MAP[thisActivityKey];
-  console.log(thisActivity);
+  const thisActivityKey = searchParams.get(ACTIVITY_PARAM);
+  if (!thisActivityKey) {
+    return <ErrorElement message={`URL missing search param: ${ACTIVITY_PARAM}`} />
+  }
+
+  const thisSector = SECTOR_MAP[thisSectorKey];
+  const thisActivity = thisSector[thisActivityKey];
 
   const content =
     <div style={{ display: 'flex' }}>
       <div>
         <p className='padding-10' >Select the activity you are undertaking:</p>
         {thisActivity.activities.map((activity, i) => (
-          <Link key={i} to={getURL(thisActivityKey, activity)} className='non-underlined-link' onClick={() => setNavButtonSelected(i)}>
+          <Link key={i} to={getURL(thisSectorKey, thisActivityKey, activity)} className='non-underlined-link' onClick={() => setNavButtonSelected(i)}>
             <div className={`left-nav-button ${navButtonSelected === i ? ' left-nav-button-selected' : ''}`}>
               <p>{activity.activityTitle}</p>
             </div>
