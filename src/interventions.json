@@ -474,7 +474,12 @@
       "relatedInterventionIds": [
         22
       ],
-      "foodEnvironmentDomainsAffected": []
+      "foodEnvironmentDomainsAffected": [
+        "Availability",
+        "Desirability",
+        "Food Safety",
+        "Convenience"
+      ]
     },
     {
       "id": 34,
@@ -488,7 +493,11 @@
         38,
         39
       ],
-      "foodEnvironmentDomainsAffected": []
+      "foodEnvironmentDomainsAffected": [
+        "Availability",
+        "Desirability",
+        "Food Safety"
+      ]
     },
     {
       "id": 35,
@@ -500,7 +509,9 @@
         34,
         36
       ],
-      "foodEnvironmentDomainsAffected": []
+      "foodEnvironmentDomainsAffected": [
+        "Availability"
+      ]
     },
     {
       "id": 36,
@@ -511,7 +522,10 @@
       "relatedInterventionIds": [
         35
       ],
-      "foodEnvironmentDomainsAffected": []
+      "foodEnvironmentDomainsAffected": [
+        "Availability",
+        "Desirability"
+      ]
     },
     {
       "id": 37,
@@ -522,7 +536,10 @@
       "relatedInterventionIds": [
         34
       ],
-      "foodEnvironmentDomainsAffected": []
+      "foodEnvironmentDomainsAffected": [
+        "Availability",
+        "Safety"
+      ]
     },
     {
       "id": 38,
@@ -533,7 +550,9 @@
       "relatedInterventionIds": [
         34
       ],
-      "foodEnvironmentDomainsAffected": []
+      "foodEnvironmentDomainsAffected": [
+        "Convenience"
+      ]
     },
     {
       "id": 39,
@@ -544,7 +563,9 @@
       "relatedInterventionIds": [
         34
       ],
-      "foodEnvironmentDomainsAffected": []
+      "foodEnvironmentDomainsAffected": [
+        "Desirability"
+      ]
     },
     {
       "id": 40,
@@ -568,7 +589,9 @@
         57,
         58
       ],
-      "foodEnvironmentDomainsAffected": []
+      "foodEnvironmentDomainsAffected": [
+        "Food Safety"
+      ]
     },
     {
       "id": 42,
@@ -583,7 +606,9 @@
         57,
         58
       ],
-      "foodEnvironmentDomainsAffected": []
+      "foodEnvironmentDomainsAffected": [
+        "Food Safety"
+      ]
     },
     {
       "id": 43,
@@ -595,7 +620,10 @@
         44,
         55
       ],
-      "foodEnvironmentDomainsAffected": []
+      "foodEnvironmentDomainsAffected": [
+        "Food Safety",
+        "Desirability"
+      ]
     },
     {
       "id": 44,
@@ -607,7 +635,9 @@
         43,
         55
       ],
-      "foodEnvironmentDomainsAffected": []
+      "foodEnvironmentDomainsAffected": [
+        "Food Safety"
+      ]
     },
     {
       "id": 45,
@@ -618,7 +648,10 @@
       "relatedInterventionIds": [
         54
       ],
-      "foodEnvironmentDomainsAffected": []
+      "foodEnvironmentDomainsAffected": [
+        "Price",
+        "Affordability"
+      ]
     },
     {
       "id": 46,
@@ -658,7 +691,9 @@
       "relatedInterventionIds": [
         49
       ],
-      "foodEnvironmentDomainsAffected": []
+      "foodEnvironmentDomainsAffected": [
+        "Desirability"
+      ]
     },
     {
       "id": 49,

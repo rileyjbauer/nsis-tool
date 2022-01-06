@@ -82,6 +82,8 @@ export const PRODUCTION_PAGE_MAP: { [key: string]: ActivityTemplateProps } = {
   }
 }
 
+// ---------------------------------------------------------------------
+
 // Typescript doesn't reverse-map string enums, so we're going with this instead for now.
 // Probably it would be better to use strings in the future with our own reverse-mapping
 // to verify whether or not a string is actually in this enum.
@@ -137,6 +139,66 @@ export const FOOD_TRADE_PAGE_MAP: { [key: string]: ActivityTemplateProps } = {
   },
 }
 
+// ---------------------------------------------------------------------
+
+export const FOOD_PROCESSING_ACTIVITIES = {
+  FARM_AND_HOUSEHOLD_TRAINING_ON_FOOD_PROCESSING: 'farm_and_household_training_on_food_processing',
+  COMMERCIAL_TRAINING_ON_FOOD_PROCESSING: 'commercial_training_on_food_processing',
+  CONSUMER_MARKETING_BY_FOOD_PROCESSORS: 'consumer_marketing_by_food_processors',
+  MARKETING_AND_DISTRIBUTION_OF_COMMODITIES: 'marketing_and_distribution_of_commodities'
+}
+
+export const FOOD_PROCESSING_PAGE_MAP: { [key: string]: ActivityTemplateProps } = {
+  [FOOD_PROCESSING_ACTIVITIES.FARM_AND_HOUSEHOLD_TRAINING_ON_FOOD_PROCESSING]: {
+    activities: [
+      {
+        activityTitle: 'Training On Household-level Processing',
+        interventionIds: [33]
+      },
+    ],
+    pageTitle: 'Farm/Household Training On Food Processing',
+    navBackwardPath: 'foodProcessing',
+  },
+  [FOOD_PROCESSING_ACTIVITIES.COMMERCIAL_TRAINING_ON_FOOD_PROCESSING]: {
+    activities: [
+      {
+        activityTitle: 'Diversification Of Processors\' Products',
+        interventionIds: [34, 35, 36, 37, 38, 39]
+      },
+      {
+        activityTitle: 'Food Safety Enhanced In Food Processing',
+        interventionIds: [41, 42]
+      },
+      {
+        activityTitle: 'Product Packaging Enhanced',
+        interventionIds: [43, 44, 45]
+      },
+    ],
+    pageTitle: 'Commercial Training On Food Processing',
+    navBackwardPath: 'foodProcessing',
+  },
+  [FOOD_PROCESSING_ACTIVITIES.CONSUMER_MARKETING_BY_FOOD_PROCESSORS]: {
+    activities: [
+      {
+        activityTitle: 'Consumer Marketing Capacities Of Processors Developed',
+        interventionIds: [48]
+      },
+    ],
+    pageTitle: 'Consumer Marketing By Food Processors',
+    navBackwardPath: 'foodProcessing',
+  },
+  [FOOD_PROCESSING_ACTIVITIES.MARKETING_AND_DISTRIBUTION_OF_COMMODITIES]: {
+    activities: [
+      {
+        activityTitle: 'Food Processors And Retailers\' Marketing Strategies Developed',
+        interventionIds: [29]
+      },
+    ],
+    pageTitle: 'Marketing/Distribution Of Commodities By Food Processors',
+    navBackwardPath: 'foodProcessing',
+  },
+}
+
 export const SECTORS = {
   PRODUCTION: 'production',
   FOOD_TRADE_AND_MARKETING: 'food_trade_and_marketing',
@@ -149,4 +211,5 @@ export const SECTORS = {
 export const SECTOR_MAP: { [key: string]: { [key: string]: ActivityTemplateProps } } = {
   [SECTORS.PRODUCTION]: PRODUCTION_PAGE_MAP,
   [SECTORS.FOOD_TRADE_AND_MARKETING]: FOOD_TRADE_PAGE_MAP,
+  [SECTORS.FOOD_PROCESSING]: FOOD_PROCESSING_PAGE_MAP,
 };

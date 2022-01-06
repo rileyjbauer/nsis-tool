@@ -13,6 +13,7 @@ import { InterventionTemplate } from './components/InterventionTemplate';
 import { DrillDownTemplate } from './components/DrillDownTemplate';
 import { ActivityPageTemplate } from './pages/ActivityPageTemplate';
 import { FoodTradeAndMarketing } from './pages/sectors/FoodTradeAndMarketing';
+import { FoodProcessing } from './pages/sectors/FoodProcessing';
 
 function NoMatch() {
   return (
@@ -41,6 +42,7 @@ ReactDOM.render(
           </Route> */}
         </Route>
         <Route path='foodTradeAndMarketing' element={<FoodTradeAndMarketing />} />
+        <Route path='foodProcessing' element={<FoodProcessing />} />
 
         {/* TODO: This should be nested under 'production route, but for some reason that isn't working */}
         <Route path='activity' element={<ActivityPageTemplate />}>

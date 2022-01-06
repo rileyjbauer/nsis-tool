@@ -19,7 +19,7 @@ export function MainNav() {
           <Link to="/foodTradeAndMarketing"><img src={FoodTradeAndMarketing} className="navButtonImg" /></Link>
         </div>
         <div className="navButton">
-          <img src={FoodProcessing} className="navButtonImg" />
+          <Link to="/foodProcessing"> <img src={FoodProcessing} className="navButtonImg" /></Link>
         </div>
       </div>
       <div className="navRow">
