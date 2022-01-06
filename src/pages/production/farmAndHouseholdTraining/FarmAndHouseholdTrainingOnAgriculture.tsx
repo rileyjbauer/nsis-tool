@@ -35,7 +35,7 @@ export function FarmAndHouseholdTrainingOnAgriculture() {
 
   return (
     <BasicPage
-      title="Farm/ Household Training on Agriculture"
+      title="Farm/Household Training on Agriculture"
       content={content}
       navBackward="/production"
     />

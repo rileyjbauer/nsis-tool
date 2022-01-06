@@ -11,13 +11,14 @@ import { MainNav } from './pages/MainNav/MainNav';
 import { Production } from './pages/production/Production';
 import { AgroInputSupplyAndService } from './pages/production/AgroInputSupplyAndService';
 import { ProducerFarmerOragnizationDevelopment } from './pages/production/ProducerFarmerOragnizationDevelopment';
-import { FarmAndHouseholdTrainingOnAgriculture } from './pages/production/farmAndHouseholdTraining/AgroInputSupplyAndService';
+import { FarmAndHouseholdTrainingOnAgriculture } from './pages/production/farmAndHouseholdTraining/FarmAndHouseholdTrainingOnAgriculture';
 import { AccessToInputsAndServices } from './pages/production/farmAndHouseholdTraining/AccessToInputsAndServices';
 import { TrainingOnGoodPractices } from './pages/production/farmAndHouseholdTraining/TrainingOnGoodPractices';
 import { TrainingOnHouseholdLevelProcessing } from './pages/production/farmAndHouseholdTraining/TrainingOnHouseholdLevelProcessing';
 import { ValueChainSelection } from './pages/production/valueChainSelection/ValueChainSelection';
 import { InterventionTemplate } from './components/InterventionTemplate';
 import { DrillDownTemplate } from './components/DrillDownTemplate';
+import { ActivityPageTemplate } from './pages/ActivityPageTemplate';
 
 function NoMatch() {
   return (
@@ -39,10 +40,17 @@ ReactDOM.render(
         <Route path='preface' element={<Preface />} />
         <Route path='directions' element={<Directions />} />
         <Route path='mainNav' element={<MainNav />} />
-        <Route path='production' element={<Production />} />
-        <Route path='agroInputSupplyAndService' element={<AgroInputSupplyAndService />}>
+        <Route path='production' element={<Production />} >
+          {/* <Route path='productionActivity' element={<ActivityPageTemplate />}>
+            <Route path='drillDown' element={<DrillDownTemplate />} />
+          </Route> */}
+        </Route>
+
+        {/* TODO: This should be nested under 'production route, but for some reason that isn't working */}
+        <Route path='productionActivity' element={<ActivityPageTemplate />}>
           <Route path='drillDown' element={<DrillDownTemplate />} />
         </Route>
+
         {/* Interventions */}
         <Route path='interventions/:interventionId' element={<InterventionTemplate />} />
         {/* <Route path='increaseAccessToSafeStorage' element={<IncreaseAccessToSafeStorage />} /> */}

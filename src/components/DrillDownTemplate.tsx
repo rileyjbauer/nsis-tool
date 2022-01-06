@@ -1,5 +1,6 @@
 import { Link, useSearchParams } from "react-router-dom";
 import Interventions from '../interventions.json';
+import { Activity } from "../pages/ActivityPageTemplate";
 import { ErrorElement } from "./ErrorElement";
 
 const DRILL_DOWN_PARAMS = {
@@ -7,18 +8,14 @@ const DRILL_DOWN_PARAMS = {
   pageTitle: 'title'
 };
 
-export function getURL(ids: number[], title: string) {
-  return 'drillDown?' + makeQueryString(ids, title);
-}
-
-function makeQueryString(ids: number[], title: string): string {
+export function makeQueryString(activity: Activity): URLSearchParams {
   const params = new URLSearchParams();
-  ids.forEach((id) => {
+  activity.interventionIds.forEach((id) => {
     params.append(DRILL_DOWN_PARAMS.ids, String(id));
   });
 
-  params.append(DRILL_DOWN_PARAMS.pageTitle, title);
-  return params.toString();
+  params.append(DRILL_DOWN_PARAMS.pageTitle, activity.activityTitle);
+  return params;
 }
 
 export function DrillDownTemplate() {

@@ -1,6 +1,6 @@
 import { BasicPage } from '../../components/BasicPage';
 import { Link, Outlet } from 'react-router-dom';
-import { getURL } from '../../components/DrillDownTemplate';
+// import { getURL } from '../../components/DrillDownTemplate';
 import { useState } from 'react';
 
 
@@ -19,12 +19,12 @@ export function ProducerFarmerOragnizationDevelopment() {
     <div style={{ display: 'flex' }}>
       <div>
         <p className='padding-10' >Select the activity you are undertaking:</p>
-        <Link to={getURL([8, 9, 10], activities[0])} className='non-underlined-link' onClick={() => setNavButtonSelected(0)}>
+        {/* <Link to={getURL({ activityTitle: activities[0], interventionIds: [8, 9, 10] })} className='non-underlined-link' onClick={() => setNavButtonSelected(0)}>
           <div className={`left-nav-button ${navButtonSelected === 0 ? ' left-nav-button-selected' : ''}`}>
             <p>{activities[0]}</p>
           </div>
-        </Link>
-        <Link to={getURL([11, 12], activities[1])} className='non-underlined-link' onClick={() => setNavButtonSelected(1)}>
+        </Link> */}
+        {/* <Link to={getURL([11, 12], activities[1])} className='non-underlined-link' onClick={() => setNavButtonSelected(1)}>
           <div className={`left-nav-button ${navButtonSelected === 1 ? ' left-nav-button-selected' : ''}`}>
             <p>{activities[1]}</p>
           </div>
@@ -43,7 +43,7 @@ export function ProducerFarmerOragnizationDevelopment() {
           <div className={`left-nav-button ${navButtonSelected === 4 ? ' left-nav-button-selected' : ''}`}>
             <p>{activities[4]}</p>
           </div>
-        </Link>
+        </Link> */}
       </div>
       <div className='content-box'>
         <Outlet />
