@@ -199,6 +199,237 @@ export const FOOD_PROCESSING_PAGE_MAP: { [key: string]: ActivityTemplateProps } 
   },
 }
 
+// ---------------------------------------------------------------------
+
+export const FOOD_RETAILING_ACTIVITIES = {
+  LOCATION_OF_FOOD_RETAILING: 'location_of_food_retailing',
+  SOCIAL_MARKETING_BY_VENDORS: 'social_marketing_by_vendors',
+  PRODUCT_CHARACTERISTICS: 'product_characteristics',
+  GOOD_GOVERNANCE_AT_MARKETS: 'good_governance_at_markets'
+}
+
+export const FOOD_RETAILING_PAGE_MAP: { [key: string]: ActivityTemplateProps } = {
+  [FOOD_RETAILING_ACTIVITIES.LOCATION_OF_FOOD_RETAILING]: {
+    activities: [
+      {
+        activityTitle: 'Development Of New Retail Locations For Nutrient-rich Foods',
+        interventionIds: [49]
+      },
+      {
+        activityTitle: 'Local Market Infrastructure Development',
+        interventionIds: [50, 51]
+      },
+    ],
+    pageTitle: 'Location Of Food Retailing',
+    navBackwardPath: 'foodRetailing',
+  },
+  [FOOD_RETAILING_ACTIVITIES.SOCIAL_MARKETING_BY_VENDORS]: {
+    activities: [
+      {
+        activityTitle: 'Vendors\' Consumer Marketing Capacities Developed',
+        interventionIds: [52]
+      },
+    ],
+    pageTitle: 'Social Marketing By Vendors',
+    navBackwardPath: 'foodRetailing',
+  },
+  [FOOD_RETAILING_ACTIVITIES.PRODUCT_CHARACTERISTICS]: {
+    activities: [
+      {
+        activityTitle: 'Product Sizes Optimized',
+        interventionIds: [54, 55]
+      },
+      {
+        activityTitle: 'Food Safety, Sanitation, And Hygiene Considerations Integrated In Food Retailing',
+        interventionIds: [56, 57, 58]
+      },
+    ],
+    pageTitle: 'Product Characteristics',
+    navBackwardPath: 'foodRetailing',
+  },
+  [FOOD_RETAILING_ACTIVITIES.GOOD_GOVERNANCE_AT_MARKETS]: {
+    activities: [
+      {
+        activityTitle: 'Food Safety, Sanitation, And Hygiene Considerations Integrated In Food Retailing',
+        interventionIds: [59, 60]
+      },
+      {
+        activityTitle: 'Consumer Marketing At Markets Enhanced',
+        interventionIds: [62]
+      },
+      {
+        activityTitle: 'Improvements In Policies And Processes',
+        interventionIds: [63]
+      },
+    ],
+    pageTitle: 'Good Governance At Markets',
+    navBackwardPath: 'foodRetailing',
+  },
+}
+
+// ---------------------------------------------------------------------
+
+export const CONSUMER_DEMAND_ACTIVITIES = {
+  INTEGRATION_OF_NUTRITION_MESSAGING: 'integration_of_nutrition_messaging',
+  ENGAGEMENT_OF_INFLUENCERS_TO_IMPROVE_CONSUMER_BEHAVIORS: 'engagement_of_influencers_to_improve_consumer_behaviors',
+  STANDALONE_TRAININGS_TO_CONSUMERS: 'standalone_trainings_to_consumers',
+  PRIVATE_SECTOR_MARKETING_FOR_NUTRITION: 'private_sector_marketing_for_nutrition'
+}
+
+export const CONSUMER_DEMAND_PAGE_MAP: { [key: string]: ActivityTemplateProps } = {
+  [CONSUMER_DEMAND_ACTIVITIES.INTEGRATION_OF_NUTRITION_MESSAGING]: {
+    activities: [
+      {
+        activityTitle: 'Private Sector Engagement For Nutrition',
+        interventionIds: [64]
+      },
+      {
+        activityTitle: 'Integration Into Project-implemented Trainings And Activities',
+        interventionIds: [65]
+      },
+      {
+        activityTitle: 'Integration Into ICT And Other Communication Activities',
+        interventionIds: [66]
+      },
+    ],
+    pageTitle: 'Integration Of Nutrition Messaging Into Existing Program Activities',
+    navBackwardPath: 'consumerDemand',
+  },
+  [CONSUMER_DEMAND_ACTIVITIES.ENGAGEMENT_OF_INFLUENCERS_TO_IMPROVE_CONSUMER_BEHAVIORS]: {
+    activities: [
+      {
+        activityTitle: 'Integration Into Community Health Worker Services',
+        interventionIds: [69]
+      },
+      {
+        activityTitle: 'Integration Into Religious Leader Services',
+        interventionIds: [70]
+      },
+      {
+        activityTitle: 'Cooking Demonstrations By Community Influencers',
+        interventionIds: [71]
+      },
+    ],
+    pageTitle: 'Engagement Of Community Influencers To Improve Consumer Behaviors',
+    navBackwardPath: 'consumerDemand',
+  },
+  [CONSUMER_DEMAND_ACTIVITIES.STANDALONE_TRAININGS_TO_CONSUMERS]: {
+    activities: [
+      {
+        activityTitle: 'Product Sizes Optimized',
+        interventionIds: [67]
+      },
+      {
+        activityTitle: 'Household Budgeting Training',
+        interventionIds: [19]
+      },
+    ],
+    pageTitle: 'Standalone Trainings To Consumers/Program Participants',
+    navBackwardPath: 'consumerDemand',
+  },
+  [CONSUMER_DEMAND_ACTIVITIES.PRIVATE_SECTOR_MARKETING_FOR_NUTRITION]: {
+    activities: [
+      {
+        activityTitle: 'Integrate Nutrition Messaging In Input Service Delivery',
+        interventionIds: [5]
+      },
+      {
+        activityTitle: 'Integrate Nutrition Messaging In Output Market Development Activities',
+        interventionIds: [52]
+      },
+    ],
+    pageTitle: 'Private Sector Marketing For Nutrition',
+    navBackwardPath: 'consumerDemand',
+  },
+}
+
+// ---------------------------------------------------------------------
+
+export const ENABLING_ENVIRONMENT_ACTIVITIES = {
+  GOVERNANCE_NUTRITION_SENSITIVE_POLICY_DEVELOPMENT: 'governance_nutrition_sensitive_policy_development',
+  GOVERNANCE_PUBLIC_SECTOR_INVOLVEMENT_IN_FOOD_SYSTEM: 'governance_public_sector_involvement_in_food_system',
+  BUSINESS_DEVELOPMENT_SERVICES: 'business_development_services',
+  ACCESS_TO_FINANCE: 'access_to_finance',
+  COMMUNITY_MOBILIZATION: 'community_mobilization'
+}
+
+export const ENABLING_ENVIRONMENT_PAGE_MAP: { [key: string]: ActivityTemplateProps } = {
+  [ENABLING_ENVIRONMENT_ACTIVITIES.GOVERNANCE_NUTRITION_SENSITIVE_POLICY_DEVELOPMENT]: {
+    activities: [
+      {
+        activityTitle: 'Government Budgeting For Nutrition',
+        interventionIds: [74]
+      },
+      {
+        activityTitle: 'Government Planning For Nutrition Integration',
+        interventionIds: [75]
+      },
+      {
+        activityTitle: 'Agricultural Policy Supports Production Of Nutrient-rich Foods',
+        interventionIds: [76]
+      },
+      {
+        activityTitle: 'Policies Promote Food Safety Along The Food Supply Chain',
+        interventionIds: [77]
+      },
+      {
+        activityTitle: 'Other Food Systems Policy Support Market Actors To Transport, Process, And Sell Nutritious Foods',
+        interventionIds: [78]
+      },
+    ],
+    pageTitle: 'Governance - Nutrition-sensitive Policy/Framework Development And/Or Implementation',
+    navBackwardPath: 'enablingEnvironment',
+  },
+  [ENABLING_ENVIRONMENT_ACTIVITIES.GOVERNANCE_PUBLIC_SECTOR_INVOLVEMENT_IN_FOOD_SYSTEM]: {
+    activities: [
+      {
+        activityTitle: 'Local Agriculture, Livestock, And/Or Fisheries Officers Or Extension Agents Trained On Nutrition-sensitive Agriculture',
+        interventionIds: [79, 80, 81]
+      },
+      {
+        activityTitle: 'Public-private Sector Coordination Throughout The Food System',
+        interventionIds: [82, 83]
+      },
+      {
+        activityTitle: 'Public And Private School Meals Provide Nutritious Foods',
+        interventionIds: [85]
+      },
+    ],
+    pageTitle: 'Governance - Public Sector Involvement In The Food System',
+    navBackwardPath: 'enablingEnvironment',
+  },
+  [ENABLING_ENVIRONMENT_ACTIVITIES.BUSINESS_DEVELOPMENT_SERVICES]: {
+    activities: [
+      {
+        activityTitle: 'Food System Actors\' Business Capacities Improved',
+        interventionIds: [86]
+      },
+    ],
+    pageTitle: 'Business Development Services',
+    navBackwardPath: 'enablingEnvironment',
+  },
+  [ENABLING_ENVIRONMENT_ACTIVITIES.ACCESS_TO_FINANCE]: {
+    activities: [
+      {
+        activityTitle: 'Food System Actors\' Access Financial Services',
+        interventionIds: [87, 88]
+      },
+    ],
+    pageTitle: 'Access To Finance',
+    navBackwardPath: 'enablingEnvironment',
+  },
+  [ENABLING_ENVIRONMENT_ACTIVITIES.COMMUNITY_MOBILIZATION]: {
+    activities: [
+      {
+        activityTitle: 'Enhanced Community Mobilization For A Nutritious Food System',
+        interventionIds: [89]
+      },
+    ],
+    pageTitle: 'Community Mobilization',
+    navBackwardPath: 'enablingEnvironment',
+  },
+}
+
 export const SECTORS = {
   PRODUCTION: 'production',
   FOOD_TRADE_AND_MARKETING: 'food_trade_and_marketing',
@@ -212,4 +443,7 @@ export const SECTOR_MAP: { [key: string]: { [key: string]: ActivityTemplateProps
   [SECTORS.PRODUCTION]: PRODUCTION_PAGE_MAP,
   [SECTORS.FOOD_TRADE_AND_MARKETING]: FOOD_TRADE_PAGE_MAP,
   [SECTORS.FOOD_PROCESSING]: FOOD_PROCESSING_PAGE_MAP,
+  [SECTORS.FOOD_RETAILING]: FOOD_RETAILING_PAGE_MAP,
+  [SECTORS.CONSUMER_DEMAND]: CONSUMER_DEMAND_PAGE_MAP,
+  [SECTORS.ENABLING_ENVIRONMENT]: ENABLING_ENVIRONMENT_PAGE_MAP,
 };

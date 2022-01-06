@@ -13,24 +13,24 @@ export function MainNav() {
     <div>
       <div className="navRow">
         <div className="navButton">
-          <Link to="/production"><img src={Production} className="navButtonImg" /></Link>
+          <Link to="/production">Production<img src={Production} className="navButtonImg" /></Link>
         </div>
         <div className="navButton">
-          <Link to="/foodTradeAndMarketing"><img src={FoodTradeAndMarketing} className="navButtonImg" /></Link>
+          <Link to="/foodTradeAndMarketing">Food Trade and Marketing<img src={FoodTradeAndMarketing} className="navButtonImg" /></Link>
         </div>
         <div className="navButton">
-          <Link to="/foodProcessing"> <img src={FoodProcessing} className="navButtonImg" /></Link>
+          <Link to="/foodProcessing">Food Processing<img src={FoodProcessing} className="navButtonImg" /></Link>
         </div>
       </div>
       <div className="navRow">
         <div className="navButton">
-          <img src={FoodRetailing} className="navButtonImg" />
+          <Link to="/foodRetailing">Food Retailing<img src={FoodRetailing} className="navButtonImg" /></Link>
         </div>
         <div className="navButton">
-          <img src={ConsumerDemand} className="navButtonImg" />
+          <Link to="/consumerDemand">Consumer Demand<img src={ConsumerDemand} className="navButtonImg" /></Link>
         </div>
         <div className="navButton">
-          <img src={EnablingEnvironment} className="navButtonImg" />
+          <Link to="/enablingEnvironment">Enabling Environment<img src={EnablingEnvironment} className="navButtonImg" /></Link>
         </div>
       </div>
     </div>;
