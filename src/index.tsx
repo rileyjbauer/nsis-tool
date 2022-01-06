@@ -7,16 +7,17 @@ import { BrowserRouter, Link, Route, Routes } from 'react-router-dom';
 import { Welcome } from './pages/Welcome';
 import { Preface } from './pages/Preface';
 import { Directions } from './pages/Directions';
-import { MainNav } from './pages/MainNav/MainNav';
+import { MainNav } from './pages/mainNav/MainNav';
 import { Production } from './pages/sectors/Production';
-import { InterventionTemplate } from './components/InterventionTemplate';
-import { DrillDownTemplate } from './components/DrillDownTemplate';
+import { InterventionTemplate } from './pages/interventions/InterventionTemplate';
+import { ActivityDetail } from './components/ActivityDetail';
 import { ActivityPageTemplate } from './pages/ActivityPageTemplate';
 import { FoodTradeAndMarketing } from './pages/sectors/FoodTradeAndMarketing';
 import { FoodProcessing } from './pages/sectors/FoodProcessing';
 import { FoodRetailing } from './pages/sectors/FoodRetailing';
 import { ConsumerDemand } from './pages/sectors/ConsumerDemand';
 import { EnablingEnvironment } from './pages/sectors/EnablingEnvironment';
+import { GenderIntegrationTemplate } from './pages/genderIntegrations/GenderIntegrationTemplate';
 
 function NoMatch() {
   return (
@@ -41,7 +42,7 @@ ReactDOM.render(
 
         <Route path='production' element={<Production />} >
           {/* <Route path='productionActivity' element={<ActivityPageTemplate />}>
-            <Route path='drillDown' element={<DrillDownTemplate />} />
+            <Route path='activityDetail' element={<ActivityDetail />} />
           </Route> */}
         </Route>
         <Route path='foodTradeAndMarketing' element={<FoodTradeAndMarketing />} />
@@ -52,11 +53,14 @@ ReactDOM.render(
 
         {/* TODO: This should be nested under 'production route, but for some reason that isn't working */}
         <Route path='activity' element={<ActivityPageTemplate />}>
-          <Route path='drillDown' element={<DrillDownTemplate />} />
+          <Route path='activityDetail' element={<ActivityDetail />} />
         </Route>
 
         {/* Interventions */}
         <Route path='interventions/:interventionId' element={<InterventionTemplate />} />
+
+        {/* Gender Integrations */}
+        <Route path='genderIntegrations/:genderIntegrationId' element={<GenderIntegrationTemplate />} />
 
         {/* Catch all other paths and display placeholder page */}
         <Route path="*" element={<NoMatch />} />

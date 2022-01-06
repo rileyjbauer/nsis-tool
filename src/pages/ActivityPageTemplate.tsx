@@ -1,9 +1,9 @@
 import { BasicPage } from '../components/BasicPage';
 import { Link, Outlet, useSearchParams } from 'react-router-dom';
-import { makeQueryString } from '../components/DrillDownTemplate';
+import { makeQueryString } from '../components/ActivityDetail';
 import { useState } from 'react';
 import { ErrorElement } from '../components/ErrorElement';
-import { SECTOR_MAP } from './Maps';
+import { MASTER_SECTOR_MAP } from './Maps';
 
 export const ACTIVITY_PARAM = 'activity';
 export const SECTOR_PARAM = 'sector';
@@ -11,6 +11,7 @@ export const SECTOR_PARAM = 'sector';
 export type Activity = {
   activityTitle: string;
   interventionIds: number[];
+  genderIntegrationIds: number[];
 }
 
 export interface ActivityTemplateProps {
@@ -23,7 +24,7 @@ function getURL(thisSectorKey: string, thisActivityKey: string, activity: Activi
   let params = makeQueryString(activity);
   params.append(SECTOR_PARAM, thisSectorKey);
   params.append(ACTIVITY_PARAM, thisActivityKey);
-  return 'drillDown?' + params.toString();
+  return 'activityDetail?' + params.toString();
 }
 
 export function ActivityPageTemplate() {
@@ -40,7 +41,7 @@ export function ActivityPageTemplate() {
     return <ErrorElement message={`URL missing search param: ${ACTIVITY_PARAM}`} />
   }
 
-  const thisSector = SECTOR_MAP[thisSectorKey];
+  const thisSector = MASTER_SECTOR_MAP[thisSectorKey];
   const thisActivity = thisSector[thisActivityKey];
 
   const content =

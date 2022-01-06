@@ -1,8 +1,8 @@
-import { BasicPage } from "./BasicPage";
-import Interventions from '../interventions.json';
+import { BasicPage } from "../../components/BasicPage";
+import Interventions from '../../interventions.json';
 import './InterventionTemplate.css';
 import { Link, useParams } from "react-router-dom";
-import { ErrorElement } from "./ErrorElement";
+import { ErrorElement } from "../../components/ErrorElement";
 
 type Intervention = {
   id: number;
@@ -28,7 +28,6 @@ export function InterventionTemplate() {
     Interventions.interventions.find(intervention => intervention.id === interventionID);
 
   if (!thisIntervention) {
-    console.log(`Error: Unable to find intervention with ID: ${params.interventionId}`);
     return (
       <ErrorElement message={`Error: Unable to find intervention with ID: ${interventionID}`} />
     );
@@ -83,7 +82,6 @@ export function InterventionTemplate() {
     <BasicPage
       title=""
       content={content}
-    // navBackward={props.navBackward}
     />
   );
 }

@@ -1,34 +1,44 @@
 import { Link, useSearchParams } from "react-router-dom";
 import Interventions from '../interventions.json';
+import GenderIntegrations from '../gender-integrations.json';
 import { Activity } from "../pages/ActivityPageTemplate";
 import { ErrorElement } from "./ErrorElement";
 
-const DRILL_DOWN_PARAMS = {
-  ids: 'ids',
-  pageTitle: 'title'
+const ACTIVITY_DETAIL_PARAMS = {
+  interventionIds: 'interventionIds',
+  pageTitle: 'title',
+  genderIntegrationIds: 'genderIntegrationIds',
 };
 
 export function makeQueryString(activity: Activity): URLSearchParams {
   const params = new URLSearchParams();
   activity.interventionIds.forEach((id) => {
-    params.append(DRILL_DOWN_PARAMS.ids, String(id));
+    params.append(ACTIVITY_DETAIL_PARAMS.interventionIds, String(id));
   });
 
-  params.append(DRILL_DOWN_PARAMS.pageTitle, activity.activityTitle);
+  activity.genderIntegrationIds.forEach((id) => {
+    params.append(ACTIVITY_DETAIL_PARAMS.genderIntegrationIds, String(id));
+  });
+
+  params.append(ACTIVITY_DETAIL_PARAMS.pageTitle, activity.activityTitle);
   return params;
 }
 
-export function DrillDownTemplate() {
+export function ActivityDetail() {
   const [searchParams, setSearchParams] = useSearchParams();
-  const interventionIds = searchParams.getAll(DRILL_DOWN_PARAMS.ids).map((id) => Number(id));
-  const pageTitle = searchParams.get(DRILL_DOWN_PARAMS.pageTitle);
+  const interventionIds = searchParams.getAll(ACTIVITY_DETAIL_PARAMS.interventionIds).map((id) => Number(id));
+  const genderIntegrationIds = searchParams.getAll(ACTIVITY_DETAIL_PARAMS.genderIntegrationIds).map((id) => Number(id));
+  const pageTitle = searchParams.get(ACTIVITY_DETAIL_PARAMS.pageTitle);
 
   if (pageTitle === null) {
     return <ErrorElement message={`Error: No page title provided in search params`} />;
   }
 
-  const relevantInterventions =
+  const interventions =
     Interventions.interventions.filter((intervention) => interventionIds.includes(intervention.id));
+
+  const genderIntegrations =
+    GenderIntegrations.genderIntegrations.filter((genderIntegrations) => genderIntegrationIds.includes(genderIntegrations.id));
 
   return (
     <div className='padding-10'>
@@ -41,7 +51,7 @@ export function DrillDownTemplate() {
           </tr>
         </thead>
         <tbody>
-          {relevantInterventions.map((intervention, i) =>
+          {interventions.map((intervention, i) =>
           (
             <tr key={i}>
               <td>
@@ -57,13 +67,20 @@ export function DrillDownTemplate() {
       <table>
         <thead>
           <tr>
-            <th>Gender Integration</th>
+            <th>Gender Integrations</th>
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>Ensuring women have equitable access to inputs/ technology will support closing gender gaps in productivity and boost overall agricultural and nutrition outcomes.</td>
-          </tr>
+          {genderIntegrations.map((genderIntegration, i) =>
+          (
+            <tr key={i}>
+              <td>
+                <Link to={`/genderIntegrations/${genderIntegration.id}`}>
+                  {genderIntegration.integration}
+                </Link>
+              </td>
+            </tr>
+          ))}
         </tbody>
       </table>
 
