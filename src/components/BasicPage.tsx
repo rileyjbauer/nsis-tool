@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { ArrowNavBar } from './ArrowNavBar';
 import './BasicPage.css';
 
@@ -12,10 +13,16 @@ export function BasicPage(props: BasicPageProps) {
   return (
     <div>
       <div className="header-bar" />
-      <div className="content">
-        {props.title && <h1>{props.title}</h1>}
-        {props.content}
-        <ArrowNavBar back={props.navBackward} forward={props.navForward} />
+      <div style={{ display: 'flex' }}>
+        <div className="sidenav">
+          <Link to='/mainNav'>Home</Link>
+          <Link to='/interventionsList'>All Nutrition Interventions</Link>
+        </div>
+        <div className="content">
+          {props.title && <h1>{props.title}</h1>}
+          {props.content}
+          <ArrowNavBar back={props.navBackward} forward={props.navForward} />
+        </div>
       </div>
     </div>
   );

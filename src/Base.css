@@ -4,6 +4,9 @@
   --main-theme-orange: #fe8200;
   --main-theme-teal: #2eccd3;
   --main-theme-gray: #999999;
+  --main-theme-light-gray: #d7d7d7;
+  --left-nav-width: 150px;
+  --top-bar-height: 55px;
 }
 
 h1 {

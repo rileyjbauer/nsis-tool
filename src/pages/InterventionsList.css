@@ -1,0 +1,10 @@
+.intervention {
+  padding-left: 20px;
+}
+
+.intervention-row {
+  display: flex;
+  padding: 10px;
+  align-items: center;
+  font-size: 18px;
+}
