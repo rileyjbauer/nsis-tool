@@ -1,0 +1,134 @@
+:root {
+  --main-theme-white: #ffffff;
+  --main-theme-blue: #002e5d;
+  --main-theme-orange: #fe8200;
+  --main-theme-teal: #2eccd3;
+  --main-theme-gray: #999999;
+  --main-theme-light-gray: #d7d7d7;
+  --left-nav-width: 150px;
+  --top-bar-height: 55px;
+}
+
+h1 {
+  color: var(--main-theme-blue);
+  font-size: 48px;
+  font-weight: normal;
+  margin-top: 0px;
+}
+
+.h1-smaller {
+  color: var(--main-theme-blue);
+  font-size: 24px;
+  font-weight: normal;
+  margin-top: 0px;
+}
+
+h2 {
+  color: var(--main-theme-teal);
+  font-size: 32px;
+  font-weight: normal;
+  margin-top: 0px;
+}
+
+h3 {
+  color: var(--main-theme-gray);
+  font-size: 24px;
+  font-weight: normal;
+  margin-top: 0px;
+}
+
+p {
+  color: var(--main-theme-gray);
+  font-size: 20px;
+}
+
+html {
+  background-color: var(--main-theme-blue);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.non-underlined-link {
+  text-decoration: none;
+}
+
+.margin-10 {
+  margin: 10px;
+}
+
+.padding-10 {
+  padding: 10px;
+}
+
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+table {
+  margin: 10px 0px;
+}
+
+th, td {
+  padding: 10px;
+}
+
+thead {
+  background-color: var(--main-theme-blue);
+  color: var(--main-theme-white);
+}
+
+button {
+  border: none;
+  cursor: pointer;
+}
+
+.navRow {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.content-box {
+  border: 2px solid var(--main-theme-blue);
+  padding: 10px;
+  width: 100%;
+  align-content: center;
+  justify-content: center;
+  /* text-align: center; */
+  display: flex;
+}
+
+.left-nav-button {
+  padding: 10px;
+  margin: 10px;
+  background-color: var(--main-theme-orange);
+  height: 70px;
+  width: 200px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+}
+
+.left-nav-button-selected {
+  background-color: var(--main-theme-gray);
+}
+
+.left-nav-button > p {
+  color: var(--main-theme-white);
+  font-size: 15px;
+}
+
+.float-nav-button {
+  padding: 20px;
+  float: left;
+  margin: 10px;
+  background-color: var(--main-theme-orange);
+  height: 90px;
+  width: 300px;
+  text-align: center;
+}
+
+.float-nav-button > p {
+  color: var(--main-theme-white);
+}

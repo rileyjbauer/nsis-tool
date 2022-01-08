@@ -1,0 +1,29 @@
+@import url(../../Base.css);
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.navButton {
+  float: left;
+  padding: 0px 10px;
+  text-align: center;
+}
+
+.navButtonImg {
+  height: 200px;
+}
+
+.nav-link {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: var(--main-theme-orange);
+  font-size: 30px;
+}
