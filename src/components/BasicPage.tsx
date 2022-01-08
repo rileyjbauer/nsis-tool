@@ -13,11 +13,13 @@ export function BasicPage(props: BasicPageProps) {
   return (
     <div>
       <div className='header-bar'>
-        <h1 className='header-bar-heading'>NSIS Tool</h1>
-        <div className='header-bar-divider' />
-        <Link to='/mainNav'>Start Over</Link>
-        <Link to='/interventionsList'>All Nutrition Interventions</Link>
-        <Link to='/genderIntegrationsList'>All Nutrition Gender Integrations</Link>
+        <h1 className='header-bar-title'>NSIS Tool</h1>
+        <hr className='header-hr' />
+        <div className='nav-bar'>
+          <Link to='/mainNav'>Start Over</Link>
+          <Link to='/interventionsList'>All Nutrition Interventions</Link>
+          <Link to='/genderIntegrationsList'>All Nutrition Gender Integrations</Link>
+        </div>
       </div>
       <div className="content">
         {props.title && <h1>{props.title}</h1>}
