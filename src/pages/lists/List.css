@@ -1,8 +1,8 @@
-.intervention {
+.title {
   padding-left: 20px;
 }
 
-.intervention-row {
+.list-row {
   display: flex;
   padding: 10px;
   align-items: center;

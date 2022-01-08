@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
-import { BasicPage } from '../components/BasicPage';
-import Interventions from '../interventions.json';
-import './InterventionsList.css';
+import { BasicPage } from '../../components/BasicPage';
+import Interventions from '../../interventions.json';
+import './List.css';
 
 export function InterventionsList() {
   const content =
@@ -10,11 +10,11 @@ export function InterventionsList() {
         if (intervention.title) {
           return (
             <div key={i}>
-              <span className='intervention-row'>
+              <span className='list-row'>
                 <Link to={`/interventions/${intervention.id}`}>
                   {`#${intervention.id}`}
                 </Link>
-                <div className='intervention'>{intervention.title}</div>
+                <div className='title'>{intervention.title}</div>
               </span>
               <hr />
             </div>

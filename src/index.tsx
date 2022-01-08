@@ -18,7 +18,8 @@ import { FoodRetailing } from './pages/sectors/FoodRetailing';
 import { ConsumerDemand } from './pages/sectors/ConsumerDemand';
 import { EnablingEnvironment } from './pages/sectors/EnablingEnvironment';
 import { GenderIntegrationTemplate } from './pages/genderIntegrations/GenderIntegrationTemplate';
-import { InterventionsList } from './pages/InterventionsList';
+import { InterventionsList } from './pages/lists/InterventionsList';
+import { GenderIntegrationsList } from './pages/lists/GenderIntegrationsList';
 
 function NoMatch() {
   return (
@@ -65,6 +66,9 @@ ReactDOM.render(
 
         {/* All Nutrition Interventions */}
         <Route path='interventionsList' element={<InterventionsList />} />
+
+        {/* All Gender Integrations */}
+        <Route path='genderIntegrationsList' element={<GenderIntegrationsList />} />
 
         {/* Catch all other paths and display placeholder page */}
         <Route path="*" element={<NoMatch />} />
