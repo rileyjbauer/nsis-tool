@@ -12,17 +12,16 @@ interface BasicPageProps {
 export function BasicPage(props: BasicPageProps) {
   return (
     <div>
-      <div className="header-bar" />
-      <div style={{ display: 'flex' }}>
-        <div className="sidenav">
-          <Link to='/mainNav'>Home</Link>
-          <Link to='/interventionsList'>All Nutrition Interventions</Link>
-        </div>
-        <div className="content">
-          {props.title && <h1>{props.title}</h1>}
-          {props.content}
-          <ArrowNavBar back={props.navBackward} forward={props.navForward} />
-        </div>
+      <div className='header-bar'>
+        <h1 className='header-bar-heading'>NSIS Tool</h1>
+        <div className='header-bar-divider' />
+        <Link to='/mainNav'>Start Over</Link>
+        <Link to='/interventionsList'>All Nutrition Interventions</Link>
+      </div>
+      <div className="content">
+        {props.title && <h1>{props.title}</h1>}
+        {props.content}
+        <ArrowNavBar back={props.navBackward} forward={props.navForward} />
       </div>
     </div>
   );

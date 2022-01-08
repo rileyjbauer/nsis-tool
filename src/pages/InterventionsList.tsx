@@ -11,7 +11,9 @@ export function InterventionsList() {
           return (
             <div key={i}>
               <span className='intervention-row'>
-                <Link to={`/interventions/${intervention.id}`}>{`#${intervention.id}`}</Link>
+                <Link to={`/interventions/${intervention.id}`}>
+                  {`#${intervention.id}`}
+                </Link>
                 <div className='intervention'>{intervention.title}</div>
               </span>
               <hr />

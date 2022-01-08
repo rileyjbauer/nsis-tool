@@ -5,32 +5,31 @@
   height: var(--top-bar-height);
   position: fixed;
   width: 100%;
+  font-size: 25px;
+  padding: 10px 50px;
+  top: 0;
+  display: flex;
+  align-items: center;
+}
+
+.header-bar > a {
+  padding: 0px 20px;
+  text-decoration: none;
+  color: var(--main-theme-white);
+  border: var(--main-theme-white) solid 1px;
+  padding: 10px;
+  margin: 0px 20px;
+}
+
+.header-bar-heading {
+  color: var(--main-theme-white);
+  margin-top: 32px;
+  margin-right: 50px;
 }
 
 .content {
   background-color: var(--main-theme-white);
   padding: 60px;
+  margin-top: 40px;
   width: 100%;
-  margin-left: var(--left-nav-width);
-}
-
-/* The side navigation menu */
-.sidenav {
-  height: 100%;
-  position: fixed;
-  width: var(--left-nav-width);
-  border-right: black solid 2px;
-  z-index: 1;
-  top: var(--top-bar-height);
-  left: 0;
-  background-color: var(--main-theme-light-gray);
-  overflow-x: hidden;
-  padding: 60px 20px 0px 20px;
-}
-
-.sidenav a {
-  text-decoration: none;
-  font-size: 25px;
-  padding: 10px 0px;
-  display: block;
 }
