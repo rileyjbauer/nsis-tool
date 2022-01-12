@@ -18,7 +18,7 @@ export function BasicPage(props: BasicPageProps) {
         <div className='nav-bar'>
           <Link to='/mainNav'>Start Over</Link>
           <Link to='/interventionsList'>All Nutrition Interventions</Link>
-          <Link to='/genderIntegrationsList'>All Nutrition Gender Integrations</Link>
+          <Link to='/genderIntegrationsList'>All Gender Integrations</Link>
         </div>
       </div>
       <div className="content">
