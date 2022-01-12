@@ -21,4 +21,24 @@
 
 .App-h2 {
   color: var(--main-theme-teal);
+  padding: 0px 30px;
+}
+
+.App-hr {
+  background-color: var(--main-theme-orange);
+  border: none;
+  height: 10px;
+  width: 100%;
+  margin: 30px 0px 20px;
+}
+
+.App-logo-div {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding-left: 60px;
+}
+
+.App-logo-div > img {
+  width: 200px;
 }
