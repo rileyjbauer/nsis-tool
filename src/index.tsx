@@ -5,8 +5,6 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Link, Route, Routes } from 'react-router-dom';
 import { Welcome } from './pages/Welcome';
-import { Preface } from './pages/Preface';
-import { Directions } from './pages/Directions';
 import { MainNav } from './pages/MainNav/MainNav';
 import { Production } from './pages/sectors/Production';
 import { InterventionTemplate } from './pages/interventions/InterventionTemplate';
@@ -38,8 +36,6 @@ ReactDOM.render(
       <Routes>
         <Route path='/' element={<App />} />
         <Route path='welcome' element={<Welcome />} />
-        <Route path='preface' element={<Preface />} />
-        <Route path='directions' element={<Directions />} />
         <Route path='mainNav' element={<MainNav />} />
 
         {/* Sector pages */}

@@ -53,7 +53,7 @@ export function MainNav() {
     <BasicPage
       title="Where in the Food System is your project working?"
       content={content}
-      navBackward="/directions"
+      navBackward="/welcome"
     />
   );
 }
