@@ -1,4 +1,4 @@
-import { BasicPage } from "../../components/BasicPage";
+import { BasicPage } from "../../components/basicPage/BasicPage";
 import GenderIntegrations from '../../gender-integrations.json';
 import './GenderIntegrationTemplate.css';
 import { useParams } from "react-router-dom";

@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { BasicPage } from '../../components/BasicPage';
+import { BasicPage } from '../../components/basicPage/BasicPage';
 import { SECTOR_PARAM } from '../ActivityPageTemplate';
 import { ACTIVITY_PARAM } from '../ActivityPageTemplate';
 import { CONSUMER_DEMAND_ACTIVITIES, CONSUMER_DEMAND_PAGE_MAP, SECTORS } from '../Maps';

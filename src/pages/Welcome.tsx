@@ -1,4 +1,4 @@
-import { BasicPage } from '../components/BasicPage';
+import { BasicPage } from '../components/basicPage/BasicPage';
 
 export function Welcome() {
   const content = <h3>

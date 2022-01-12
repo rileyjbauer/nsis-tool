@@ -1,4 +1,4 @@
-import { BasicPage } from '../components/BasicPage';
+import { BasicPage } from '../components/basicPage/BasicPage';
 import { Link, Outlet, useSearchParams } from 'react-router-dom';
 import { makeQueryString } from '../components/ActivityDetail';
 import { ErrorElement } from '../components/ErrorElement';

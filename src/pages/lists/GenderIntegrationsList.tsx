@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { BasicPage } from '../../components/BasicPage';
+import { BasicPage } from '../../components/basicPage/BasicPage';
 import GenderIntegrations from '../../gender-integrations.json';
 import './List.css';
 

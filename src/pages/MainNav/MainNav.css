@@ -2,12 +2,12 @@
 
 .container {
   display: grid;
+  /* TODO: change on smaller screen size single column?  */
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
 }
 
 .navButton {
-  float: left;
   padding: 0px 10px;
   text-align: center;
 }

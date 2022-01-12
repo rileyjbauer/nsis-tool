@@ -1,4 +1,4 @@
-import { BasicPage } from "../../components/BasicPage";
+import { BasicPage } from "../../components/basicPage/BasicPage";
 import Interventions from '../../interventions.json';
 import './InterventionTemplate.css';
 import { Link, useParams } from "react-router-dom";
