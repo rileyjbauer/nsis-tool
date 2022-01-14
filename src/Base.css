@@ -82,11 +82,9 @@ button {
   cursor: pointer;
 }
 
-/* TODO: for mobile-friendliness, look at what Chris did on his website using the @media tag to change the CSS that's loaded based on screen size: https://github.com/ChrisBauer/cascadia-photography/blob/master/src/main.less#L282 
-The numbers he chose for breaking things down are probably safe, though maybe not all of them are needed
-*/
+/* TODO: Make set of mobile-friendly styles using media queries */
 
-/* TODO: move this all to more specific CSS files, but the media queries (@media...) might be simpler if the CSS is all in one place. Quick gotcha with media queries don't count as their own CSS selector level, so the MOST selective media query MUST be the LAST one. (so most common should be first) */
+/* TODO: move this all to more specific CSS files, but the media queries (@media...) might be simpler if the CSS is all in one place. */
 
 .navRow {
   display: flex;
