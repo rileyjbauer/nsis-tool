@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/nsis-tool/static/css/main.001f0d25.css",
+    "main.js": "/nsis-tool/static/js/main.063c2ba3.js",
+    "static/js/787.22d3c70b.chunk.js": "/nsis-tool/static/js/787.22d3c70b.chunk.js",
+    "static/media/Production.png": "/nsis-tool/static/media/Production.350f080d921c2aa35b73.png",
+    "static/media/EnablingEnvironment.png": "/nsis-tool/static/media/EnablingEnvironment.94d86cc3de7721ea9f99.png",
+    "static/media/FoodTradeAndMarketing.png": "/nsis-tool/static/media/FoodTradeAndMarketing.252dee2264360705a038.png",
+    "static/media/FoodProcessing.png": "/nsis-tool/static/media/FoodProcessing.d5ba08e3cdf5ef6ebdd9.png",
+    "static/media/ConsumerDemand.png": "/nsis-tool/static/media/ConsumerDemand.5eb18a63f583a29be3c5.png",
+    "static/media/FoodRetailing.png": "/nsis-tool/static/media/FoodRetailing.c6feb826b90f46ccf057.png",
+    "static/media/TanagerLogo.png": "/nsis-tool/static/media/TanagerLogo.9bbf6b3c7d01d396e261.png",
+    "static/media/60_decibels.png": "/nsis-tool/static/media/60_decibels.8cd164b107e11eb4d44b.png",
+    "static/media/lateriteLogo.png": "/nsis-tool/static/media/lateriteLogo.10c33f4e60cc232071ca.png",
+    "index.html": "/nsis-tool/index.html",
+    "main.001f0d25.css.map": "/nsis-tool/static/css/main.001f0d25.css.map",
+    "main.063c2ba3.js.map": "/nsis-tool/static/js/main.063c2ba3.js.map",
+    "787.22d3c70b.chunk.js.map": "/nsis-tool/static/js/787.22d3c70b.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.001f0d25.css",
+    "static/js/main.063c2ba3.js"
+  ]
+}
