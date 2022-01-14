@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { BrowserRouter, Link, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Router, Link, Route, Routes } from 'react-router-dom';
 import { Welcome } from './pages/Welcome';
 import { MainNav } from './pages/MainNav/MainNav';
 import { Production } from './pages/sectors/Production';
@@ -32,7 +32,7 @@ function NoMatch() {
 
 ReactDOM.render(
   <React.StrictMode>
-    <BrowserRouter basename={`/${process.env.PUBLIC_URL}`}>
+    <BrowserRouter basename={`/nsis-tool`}>
       <Routes>
         <Route path='/' element={<App />} />
         <Route path='welcome' element={<Welcome />} />
