@@ -1,4 +1,4 @@
-@import url(../Base.css);
+@import url(../../Base.css);
 
 .header-bar {
   background-color: var(--main-theme-blue);
@@ -11,12 +11,18 @@
   box-shadow: 0 2px 5px 0 rgb(0 0 0 / 26%), 0 2px 10px 0 rgb(0 0 0 / 12%);
 }
 
+/* TODO: more work needed here. Maybe add nice hover-effect? */
+.nav-bar {
+  display: flex;
+}
+
 .nav-bar > a {
   padding: 10px 20px;
   text-decoration: none;
   color: var(--main-theme-light-gray);
   border: var(--main-theme-light-gray) solid 1px;
   margin: 0px 20px;
+  white-space: nowrap;
 }
 
 .header-bar-title {
@@ -25,9 +31,10 @@
 }
 
 .header-hr {
-  margin: 4px 0px 30px 0px;
+  margin: 4px 0px 18px 0px;
 }
 
+/* TODO: consider having white go all the way to bottom of page, and always having arrow nav either all the way at the bottom, or on top of content so it's always in the same place */
 .content {
   background-color: var(--main-theme-white);
   padding: 60px;

@@ -5,9 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Link, Route, Routes } from 'react-router-dom';
 import { Welcome } from './pages/Welcome';
-import { Preface } from './pages/Preface';
-import { Directions } from './pages/Directions';
-import { MainNav } from './pages/mainNav/MainNav';
+import { MainNav } from './pages/MainNav/MainNav';
 import { Production } from './pages/sectors/Production';
 import { InterventionTemplate } from './pages/interventions/InterventionTemplate';
 import { ActivityDetail } from './components/ActivityDetail';
@@ -38,22 +36,16 @@ ReactDOM.render(
       <Routes>
         <Route path='/' element={<App />} />
         <Route path='welcome' element={<Welcome />} />
-        <Route path='preface' element={<Preface />} />
-        <Route path='directions' element={<Directions />} />
         <Route path='mainNav' element={<MainNav />} />
 
-        <Route path='production' element={<Production />} >
-          {/* <Route path='productionActivity' element={<ActivityPageTemplate />}>
-            <Route path='activityDetail' element={<ActivityDetail />} />
-          </Route> */}
-        </Route>
+        {/* Sector pages */}
+        <Route path='production' element={<Production />} />
         <Route path='foodTradeAndMarketing' element={<FoodTradeAndMarketing />} />
         <Route path='foodProcessing' element={<FoodProcessing />} />
         <Route path='foodRetailing' element={<FoodRetailing />} />
         <Route path='consumerDemand' element={<ConsumerDemand />} />
         <Route path='enablingEnvironment' element={<EnablingEnvironment />} />
 
-        {/* TODO: This should be nested under 'production route, but for some reason that isn't working */}
         <Route path='activity' element={<ActivityPageTemplate />}>
           <Route path='activityDetail' element={<ActivityDetail />} />
         </Route>

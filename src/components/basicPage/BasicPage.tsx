@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { ArrowNavBar } from './ArrowNavBar';
+import { ArrowNavBar } from '../arrowNavBar/ArrowNavBar';
 import './BasicPage.css';
 
 interface BasicPageProps {
@@ -13,7 +13,9 @@ export function BasicPage(props: BasicPageProps) {
   return (
     <div>
       <div className='header-bar'>
-        <h1 className='header-bar-title'>NSIS Tool</h1>
+        <Link to='/' style={{ textDecoration: 'none' }}>
+          <h1 className='header-bar-title'>NSIS Tool</h1>
+        </Link>
         <hr className='header-hr' />
         <div className='nav-bar'>
           <Link to='/mainNav'>Start Over</Link>

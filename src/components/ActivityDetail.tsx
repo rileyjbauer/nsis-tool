@@ -59,7 +59,7 @@ export function ActivityDetail() {
                   {intervention.title}
                 </Link>
               </td>
-              <td>{intervention.foodEnvironmentDomainsAffected.toString()}</td>
+              <td>{intervention.foodEnvironmentDomainsAffected.join(', ')}</td>
             </tr>
           ))}
         </tbody>
