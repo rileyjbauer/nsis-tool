@@ -17,6 +17,7 @@
 
 .App-h1 {
   color: var(--main-theme-white);
+  max-width: 1300px;
 }
 
 .App-h2 {
@@ -36,6 +37,7 @@
   display: flex;
   align-items: center;
   width: 100%;
+  max-width: 1300px;
   padding-left: 60px;
 }
 
