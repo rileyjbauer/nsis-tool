@@ -40,3 +40,23 @@
   padding: 60px;
   margin-top: var(--top-bar-height);
 }
+
+@media (max-width: 950px) {
+  .nav-bar {
+    flex-direction: column;
+  }
+
+  .nav-bar > a {
+    margin-bottom: 10px;
+    width: 200px;
+  }
+
+  .header-bar {
+    height: var(--mobile-top-bar-height);
+    font-size: 15px;
+  }
+
+  .content {
+    margin-top: var(--mobile-top-bar-height);
+  }
+}
