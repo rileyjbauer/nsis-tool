@@ -8,6 +8,7 @@
   align-items: center;
   justify-content: center;
   min-width: 800px;
+  width: 100%;
 }
 
 .App-start-link {
@@ -43,4 +44,11 @@
 
 .App-logo-div > img {
   width: 200px;
+}
+
+@media (max-width: 950px) {
+  /* .App-h1 {
+    max-width: 700px;
+    font-size: 20px;
+  } */
 }
