@@ -9,6 +9,7 @@
   padding: 10px 50px;
   top: 0;
   box-shadow: 0 2px 5px 0 rgb(0 0 0 / 26%), 0 2px 10px 0 rgb(0 0 0 / 12%);
+  z-index: 99;
 }
 
 .title-bar {
@@ -86,5 +87,9 @@
 
   .content {
     margin-top: var(--mobile-top-bar-height);
+  }
+
+  .content-title {
+    font-size: 28px;
   }
 }

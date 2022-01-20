@@ -32,7 +32,7 @@ export function BasicPage(props: BasicPageProps) {
         </div>
       </div>
       <div className="content" onClick={() => setMenuExpanded(false)}>
-        {props.title && <h1>{props.title}</h1>}
+        {props.title && <h1 className='content-title'>{props.title}</h1>}
         {props.content}
         <ArrowNavBar back={props.navBackward} forward={props.navForward} />
       </div>

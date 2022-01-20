@@ -3,6 +3,9 @@ import { Link, Outlet, useSearchParams } from 'react-router-dom';
 import { makeQueryString } from '../components/ActivityDetail';
 import { ErrorElement } from '../components/ErrorElement';
 import { MASTER_SECTOR_MAP } from './Maps';
+import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
+import { useState } from 'react';
+import './ActivityPageTemplate.css';
 
 export const ACTIVITY_PARAM = 'activity';
 export const SECTOR_PARAM = 'sector';
@@ -31,6 +34,7 @@ function getURL(thisSectorKey: string, thisActivityKey: string, activity: Activi
 export function ActivityPageTemplate() {
   let navButtonSelected = -1;
   const [searchParams, setSearchParams] = useSearchParams();
+  const [menuExpanded, setMenuExpanded] = useState(false);
 
   const thisSectorKey = searchParams.get(SECTOR_PARAM);
   if (!thisSectorKey) {
@@ -50,18 +54,27 @@ export function ActivityPageTemplate() {
   const thisActivity = thisSector[thisActivityKey];
 
   const content =
-    <div style={{ display: 'flex' }}>
-      <div>
-        <p className='padding-10' >Select the activity you are undertaking:</p>
-        {thisActivity.activities.map((activity, i) => (
-          <Link key={i} to={getURL(thisSectorKey, thisActivityKey, activity, i)} className='non-underlined-link'>
-            <div className={`left-nav-button ${navButtonSelected === i ? ' left-nav-button-selected' : ''}`}>
-              <p>{activity.activityTitle}</p>
-            </div>
-          </Link>
-        ))}
+    <div className='activity-page-template-container'>
+      <div className='activity-page-template-nav-container'>
+        <div style={{ display: 'flex', alignItems: 'center' }} onClick={() => setMenuExpanded(!menuExpanded)}>
+          <p className='activity-page-template-instructions'>
+            Select the activity you are undertaking:
+          </p>
+          <div className='activity-page-template-dropdown'>
+            <ArrowDropDownIcon sx={{ fontSize: 40, color: '#fe8200' }} />
+          </div>
+        </div>
+        <div className={`activity-page-template-nav-button-container ${menuExpanded ? 'activity-menu-expanded' : ''}`}>
+          {thisActivity.activities.map((activity, i) => (
+            <Link key={i} to={getURL(thisSectorKey, thisActivityKey, activity, i)} className='non-underlined-link' onClick={() => setMenuExpanded(false)}>
+              <div className={`activity-page-template-nav-button ${navButtonSelected === i ? 'activity-page-template-nav-button-selected' : ''}`}>
+                <p>{activity.activityTitle}</p>
+              </div>
+            </Link>
+          ))}
+        </div>
       </div>
-      <div className='content-box'>
+      <div className='activity-page-template-content-box' onClick={() => setMenuExpanded(false)}>
         <Outlet />
       </div>
     </div >;

@@ -92,45 +92,14 @@ button {
   flex-wrap: nowrap;
 }
 
-.content-box {
-  border: 2px solid var(--main-theme-blue);
-  padding: 10px;
-  width: 100%;
-  align-content: center;
-  justify-content: center;
-  /* text-align: center; */
-  display: flex;
-}
-
-.left-nav-button {
-  padding: 10px;
-  margin: 10px;
-  background-color: var(--main-theme-orange);
-  height: 70px;
-  width: 200px;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  flex-direction: column;
-}
-
-.left-nav-button-selected {
-  background-color: var(--main-theme-gray);
-}
-
-.left-nav-button > p {
-  color: var(--main-theme-white);
-  font-size: 15px;
-}
-
 .float-nav-button {
   padding: 20px;
   float: left;
   margin: 10px;
   background-color: var(--main-theme-orange);
   height: 90px;
-  width: 300px;
+  max-width: 300px;
+  width: 80%;
   text-align: center;
 }
 
