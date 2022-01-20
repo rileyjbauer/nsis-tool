@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { BrowserRouter, Router, Link, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Router, Link, Route, Routes, useLocation } from 'react-router-dom';
 import { Welcome } from './pages/Welcome';
 import { MainNav } from './pages/MainNav/MainNav';
 import { Production } from './pages/sectors/Production';
@@ -30,41 +30,52 @@ function NoMatch() {
   );
 }
 
+// Ensures that each time the user navigates, the app scrolls to the top of the page
+function ScrollToTopWrapper({ children }: any) {
+  const location = useLocation();
+  useEffect(() => {
+    document.documentElement.scrollTo(0, 0);
+  }, [location.pathname]);
+  return children
+}
+
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter basename={`/nsis-tool`}>
-      <Routes>
-        <Route path='/' element={<App />} />
-        <Route path='welcome' element={<Welcome />} />
-        <Route path='mainNav' element={<MainNav />} />
+      <ScrollToTopWrapper>
+        <Routes>
+          <Route path='/' element={<App />} />
+          <Route path='welcome' element={<Welcome />} />
+          <Route path='mainNav' element={<MainNav />} />
 
-        {/* Sector pages */}
-        <Route path='production' element={<Production />} />
-        <Route path='foodTradeAndMarketing' element={<FoodTradeAndMarketing />} />
-        <Route path='foodProcessing' element={<FoodProcessing />} />
-        <Route path='foodRetailing' element={<FoodRetailing />} />
-        <Route path='consumerDemand' element={<ConsumerDemand />} />
-        <Route path='enablingEnvironment' element={<EnablingEnvironment />} />
+          {/* Sector pages */}
+          <Route path='production' element={<Production />} />
+          <Route path='foodTradeAndMarketing' element={<FoodTradeAndMarketing />} />
+          <Route path='foodProcessing' element={<FoodProcessing />} />
+          <Route path='foodRetailing' element={<FoodRetailing />} />
+          <Route path='consumerDemand' element={<ConsumerDemand />} />
+          <Route path='enablingEnvironment' element={<EnablingEnvironment />} />
 
-        <Route path='activity' element={<ActivityPageTemplate />}>
-          <Route path='activityDetail' element={<ActivityDetail />} />
-        </Route>
+          <Route path='activity' element={<ActivityPageTemplate />}>
+            <Route path='activityDetail' element={<ActivityDetail />} />
+          </Route>
 
-        {/* Intervention pages */}
-        <Route path='interventions/:interventionId' element={<InterventionTemplate />} />
+          {/* Intervention pages */}
+          <Route path='interventions/:interventionId' element={<InterventionTemplate />} />
 
-        {/* Gender Integrations */}
-        <Route path='genderIntegrations/:genderIntegrationId' element={<GenderIntegrationTemplate />} />
+          {/* Gender Integrations */}
+          <Route path='genderIntegrations/:genderIntegrationId' element={<GenderIntegrationTemplate />} />
 
-        {/* All Nutrition Interventions */}
-        <Route path='interventionsList' element={<InterventionsList />} />
+          {/* All Nutrition Interventions */}
+          <Route path='interventionsList' element={<InterventionsList />} />
 
-        {/* All Gender Integrations */}
-        <Route path='genderIntegrationsList' element={<GenderIntegrationsList />} />
+          {/* All Gender Integrations */}
+          <Route path='genderIntegrationsList' element={<GenderIntegrationsList />} />
 
-        {/* Catch all other paths and display placeholder page */}
-        <Route path="*" element={<NoMatch />} />
-      </Routes>
+          {/* Catch all other paths and display placeholder page */}
+          <Route path="*" element={<NoMatch />} />
+        </Routes>
+      </ScrollToTopWrapper>
     </BrowserRouter>,
   </React.StrictMode>,
   document.getElementById('root')
