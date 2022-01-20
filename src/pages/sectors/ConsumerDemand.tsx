@@ -11,10 +11,10 @@ export function ConsumerDemand() {
         Select the box below that reflects the primary focus of your work in consumer demand:
       </p>
       <div>
-        <div>
+        <div className='sector-nav-button-container'>
           {Object.values(CONSUMER_DEMAND_ACTIVITIES).map((v, i) =>
-            <Link key={i} to={`/activity?${ACTIVITY_PARAM}=${v}&${SECTOR_PARAM}=${SECTORS.CONSUMER_DEMAND}`}>
-              <div className='float-nav-button'>
+            <Link key={i} to={`/activity?${ACTIVITY_PARAM}=${v}&${SECTOR_PARAM}=${SECTORS.CONSUMER_DEMAND}`} className='non-underlined-link'>
+              <div className='sector-nav-button'>
                 <p>{CONSUMER_DEMAND_PAGE_MAP[v].pageTitle}</p>
               </div>
             </Link>)}

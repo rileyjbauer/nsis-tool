@@ -11,10 +11,10 @@ export function FoodRetailing() {
         Select the box below that reflects the primary focus of your work in food retailing:
       </p>
       <div>
-        <div>
+        <div className='sector-nav-button-container'>
           {Object.values(FOOD_RETAILING_ACTIVITIES).map((v, i) =>
-            <Link key={i} to={`/activity?${ACTIVITY_PARAM}=${v}&${SECTOR_PARAM}=${SECTORS.FOOD_RETAILING}`}>
-              <div className='float-nav-button'>
+            <Link key={i} to={`/activity?${ACTIVITY_PARAM}=${v}&${SECTOR_PARAM}=${SECTORS.FOOD_RETAILING}`} className='non-underlined-link'>
+              <div className='sector-nav-button'>
                 <p>{FOOD_RETAILING_PAGE_MAP[v].pageTitle}</p>
               </div>
             </Link>)}

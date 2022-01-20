@@ -11,10 +11,10 @@ export function EnablingEnvironment() {
         Select the box below that reflects the primary focus of your work in enabling environment:
       </p>
       <div>
-        <div>
+        <div className='sector-nav-button-container'>
           {Object.values(ENABLING_ENVIRONMENT_ACTIVITIES).map((v, i) =>
-            <Link key={i} to={`/activity?${ACTIVITY_PARAM}=${v}&${SECTOR_PARAM}=${SECTORS.ENABLING_ENVIRONMENT}`}>
-              <div className='float-nav-button'>
+            <Link key={i} to={`/activity?${ACTIVITY_PARAM}=${v}&${SECTOR_PARAM}=${SECTORS.ENABLING_ENVIRONMENT}`} className='non-underlined-link'>
+              <div className='sector-nav-button'>
                 <p>{ENABLING_ENVIRONMENT_PAGE_MAP[v].pageTitle}</p>
               </div>
             </Link>)}

@@ -3,10 +3,14 @@
 .arrow-bar {
   width: 100%;
   display: flex;
+  background: var(--main-theme-blue);
   justify-content: space-between;
+  position: fixed;
+  bottom: 0;
 }
 
 .arrow-button {
-  color: var(--main-theme-blue);
+  color: var(--main-theme-white);
   cursor: pointer;
+  padding: 0px 20px;
 }

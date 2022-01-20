@@ -9,10 +9,10 @@ export function Production() {
       <p>
         Select the box below that reflects the focus of your work in agriculture/livestock production:
       </p>
-      <div className='float-nav-button-container'>
+      <div className='sector-nav-button-container'>
         {Object.values(PRODUCTION_ACTIVITIES).map((v, i) =>
-          <Link key={i} to={`/activity?${ACTIVITY_PARAM}=${v}&${SECTOR_PARAM}=${SECTORS.PRODUCTION}`}>
-            <div className='float-nav-button'>
+          <Link key={i} to={`/activity?${ACTIVITY_PARAM}=${v}&${SECTOR_PARAM}=${SECTORS.PRODUCTION}`} className='non-underlined-link'>
+            <div className='sector-nav-button'>
               <p>{PRODUCTION_PAGE_MAP[v].pageTitle}</p>
             </div>
           </Link>)}

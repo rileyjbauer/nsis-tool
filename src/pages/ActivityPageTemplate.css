@@ -3,10 +3,12 @@
 .activity-page-template-content-box {
   border: 2px solid var(--main-theme-blue);
   padding: 10px;
-  width: 100%;
+  margin-left: 10px;
+  min-height: 200px;
   align-content: center;
   justify-content: center;
   display: flex;
+  width: 100%;
 }
 
 .activity-page-template-container {
@@ -51,6 +53,11 @@
 }
 
 @media (max-width: 950px) {
+  .activity-page-template-content-box {
+    margin: 0px;
+    width: auto;
+  }
+
   .activity-page-template-container {
     flex-direction: column;
   }
@@ -58,6 +65,7 @@
   .activity-page-template-nav-container {
     flex-direction: row;
     position: relative;
+    margin-bottom: 20px;
   }
 
   .activity-page-template-dropdown {

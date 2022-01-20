@@ -7,6 +7,8 @@
   --main-theme-light-gray: #d7d7d7;
   --left-nav-width: 150px;
   --top-bar-height: 150px;
+  --top-bar-padding-top: 10px;
+  --top-bar-padding-bottom: 10px;
   --mobile-top-bar-height: 80px;
 }
 
@@ -44,7 +46,6 @@ p {
 }
 
 html {
-  background-color: var(--main-theme-blue);
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -83,26 +84,29 @@ button {
   cursor: pointer;
 }
 
-/* TODO: Make set of mobile-friendly styles using media queries */
-
-/* TODO: move this all to more specific CSS files, but the media queries (@media...) might be simpler if the CSS is all in one place. */
-
 .navRow {
   display: flex;
   flex-wrap: nowrap;
 }
 
-.float-nav-button {
-  padding: 20px;
-  float: left;
-  margin: 10px;
-  background-color: var(--main-theme-orange);
-  height: 90px;
-  max-width: 300px;
-  width: 80%;
-  text-align: center;
+.sector-nav-button-container {
+  display: flex;
+  flex-wrap: wrap;
 }
 
-.float-nav-button > p {
+.sector-nav-button {
+  padding: 10px;
+  margin: 10px;
+  background-color: var(--main-theme-orange);
+  height: 70px;
+  width: 200px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+}
+
+.sector-nav-button > p {
   color: var(--main-theme-white);
 }
