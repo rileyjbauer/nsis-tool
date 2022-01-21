@@ -33,14 +33,14 @@ export function GenderIntegrationTemplate() {
       </h3>
       {thisIntegration.keyConsiderations.length > 0 && (
         <div>
-          <h4>Key Considerations:</h4>
+          <h4>Key Considerations</h4>
           <ol>
             {thisIntegration.keyConsiderations.map((consideration, i) => <li key={i}>{consideration}</li>)}
           </ol>
         </div>)}
       {thisIntegration.transformative && (
         <div>
-          <h4>Transformative:</h4>
+          <h4>Transformative</h4>
           <p>{thisIntegration.transformative}</p>
         </div>)}
     </div>

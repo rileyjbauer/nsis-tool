@@ -3,6 +3,7 @@ import { BasicPage } from '../../components/basicPage/BasicPage';
 import { SECTOR_PARAM } from '../ActivityPageTemplate';
 import { ACTIVITY_PARAM } from '../ActivityPageTemplate';
 import { FOOD_TRADE_ACTIVITIES, FOOD_TRADE_PAGE_MAP, SECTORS } from '../Maps';
+import './Sector.css';
 
 export function FoodTradeAndMarketing() {
   const content =

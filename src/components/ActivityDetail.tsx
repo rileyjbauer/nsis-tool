@@ -64,26 +64,27 @@ export function ActivityDetail() {
           ))}
         </tbody>
       </table>
-      <table>
-        <thead>
-          <tr>
-            <th>Gender Integrations</th>
-          </tr>
-        </thead>
-        <tbody>
-          {genderIntegrations.map((genderIntegration, i) =>
-          (
-            <tr key={i}>
-              <td>
-                <Link to={`/genderIntegrations/${genderIntegration.id}`}>
-                  {genderIntegration.integration}
-                </Link>
-              </td>
+      {genderIntegrations.length > 0 && (
+        <table>
+          <thead>
+            <tr>
+              <th>Gender Integrations</th>
             </tr>
-          ))}
-        </tbody>
-      </table>
-
+          </thead>
+          <tbody>
+            {genderIntegrations.map((genderIntegration, i) =>
+            (
+              <tr key={i}>
+                <td>
+                  <Link to={`/genderIntegrations/${genderIntegration.id}`}>
+                    {genderIntegration.integration}
+                  </Link>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      )}
     </div>
   );
 }

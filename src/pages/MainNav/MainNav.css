@@ -1,24 +1,30 @@
 @import url(../../Base.css);
 
-.container {
+.nav-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
 }
 
-.navButton {
+
+.nav-button {
   padding: 0px 10px;
   text-align: center;
 }
 
-.navButtonImg {
+.nav-button-img {
+  display: block;
   width: 240px;
+}
+
+.mobile-nav-button-img {
+  display: none;
+  width: 130px;
 }
 
 .nav-link {
   display: flex;
   flex-direction: column;
-  flex-wrap: nowrap;
   align-content: center;
   justify-content: center;
   align-items: center;
@@ -28,13 +34,32 @@
 }
 
 @media (max-width: 950px) {
-  .container {
+  .nav-container {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (max-width: 630px) {
-  .container {
+  .nav-container {
     grid-template-columns: repeat(1, 1fr);
+    margin-bottom: 30px;
+  }
+
+  .nav-link {
+    flex-direction: row;
+    justify-content: initial;
+  }
+
+  .nav-button-img {
+    display: none;
+  }
+
+  .mobile-nav-button-img {
+    display: block;
+  }
+
+  .nav-button-text {
+    text-align: left;
+    margin-left: 20px;
   }
 }

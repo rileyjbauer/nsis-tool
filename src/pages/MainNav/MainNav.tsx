@@ -10,50 +10,56 @@ import { Link } from 'react-router-dom';
 
 export function MainNav() {
   const content =
-    <div className="container">
-      <div className="navButton">
-        <Link to="/production" className="nav-link">
-          Production
-          <img src={Production} className="navButtonImg" />
+    <div className='nav-container'>
+      <div className='nav-button'>
+        <Link to='/production' className='nav-link'>
+          <img src={Production} className='mobile-nav-button-img' />
+          <span className='nav-button-text'>Production</span>
+          <img src={Production} className='nav-button-img' />
         </Link>
-      </div>
-      <div className="navButton">
-        <Link to="/foodTradeAndMarketing" className="nav-link">
-          Food Trade and Marketing
-          <img src={FoodTradeAndMarketing} className="navButtonImg" />
-        </Link>
-      </div>
-      <div className="navButton">
-        <Link to="/foodProcessing" className="nav-link">
-          Food Processing
-          <img src={FoodProcessing} className="navButtonImg" />
-        </Link>
-      </div>
-      <div className="navButton">
-        <Link to="/foodRetailing" className="nav-link">
-          Food Retailing
-          <img src={FoodRetailing} className="navButtonImg" />
-        </Link>
-      </div>
-      <div className="navButton">
-        <Link to="/consumerDemand" className="nav-link">
-          Consumer Demand
-          <img src={ConsumerDemand} className="navButtonImg" />
-        </Link>
-      </div>
-      <div className="navButton">
-        <Link to="/enablingEnvironment" className="nav-link">
-          Enabling Environment
-          <img src={EnablingEnvironment} className="navButtonImg" />
-        </Link>
-      </div>
-    </div>;
+      </div >
+      <div className='nav-button'>
+        <Link to='/foodTradeAndMarketing' className='nav-link'>
+          <img src={FoodTradeAndMarketing} className='mobile-nav-button-img' />
+          <span className='nav-button-text'>Food Trade and Marketing</span>
+          <img src={FoodTradeAndMarketing} className='nav-button-img' />
+        </Link >
+      </div >
+      <div className='nav-button'>
+        <Link to='/foodProcessing' className='nav-link'>
+          <img src={FoodProcessing} className='mobile-nav-button-img' />
+          <span className='nav-button-text'>Food Processing</span>
+          <img src={FoodProcessing} className='nav-button-img' />
+        </Link >
+      </div >
+      <div className='nav-button'>
+        <Link to='/foodRetailing' className='nav-link'>
+          <img src={FoodRetailing} className='mobile-nav-button-img' />
+          <span className='nav-button-text'>Food Retailing</span>
+          <img src={FoodRetailing} className='nav-button-img' />
+        </Link >
+      </div >
+      <div className='nav-button'>
+        <Link to='/consumerDemand' className='nav-link'>
+          <img src={ConsumerDemand} className='mobile-nav-button-img' />
+          <span className='nav-button-text'>Consumer Demand</span>
+          <img src={ConsumerDemand} className='nav-button-img' />
+        </Link >
+      </div >
+      <div className='nav-button'>
+        <Link to='/enablingEnvironment' className='nav-link'>
+          <img src={EnablingEnvironment} className='mobile-nav-button-img' />
+          <span className='nav-button-text'>Enabling Environment</span>
+          <img src={EnablingEnvironment} className='nav-button-img' />
+        </Link >
+      </div >
+    </div >;
 
   return (
     <BasicPage
-      title="Where in the Food System is your project working?"
+      title='Where in the Food System is your project working?'
       content={content}
-      navBackward="/welcome"
+      navBackward='/welcome'
     />
   );
 }

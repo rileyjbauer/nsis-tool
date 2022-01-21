@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { BasicPage } from '../../components/basicPage/BasicPage';
 import { ACTIVITY_PARAM, SECTOR_PARAM } from '../ActivityPageTemplate';
 import { PRODUCTION_ACTIVITIES, PRODUCTION_PAGE_MAP, SECTORS } from '../Maps';
+import './Sector.css';
 
 export function Production() {
   const content =

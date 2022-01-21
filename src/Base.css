@@ -3,7 +3,7 @@
   --main-theme-blue: #002e5d;
   --main-theme-orange: #fe8200;
   --main-theme-teal: #2eccd3;
-  --main-theme-gray: #999999;
+  --main-theme-gray: #666666;
   --main-theme-light-gray: #d7d7d7;
   --left-nav-width: 150px;
   --top-bar-height: 150px;
@@ -17,6 +17,7 @@ h1 {
   font-size: 48px;
   font-weight: normal;
   margin-top: 0px;
+  box-sizing: border-box;
 }
 
 .h1-smaller {
@@ -40,7 +41,12 @@ h3 {
   margin-top: 0px;
 }
 
-p {
+h4 {
+  font-size: 22px;
+  margin-bottom: 0px;
+}
+
+p, ul, ol {
   color: var(--main-theme-gray);
   font-size: 20px;
 }
@@ -82,31 +88,4 @@ thead {
 button {
   border: none;
   cursor: pointer;
-}
-
-.navRow {
-  display: flex;
-  flex-wrap: nowrap;
-}
-
-.sector-nav-button-container {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.sector-nav-button {
-  padding: 10px;
-  margin: 10px;
-  background-color: var(--main-theme-orange);
-  height: 70px;
-  width: 200px;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  flex-direction: column;
-}
-
-.sector-nav-button > p {
-  color: var(--main-theme-white);
 }

@@ -63,6 +63,10 @@
     display: none;
   }
 
+  .nav-bar > a {
+    margin: 0px;
+  }
+
   .menu-expanded {
     display: flex;
     background: var(--main-theme-blue);
@@ -94,6 +98,6 @@
   }
 
   .content-title {
-    font-size: 28px;
+    font-size: 32px;
   }
 }
