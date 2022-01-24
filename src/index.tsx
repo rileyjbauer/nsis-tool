@@ -3,18 +3,13 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { BrowserRouter, Router, Link, Route, Routes, useLocation } from 'react-router-dom';
+import { BrowserRouter, Link, Route, Routes, useLocation } from 'react-router-dom';
 import { Welcome } from './pages/Welcome';
 import { MainNav } from './pages/MainNav/MainNav';
-import { Production } from './pages/sectors/Production';
+import { Sector } from './pages/sectors/Sector';
 import { InterventionTemplate } from './pages/interventions/InterventionTemplate';
 import { ActivityDetail } from './components/ActivityDetail';
 import { ActivityPageTemplate } from './pages/ActivityPageTemplate';
-import { FoodTradeAndMarketing } from './pages/sectors/FoodTradeAndMarketing';
-import { FoodProcessing } from './pages/sectors/FoodProcessing';
-import { FoodRetailing } from './pages/sectors/FoodRetailing';
-import { ConsumerDemand } from './pages/sectors/ConsumerDemand';
-import { EnablingEnvironment } from './pages/sectors/EnablingEnvironment';
 import { GenderIntegrationTemplate } from './pages/genderIntegrations/GenderIntegrationTemplate';
 import { InterventionsList } from './pages/lists/InterventionsList';
 import { GenderIntegrationsList } from './pages/lists/GenderIntegrationsList';
@@ -47,14 +42,7 @@ ReactDOM.render(
           <Route path='/' element={<App />} />
           <Route path='welcome' element={<Welcome />} />
           <Route path='mainNav' element={<MainNav />} />
-
-          {/* Sector pages */}
-          <Route path='production' element={<Production />} />
-          <Route path='foodTradeAndMarketing' element={<FoodTradeAndMarketing />} />
-          <Route path='foodProcessing' element={<FoodProcessing />} />
-          <Route path='foodRetailing' element={<FoodRetailing />} />
-          <Route path='consumerDemand' element={<ConsumerDemand />} />
-          <Route path='enablingEnvironment' element={<EnablingEnvironment />} />
+          <Route path='sector' element={<Sector />} />
 
           <Route path='activity' element={<ActivityPageTemplate />}>
             <Route path='activityDetail' element={<ActivityDetail />} />

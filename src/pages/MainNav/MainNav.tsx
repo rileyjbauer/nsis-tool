@@ -1,58 +1,29 @@
 import { BasicPage } from '../../components/basicPage/BasicPage';
-import ConsumerDemand from '../../img/ConsumerDemand.png';
-import EnablingEnvironment from '../../img/EnablingEnvironment.png';
-import Production from '../../img/Production.png';
-import FoodRetailing from '../../img/FoodRetailing.png';
-import FoodTradeAndMarketing from '../../img/FoodTradeAndMarketing.png';
-import FoodProcessing from '../../img/FoodProcessing.png';
 import './MainNav.css'
 import { Link } from 'react-router-dom';
+import { SECTOR_PARAM } from '../sectors/Sector';
+import { MASTER_SECTOR_MAP, SECTORS } from '../SectorMaps';
+
+function getURL(thisSectorKey: string): string {
+  const params = new URLSearchParams();
+  params.append(SECTOR_PARAM, thisSectorKey);
+  return '/sector?' + params.toString();
+}
 
 export function MainNav() {
   const content =
     <div className='nav-container'>
-      <div className='nav-button'>
-        <Link to='/production' className='nav-link'>
-          <img src={Production} className='mobile-nav-button-img' />
-          <span className='nav-button-text'>Production</span>
-          <img src={Production} className='nav-button-img' />
-        </Link>
-      </div >
-      <div className='nav-button'>
-        <Link to='/foodTradeAndMarketing' className='nav-link'>
-          <img src={FoodTradeAndMarketing} className='mobile-nav-button-img' />
-          <span className='nav-button-text'>Food Trade and Marketing</span>
-          <img src={FoodTradeAndMarketing} className='nav-button-img' />
-        </Link >
-      </div >
-      <div className='nav-button'>
-        <Link to='/foodProcessing' className='nav-link'>
-          <img src={FoodProcessing} className='mobile-nav-button-img' />
-          <span className='nav-button-text'>Food Processing</span>
-          <img src={FoodProcessing} className='nav-button-img' />
-        </Link >
-      </div >
-      <div className='nav-button'>
-        <Link to='/foodRetailing' className='nav-link'>
-          <img src={FoodRetailing} className='mobile-nav-button-img' />
-          <span className='nav-button-text'>Food Retailing</span>
-          <img src={FoodRetailing} className='nav-button-img' />
-        </Link >
-      </div >
-      <div className='nav-button'>
-        <Link to='/consumerDemand' className='nav-link'>
-          <img src={ConsumerDemand} className='mobile-nav-button-img' />
-          <span className='nav-button-text'>Consumer Demand</span>
-          <img src={ConsumerDemand} className='nav-button-img' />
-        </Link >
-      </div >
-      <div className='nav-button'>
-        <Link to='/enablingEnvironment' className='nav-link'>
-          <img src={EnablingEnvironment} className='mobile-nav-button-img' />
-          <span className='nav-button-text'>Enabling Environment</span>
-          <img src={EnablingEnvironment} className='nav-button-img' />
-        </Link >
-      </div >
+      {Object.values(SECTORS).map((val) => (
+        <div className='nav-button'>
+          <Link to={getURL(val)} className='nav-link'>
+            <img src={MASTER_SECTOR_MAP[val].imgSrc} className='mobile-nav-button-img' alt={MASTER_SECTOR_MAP[val].title} />
+            <span className='nav-button-text'>
+              {MASTER_SECTOR_MAP[val].title}
+            </span>
+            <img src={MASTER_SECTOR_MAP[val].imgSrc} className='nav-button-img' alt={MASTER_SECTOR_MAP[val].title} />
+          </Link>
+        </div >
+      ))}
     </div >;
 
   return (

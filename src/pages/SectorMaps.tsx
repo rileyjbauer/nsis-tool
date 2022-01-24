@@ -1,17 +1,31 @@
-import { ActivityTemplateProps } from "./ActivityPageTemplate"
+import { ActivityTemplateProps } from './ActivityPageTemplate';
+import ConsumerDemandImg from '../img/ConsumerDemand.png';
+import EnablingEnvironmentImg from '../img/EnablingEnvironment.png';
+import ProductionImg from '../img/Production.png';
+import FoodRetailingImg from '../img/FoodRetailing.png';
+import FoodTradeAndMarketingImg from '../img/FoodTradeAndMarketing.png';
+import FoodProcessingImg from '../img/FoodProcessing.png';
+
+export type SectorMap = { [key: string]: ActivityTemplateProps };
+
+type SectorActivities = { [key: string]: string };
+
+export type SectorPage = {
+  map: SectorMap;
+  header: string;
+  title: string;
+  activities: SectorActivities;
+  imgSrc: string;
+};
 
 // Typescript doesn't reverse-map string enums, so we're going with this instead for now.
-// Probably it would be better to use strings in the future with our own reverse-mapping
-// to verify whether or not a string is actually in this enum.
-// https://www.typescriptlang.org/docs/handbook/enums.html#reverse-mappings 
-export const PRODUCTION_ACTIVITIES = {
+// https://www.typescriptlang.org/docs/handbook/enums.html#reverse-mappings
+export const PRODUCTION_ACTIVITIES: SectorActivities = {
   AGRO_INPUT_SUPPLY: 'agro_input_supply',
   PRODUCER_FARMER_ORGANIZATION_DEVELOPMENT: 'producer_farmer_organization_development',
   FARM_AND_HOUSEHOLD_TRAINING: 'farm_and_household_training',
   VALUE_CHAIN_SELECTION: 'value_chain_selection',
 }
-
-type SectorMap = { [key: string]: ActivityTemplateProps };
 
 export const PRODUCTION_PAGE_MAP: SectorMap = {
   [PRODUCTION_ACTIVITIES.AGRO_INPUT_SUPPLY]: {
@@ -95,12 +109,20 @@ export const PRODUCTION_PAGE_MAP: SectorMap = {
   }
 }
 
+export const PRODUCTION_PAGE: SectorPage = {
+  map: PRODUCTION_PAGE_MAP,
+  header: 'Select the box below that reflects the focus of your work in agriculture/livestock production:',
+  title: 'Production',
+  activities: PRODUCTION_ACTIVITIES,
+  imgSrc: ProductionImg,
+}
+
 // ---------------------------------------------------------------------
 
 // Typescript doesn't reverse-map string enums, so we're going with this instead for now.
 // Probably it would be better to use strings in the future with our own reverse-mapping
 // to verify whether or not a string is actually in this enum.
-// https://www.typescriptlang.org/docs/handbook/enums.html#reverse-mappings 
+// https://www.typescriptlang.org/docs/handbook/enums.html#reverse-mappings
 export const FOOD_TRADE_ACTIVITIES = {
   FOOD_COMMODITY_STORAGE: 'food_commodity_storage',
   MARKETING_DISTRIBUTION_OF_COMMODITIES: 'marketing_distribution_of_commodities',
@@ -156,6 +178,14 @@ export const FOOD_TRADE_PAGE_MAP: SectorMap = {
     pageTitle: 'Food Safety In Food Storage, Transport, And Trade',
     navBackwardPath: 'foodTradeAndMarketing',
   },
+}
+
+export const FOOD_TRADE_PAGE: SectorPage = {
+  map: FOOD_TRADE_PAGE_MAP,
+  header: 'Select the box below that reflects the focus of your work in food trade/marketing:',
+  title: 'Food Trade and Marketing',
+  activities: FOOD_TRADE_ACTIVITIES,
+  imgSrc: FoodTradeAndMarketingImg,
 }
 
 // ---------------------------------------------------------------------
@@ -222,6 +252,14 @@ export const FOOD_PROCESSING_PAGE_MAP: SectorMap = {
     pageTitle: 'Marketing/Distribution Of Commodities By Food Processors',
     navBackwardPath: 'foodProcessing',
   },
+}
+
+export const FOOD_PROCESSING_PAGE: SectorPage = {
+  map: FOOD_PROCESSING_PAGE_MAP,
+  header: 'Select the box below that reflects the primary focus of your work in processing:',
+  title: 'Food Processing',
+  activities: FOOD_PROCESSING_ACTIVITIES,
+  imgSrc: FoodProcessingImg,
 }
 
 // ---------------------------------------------------------------------
@@ -298,6 +336,14 @@ export const FOOD_RETAILING_PAGE_MAP: SectorMap = {
     pageTitle: 'Good Governance At Markets',
     navBackwardPath: 'foodRetailing',
   },
+}
+
+export const FOOD_RETAILING_PAGE: SectorPage = {
+  map: FOOD_RETAILING_PAGE_MAP,
+  header: 'Select the box below that reflects the primary focus of your work in food retailing:',
+  title: 'Food Retailing',
+  activities: FOOD_RETAILING_ACTIVITIES,
+  imgSrc: FoodRetailingImg,
 }
 
 // ---------------------------------------------------------------------
@@ -384,6 +430,14 @@ export const CONSUMER_DEMAND_PAGE_MAP: SectorMap = {
     pageTitle: 'Private Sector Marketing For Nutrition',
     navBackwardPath: 'consumerDemand',
   },
+}
+
+export const CONSUMER_DEMAND_PAGE: SectorPage = {
+  map: CONSUMER_DEMAND_PAGE_MAP,
+  header: 'Select the box below that reflects the primary focus of your work in consumer demand:',
+  title: 'Consumer Demand',
+  activities: CONSUMER_DEMAND_ACTIVITIES,
+  imgSrc: ConsumerDemandImg,
 }
 
 // ---------------------------------------------------------------------
@@ -484,6 +538,16 @@ export const ENABLING_ENVIRONMENT_PAGE_MAP: SectorMap = {
   },
 }
 
+export const ENABLING_ENVIRONMENT_PAGE: SectorPage = {
+  map: ENABLING_ENVIRONMENT_PAGE_MAP,
+  header: 'Select the box below that reflects the primary focus of your work in enabling environment:',
+  title: 'Enabling Environment',
+  activities: ENABLING_ENVIRONMENT_ACTIVITIES,
+  imgSrc: EnablingEnvironmentImg,
+}
+
+// ----------------------------------------------------
+
 export const SECTORS = {
   PRODUCTION: 'production',
   FOOD_TRADE_AND_MARKETING: 'food_trade_and_marketing',
@@ -493,11 +557,11 @@ export const SECTORS = {
   ENABLING_ENVIRONMENT: 'enabling_environment'
 }
 
-export const MASTER_SECTOR_MAP: { [key: string]: SectorMap } = {
-  [SECTORS.PRODUCTION]: PRODUCTION_PAGE_MAP,
-  [SECTORS.FOOD_TRADE_AND_MARKETING]: FOOD_TRADE_PAGE_MAP,
-  [SECTORS.FOOD_PROCESSING]: FOOD_PROCESSING_PAGE_MAP,
-  [SECTORS.FOOD_RETAILING]: FOOD_RETAILING_PAGE_MAP,
-  [SECTORS.CONSUMER_DEMAND]: CONSUMER_DEMAND_PAGE_MAP,
-  [SECTORS.ENABLING_ENVIRONMENT]: ENABLING_ENVIRONMENT_PAGE_MAP,
+export const MASTER_SECTOR_MAP: { [key: string]: SectorPage } = {
+  [SECTORS.PRODUCTION]: PRODUCTION_PAGE,
+  [SECTORS.FOOD_TRADE_AND_MARKETING]: FOOD_TRADE_PAGE,
+  [SECTORS.FOOD_PROCESSING]: FOOD_PROCESSING_PAGE,
+  [SECTORS.FOOD_RETAILING]: FOOD_RETAILING_PAGE,
+  [SECTORS.CONSUMER_DEMAND]: CONSUMER_DEMAND_PAGE,
+  [SECTORS.ENABLING_ENVIRONMENT]: ENABLING_ENVIRONMENT_PAGE,
 };

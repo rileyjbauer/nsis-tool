@@ -2,13 +2,13 @@ import { BasicPage } from '../components/basicPage/BasicPage';
 import { Link, Outlet, useSearchParams } from 'react-router-dom';
 import { makeQueryString } from '../components/ActivityDetail';
 import { ErrorElement } from '../components/ErrorElement';
-import { MASTER_SECTOR_MAP } from './Maps';
+import { MASTER_SECTOR_MAP } from './SectorMaps';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import { useState } from 'react';
 import './ActivityPageTemplate.css';
+import { SECTOR_PARAM } from './sectors/Sector';
 
 export const ACTIVITY_PARAM = 'activity';
-export const SECTOR_PARAM = 'sector';
 export const SELECTED_ACTIVITY_PARAM = 'selected';
 
 export type Activity = {
@@ -37,6 +37,7 @@ export function ActivityPageTemplate() {
   const [menuExpanded, setMenuExpanded] = useState(false);
 
   const thisSectorKey = searchParams.get(SECTOR_PARAM);
+  // TODO: Verify that these checks are working as intended
   if (!thisSectorKey) {
     return <ErrorElement message={`URL missing search param: ${SECTOR_PARAM}`} />
   }
@@ -51,7 +52,7 @@ export function ActivityPageTemplate() {
   }
 
   const thisSector = MASTER_SECTOR_MAP[thisSectorKey];
-  const thisActivity = thisSector[thisActivityKey];
+  const thisActivity = thisSector.map[thisActivityKey];
 
   const content =
     <div className='activity-page-template-container'>
