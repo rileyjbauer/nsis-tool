@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/nsis-tool/static/css/main.9c74ffe0.css",
-    "main.js": "/nsis-tool/static/js/main.c96ae81b.js",
+    "main.js": "/nsis-tool/static/js/main.b6cf3e9b.js",
     "static/js/787.22d3c70b.chunk.js": "/nsis-tool/static/js/787.22d3c70b.chunk.js",
     "static/media/Production.png": "/nsis-tool/static/media/Production.350f080d921c2aa35b73.png",
     "static/media/EnablingEnvironment.png": "/nsis-tool/static/media/EnablingEnvironment.94d86cc3de7721ea9f99.png",
@@ -14,11 +14,11 @@
     "static/media/lateriteLogo.png": "/nsis-tool/static/media/lateriteLogo.10c33f4e60cc232071ca.png",
     "index.html": "/nsis-tool/index.html",
     "main.9c74ffe0.css.map": "/nsis-tool/static/css/main.9c74ffe0.css.map",
-    "main.c96ae81b.js.map": "/nsis-tool/static/js/main.c96ae81b.js.map",
+    "main.b6cf3e9b.js.map": "/nsis-tool/static/js/main.b6cf3e9b.js.map",
     "787.22d3c70b.chunk.js.map": "/nsis-tool/static/js/787.22d3c70b.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.9c74ffe0.css",
-    "static/js/main.c96ae81b.js"
+    "static/js/main.b6cf3e9b.js"
   ]
 }
