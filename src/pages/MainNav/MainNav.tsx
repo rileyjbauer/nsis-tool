@@ -2,7 +2,7 @@ import { BasicPage } from '../../components/basicPage/BasicPage';
 import './MainNav.css'
 import { Link } from 'react-router-dom';
 import { SECTOR_PARAM } from '../sectors/Sector';
-import { MASTER_SECTOR_MAP, SECTORS } from '../SectorMaps';
+import { MASTER_SECTOR_MAP, SECTORS } from '../../SectorMaps';
 
 function getURL(thisSectorKey: string): string {
   const params = new URLSearchParams();

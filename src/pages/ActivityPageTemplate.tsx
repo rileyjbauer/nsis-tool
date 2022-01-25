@@ -2,7 +2,7 @@ import { BasicPage } from '../components/basicPage/BasicPage';
 import { Link, Outlet, useSearchParams } from 'react-router-dom';
 import { makeQueryString } from '../components/ActivityDetail';
 import { ErrorElement } from '../components/ErrorElement';
-import { MASTER_SECTOR_MAP } from './SectorMaps';
+import { MASTER_SECTOR_MAP } from '../SectorMaps';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import { useState } from 'react';
 import './ActivityPageTemplate.css';

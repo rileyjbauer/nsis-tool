@@ -2,7 +2,7 @@ import { Link, useSearchParams } from 'react-router-dom';
 import { BasicPage } from '../../components/basicPage/BasicPage';
 import { ErrorElement } from '../../components/ErrorElement';
 import { ACTIVITY_PARAM } from '../ActivityPageTemplate';
-import { MASTER_SECTOR_MAP } from '../SectorMaps';
+import { MASTER_SECTOR_MAP } from '../../SectorMaps';
 import './Sector.css';
 
 export const SECTOR_PARAM = 'sector';

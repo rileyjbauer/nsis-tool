@@ -1,10 +1,10 @@
-import { ActivityTemplateProps } from './ActivityPageTemplate';
-import ConsumerDemandImg from '../img/ConsumerDemand.png';
-import EnablingEnvironmentImg from '../img/EnablingEnvironment.png';
-import ProductionImg from '../img/Production.png';
-import FoodRetailingImg from '../img/FoodRetailing.png';
-import FoodTradeAndMarketingImg from '../img/FoodTradeAndMarketing.png';
-import FoodProcessingImg from '../img/FoodProcessing.png';
+import { ActivityTemplateProps } from './pages/ActivityPageTemplate';
+import ConsumerDemandImg from './img/ConsumerDemand.png';
+import EnablingEnvironmentImg from './img/EnablingEnvironment.png';
+import ProductionImg from './img/Production.png';
+import FoodRetailingImg from './img/FoodRetailing.png';
+import FoodTradeAndMarketingImg from './img/FoodTradeAndMarketing.png';
+import FoodProcessingImg from './img/FoodProcessing.png';
 
 export type SectorMap = { [key: string]: ActivityTemplateProps };
 
