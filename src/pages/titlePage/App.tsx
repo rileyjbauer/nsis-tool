@@ -1,9 +1,9 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import TanagerLogo from './img/TanagerLogo.png'
-import SixtyDecibelsLogo from './img/60_decibels.png'
-import LateriteLogo from './img/lateriteLogo.png'
+import TanagerLogo from '../../img/TanagerLogo.png'
+import SixtyDecibelsLogo from '../../img/60_decibels.png'
+import LateriteLogo from '../../img/lateriteLogo.png'
 import { Link } from 'react-router-dom';
 
 function App() {

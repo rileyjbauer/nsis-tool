@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import App from './pages/titlePage/App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Link, Route, Routes, useLocation } from 'react-router-dom';
 import { Welcome } from './pages/Welcome';
