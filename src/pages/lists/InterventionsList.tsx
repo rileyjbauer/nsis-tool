@@ -20,6 +20,7 @@ export function InterventionsList() {
             </div>
           );
         }
+        return <div />;
       })}
     </div>
   return (

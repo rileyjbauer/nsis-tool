@@ -1,5 +1,4 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import TanagerLogo from '../../img/TanagerLogo.png'
 import SixtyDecibelsLogo from '../../img/60_decibels.png'
@@ -20,9 +19,9 @@ function App() {
       <Link to="/mainNav" className="App-start-link">Or jump straight to the Main Menu</Link>
       <hr className='App-hr' />
       <div className='App-logo-div'>
-        <img src={TanagerLogo} />
-        <img src={LateriteLogo} />
-        <img src={SixtyDecibelsLogo} />
+        <img src={TanagerLogo} alt='Tanager' />
+        <img src={LateriteLogo} alt='Laterite' />
+        <img src={SixtyDecibelsLogo} alt='Sixty Decibels' />
       </div>
     </div>
   );
