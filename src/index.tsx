@@ -36,7 +36,7 @@ function ScrollToTopWrapper({ children }: any) {
 
 ReactDOM.render(
   <React.StrictMode>
-    <BrowserRouter basename={`/nsis-tool`}>
+    <BrowserRouter basename={`/WordPress/react`}>
       <ScrollToTopWrapper>
         <Routes>
           <Route path='/' element={<App />} />
@@ -66,7 +66,7 @@ ReactDOM.render(
       </ScrollToTopWrapper>
     </BrowserRouter>,
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById('nsis-tool')
 );
 
 // If you want to start measuring performance in your app, pass a function
