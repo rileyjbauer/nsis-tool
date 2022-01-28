@@ -35,37 +35,39 @@ function ScrollToTopWrapper({ children }: any) {
 }
 
 ReactDOM.render(
-  <React.StrictMode>
-    <BrowserRouter basename={`/nsis-tool`}>
-      <ScrollToTopWrapper>
-        <Routes>
-          <Route path='/' element={<App />} />
-          <Route path='welcome' element={<Welcome />} />
-          <Route path='mainNav' element={<MainNav />} />
-          <Route path='sector' element={<Sector />} />
+  (
+    <React.StrictMode>
+      <BrowserRouter basename={`/nsis-tool`}>
+        <ScrollToTopWrapper>
+          <Routes>
+            <Route path='/' element={<App />} />
+            <Route path='welcome' element={<Welcome />} />
+            <Route path='mainNav' element={<MainNav />} />
+            <Route path='sector' element={<Sector />} />
 
-          <Route path='activity' element={<ActivityPageTemplate />}>
-            <Route path='activityDetail' element={<ActivityDetail />} />
-          </Route>
+            <Route path='activity' element={<ActivityPageTemplate />}>
+              <Route path='activityDetail' element={<ActivityDetail />} />
+            </Route>
 
-          {/* Intervention pages */}
-          <Route path='interventions/:interventionId' element={<InterventionTemplate />} />
+            {/* Intervention pages */}
+            <Route path='interventions/:interventionId' element={<InterventionTemplate />} />
 
-          {/* Gender Integrations */}
-          <Route path='genderIntegrations/:genderIntegrationId' element={<GenderIntegrationTemplate />} />
+            {/* Gender Integrations */}
+            <Route path='genderIntegrations/:genderIntegrationId' element={<GenderIntegrationTemplate />} />
 
-          {/* All Nutrition Interventions */}
-          <Route path='interventionsList' element={<InterventionsList />} />
+            {/* All Nutrition Interventions */}
+            <Route path='interventionsList' element={<InterventionsList />} />
 
-          {/* All Gender Integrations */}
-          <Route path='genderIntegrationsList' element={<GenderIntegrationsList />} />
+            {/* All Gender Integrations */}
+            <Route path='genderIntegrationsList' element={<GenderIntegrationsList />} />
 
-          {/* Catch all other paths and display placeholder page */}
-          <Route path="*" element={<NoMatch />} />
-        </Routes>
-      </ScrollToTopWrapper>
-    </BrowserRouter>,
-  </React.StrictMode>,
+            {/* Catch all other paths and display placeholder page */}
+            <Route path="*" element={<NoMatch />} />
+          </Routes>
+        </ScrollToTopWrapper>
+      </BrowserRouter>
+    </React.StrictMode>
+  ),
   document.getElementById('root')
 );
 
