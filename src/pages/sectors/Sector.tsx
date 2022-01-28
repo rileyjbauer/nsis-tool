@@ -35,7 +35,7 @@ export function Sector() {
     <BasicPage
       title={sector.title}
       content={content}
-      navBackward="/mainNav"
+      navBackward='/mainNav'
     />
   );
 }

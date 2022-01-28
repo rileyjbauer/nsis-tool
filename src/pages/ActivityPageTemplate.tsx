@@ -84,7 +84,6 @@ export function ActivityPageTemplate() {
     <BasicPage
       title={thisActivity.pageTitle}
       content={content}
-      navBackward={`/${thisActivity.navBackwardPath}`}
     />
   );
 }

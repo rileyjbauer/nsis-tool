@@ -31,10 +31,11 @@ export function BasicPage(props: BasicPageProps) {
           <Link to='/genderIntegrationsList'>All Gender Integrations</Link>
         </div>
       </div>
-      <div className="content" onClick={() => setMenuExpanded(false)}>
+      <div className='content' onClick={() => setMenuExpanded(false)}>
         {props.title && <h1 className='content-title'>{props.title}</h1>}
         {props.content}
       </div>
+      <div className='bottom-spacer' />
       <ArrowNavBar back={props.navBackward} forward={props.navForward} />
     </div>
   );

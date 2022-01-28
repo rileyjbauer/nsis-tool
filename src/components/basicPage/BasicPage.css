@@ -53,6 +53,11 @@
   margin-top: calc(var(--top-bar-height) + var(--top-bar-padding-top) + var(--top-bar-padding-bottom));
 }
 
+.bottom-spacer {
+  display: block;
+  height: 20px;
+}
+
 @media (max-width: 950px) {
   .header-bar {
     padding: var(--top-bar-padding-top) 20px var(--top-bar-padding-bottom);

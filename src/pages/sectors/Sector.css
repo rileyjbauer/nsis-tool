@@ -5,10 +5,6 @@
   flex-wrap: wrap;
 }
 
-.nav-button-card > p {
-  color: var(--main-theme-white);
-}
-
 @media (max-width: 950px) {
   .sector-nav-button-container {
     flex-wrap: nowrap;
