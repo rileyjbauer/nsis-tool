@@ -1,8 +1,10 @@
-import { Link, useSearchParams } from "react-router-dom";
+import { Link, useSearchParams } from 'react-router-dom';
 import Interventions from '../interventions.json';
 import GenderIntegrations from '../gender-integrations.json';
-import { Activity } from "../pages/ActivityPageTemplate";
-import { ErrorElement } from "./ErrorElement";
+import { Activity } from '../pages/ActivityPageTemplate';
+import { ErrorElement } from './ErrorElement';
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import './ActivityDetail.css';
 
 const ACTIVITY_DETAIL_PARAMS = {
   interventionIds: 'interventionIds',
@@ -55,8 +57,9 @@ export function ActivityDetail() {
           (
             <tr key={i}>
               <td>
-                <Link to={`/interventions/${intervention.id}`}>
+                <Link className='activity-detail-link' to={`/interventions/${intervention.id}`}>
                   {intervention.title}
+                  <ArrowForwardIosIcon />
                 </Link>
               </td>
               <td>{intervention.foodEnvironmentDomainsAffected.join(', ')}</td>
@@ -76,8 +79,9 @@ export function ActivityDetail() {
             (
               <tr key={i}>
                 <td>
-                  <Link to={`/genderIntegrations/${genderIntegration.id}`}>
+                  <Link to={`/genderIntegrations/${genderIntegration.id}`} className='activity-detail-link'>
                     {genderIntegration.integration}
+                    <ArrowForwardIosIcon />
                   </Link>
                 </td>
               </tr>
