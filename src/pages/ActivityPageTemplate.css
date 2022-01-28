@@ -79,6 +79,7 @@
     max-width: 400px;
     max-height: 45vh;
     overflow: auto;
+    z-index: 99;
   }
 
   .activity-page-template-nav-button {
