@@ -5,20 +5,7 @@
   flex-wrap: wrap;
 }
 
-.sector-nav-button {
-  padding: 10px;
-  margin: 10px;
-  background-color: var(--main-theme-orange);
-  height: 70px;
-  width: 340px;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  flex-direction: column;
-}
-
-.sector-nav-button > p {
+.nav-button-card > p {
   color: var(--main-theme-white);
 }
 

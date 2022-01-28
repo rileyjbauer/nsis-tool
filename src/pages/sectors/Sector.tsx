@@ -23,7 +23,7 @@ export function Sector() {
       <div className='sector-nav-button-container'>
         {Object.values(sector.activities).map((v, i) =>
           <Link key={i} to={`/activity?${ACTIVITY_PARAM}=${v}&${SECTOR_PARAM}=${thisSectorKey}`} className='non-underlined-link'>
-            <div className='sector-nav-button'>
+            <div className='nav-button-card'>
               <p>{sector.map[v].pageTitle}</p>
             </div>
           </Link>)}

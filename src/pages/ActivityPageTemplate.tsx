@@ -68,7 +68,7 @@ export function ActivityPageTemplate() {
         <div className={`activity-page-template-nav-button-container ${menuExpanded ? 'activity-menu-expanded' : ''}`}>
           {thisActivity.activities.map((activity, i) => (
             <Link key={i} to={getURL(thisSectorKey, thisActivityKey, activity, i)} className='non-underlined-link' onClick={() => setMenuExpanded(false)}>
-              <div className={`activity-page-template-nav-button ${navButtonSelected === i ? 'activity-page-template-nav-button-selected' : ''}`}>
+              <div className={`nav-button-card activity-page-template-nav-button ${navButtonSelected === i ? 'activity-page-template-nav-button-selected' : ''}`}>
                 <p>{activity.activityTitle}</p>
               </div>
             </Link>

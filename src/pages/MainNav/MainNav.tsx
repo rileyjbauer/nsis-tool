@@ -14,7 +14,7 @@ export function MainNav() {
   const content =
     <div className='nav-container'>
       {Object.values(SECTORS).map((val) => (
-        <div className='nav-button'>
+        <div className='nav-button' key={val}>
           <Link to={getURL(val)} className='nav-link'>
             <img src={MASTER_SECTOR_MAP[val].imgSrc} className='mobile-nav-button-img' alt={MASTER_SECTOR_MAP[val].title} />
             <span className='nav-button-text'>
