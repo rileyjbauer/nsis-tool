@@ -55,7 +55,7 @@
 
 .bottom-spacer {
   display: block;
-  height: 20px;
+  height: 60px;
 }
 
 @media (max-width: 950px) {
@@ -104,5 +104,10 @@
 
   .content-title {
     font-size: 32px;
+  }
+
+  .bottom-spacer {
+    display: block;
+    height: 20px;
   }
 }

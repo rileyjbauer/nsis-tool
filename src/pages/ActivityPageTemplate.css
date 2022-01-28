@@ -62,7 +62,7 @@
     display: block;
   }
 
-  .activity-page-template-nav-button-container {
+  .activity-page-template-menu {
     display: none;
   }
 
@@ -77,6 +77,8 @@
     top: 100%;
     width: calc(100vw - 116px);
     max-width: 400px;
+    max-height: 45vh;
+    overflow: auto;
   }
 
   .activity-page-template-nav-button {

@@ -20,7 +20,7 @@ export function InterventionsList() {
             </div>
           );
         }
-        return <div />;
+        return <div key={i} />;
       })}
     </div>
   return (

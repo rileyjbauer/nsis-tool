@@ -20,7 +20,7 @@ export function GenderIntegrationsList() {
             </div>
           );
         }
-        return <div />;
+        return <div key={i} />;
       })}
     </div>
   return (

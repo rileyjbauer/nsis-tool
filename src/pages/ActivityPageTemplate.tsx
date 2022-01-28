@@ -7,6 +7,7 @@ import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import { useState } from 'react';
 import './ActivityPageTemplate.css';
 import { SECTOR_PARAM } from './sectors/Sector';
+import { useEffect } from 'react';
 
 export const ACTIVITY_PARAM = 'activity';
 export const SELECTED_ACTIVITY_PARAM = 'selected';
@@ -35,6 +36,16 @@ export function ActivityPageTemplate() {
   let navButtonSelected = -1;
   const [searchParams, setSearchParams] = useSearchParams();
   const [menuExpanded, setMenuExpanded] = useState(false);
+
+  // Ensures that if the activity menu is in dropdown form AND it exceeds the defined max-height (meaning it will be scrollable), then it will always open scrolled to the top
+  useEffect(() => {
+    if (menuExpanded) {
+      const menu = document.getElementById('activity-page-template-menu');
+      if (menu) {
+        menu.scrollTop = 0;
+      }
+    }
+  });
 
   const thisSectorKey = searchParams.get(SECTOR_PARAM);
   // TODO: Verify that these checks are working as intended
@@ -65,7 +76,7 @@ export function ActivityPageTemplate() {
             <ArrowDropDownIcon sx={{ fontSize: 40, color: '#fe8200' }} />
           </div>
         </div>
-        <div className={`activity-page-template-nav-button-container ${menuExpanded ? 'activity-menu-expanded' : ''}`}>
+        <div id='activity-page-template-menu' className={`activity-page-template-menu ${menuExpanded ? 'activity-menu-expanded' : ''}`}>
           {thisActivity.activities.map((activity, i) => (
             <Link key={i} to={getURL(thisSectorKey, thisActivityKey, activity, i)} className='non-underlined-link' onClick={() => setMenuExpanded(false)}>
               <div className={`nav-button-card activity-page-template-nav-button ${navButtonSelected === i ? 'activity-page-template-nav-button-selected' : ''}`}>
