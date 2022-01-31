@@ -13,6 +13,7 @@ import { ActivityPageTemplate } from './pages/ActivityPageTemplate';
 import { GenderIntegrationTemplate } from './pages/genderIntegrations/GenderIntegrationTemplate';
 import { InterventionsList } from './pages/lists/InterventionsList';
 import { GenderIntegrationsList } from './pages/lists/GenderIntegrationsList';
+import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 
 function NoMatch() {
   return (
@@ -75,3 +76,6 @@ ReactDOM.render(
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
+
+// Learn more about service workers: https://cra.link/PWA
+serviceWorkerRegistration.register();
