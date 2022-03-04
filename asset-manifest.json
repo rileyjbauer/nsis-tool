@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/nsis-tool/static/css/main.8ecda020.css",
+    "main.css": "/nsis-tool/static/css/main.62df46c2.css",
     "main.js": "/nsis-tool/static/js/main.3e537cc3.js",
     "static/js/787.22d3c70b.chunk.js": "/nsis-tool/static/js/787.22d3c70b.chunk.js",
     "service-worker.js": "/nsis-tool/service-worker.js",
@@ -14,12 +14,12 @@
     "static/media/FoodTradeAndMarketing.svg": "/nsis-tool/static/media/FoodTradeAndMarketing.61015beb078e56a7c5d3d88e8e494abd.svg",
     "index.html": "/nsis-tool/index.html",
     "static/media/ConsumerDemand.svg": "/nsis-tool/static/media/ConsumerDemand.0c71715d99e5e7c4e0303bd662797a9d.svg",
-    "main.8ecda020.css.map": "/nsis-tool/static/css/main.8ecda020.css.map",
+    "main.62df46c2.css.map": "/nsis-tool/static/css/main.62df46c2.css.map",
     "main.3e537cc3.js.map": "/nsis-tool/static/js/main.3e537cc3.js.map",
     "787.22d3c70b.chunk.js.map": "/nsis-tool/static/js/787.22d3c70b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.8ecda020.css",
+    "static/css/main.62df46c2.css",
     "static/js/main.3e537cc3.js"
   ]
 }
