@@ -24,7 +24,6 @@ export function BasicPage(props: BasicPageProps) {
             <MenuIcon sx={{ fontSize: 50 }} onClick={() => setMenuExpanded(!menuExpanded)} />
           </div>
         </span>
-        <hr className='header-hr' />
         <div className={`nav-bar ${menuExpanded ? 'menu-expanded' : ''}`}>
           <Link to='/mainNav'>Start Over</Link>
           <Link to='/interventionsList'>All Nutrition Interventions</Link>

@@ -7,7 +7,7 @@
   --main-theme-light-gray: #d7d7d7;
   --main-theme-very-light-gray: #eeeeee;
   --left-nav-width: 150px;
-  --top-bar-height: 150px;
+  --top-bar-height: 80px;
   --top-bar-padding-top: 10px;
   --top-bar-padding-bottom: 10px;
   --mobile-top-bar-height: 80px;
@@ -109,4 +109,10 @@ button {
 
 .nav-button-card > p {
   color: var(--main-theme-white);
+}
+
+@media (max-width: 630px) {
+  .nav-button-card {
+    margin: 10px 0px;
+  }
 }
