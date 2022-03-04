@@ -17,10 +17,12 @@ export function MainNav() {
         <div className='nav-button' key={val}>
           <Link to={getURL(val)} className='nav-link'>
             <img src={MASTER_SECTOR_MAP[val].imgSrc} className='mobile-nav-button-img' alt={MASTER_SECTOR_MAP[val].title} />
-            <span className='nav-button-text'>
+            <div className='nav-button-img-container'>
+              <img src={MASTER_SECTOR_MAP[val].imgSrc} className='nav-button-img' alt={MASTER_SECTOR_MAP[val].title} />
+            </div>
+            <div className='nav-button-text'>
               {MASTER_SECTOR_MAP[val].title}
-            </span>
-            <img src={MASTER_SECTOR_MAP[val].imgSrc} className='nav-button-img' alt={MASTER_SECTOR_MAP[val].title} />
+            </div>
           </Link>
         </div >
       ))}
