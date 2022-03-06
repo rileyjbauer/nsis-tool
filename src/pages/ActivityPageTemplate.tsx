@@ -86,7 +86,10 @@ export function ActivityPageTemplate() {
           ))}
         </div>
       </div>
-      <div className='activity-page-template-content-box' onClick={() => setMenuExpanded(false)}>
+      <div className={`activity-page-template-content-box ${navButtonSelected === -1 ? 'activity-page-template-content-box-empty' : ''}`} onClick={() => setMenuExpanded(false)}>
+        {navButtonSelected === -1 && (
+          <p>Please select an activity</p>
+        )}
         <Outlet />
       </div>
     </div >;

@@ -43,7 +43,7 @@ export function ActivityDetail() {
     GenderIntegrations.genderIntegrations.filter((genderIntegrations) => genderIntegrationIds.includes(genderIntegrations.id));
 
   return (
-    <div className='padding-10'>
+    <div>
       <h1 className='h1-smaller'>{pageTitle}</h1>
       <table>
         <thead>

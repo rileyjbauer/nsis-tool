@@ -1,14 +1,16 @@
 @import url('../Base.css');
 
 .activity-page-template-content-box {
-  border: 2px solid var(--main-theme-blue);
-  padding: 10px;
-  margin-left: 10px;
   min-height: 200px;
-  align-content: center;
+  align-items: center;
   justify-content: center;
   display: flex;
   width: 100%;
+}
+
+.activity-page-template-content-box-empty {
+  background: var(--main-theme-very-light-gray);
+  color:  var(--main-theme-light-gray);
 }
 
 .activity-page-template-container {
