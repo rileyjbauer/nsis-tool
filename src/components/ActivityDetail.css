@@ -8,7 +8,7 @@
   align-items: flex-end;
 }
 
-.activity-detail-link > svg {
+.activity-detail-link > span {
   display: block;
   color: var(--main-theme-orange)
 }

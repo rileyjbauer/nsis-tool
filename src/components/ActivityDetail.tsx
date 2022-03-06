@@ -3,7 +3,6 @@ import Interventions from '../interventions.json';
 import GenderIntegrations from '../gender-integrations.json';
 import { Activity } from '../pages/ActivityPageTemplate';
 import { ErrorElement } from './ErrorElement';
-import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import './ActivityDetail.css';
 
 const ACTIVITY_DETAIL_PARAMS = {
@@ -59,7 +58,7 @@ export function ActivityDetail() {
               <td>
                 <Link className='activity-detail-link' to={`/interventions/${intervention.id}`}>
                   {intervention.title}
-                  <ArrowForwardIosIcon />
+                  <span>(Read more →)</span>
                 </Link>
               </td>
               <td>{intervention.foodEnvironmentDomainsAffected.join(', ')}</td>
@@ -81,7 +80,7 @@ export function ActivityDetail() {
                 <td>
                   <Link to={`/genderIntegrations/${genderIntegration.id}`} className='activity-detail-link'>
                     {genderIntegration.integration}
-                    <ArrowForwardIosIcon />
+                    <span>(Read more →)</span>
                   </Link>
                 </td>
               </tr>
