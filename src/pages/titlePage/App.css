@@ -6,7 +6,6 @@
   display: flex;
   flex-direction: column;
   padding-top: 10vh;
-  justify-content: space-between;
   width: 100%;
   box-sizing: border-box;
   background: var(--main-theme-blue);
@@ -24,11 +23,19 @@
   padding-bottom: 30px;
 }
 
-.App-nav-button {
-  /* background-color: var(--main-theme-teal); */
+.nav-button-card.App-nav-button {
   font-weight: 600;
-  height: 64px;
-  width: 188px;
+  height: 70px;
+  box-shadow: none;
+  background: none;
+  border-radius: 12px;
+  width: 240px;
+  border: solid 2px var(--main-theme-orange);
+  transition: 0.4s ease-in-out;
+}
+
+.nav-button-card.App-nav-button:hover {
+  background-color: var(--main-theme-orange);
 }
 
 .App-nav-button-spacer {
@@ -42,7 +49,7 @@
 }
 
 .App-text {
-  font-size: 20px;
+  font-size: 16px;
   text-align: justify;
   font-style: italic;
 }
