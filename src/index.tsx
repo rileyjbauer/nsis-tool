@@ -1,18 +1,18 @@
 import React, { useEffect } from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './pages/titlePage/App';
-import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Link, Route, Routes, useLocation } from 'react-router-dom';
-import { Welcome } from './pages/Welcome';
+import { ActivityDetail } from './components/activityDetail/ActivityDetail';
+import './index.css';
+import { ActivityPageTemplate } from './pages/activityPageTemplate/ActivityPageTemplate';
+import { GenderIntegrationTemplate } from './pages/genderIntegrations/GenderIntegrationTemplate';
+import { InterventionTemplate } from './pages/interventions/InterventionTemplate';
+import { GenderIntegrationsList } from './pages/lists/GenderIntegrationsList';
+import { InterventionsList } from './pages/lists/InterventionsList';
 import { MainNav } from './pages/MainNav/MainNav';
 import { Sector } from './pages/sectors/Sector';
-import { InterventionTemplate } from './pages/interventions/InterventionTemplate';
-import { ActivityDetail } from './components/ActivityDetail';
-import { ActivityPageTemplate } from './pages/ActivityPageTemplate';
-import { GenderIntegrationTemplate } from './pages/genderIntegrations/GenderIntegrationTemplate';
-import { InterventionsList } from './pages/lists/InterventionsList';
-import { GenderIntegrationsList } from './pages/lists/GenderIntegrationsList';
+import App from './pages/titlePage/App';
+import { Welcome } from './pages/Welcome';
+import reportWebVitals from './reportWebVitals';
 import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 
 function NoMatch() {

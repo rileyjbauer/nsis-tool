@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { BasicPage } from '../../components/basicPage/BasicPage';
-import Interventions from '../../interventions.json';
+import Interventions from '../../data/interventions.json';
 import './List.css';
 
 export function InterventionsList() {

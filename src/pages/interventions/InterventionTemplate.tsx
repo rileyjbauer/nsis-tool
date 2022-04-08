@@ -1,8 +1,8 @@
-import { BasicPage } from "../../components/basicPage/BasicPage";
-import Interventions from '../../interventions.json';
+import { Link, useParams } from 'react-router-dom';
+import { BasicPage } from '../../components/basicPage/BasicPage';
+import { ErrorElement } from '../../components/ErrorElement';
+import Interventions from '../../data/interventions.json';
 import './InterventionTemplate.css';
-import { Link, useParams } from "react-router-dom";
-import { ErrorElement } from "../../components/ErrorElement";
 
 type Intervention = {
   id: number;

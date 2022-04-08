@@ -1,8 +1,8 @@
-import { BasicPage } from "../../components/basicPage/BasicPage";
-import GenderIntegrations from '../../gender-integrations.json';
+import { useParams } from 'react-router-dom';
+import { BasicPage } from '../../components/basicPage/BasicPage';
+import { ErrorElement } from '../../components/ErrorElement';
+import GenderIntegrations from '../../data/gender-integrations.json';
 import './GenderIntegrationTemplate.css';
-import { useParams } from "react-router-dom";
-import { ErrorElement } from "../../components/ErrorElement";
 
 type GenderIntegration = {
   id: number;

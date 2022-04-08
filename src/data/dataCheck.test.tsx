@@ -1,8 +1,7 @@
-import React from 'react';
-import Interventions from './interventions.json';
+import { Activity } from '../pages/activityPageTemplate/ActivityPageTemplate';
+import { MASTER_SECTOR_MAP } from '../SectorMaps';
 import GenderIntegrations from './gender-integrations.json';
-import { MASTER_SECTOR_MAP } from './SectorMaps';
-import { Activity } from './pages/ActivityPageTemplate';
+import Interventions from './interventions.json';
 
 const allInterventionIds = new Map<number, boolean>();
 Interventions.interventions.forEach(

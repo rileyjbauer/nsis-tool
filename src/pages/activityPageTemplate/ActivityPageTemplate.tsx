@@ -1,13 +1,12 @@
-import { BasicPage } from '../components/basicPage/BasicPage';
-import { Link, Outlet, useSearchParams } from 'react-router-dom';
-import { makeQueryString } from '../components/ActivityDetail';
-import { ErrorElement } from '../components/ErrorElement';
-import { MASTER_SECTOR_MAP } from '../SectorMaps';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import { Link, Outlet, useSearchParams } from 'react-router-dom';
+import { makeQueryString } from '../../components/activityDetail/ActivityDetail';
+import { BasicPage } from '../../components/basicPage/BasicPage';
+import { ErrorElement } from '../../components/ErrorElement';
+import { MASTER_SECTOR_MAP } from '../../SectorMaps';
+import { SECTOR_PARAM } from '../sectors/Sector';
 import './ActivityPageTemplate.css';
-import { SECTOR_PARAM } from './sectors/Sector';
-import { useEffect } from 'react';
 
 export const ACTIVITY_PARAM = 'activity';
 export const SELECTED_ACTIVITY_PARAM = 'selected';
