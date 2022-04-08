@@ -1,5 +1,5 @@
-import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import ArrowBackwardIcon from '@mui/icons-material/ArrowBack';
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import { Link, useNavigate } from 'react-router-dom';
 import './ArrowNavBar.css';
 

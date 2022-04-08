@@ -4,7 +4,7 @@ import { Link, Outlet, useSearchParams } from 'react-router-dom';
 import { makeQueryString } from '../../components/activityDetail/ActivityDetail';
 import { BasicPage } from '../../components/basicPage/BasicPage';
 import { ErrorElement } from '../../components/ErrorElement';
-import { MASTER_SECTOR_MAP } from '../../SectorMaps';
+import { MASTER_SECTOR_MAP } from '../../data/SectorMaps';
 import { SECTOR_PARAM } from '../sectors/Sector';
 import './ActivityPageTemplate.css';
 

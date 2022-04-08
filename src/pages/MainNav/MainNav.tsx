@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { BasicPage } from '../../components/basicPage/BasicPage';
-import { MASTER_SECTOR_MAP, SECTORS } from '../../SectorMaps';
+import { MASTER_SECTOR_MAP, SECTORS } from '../../data/SectorMaps';
 import { SECTOR_PARAM } from '../sectors/Sector';
 import './MainNav.css';
 
