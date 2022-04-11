@@ -43,11 +43,11 @@ How to edit each of these files is explained next and followed by examples. **No
 
 Breaking that down we get:
 
-`interventions` - an array of intervention objects each of which are comprised of the following. Each intervention should be followed by a comma **except** whichever is the very last in the file.
+`interventions` - an array of intervention objects each of which are comprised of the following. **Note:** each intervention should be followed by a comma **except** whichever is the very last in the file.
 
 An intervention "object" is comprised of all of the following:
 
-`id` - a unique, integer value > 0. No two interventions should have the same id number. Followed by a comma.
+`id` - a unique, integer value > 0, followed by a comma. No two interventions should have the same id number.
 
 Example:
 ```
@@ -57,7 +57,7 @@ Example:
 }
 ```
 
-`title` - The simple text name a person would use to refer to the intervention placed between a set of "". Followed by a comma. **Note:** Make sure the quotation mark character is ", not “ or ”
+`title` - The simple text name a person would use to refer to the intervention, placed between a set of "", followed by a comma. **Note:** Make sure the quotation mark character is ", not “ or ”
 
 Example:
 ```
@@ -67,7 +67,7 @@ Example:
 }
 ```
 
-`rationale` - The main idea of the intervention placed between a set of "". Followed by a comma. **Note:** Make sure the quotation mark character is ", not “ or ”
+`rationale` - The main idea of the intervention, placed between a set of "", followed by a comma. **Note:** Make sure the quotation mark character is ", not “ or ”
 
 Example:
 ```
@@ -77,7 +77,7 @@ Example:
 }
 ```
 
-`operationalizing` - Description of how the intervention should be carried out, placed between a set of "". Followed by a comma. **Note:** Make sure the quotation mark character is ", not “ or ”
+`operationalizing` - Description of how the intervention should be carried out, placed between a set of "", followed by a comma. **Note:** Make sure the quotation mark character is ", not “ or ”
 
 Example:
 ```
@@ -89,7 +89,7 @@ Example:
 
 `stepsForOperationalizing` - (Optional) A more detailed break-down of steps to implement the intervention. Can be left as [], or given a list of steps in "" placed within the [], and separated by commas **except** for the last step which cannot be followed by a comma. **Note:** Make sure the quotation mark character is ", not “ or ”
 
-Examples:
+Examples: (**Note:** the text "Step _:" is for illustrative purposes only and is not required; the app will automatically place the text from `stepsForOperationalizing` in a numbered list.)
 
 **Valid** - no steps
 ```
@@ -207,7 +207,7 @@ The following examples are **NOT** valid inputs.
 }
 ```
 
-`foodEnvironmentDomainsAffected` - A list of one or more parts of the food environment affected by this intervention. Place each domain within "" inside the [], and separated by commas **except** for the last step which cannot be followed by a comma. **Note:** Make sure the quotation mark character is ", not “ or ”
+`foodEnvironmentDomainsAffected` - A list of one or more parts of the food environment affected by this intervention. Place each domain within "" inside the [], and separated by commas **except** for the last step which cannot be followed by a comma. **Note:** the closing bracket "]" is *not* followed by a comma. **Note:** Make sure the quotation mark character is ", not “ or ”
 
 Examples:
 
@@ -216,7 +216,7 @@ Examples:
 {
   "foodEnvironmentDomainsAffected": [
     "Accessibility"
-  ],
+  ]
 }
 ```
 
@@ -226,7 +226,7 @@ Examples:
   "foodEnvironmentDomainsAffected": [
     "Accessibility",
     "Availability"
-  ],
+  ]
 }
 ```
 
@@ -235,7 +235,7 @@ The following examples are **NOT** valid inputs.
 **NOT Valid** - no domains listed
 ```
 {
-  "foodEnvironmentDomainsAffected": [],
+  "foodEnvironmentDomainsAffected": []
 }
 ```
 
@@ -244,7 +244,7 @@ The following examples are **NOT** valid inputs.
 {
   "foodEnvironmentDomainsAffected": [
     "Accessibility",
-  ],
+  ]
 }
 ```
 
@@ -254,6 +254,15 @@ The following examples are **NOT** valid inputs.
   "foodEnvironmentDomainsAffected": [
     "Accessibility",
     "Availability",
+  ]
+}
+```
+
+**NOT Valid** - trailing comma closing bracket
+```
+{
+  "foodEnvironmentDomainsAffected": [
+    "Accessibility"
   ],
 }
 ```
@@ -286,5 +295,115 @@ The following examples are **NOT** valid inputs.
 ```
 
 ### gender-integrations.json
+
+`gender-integrations.json` is structured like so:
+
+```
+{
+  "genderIntegrations": [
+    {
+      "id": number,
+      "integration": string,
+      "keyConsiderations": string[],
+      "transformative": string
+    },
+    ...
+  ]
+}
+```
+
+Breaking that down we get:
+
+`genderIntegrations` - an array of gender integration objects each of which are comprised of the following. **Note:** each intervention should be followed by a comma **except** whichever is the very last in the file.
+
+A gender integration "object" is comprised of all of the following:
+
+`id` - a unique, integer value > 0. No two integrations should have the same id number. Followed by a comma.
+
+Example:
+```
+{
+  "id": 24,
+  ...
+}
+```
+
+`integration` - The main idea of the gender integration, placed between a set of "", followed by a comma. **Note:** make sure the quotation mark character is ", not “ or ”
+
+Example:
+```
+{
+  "integration": "Ensuring women have equitable access to inputs/ technology will support closing gender gaps in productivity and boost overall agricultural and nutrition outcomes.",
+  ...
+}
+```
+
+`keyConsiderations` - A list of important and/or relavent considerations or pieces of context. Can be left as [], or given a list of text surrounded by "" placed within the [], and separated by commas **except** for the last consideration which cannot be followed by a comma. **Note:** Make sure the quotation mark character is ", not “ or ”
+
+Examples:
+
+**Valid** - no considerations
+```
+{
+  "keyConsiderations": [],
+}
+```
+
+**Valid** - 1 consideration, no comma after the consideration
+```
+{
+  "keyConsiderations": [
+    "Women are key purchasers of food..."
+  ],
+}
+```
+
+**Valid** - Multiple considerations, separated by commas, with no comma after the final consideration.
+```
+{
+  "keyConsiderations": [
+    "Women are key purchasers of food...",
+    "Depending on the local context...",
+    "Women face constraints to accessing markets..."
+  ],
+}
+```
+
+The following examples are **NOT** valid inputs.
+
+**NOT Valid** - no trailing comma
+```
+{
+  "keyConsiderations": []
+}
+```
+
+**NOT Valid** - trailing comma after the last consideration
+```
+{
+  "keyConsiderations": [
+    "Women are key purchasers of food...",
+  ],
+}
+```
+
+**NOT Valid** - trailing comma after the last consideration
+```
+{
+  "keyConsiderations": [
+    "Women are key purchasers of food...",
+    "Depending on the local context...",
+  ],
+}
+```
+
+`transformative` - The effects and benefits that gender integration can ideally generate, placed between a set of "". **Note:** the transformative is *not* followed by a comma. **Note:** Make sure the quotation mark character is ", not “ or ”
+
+Example:
+```
+{
+  "transformative": "In addition to expanding access to a new consumer base and increasing consumer loyalty by ensuring that both men and women can access commodities and products..."
+}
+```
 
 ### SectorMaps.tsx
