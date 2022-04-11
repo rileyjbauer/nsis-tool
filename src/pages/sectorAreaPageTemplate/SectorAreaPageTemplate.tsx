@@ -6,9 +6,9 @@ import { BasicPage } from '../../components/basicPage/BasicPage';
 import { ErrorElement } from '../../components/ErrorElement';
 import { MASTER_SECTOR_MAP } from '../../data/SectorMaps';
 import { SECTOR_PARAM } from '../sectors/Sector';
-import './ActivityPageTemplate.css';
+import './SectorAreaPageTemplate.css';
 
-export const ACTIVITY_PARAM = 'activity';
+export const SECTOR_AREA_PARAM = 'activity';
 export const SELECTED_ACTIVITY_PARAM = 'selected';
 
 export type Activity = {
@@ -17,21 +17,20 @@ export type Activity = {
   genderIntegrationIds: number[];
 }
 
-export interface ActivityTemplateProps {
+export interface SectorAreaTemplateProps {
   activities: Activity[];
   pageTitle: string;
-  navBackwardPath: string;
 }
 
-function getURL(thisSectorKey: string, thisActivityKey: string, activity: Activity, navButtonSelected: number): string {
+function getURL(thisSectorKey: string, thisSectorAreaKey: string, activity: Activity, navButtonSelected: number): string {
   let params = makeQueryString(activity);
   params.append(SECTOR_PARAM, thisSectorKey);
-  params.append(ACTIVITY_PARAM, thisActivityKey);
+  params.append(SECTOR_AREA_PARAM, thisSectorAreaKey);
   params.append(SELECTED_ACTIVITY_PARAM, navButtonSelected + '');
   return 'activityDetail?' + params.toString();
 }
 
-export function ActivityPageTemplate() {
+export function SectorAreaPageTemplate() {
   let navButtonSelected = -1;
   const [searchParams, setSearchParams] = useSearchParams();
   const [menuExpanded, setMenuExpanded] = useState(false);
@@ -52,9 +51,9 @@ export function ActivityPageTemplate() {
     return <ErrorElement message={`URL missing search param: ${SECTOR_PARAM}`} />
   }
 
-  const thisActivityKey = searchParams.get(ACTIVITY_PARAM);
-  if (!thisActivityKey) {
-    return <ErrorElement message={`URL missing search param: ${ACTIVITY_PARAM}`} />
+  const thisSectorAreaKey = searchParams.get(SECTOR_AREA_PARAM);
+  if (!thisSectorAreaKey) {
+    return <ErrorElement message={`URL missing search param: ${SECTOR_AREA_PARAM}`} />
   }
   const navButtonSelectedParam = searchParams.get(SELECTED_ACTIVITY_PARAM);
   if (navButtonSelectedParam) {
@@ -62,30 +61,30 @@ export function ActivityPageTemplate() {
   }
 
   const thisSector = MASTER_SECTOR_MAP[thisSectorKey];
-  const thisActivity = thisSector.map[thisActivityKey];
+  const thisSectorArea = thisSector.map[thisSectorAreaKey];
 
   const content =
-    <div className='activity-page-template-container'>
-      <div className='activity-page-template-nav-container'>
+    <div className='sector-area-page-template-container'>
+      <div className='sector-area-page-template-nav-container'>
         <div style={{ display: 'flex', alignItems: 'center' }} onClick={() => setMenuExpanded(!menuExpanded)}>
-          <p className='activity-page-template-instructions'>
+          <p className='sector-area-page-template-instructions'>
             Select the activity you are undertaking:
           </p>
-          <div className='activity-page-template-dropdown'>
+          <div className='sector-area-page-template-dropdown'>
             <ArrowDropDownIcon sx={{ fontSize: 40, color: '#fe8200' }} />
           </div>
         </div>
-        <div id='activity-page-template-menu' className={`activity-page-template-menu ${menuExpanded ? 'activity-menu-expanded' : ''}`}>
-          {thisActivity.activities.map((activity, i) => (
-            <Link key={i} to={getURL(thisSectorKey, thisActivityKey, activity, i)} className='non-underlined-link' onClick={() => setMenuExpanded(false)}>
-              <div className={`nav-button-card activity-page-template-nav-button ${navButtonSelected === i ? 'activity-page-template-nav-button-selected' : ''}`}>
+        <div id='sector-area-page-template-menu' className={`sector-area-page-template-menu ${menuExpanded ? 'sector-area-menu-expanded' : ''}`}>
+          {thisSectorArea.activities.map((activity, i) => (
+            <Link key={i} to={getURL(thisSectorKey, thisSectorAreaKey, activity, i)} className='non-underlined-link' onClick={() => setMenuExpanded(false)}>
+              <div className={`nav-button-card sector-area-page-template-nav-button ${navButtonSelected === i ? 'sector-area-page-template-nav-button-selected' : ''}`}>
                 <p>{activity.activityTitle}</p>
               </div>
             </Link>
           ))}
         </div>
       </div>
-      <div className={`activity-page-template-content-box ${navButtonSelected === -1 ? 'activity-page-template-content-box-empty' : ''}`} onClick={() => setMenuExpanded(false)}>
+      <div className={`sector-area-page-template-content-box ${navButtonSelected === -1 ? 'sector-area-page-template-content-box-empty' : ''}`} onClick={() => setMenuExpanded(false)}>
         {navButtonSelected === -1 && (
           <p>Please select an activity</p>
         )}
@@ -95,7 +94,7 @@ export function ActivityPageTemplate() {
 
   return (
     <BasicPage
-      title={thisActivity.pageTitle}
+      title={thisSectorArea.pageTitle}
       content={content}
     />
   );

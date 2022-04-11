@@ -3,12 +3,12 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter, Link, Route, Routes, useLocation } from 'react-router-dom';
 import { ActivityDetail } from './components/activityDetail/ActivityDetail';
 import './index.css';
-import { ActivityPageTemplate } from './pages/activityPageTemplate/ActivityPageTemplate';
 import { GenderIntegrationTemplate } from './pages/genderIntegrations/GenderIntegrationTemplate';
 import { InterventionTemplate } from './pages/interventions/InterventionTemplate';
 import { GenderIntegrationsList } from './pages/lists/GenderIntegrationsList';
 import { InterventionsList } from './pages/lists/InterventionsList';
 import { MainNav } from './pages/MainNav/MainNav';
+import { SectorAreaPageTemplate } from './pages/sectorAreaPageTemplate/SectorAreaPageTemplate';
 import { Sector } from './pages/sectors/Sector';
 import App from './pages/titlePage/App';
 import { Welcome } from './pages/Welcome';
@@ -46,7 +46,7 @@ ReactDOM.render(
             <Route path='mainNav' element={<MainNav />} />
             <Route path='sector' element={<Sector />} />
 
-            <Route path='activity' element={<ActivityPageTemplate />}>
+            <Route path='sector_area' element={<SectorAreaPageTemplate />}>
               <Route path='activityDetail' element={<ActivityDetail />} />
             </Route>
 

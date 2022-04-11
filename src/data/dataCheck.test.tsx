@@ -1,4 +1,4 @@
-import { Activity } from '../pages/activityPageTemplate/ActivityPageTemplate';
+import { Activity } from '../pages/sectorAreaPageTemplate/SectorAreaPageTemplate';
 import GenderIntegrations from './gender-integrations.json';
 import Interventions from './interventions.json';
 import { MASTER_SECTOR_MAP } from './SectorMaps';
@@ -13,12 +13,12 @@ GenderIntegrations.genderIntegrations.forEach((integration) => allGenderIntegrat
 
 const allSectorPages = Object.values(MASTER_SECTOR_MAP);
 const allSectorMaps = allSectorPages.map(page => page.map);
-const allActivityTemplateProps =
+const allSectorAreaTemplateProps =
   allSectorMaps.map(
     pageMaps => Object.values(pageMaps)
   ).flat();
-const allActivities = allActivityTemplateProps.reduce(
-  (prev, currActivityProps) => prev.concat(currActivityProps.activities),
+const allActivities = allSectorAreaTemplateProps.reduce(
+  (prev, currSectorAreaProps) => prev.concat(currSectorAreaProps.activities),
   [] as Activity[]
 );
 
@@ -50,20 +50,26 @@ expect.extend({
   },
 });
 
-test.each(Interventions.interventions)('Intervention with ID: $id has valid references to other interventions', ({ id, relatedInterventionIds }) => {
-  relatedInterventionIds.forEach((relatedId) => {
-    expect(relatedId).toLinkToValidIntervention(`Intervention with ID: ${id}`);
+test.each(Interventions.interventions)(
+  'Intervention with ID: $id has valid references to other interventions',
+  ({ id, relatedInterventionIds }) => {
+    relatedInterventionIds.forEach((relatedId) => {
+      expect(relatedId).toLinkToValidIntervention(`Intervention with ID: ${id}`);
+    });
   });
-});
 
-test.each(allActivities)('Activity with title \'$activityTitle\' has valid references to interventions', ({ activityTitle, interventionIds }) => {
-  interventionIds.forEach((relatedId) => {
-    expect(relatedId).toLinkToValidIntervention(`Activity: '${activityTitle}'`);
+test.each(allActivities)(
+  'Activity with title \'$activityTitle\' has valid references to interventions',
+  ({ activityTitle, interventionIds }) => {
+    interventionIds.forEach((relatedId) => {
+      expect(relatedId).toLinkToValidIntervention(`Activity: '${activityTitle}'`);
+    });
   });
-});
 
-test.each(allActivities)('Activity with title \'$activityTitle\' has valid references to gender integrations', ({ activityTitle, genderIntegrationIds }) => {
-  genderIntegrationIds.forEach((relatedId) => {
-    expect(relatedId).toLinkToValidGenderIntegration(`Activity: '${activityTitle}'`);
+test.each(allActivities)(
+  'Activity with title \'$activityTitle\' has valid references to gender integrations',
+  ({ activityTitle, genderIntegrationIds }) => {
+    genderIntegrationIds.forEach((relatedId) => {
+      expect(relatedId).toLinkToValidGenderIntegration(`Activity: '${activityTitle}'`);
+    });
   });
-});

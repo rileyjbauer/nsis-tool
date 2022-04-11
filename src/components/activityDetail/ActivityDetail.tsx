@@ -1,7 +1,7 @@
 import { Link, useSearchParams } from 'react-router-dom';
 import GenderIntegrations from '../../data/gender-integrations.json';
 import Interventions from '../../data/interventions.json';
-import { Activity } from '../../pages/activityPageTemplate/ActivityPageTemplate';
+import { Activity } from '../../pages/sectorAreaPageTemplate/SectorAreaPageTemplate';
 import { ErrorElement } from '../ErrorElement';
 import './ActivityDetail.css';
 

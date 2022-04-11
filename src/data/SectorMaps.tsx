@@ -4,23 +4,23 @@ import FoodProcessingImg from '../img/FoodProcessing.svg';
 import FoodRetailingImg from '../img/FoodRetailing.svg';
 import FoodTradeAndMarketingImg from '../img/FoodTradeAndMarketing.svg';
 import ProductionImg from '../img/Production.svg';
-import { ActivityTemplateProps } from '../pages/activityPageTemplate/ActivityPageTemplate';
+import { SectorAreaTemplateProps } from '../pages/sectorAreaPageTemplate/SectorAreaPageTemplate';
 
-export type SectorMap = { [key: string]: ActivityTemplateProps };
+export type SectorMap = { [key: string]: SectorAreaTemplateProps };
 
-type SectorActivities = { [key: string]: string };
+type SectorAreas = { [key: string]: string };
 
 export type SectorPage = {
   map: SectorMap;
   header: string;
   title: string;
-  activities: SectorActivities;
+  sectorAreas: SectorAreas;
   imgSrc: string;
 };
 
 // Typescript doesn't reverse-map string enums, so we're going with this instead for now.
 // https://www.typescriptlang.org/docs/handbook/enums.html#reverse-mappings
-export const PRODUCTION_ACTIVITIES: SectorActivities = {
+export const PRODUCTION_AREAS: SectorAreas = {
   AGRO_INPUT_SUPPLY: 'agro_input_supply',
   PRODUCER_FARMER_ORGANIZATION_DEVELOPMENT: 'producer_farmer_organization_development',
   FARM_AND_HOUSEHOLD_TRAINING: 'farm_and_household_training',
@@ -28,7 +28,7 @@ export const PRODUCTION_ACTIVITIES: SectorActivities = {
 }
 
 export const PRODUCTION_PAGE_MAP: SectorMap = {
-  [PRODUCTION_ACTIVITIES.AGRO_INPUT_SUPPLY]: {
+  [PRODUCTION_AREAS.AGRO_INPUT_SUPPLY]: {
     activities: [
       {
         activityTitle: 'Increasing Equitable Access to Inputs/Services',
@@ -42,9 +42,8 @@ export const PRODUCTION_PAGE_MAP: SectorMap = {
       },
     ],
     pageTitle: 'Agro-Input Supply and Service Delivery',
-    navBackwardPath: 'production',
   },
-  [PRODUCTION_ACTIVITIES.PRODUCER_FARMER_ORGANIZATION_DEVELOPMENT]: {
+  [PRODUCTION_AREAS.PRODUCER_FARMER_ORGANIZATION_DEVELOPMENT]: {
     activities: [
       {
         activityTitle: 'Marketing/Offtake Development',
@@ -73,9 +72,8 @@ export const PRODUCTION_PAGE_MAP: SectorMap = {
       },
     ],
     pageTitle: 'Producer/Farmer Organization Development',
-    navBackwardPath: 'production',
   },
-  [PRODUCTION_ACTIVITIES.FARM_AND_HOUSEHOLD_TRAINING]: {
+  [PRODUCTION_AREAS.FARM_AND_HOUSEHOLD_TRAINING]: {
     activities: [
       {
         activityTitle: 'Farm/HH Access To Inputs And Services',
@@ -94,9 +92,8 @@ export const PRODUCTION_PAGE_MAP: SectorMap = {
       },
     ],
     pageTitle: 'Farm/Household Training on Agriculture',
-    navBackwardPath: 'production',
   },
-  [PRODUCTION_ACTIVITIES.VALUE_CHAIN_SELECTION]: {
+  [PRODUCTION_AREAS.VALUE_CHAIN_SELECTION]: {
     activities: [
       {
         activityTitle: 'Value Chain Selection',
@@ -105,7 +102,6 @@ export const PRODUCTION_PAGE_MAP: SectorMap = {
       },
     ],
     pageTitle: 'Value Chain Selection',
-    navBackwardPath: 'production',
   }
 }
 
@@ -113,7 +109,7 @@ export const PRODUCTION_PAGE: SectorPage = {
   map: PRODUCTION_PAGE_MAP,
   header: 'Select the box below that reflects the focus of your work in agriculture/livestock production:',
   title: 'Production',
-  activities: PRODUCTION_ACTIVITIES,
+  sectorAreas: PRODUCTION_AREAS,
   imgSrc: ProductionImg,
 }
 
@@ -123,14 +119,14 @@ export const PRODUCTION_PAGE: SectorPage = {
 // Probably it would be better to use strings in the future with our own reverse-mapping
 // to verify whether or not a string is actually in this enum.
 // https://www.typescriptlang.org/docs/handbook/enums.html#reverse-mappings
-export const FOOD_TRADE_ACTIVITIES = {
+export const FOOD_TRADE_AREAS = {
   FOOD_COMMODITY_STORAGE: 'food_commodity_storage',
   MARKETING_DISTRIBUTION_OF_COMMODITIES: 'marketing_distribution_of_commodities',
   FOOD_SAFETY: 'food_safety',
 }
 
 export const FOOD_TRADE_PAGE_MAP: SectorMap = {
-  [FOOD_TRADE_ACTIVITIES.FOOD_COMMODITY_STORAGE]: {
+  [FOOD_TRADE_AREAS.FOOD_COMMODITY_STORAGE]: {
     activities: [
       {
         activityTitle: 'Market-level Or Producer Organization-level Storage Facilities Developed',
@@ -144,9 +140,8 @@ export const FOOD_TRADE_PAGE_MAP: SectorMap = {
       },
     ],
     pageTitle: 'Food Commodity Storage',
-    navBackwardPath: 'foodTradeAndMarketing',
   },
-  [FOOD_TRADE_ACTIVITIES.MARKETING_DISTRIBUTION_OF_COMMODITIES]: {
+  [FOOD_TRADE_AREAS.MARKETING_DISTRIBUTION_OF_COMMODITIES]: {
     activities: [
       {
         activityTitle: 'Farm-level Marketing/Offtake Enhanced',
@@ -165,9 +160,8 @@ export const FOOD_TRADE_PAGE_MAP: SectorMap = {
       },
     ],
     pageTitle: 'Marketing/Distribution Of Commodities',
-    navBackwardPath: 'foodTradeAndMarketing',
   },
-  [FOOD_TRADE_ACTIVITIES.FOOD_SAFETY]: {
+  [FOOD_TRADE_AREAS.FOOD_SAFETY]: {
     activities: [
       {
         activityTitle: 'Food Safety, Sanitation, And Hygiene Is Enhanced Along Food Distribution',
@@ -176,7 +170,6 @@ export const FOOD_TRADE_PAGE_MAP: SectorMap = {
       },
     ],
     pageTitle: 'Food Safety In Food Storage, Transport, And Trade',
-    navBackwardPath: 'foodTradeAndMarketing',
   },
 }
 
@@ -184,13 +177,13 @@ export const FOOD_TRADE_PAGE: SectorPage = {
   map: FOOD_TRADE_PAGE_MAP,
   header: 'Select the box below that reflects the focus of your work in food trade/marketing:',
   title: 'Food Trade and Marketing',
-  activities: FOOD_TRADE_ACTIVITIES,
+  sectorAreas: FOOD_TRADE_AREAS,
   imgSrc: FoodTradeAndMarketingImg,
 }
 
 // ---------------------------------------------------------------------
 
-export const FOOD_PROCESSING_ACTIVITIES = {
+export const FOOD_PROCESSING_AREAS = {
   FARM_AND_HOUSEHOLD_TRAINING_ON_FOOD_PROCESSING: 'farm_and_household_training_on_food_processing',
   COMMERCIAL_TRAINING_ON_FOOD_PROCESSING: 'commercial_training_on_food_processing',
   CONSUMER_MARKETING_BY_FOOD_PROCESSORS: 'consumer_marketing_by_food_processors',
@@ -198,7 +191,7 @@ export const FOOD_PROCESSING_ACTIVITIES = {
 }
 
 export const FOOD_PROCESSING_PAGE_MAP: SectorMap = {
-  [FOOD_PROCESSING_ACTIVITIES.FARM_AND_HOUSEHOLD_TRAINING_ON_FOOD_PROCESSING]: {
+  [FOOD_PROCESSING_AREAS.FARM_AND_HOUSEHOLD_TRAINING_ON_FOOD_PROCESSING]: {
     activities: [
       {
         activityTitle: 'Training On Household-level Processing',
@@ -207,9 +200,8 @@ export const FOOD_PROCESSING_PAGE_MAP: SectorMap = {
       },
     ],
     pageTitle: 'Farm/Household Training On Food Processing',
-    navBackwardPath: 'foodProcessing',
   },
-  [FOOD_PROCESSING_ACTIVITIES.COMMERCIAL_TRAINING_ON_FOOD_PROCESSING]: {
+  [FOOD_PROCESSING_AREAS.COMMERCIAL_TRAINING_ON_FOOD_PROCESSING]: {
     activities: [
       {
         activityTitle: 'Diversification Of Processors\' Products',
@@ -228,9 +220,8 @@ export const FOOD_PROCESSING_PAGE_MAP: SectorMap = {
       },
     ],
     pageTitle: 'Commercial Training On Food Processing',
-    navBackwardPath: 'foodProcessing',
   },
-  [FOOD_PROCESSING_ACTIVITIES.CONSUMER_MARKETING_BY_FOOD_PROCESSORS]: {
+  [FOOD_PROCESSING_AREAS.CONSUMER_MARKETING_BY_FOOD_PROCESSORS]: {
     activities: [
       {
         activityTitle: 'Consumer Marketing Capacities Of Processors Developed',
@@ -239,9 +230,8 @@ export const FOOD_PROCESSING_PAGE_MAP: SectorMap = {
       },
     ],
     pageTitle: 'Consumer Marketing By Food Processors',
-    navBackwardPath: 'foodProcessing',
   },
-  [FOOD_PROCESSING_ACTIVITIES.MARKETING_AND_DISTRIBUTION_OF_COMMODITIES]: {
+  [FOOD_PROCESSING_AREAS.MARKETING_AND_DISTRIBUTION_OF_COMMODITIES]: {
     activities: [
       {
         activityTitle: 'Food Processors And Retailers\' Marketing Strategies Developed',
@@ -250,7 +240,6 @@ export const FOOD_PROCESSING_PAGE_MAP: SectorMap = {
       },
     ],
     pageTitle: 'Marketing/Distribution Of Commodities By Food Processors',
-    navBackwardPath: 'foodProcessing',
   },
 }
 
@@ -258,13 +247,13 @@ export const FOOD_PROCESSING_PAGE: SectorPage = {
   map: FOOD_PROCESSING_PAGE_MAP,
   header: 'Select the box below that reflects the primary focus of your work in processing:',
   title: 'Food Processing',
-  activities: FOOD_PROCESSING_ACTIVITIES,
+  sectorAreas: FOOD_PROCESSING_AREAS,
   imgSrc: FoodProcessingImg,
 }
 
 // ---------------------------------------------------------------------
 
-export const FOOD_RETAILING_ACTIVITIES = {
+export const FOOD_RETAILING_AREAS = {
   LOCATION_OF_FOOD_RETAILING: 'location_of_food_retailing',
   SOCIAL_MARKETING_BY_VENDORS: 'social_marketing_by_vendors',
   PRODUCT_CHARACTERISTICS: 'product_characteristics',
@@ -272,7 +261,7 @@ export const FOOD_RETAILING_ACTIVITIES = {
 }
 
 export const FOOD_RETAILING_PAGE_MAP: SectorMap = {
-  [FOOD_RETAILING_ACTIVITIES.LOCATION_OF_FOOD_RETAILING]: {
+  [FOOD_RETAILING_AREAS.LOCATION_OF_FOOD_RETAILING]: {
     activities: [
       {
         activityTitle: 'Development Of New Retail Locations For Nutrient-rich Foods',
@@ -286,9 +275,8 @@ export const FOOD_RETAILING_PAGE_MAP: SectorMap = {
       },
     ],
     pageTitle: 'Location Of Food Retailing',
-    navBackwardPath: 'foodRetailing',
   },
-  [FOOD_RETAILING_ACTIVITIES.SOCIAL_MARKETING_BY_VENDORS]: {
+  [FOOD_RETAILING_AREAS.SOCIAL_MARKETING_BY_VENDORS]: {
     activities: [
       {
         activityTitle: 'Vendors\' Consumer Marketing Capacities Developed',
@@ -297,9 +285,8 @@ export const FOOD_RETAILING_PAGE_MAP: SectorMap = {
       },
     ],
     pageTitle: 'Social Marketing By Vendors',
-    navBackwardPath: 'foodRetailing',
   },
-  [FOOD_RETAILING_ACTIVITIES.PRODUCT_CHARACTERISTICS]: {
+  [FOOD_RETAILING_AREAS.PRODUCT_CHARACTERISTICS]: {
     activities: [
       {
         activityTitle: 'Product Sizes Optimized',
@@ -313,9 +300,8 @@ export const FOOD_RETAILING_PAGE_MAP: SectorMap = {
       },
     ],
     pageTitle: 'Product Characteristics',
-    navBackwardPath: 'foodRetailing',
   },
-  [FOOD_RETAILING_ACTIVITIES.GOOD_GOVERNANCE_AT_MARKETS]: {
+  [FOOD_RETAILING_AREAS.GOOD_GOVERNANCE_AT_MARKETS]: {
     activities: [
       {
         activityTitle: 'Food Safety, Sanitation, And Hygiene Considerations Integrated In Food Retailing',
@@ -334,7 +320,6 @@ export const FOOD_RETAILING_PAGE_MAP: SectorMap = {
       },
     ],
     pageTitle: 'Good Governance At Markets',
-    navBackwardPath: 'foodRetailing',
   },
 }
 
@@ -342,13 +327,13 @@ export const FOOD_RETAILING_PAGE: SectorPage = {
   map: FOOD_RETAILING_PAGE_MAP,
   header: 'Select the box below that reflects the primary focus of your work in food retailing:',
   title: 'Food Retailing',
-  activities: FOOD_RETAILING_ACTIVITIES,
+  sectorAreas: FOOD_RETAILING_AREAS,
   imgSrc: FoodRetailingImg,
 }
 
 // ---------------------------------------------------------------------
 
-export const CONSUMER_DEMAND_ACTIVITIES = {
+export const CONSUMER_DEMAND_AREAS = {
   INTEGRATION_OF_NUTRITION_MESSAGING: 'integration_of_nutrition_messaging',
   ENGAGEMENT_OF_INFLUENCERS_TO_IMPROVE_CONSUMER_BEHAVIORS: 'engagement_of_influencers_to_improve_consumer_behaviors',
   STANDALONE_TRAININGS_TO_CONSUMERS: 'standalone_trainings_to_consumers',
@@ -356,7 +341,7 @@ export const CONSUMER_DEMAND_ACTIVITIES = {
 }
 
 export const CONSUMER_DEMAND_PAGE_MAP: SectorMap = {
-  [CONSUMER_DEMAND_ACTIVITIES.INTEGRATION_OF_NUTRITION_MESSAGING]: {
+  [CONSUMER_DEMAND_AREAS.INTEGRATION_OF_NUTRITION_MESSAGING]: {
     activities: [
       {
         activityTitle: 'Private Sector Engagement For Nutrition',
@@ -375,9 +360,8 @@ export const CONSUMER_DEMAND_PAGE_MAP: SectorMap = {
       },
     ],
     pageTitle: 'Integration Of Nutrition Messaging Into Existing Program Activities',
-    navBackwardPath: 'consumerDemand',
   },
-  [CONSUMER_DEMAND_ACTIVITIES.ENGAGEMENT_OF_INFLUENCERS_TO_IMPROVE_CONSUMER_BEHAVIORS]: {
+  [CONSUMER_DEMAND_AREAS.ENGAGEMENT_OF_INFLUENCERS_TO_IMPROVE_CONSUMER_BEHAVIORS]: {
     activities: [
       {
         activityTitle: 'Integration Into Community Health Worker Services',
@@ -396,9 +380,8 @@ export const CONSUMER_DEMAND_PAGE_MAP: SectorMap = {
       },
     ],
     pageTitle: 'Engagement Of Community Influencers To Improve Consumer Behaviors',
-    navBackwardPath: 'consumerDemand',
   },
-  [CONSUMER_DEMAND_ACTIVITIES.STANDALONE_TRAININGS_TO_CONSUMERS]: {
+  [CONSUMER_DEMAND_AREAS.STANDALONE_TRAININGS_TO_CONSUMERS]: {
     activities: [
       {
         activityTitle: 'Household Nutrition Trainings',
@@ -412,9 +395,8 @@ export const CONSUMER_DEMAND_PAGE_MAP: SectorMap = {
       },
     ],
     pageTitle: 'Standalone Trainings To Consumers/Program Participants',
-    navBackwardPath: 'consumerDemand',
   },
-  [CONSUMER_DEMAND_ACTIVITIES.PRIVATE_SECTOR_MARKETING_FOR_NUTRITION]: {
+  [CONSUMER_DEMAND_AREAS.PRIVATE_SECTOR_MARKETING_FOR_NUTRITION]: {
     activities: [
       {
         activityTitle: 'Integrate Nutrition Messaging In Input Service Delivery',
@@ -428,7 +410,6 @@ export const CONSUMER_DEMAND_PAGE_MAP: SectorMap = {
       },
     ],
     pageTitle: 'Private Sector Marketing For Nutrition',
-    navBackwardPath: 'consumerDemand',
   },
 }
 
@@ -436,13 +417,13 @@ export const CONSUMER_DEMAND_PAGE: SectorPage = {
   map: CONSUMER_DEMAND_PAGE_MAP,
   header: 'Select the box below that reflects the primary focus of your work in consumer demand:',
   title: 'Consumer Demand',
-  activities: CONSUMER_DEMAND_ACTIVITIES,
+  sectorAreas: CONSUMER_DEMAND_AREAS,
   imgSrc: ConsumerDemandImg,
 }
 
 // ---------------------------------------------------------------------
 
-export const ENABLING_ENVIRONMENT_ACTIVITIES = {
+export const ENABLING_ENVIRONMENT_AREAS = {
   GOVERNANCE_NUTRITION_SENSITIVE_POLICY_DEVELOPMENT: 'governance_nutrition_sensitive_policy_development',
   GOVERNANCE_PUBLIC_SECTOR_INVOLVEMENT_IN_FOOD_SYSTEM: 'governance_public_sector_involvement_in_food_system',
   BUSINESS_DEVELOPMENT_SERVICES: 'business_development_services',
@@ -451,7 +432,7 @@ export const ENABLING_ENVIRONMENT_ACTIVITIES = {
 }
 
 export const ENABLING_ENVIRONMENT_PAGE_MAP: SectorMap = {
-  [ENABLING_ENVIRONMENT_ACTIVITIES.GOVERNANCE_NUTRITION_SENSITIVE_POLICY_DEVELOPMENT]: {
+  [ENABLING_ENVIRONMENT_AREAS.GOVERNANCE_NUTRITION_SENSITIVE_POLICY_DEVELOPMENT]: {
     activities: [
       {
         activityTitle: 'Government Budgeting For Nutrition',
@@ -480,9 +461,8 @@ export const ENABLING_ENVIRONMENT_PAGE_MAP: SectorMap = {
       },
     ],
     pageTitle: 'Governance - Nutrition-sensitive Policy/Framework Development And/Or Implementation',
-    navBackwardPath: 'enablingEnvironment',
   },
-  [ENABLING_ENVIRONMENT_ACTIVITIES.GOVERNANCE_PUBLIC_SECTOR_INVOLVEMENT_IN_FOOD_SYSTEM]: {
+  [ENABLING_ENVIRONMENT_AREAS.GOVERNANCE_PUBLIC_SECTOR_INVOLVEMENT_IN_FOOD_SYSTEM]: {
     activities: [
       {
         activityTitle: 'Local Agriculture, Livestock, And/Or Fisheries Officers Or Extension Agents Trained On Nutrition-sensitive Agriculture',
@@ -501,9 +481,8 @@ export const ENABLING_ENVIRONMENT_PAGE_MAP: SectorMap = {
       },
     ],
     pageTitle: 'Governance - Public Sector Involvement In The Food System',
-    navBackwardPath: 'enablingEnvironment',
   },
-  [ENABLING_ENVIRONMENT_ACTIVITIES.BUSINESS_DEVELOPMENT_SERVICES]: {
+  [ENABLING_ENVIRONMENT_AREAS.BUSINESS_DEVELOPMENT_SERVICES]: {
     activities: [
       {
         activityTitle: 'Food System Actors\' Business Capacities Improved',
@@ -512,9 +491,8 @@ export const ENABLING_ENVIRONMENT_PAGE_MAP: SectorMap = {
       },
     ],
     pageTitle: 'Business Development Services',
-    navBackwardPath: 'enablingEnvironment',
   },
-  [ENABLING_ENVIRONMENT_ACTIVITIES.ACCESS_TO_FINANCE]: {
+  [ENABLING_ENVIRONMENT_AREAS.ACCESS_TO_FINANCE]: {
     activities: [
       {
         activityTitle: 'Food System Actors\' Access Financial Services',
@@ -523,9 +501,8 @@ export const ENABLING_ENVIRONMENT_PAGE_MAP: SectorMap = {
       },
     ],
     pageTitle: 'Access To Finance',
-    navBackwardPath: 'enablingEnvironment',
   },
-  [ENABLING_ENVIRONMENT_ACTIVITIES.COMMUNITY_MOBILIZATION]: {
+  [ENABLING_ENVIRONMENT_AREAS.COMMUNITY_MOBILIZATION]: {
     activities: [
       {
         activityTitle: 'Enhanced Community Mobilization For A Nutritious Food System',
@@ -534,7 +511,6 @@ export const ENABLING_ENVIRONMENT_PAGE_MAP: SectorMap = {
       },
     ],
     pageTitle: 'Community Mobilization',
-    navBackwardPath: 'enablingEnvironment',
   },
 }
 
@@ -542,7 +518,7 @@ export const ENABLING_ENVIRONMENT_PAGE: SectorPage = {
   map: ENABLING_ENVIRONMENT_PAGE_MAP,
   header: 'Select the box below that reflects the primary focus of your work in enabling environment:',
   title: 'Enabling Environment',
-  activities: ENABLING_ENVIRONMENT_ACTIVITIES,
+  sectorAreas: ENABLING_ENVIRONMENT_AREAS,
   imgSrc: EnablingEnvironmentImg,
 }
 

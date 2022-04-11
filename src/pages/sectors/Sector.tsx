@@ -2,7 +2,7 @@ import { Link, useSearchParams } from 'react-router-dom';
 import { BasicPage } from '../../components/basicPage/BasicPage';
 import { ErrorElement } from '../../components/ErrorElement';
 import { MASTER_SECTOR_MAP } from '../../data/SectorMaps';
-import { ACTIVITY_PARAM } from '../activityPageTemplate/ActivityPageTemplate';
+import { SECTOR_AREA_PARAM } from '../sectorAreaPageTemplate/SectorAreaPageTemplate';
 import './Sector.css';
 
 export const SECTOR_PARAM = 'sector';
@@ -21,8 +21,8 @@ export function Sector() {
     <div>
       <p>{sector.header}</p>
       <div className='sector-nav-button-container'>
-        {Object.values(sector.activities).map((v, i) =>
-          <Link key={i} to={`/activity?${ACTIVITY_PARAM}=${v}&${SECTOR_PARAM}=${thisSectorKey}`} className='non-underlined-link'>
+        {Object.values(sector.sectorAreas).map((v, i) =>
+          <Link key={i} to={`/sector_area?${SECTOR_AREA_PARAM}=${v}&${SECTOR_PARAM}=${thisSectorKey}`} className='non-underlined-link'>
             <div className='nav-button-card'>
               <p>{sector.map[v].pageTitle}</p>
             </div>
