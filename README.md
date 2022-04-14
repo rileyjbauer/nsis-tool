@@ -29,7 +29,7 @@ How to edit each of these files is explained next and followed by examples. **No
 
 `interventions.json` is structured like so:
 
-```
+```json
 {
   "interventions": [
     {
@@ -55,7 +55,7 @@ An intervention "object" is comprised of all of the following:
 `id` - a unique, integer value > 0, followed by a comma. No two interventions should have the same id number.
 
 Example:
-```
+```json
 {
   "id": 59,
   ...
@@ -65,7 +65,7 @@ Example:
 `title` - The simple text name a person would use to refer to the intervention, placed between a set of "", followed by a comma. **Note:** Make sure the quotation mark character is ", not “ or ”
 
 Example:
-```
+```json
 {
   "title": "Promote the installation and use of handwashing stations",
   ...
@@ -75,7 +75,7 @@ Example:
 `rationale` - The main idea of the intervention, placed between a set of "", followed by a comma. **Note:** Make sure the quotation mark character is ", not “ or ”
 
 Example:
-```
+```json
 {
   "rationale": "Foodborne illnesses have negatives effects on human health, productivity, and consumer trust in food retailers. Research suggests...",
   ...
@@ -85,7 +85,7 @@ Example:
 `operationalizing` - Description of how the intervention should be carried out, placed between a set of "", followed by a comma. **Note:** Make sure the quotation mark character is ", not “ or ”
 
 Example:
-```
+```json
 {
   "operationalizing": "Depending on the scope of the project, the implementer can either financially support the installation of handwashing stations and/or support local actors and market managing bodies to invest stations themselves. To increase investment in the market...",
   ...
@@ -97,14 +97,14 @@ Example:
 Examples: (**Note:** the text "Step _:" is for illustrative purposes only and is not required; the app will automatically place the text from `stepsForOperationalizing` in a numbered list.)
 
 **Valid** - no steps
-```
+```json
 {
   "stepsForOperationalizing": [],
 }
 ```
 
 **Valid** - 1 step
-```
+```json
 {
   "stepsForOperationalizing": [
     "Step 1: ..."
@@ -113,7 +113,7 @@ Examples: (**Note:** the text "Step _:" is for illustrative purposes only and is
 ```
 
 **Valid** - Multiple steps, separated by commas, with no comma after the final step.
-```
+```json
 {
   "stepsForOperationalizing": [
     "Step 1: ...",
@@ -127,14 +127,14 @@ Examples: (**Note:** the text "Step _:" is for illustrative purposes only and is
 The following examples are **NOT** valid inputs.
 
 **NOT Valid** - no trailing comma
-```
+```json
 {
   "stepsForOperationalizing": []
 }
 ```
 
 **NOT Valid** - trailing comma after the last step
-```
+```json
 {
   "stepsForOperationalizing": [
     "Step 1: ...",
@@ -143,7 +143,7 @@ The following examples are **NOT** valid inputs.
 ```
 
 **NOT Valid** - trailing comma after the last step
-```
+```json
 {
   "stepsForOperationalizing": [
     "Step 1: ...",
@@ -157,14 +157,14 @@ The following examples are **NOT** valid inputs.
 Examples:
 
 **Valid** - no related interventions
-```
+```json
 {
   "relatedInterventionIds": [],
 }
 ```
 
 **Valid** - a single related intervention
-```
+```json
 {
   "relatedInterventionIds": [
     123
@@ -173,7 +173,7 @@ Examples:
 ```
 
 **Valid** - Multiple related interventions, separated by commas, with no comma after the final id.
-```
+```json
 {
   "relatedInterventionIds": [
     123,
@@ -187,14 +187,14 @@ Examples:
 The following examples are **NOT** valid inputs.
 
 **NOT Valid** - no trailing comma
-```
+```json
 {
   "relatedInterventionIds": []
 }
 ```
 
 **NOT Valid** - trailing comma after the last step
-```
+```json
 {
   "relatedInterventionIds": [
     123,
@@ -203,7 +203,7 @@ The following examples are **NOT** valid inputs.
 ```
 
 **NOT Valid** - trailing comma after the last step
-```
+```json
 {
   "relatedInterventionIds": [
     123,
@@ -217,7 +217,7 @@ The following examples are **NOT** valid inputs.
 Examples:
 
 **Valid** - 1 domain
-```
+```json
 {
   "foodEnvironmentDomainsAffected": [
     "Accessibility"
@@ -226,7 +226,7 @@ Examples:
 ```
 
 **Valid** - Multiple steps, separated by commas, with no comma after the final step.
-```
+```json
 {
   "foodEnvironmentDomainsAffected": [
     "Accessibility",
@@ -238,14 +238,14 @@ Examples:
 The following examples are **NOT** valid inputs.
 
 **NOT Valid** - no domains listed
-```
+```json
 {
   "foodEnvironmentDomainsAffected": []
 }
 ```
 
 **NOT Valid** - trailing comma after the last domain
-```
+```json
 {
   "foodEnvironmentDomainsAffected": [
     "Accessibility",
@@ -254,7 +254,7 @@ The following examples are **NOT** valid inputs.
 ```
 
 **NOT Valid** - trailing comma after the last step
-```
+```json
 {
   "foodEnvironmentDomainsAffected": [
     "Accessibility",
@@ -275,7 +275,7 @@ The following examples are **NOT** valid inputs.
 
 #### Put that altogether and we get a valid intervention:
 
-```
+```json
 {
   "id": 79,
   "title": "Support extension/officers to promote the local production of nutrient-rich foods by training producers on good agricultural practices and messaging on the benefit of producing the target nutrient-rich foods",
@@ -303,7 +303,7 @@ The following examples are **NOT** valid inputs.
 
 `gender-integrations.json` is structured like so:
 
-```
+```json
 {
   "genderIntegrations": [
     {
@@ -326,7 +326,7 @@ A gender integration "object" is comprised of all of the following:
 `id` - a unique, integer value > 0. No two integrations should have the same id number. Followed by a comma.
 
 Example:
-```
+```json
 {
   "id": 24,
   ...
@@ -336,7 +336,7 @@ Example:
 `integration` - The main idea of the gender integration, placed between a set of "", followed by a comma. **Note:** make sure the quotation mark character is ", not “ or ”
 
 Example:
-```
+```json
 {
   "integration": "Ensuring women have equitable access to inputs/ technology will support closing gender gaps in productivity and boost overall agricultural and nutrition outcomes.",
   ...
@@ -348,14 +348,14 @@ Example:
 Examples:
 
 **Valid** - no considerations
-```
+```json
 {
   "keyConsiderations": [],
 }
 ```
 
 **Valid** - 1 consideration, no comma after the consideration
-```
+```json
 {
   "keyConsiderations": [
     "Women are key purchasers of food..."
@@ -364,7 +364,7 @@ Examples:
 ```
 
 **Valid** - Multiple considerations, separated by commas, with no comma after the final consideration.
-```
+```json
 {
   "keyConsiderations": [
     "Women are key purchasers of food...",
@@ -377,14 +377,14 @@ Examples:
 The following examples are **NOT** valid inputs.
 
 **NOT Valid** - no trailing comma
-```
+```json
 {
   "keyConsiderations": []
 }
 ```
 
 **NOT Valid** - trailing comma after the last consideration
-```
+```json
 {
   "keyConsiderations": [
     "Women are key purchasers of food...",
@@ -393,7 +393,7 @@ The following examples are **NOT** valid inputs.
 ```
 
 **NOT Valid** - trailing comma after the last consideration
-```
+```json
 {
   "keyConsiderations": [
     "Women are key purchasers of food...",
@@ -405,7 +405,7 @@ The following examples are **NOT** valid inputs.
 `transformative` - The effects and benefits that gender integration can ideally generate, placed between a set of "". **Note:** the transformative is *not* followed by a comma. **Note:** Make sure the quotation mark character is ", not “ or ”
 
 Example:
-```
+```json
 {
   "transformative": "In addition to expanding access to a new consumer base and increasing consumer loyalty by ensuring that both men and women can access commodities and products..."
 }
@@ -430,7 +430,7 @@ When a person is navigating through the app, they will follow this same progress
 
 With that progression in mind, below is a subset of the data related to *Production* which we will explore in detail below:
 
-```
+```typescript
 export const PRODUCTION_AREAS: SectorAreas = {
   AGRO_INPUT_SUPPLY: 'agro_input_supply',
   VALUE_CHAIN_SELECTION: 'value_chain_selection',
@@ -487,7 +487,7 @@ export const MASTER_SECTOR_MAP: { [key: string]: SectorPage } = {
 Hopefully at least some of the relations between the data here can be seen, but we will now dive into how this all works:
 
 First, we add a *Sector* to `SECTORS`:
-```
+```typescript
 export const SECTORS = {
   PRODUCTION: 'production',
   ...
@@ -496,7 +496,7 @@ export const SECTORS = {
 
 Next, we define the `SectorAreas` related to this *Sector* in `PRODUCTION_AREAS`:
 
-```
+```typescript
 export const PRODUCTION_AREAS: SectorAreas = {
   AGRO_INPUT_SUPPLY: 'agro_input_supply',
   VALUE_CHAIN_SELECTION: 'value_chain_selection',
@@ -506,7 +506,7 @@ export const PRODUCTION_AREAS: SectorAreas = {
 Each `SectorArea` is defined by a NAME_IN_CAPS_SEPARATED_BY_UNDERSCORES, with a value of the same name but lowercase.
 
 The *SectorArea* is then used to add an entry to the `PRODUCTION_PAGE_MAP` where we list each *Activity* related to this *SectorArea*:
-```
+```typescript
 export const PRODUCTION_PAGE_MAP: SectorMap = {
   [PRODUCTION_AREAS.AGRO_INPUT_SUPPLY]: {
     activities: [
@@ -538,7 +538,7 @@ Each *Activity* consists of the following:
 The *SectorArea* also is given a `pageTitle` which is used for both the button on the *Sector's* page and as the title on the *SectorArea's* page.
 
 Next, we define the `PRODUCTION_PAGE` as follows:
-```
+```typescript
 export const PRODUCTION_PAGE: SectorPage = {
   map: PRODUCTION_PAGE_MAP,
   header: 'Select the box below that reflects the focus of your work in agriculture/livestock production:',
@@ -562,7 +562,7 @@ where each of the fields are defined as:
 
 Finally, we have the `MASTER_SECTOR_MAP`:
 
-```
+```typescript
 export const MASTER_SECTOR_MAP: { [key: string]: SectorPage } = {
   [SECTORS.PRODUCTION]: PRODUCTION_PAGE,
   ...
