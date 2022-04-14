@@ -23,7 +23,9 @@ The data that makes up the NSIS Tool is located primarily with in the `/src/data
 * [`gender-integrations.json`](gender-integrations.json)
 * [`SectorMaps.tsx`](SectorMaps.tsx)
 
-How to edit each of these files is explained next and followed by examples. **Note:** The placement of commas is important when editing these files. Each explanation also indicates where to place and avoid placing commas.
+How to edit each of these files is explained next and followed by examples.
+
+> **Note:** The placement of commas is important when editing these files. Each explanation also indicates where to place and avoid placing commas.
 
 ### interventions.json
 
@@ -48,7 +50,9 @@ How to edit each of these files is explained next and followed by examples. **No
 
 Breaking that down we get:
 
-`interventions` - an array of intervention objects each of which are comprised of the following. **Note:** each intervention should be followed by a comma **except** whichever is the very last in the file.
+`interventions` - an array of intervention objects each of which are comprised of the following.
+
+>**Note:** each intervention should be followed by a comma **except** whichever is the very last in the file.
 
 An intervention "object" is comprised of all of the following:
 
@@ -62,7 +66,9 @@ Example:
 }
 ```
 
-`title` - The simple text name a person would use to refer to the intervention, placed between a set of "", followed by a comma. **Note:** Make sure the quotation mark character is ", not “ or ”
+`title` - The simple text name a person would use to refer to the intervention, placed between a set of "", followed by a comma.
+
+>**Note:** Make sure the quotation mark character is ", not “ or ”
 
 Example:
 ```json
@@ -72,7 +78,9 @@ Example:
 }
 ```
 
-`rationale` - The main idea of the intervention, placed between a set of "", followed by a comma. **Note:** Make sure the quotation mark character is ", not “ or ”
+`rationale` - The main idea of the intervention, placed between a set of "", followed by a comma.
+
+>**Note:** Make sure the quotation mark character is ", not “ or ”
 
 Example:
 ```json
@@ -82,7 +90,9 @@ Example:
 }
 ```
 
-`operationalizing` - Description of how the intervention should be carried out, placed between a set of "", followed by a comma. **Note:** Make sure the quotation mark character is ", not “ or ”
+`operationalizing` - Description of how the intervention should be carried out, placed between a set of "", followed by a comma.
+
+>**Note:** Make sure the quotation mark character is ", not “ or ”
 
 Example:
 ```json
@@ -92,9 +102,13 @@ Example:
 }
 ```
 
-`stepsForOperationalizing` - (Optional) A more detailed break-down of steps to implement the intervention. Can be left as [], or given a list of steps in "" placed within the [], and separated by commas **except** for the last step which cannot be followed by a comma. **Note:** Make sure the quotation mark character is ", not “ or ”
+`stepsForOperationalizing` - (Optional) A more detailed break-down of steps to implement the intervention. Can be left as [], or given a list of steps in "" placed within the [], and separated by commas **except** for the last step which cannot be followed by a comma.
 
-Examples: (**Note:** the text "Step _:" is for illustrative purposes only and is not required; the app will automatically place the text from `stepsForOperationalizing` in a numbered list.)
+> **Note:** Make sure the quotation mark character is ", not “ or ”
+
+Examples:
+
+>**Note:** the text "Step _:" is for illustrative purposes only and is not required; the app will automatically place the text from `stepsForOperationalizing` in a numbered list.
 
 **Valid** - no steps
 ```json
@@ -212,7 +226,11 @@ The following examples are **NOT** valid inputs.
 }
 ```
 
-`foodEnvironmentDomainsAffected` - A list of one or more parts of the food environment affected by this intervention. Place each domain within "" inside the [], and separated by commas **except** for the last step which cannot be followed by a comma. **Note:** the closing bracket "]" is *not* followed by a comma. **Note:** Make sure the quotation mark character is ", not “ or ”
+`foodEnvironmentDomainsAffected` - A list of one or more parts of the food environment affected by this intervention. Place each domain within "" inside the [], and separated by commas **except** for the last step which cannot be followed by a comma.
+
+> **Note:** the closing bracket "]" is *not* followed by a comma.
+
+> **Note:** Make sure the quotation mark character is ", not “ or ”
 
 Examples:
 
@@ -319,7 +337,9 @@ The following examples are **NOT** valid inputs.
 
 Breaking that down we get:
 
-`genderIntegrations` - an array of gender integration objects each of which are comprised of the following. **Note:** each intervention should be followed by a comma **except** whichever is the very last in the file.
+`genderIntegrations` - an array of gender integration objects each of which are comprised of the following.
+
+> **Note:** each intervention should be followed by a comma **except** whichever is the very last in the file.
 
 A gender integration "object" is comprised of all of the following:
 
@@ -333,7 +353,9 @@ Example:
 }
 ```
 
-`integration` - The main idea of the gender integration, placed between a set of "", followed by a comma. **Note:** make sure the quotation mark character is ", not “ or ”
+`integration` - The main idea of the gender integration, placed between a set of "", followed by a comma.
+
+> **Note:** make sure the quotation mark character is ", not “ or ”
 
 Example:
 ```json
@@ -343,7 +365,9 @@ Example:
 }
 ```
 
-`keyConsiderations` - A list of important and/or relavent considerations or pieces of context. Can be left as [], or given a list of text surrounded by "" placed within the [], and separated by commas **except** for the last consideration which cannot be followed by a comma. **Note:** Make sure the quotation mark character is ", not “ or ”
+`keyConsiderations` - A list of important and/or relavent considerations or pieces of context. Can be left as [], or given a list of text surrounded by "" placed within the [], and separated by commas **except** for the last consideration which cannot be followed by a comma.
+
+> **Note:** Make sure the quotation mark character is ", not “ or ”
 
 Examples:
 
@@ -402,7 +426,11 @@ The following examples are **NOT** valid inputs.
 }
 ```
 
-`transformative` - The effects and benefits that gender integration can ideally generate, placed between a set of "". **Note:** the transformative is *not* followed by a comma. **Note:** Make sure the quotation mark character is ", not “ or ”
+`transformative` - The effects and benefits that gender integration can ideally generate, placed between a set of "".
+
+> **Note:** the transformative is *not* followed by a comma.
+
+> **Note:** Make sure the quotation mark character is ", not “ or ”
 
 Example:
 ```json
