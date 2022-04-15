@@ -1,8 +1,8 @@
+import MenuIcon from '@mui/icons-material/Menu';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowNavBar } from '../arrowNavBar/ArrowNavBar';
-import MenuIcon from '@mui/icons-material/Menu';
 import './BasicPage.css';
-import { useState } from 'react';
 
 interface BasicPageProps {
   title?: string;
@@ -30,7 +30,7 @@ export function BasicPage(props: BasicPageProps) {
           <Link to='/genderIntegrationsList'>All Gender Integrations</Link>
         </div>
       </div>
-      <div className='content' onClick={() => setMenuExpanded(false)}>
+      <div className='page-content' onClick={() => setMenuExpanded(false)}>
         {props.title && <h1 className='content-title'>{props.title}</h1>}
         {props.content}
       </div>

@@ -8,7 +8,16 @@
   align-items: flex-end;
 }
 
-.activity-detail-link > span {
+.activity-detail-link-text {
   display: block;
   color: var(--main-theme-orange)
+}
+
+.activity-detail-table {
+  width: 100%;
+}
+
+.activity-detail-text {
+  width: 100%;
+  text-align: left;
 }

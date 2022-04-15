@@ -26,7 +26,7 @@ export function GenderIntegrationTemplate() {
   }
 
   const content =
-    <div>
+    <div className='integration-template-container'>
       <h2>Suggested Gender Integration</h2>
       <h3 className='integration-heading'>
         {`#${thisIntegration.id}: ${thisIntegration.integration}`}

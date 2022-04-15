@@ -1,5 +1,10 @@
 @import url(../../Base.css);
 
+.integration-template-container {
+  width: 90%;
+}
+
+
 .integration-heading {
   color: black;
   font-size: 24px;

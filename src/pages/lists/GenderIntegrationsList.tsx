@@ -5,7 +5,7 @@ import './List.css';
 
 export function GenderIntegrationsList() {
   const content =
-    <div>
+    <div className='list-container'>
       {GenderIntegrations.genderIntegrations.map((genderIntegration, i) => {
         if (genderIntegration.integration) {
           return (

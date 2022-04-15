@@ -1,7 +1,7 @@
 @import url('../../Base.css');
 
 .sector-area-page-template-content-box {
-  min-height: 200px;
+  min-height: 400px;
   align-items: center;
   justify-content: center;
   display: flex;
@@ -15,6 +15,7 @@
 
 .sector-area-page-template-container {
   display: flex;
+  width: 90%;
 }
 
 .sector-area-page-template-nav-container {
@@ -46,6 +47,7 @@
 
 @media (max-width: 950px) {
   .sector-area-page-template-content-box {
+    min-height: 200px;
     margin: 0px;
     box-sizing: border-box;
   }

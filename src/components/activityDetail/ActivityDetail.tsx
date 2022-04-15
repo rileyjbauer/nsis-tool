@@ -44,7 +44,7 @@ export function ActivityDetail() {
   return (
     <div>
       <h1 className='h1-smaller'>{pageTitle}</h1>
-      <table>
+      <table className='activity-detail-table'>
         <thead>
           <tr>
             <th>Potential Nutrition Intervention</th>
@@ -57,8 +57,12 @@ export function ActivityDetail() {
             <tr key={i}>
               <td>
                 <Link className='activity-detail-link' to={`/interventions/${intervention.id}`}>
-                  {intervention.title}
-                  <span>(Read more →)</span>
+                  <span className='activity-detail-text'>
+                    {intervention.title}
+                  </span>
+                  <span className='activity-detail-link-text'>
+                    (Read more →)
+                  </span>
                 </Link>
               </td>
               <td>{intervention.foodEnvironmentDomainsAffected.join(', ')}</td>
@@ -67,7 +71,7 @@ export function ActivityDetail() {
         </tbody>
       </table>
       {genderIntegrations.length > 0 && (
-        <table>
+        <table className='activity-detail-table'>
           <thead>
             <tr>
               <th>Gender Integrations</th>
@@ -79,8 +83,12 @@ export function ActivityDetail() {
               <tr key={i}>
                 <td>
                   <Link to={`/genderIntegrations/${genderIntegration.id}`} className='activity-detail-link'>
-                    {genderIntegration.integration}
-                    <span>(Read more →)</span>
+                    <span className='activity-detail-text'>
+                      {genderIntegration.integration}
+                    </span>
+                    <span className='activity-detail-link-text'>
+                      (Read more →)
+                    </span>
                   </Link>
                 </td>
               </tr>

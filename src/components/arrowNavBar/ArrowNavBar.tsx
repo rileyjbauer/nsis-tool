@@ -1,5 +1,4 @@
 import ArrowBackwardIcon from '@mui/icons-material/ArrowBack';
-import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import { Link, useNavigate } from 'react-router-dom';
 import './ArrowNavBar.css';
 
@@ -28,11 +27,6 @@ export function ArrowNavBar(props: ArrowNavBarProps) {
   return (
     <div className="arrow-bar">
       {backButton}
-      {props.forward &&
-        (<Link to={props.forward} className="arrow-button">
-          <ArrowForwardIcon sx={{ fontSize: 55 }} />
-        </Link>)
-      }
     </div>
   );
 }

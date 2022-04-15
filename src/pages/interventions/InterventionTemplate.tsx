@@ -42,7 +42,7 @@ export function InterventionTemplate() {
   }, []);
 
   const content =
-    <div>
+    <div className='intervention-template-container'>
       <h2>Suggested Nutrition-Sensitive Intervention</h2>
       <h3 className='intervention-heading'>
         {`#${thisIntervention.id}: ${thisIntervention.title}`}

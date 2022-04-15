@@ -18,7 +18,7 @@ export function Sector() {
   const sector = MASTER_SECTOR_MAP[thisSectorKey];
 
   const content =
-    <div>
+    <div className='sector-container'>
       <p>{sector.header}</p>
       <div className='sector-nav-button-container'>
         {Object.values(sector.sectorAreas).map((v, i) =>

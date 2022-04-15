@@ -20,6 +20,10 @@
   display: flex;
 }
 
+.content-title {
+  padding-left: 30px;
+}
+
 .menu-button > svg {
   color: var(--main-theme-white);
   font-size: 50px;
@@ -46,9 +50,12 @@
   width: 250px;
 }
 
-.content {
+.page-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background-color: var(--main-theme-white);
-  padding: 30px 60px;
+  padding: 30px 0px 60px;
   margin-top: calc(var(--top-bar-height) + var(--top-bar-padding-top) + var(--top-bar-padding-bottom));
 }
 
@@ -108,6 +115,7 @@
 
   .content-title {
     font-size: 28px;
+    padding-left: 16px;
   }
 
   .bottom-spacer {

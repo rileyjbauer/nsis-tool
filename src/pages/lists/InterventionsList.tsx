@@ -5,7 +5,7 @@ import './List.css';
 
 export function InterventionsList() {
   const content =
-    <div>
+    <div className='list-container'>
       {Interventions.interventions.map((intervention, i) => {
         if (intervention.title) {
           return (

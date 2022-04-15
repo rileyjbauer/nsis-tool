@@ -11,7 +11,7 @@ import { MainNav } from './pages/MainNav/MainNav';
 import { SectorAreaPageTemplate } from './pages/sectorAreaPageTemplate/SectorAreaPageTemplate';
 import { Sector } from './pages/sectors/Sector';
 import App from './pages/titlePage/App';
-import { Welcome } from './pages/Welcome';
+import { Welcome } from './pages/welcome/Welcome';
 import reportWebVitals from './reportWebVitals';
 import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 

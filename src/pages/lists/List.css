@@ -2,6 +2,10 @@
   padding-left: 20px;
 }
 
+.list-container {
+  width: 90%;
+}
+
 .list-row {
   display: flex;
   padding: 10px;
