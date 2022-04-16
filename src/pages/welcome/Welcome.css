@@ -9,6 +9,11 @@
   justify-content: center;
 }
 
+.welcome-helpbox-container {
+  z-index: 99;
+  position: absolute;
+}
+
 .welcome-helpbox {
   display: flex;
   flex-direction: column;

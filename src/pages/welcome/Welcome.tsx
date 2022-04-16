@@ -1,5 +1,5 @@
 import CloseIcon from '@mui/icons-material/Close';
-import { useState } from 'react';
+import { useLayoutEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { BasicPage } from '../../components/basicPage/BasicPage';
 import ArrowSVG from '../../img/arrow.svg';
@@ -7,6 +7,28 @@ import './Welcome.css';
 
 export function Welcome() {
   const [helpBoxDisplayed, setHelpBoxDisplayed] = useState(true);
+
+  // value used to keep track of scroll position for animation
+  const [scrollVal, setScrollVal] = useState(0);
+
+  // before render, add scroll listener. clean-up afterward.
+  useLayoutEffect(() => {
+
+    // what to do when user starts scrolling
+    const onScroll = () => {
+      const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+      const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scrolled = (winScroll / height) * 100;
+      setScrollVal(scrolled);
+      console.log(scrolled);
+    };
+
+    window.addEventListener('scroll', onScroll, true)
+
+    // clean-up listener
+    return () => window.removeEventListener('scroll', onScroll)
+
+  }, []);
 
   const content = (
     <div className='welcome-content'>
@@ -43,7 +65,7 @@ export function Welcome() {
         </Link>
       </div>
       {helpBoxDisplayed && (
-        <div className='welcome-helpbox-container'>
+        <div className='welcome-helpbox-container' style={{ opacity: scrollVal / 100 }}>
           <div className='welcome-helpbox'>
             {/* <div className='welcome-helpbox-dismiss-container'> */}
             <button className='welcome-helpbox-dismiss-button' onClick={() => setHelpBoxDisplayed(false)}>
