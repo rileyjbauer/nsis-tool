@@ -1,5 +1,5 @@
 import CloseIcon from '@mui/icons-material/Close';
-import { useLayoutEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { BasicPage } from '../../components/basicPage/BasicPage';
 import ArrowSVG from '../../img/arrow.svg';
@@ -12,7 +12,7 @@ export function Welcome() {
   const [scrollVal, setScrollVal] = useState(0);
 
   // before render, add scroll listener. clean-up afterward.
-  useLayoutEffect(() => {
+  useEffect(() => {
 
     // what to do when user starts scrolling
     const onScroll = () => {
@@ -20,7 +20,6 @@ export function Welcome() {
       const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
       const scrolled = (winScroll / height) * 100;
       setScrollVal(scrolled);
-      console.log(scrolled);
     };
 
     window.addEventListener('scroll', onScroll, true)
@@ -67,11 +66,9 @@ export function Welcome() {
       {helpBoxDisplayed && (
         <div className='welcome-helpbox-container' style={{ opacity: scrollVal / 100 }}>
           <div className='welcome-helpbox'>
-            {/* <div className='welcome-helpbox-dismiss-container'> */}
             <button className='welcome-helpbox-dismiss-button' onClick={() => setHelpBoxDisplayed(false)}>
               <CloseIcon sx={{ fontSize: 18 }} />
             </button>
-            {/* </div> */}
             <p className='welcome-helpbox-text'>Click here at any time to go back!</p>
           </div>
           <img src={ArrowSVG} className='welcome-arrow' />

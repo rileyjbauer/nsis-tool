@@ -2,6 +2,7 @@
   --main-theme-white: #ffffff;
   --main-theme-blue: #002e5d;
   --main-theme-orange: #fe8200;
+  --main-theme-orange-hover: #ff9c33;
   --main-theme-teal: #2eccd3;
   --main-theme-gray: #666666;
   --main-theme-light-gray: #d7d7d7;
@@ -105,6 +106,12 @@ button {
   margin: 10px;
   padding: 10px;
   width: 340px;
+  transition: 0.4s ease-in-out;
+}
+
+.nav-button-card:hover {
+  background-color: var(--main-theme-orange-hover);
+  box-shadow: 0 2px 5px 2px rgb(0 0 0 / 26%), 0 2px 10px 0 rgb(0 0 0 / 12%);
 }
 
 .nav-button-card > p {

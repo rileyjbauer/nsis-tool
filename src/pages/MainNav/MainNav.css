@@ -11,6 +11,12 @@
   box-shadow: 0 2px 5px 0 rgb(0 0 0 / 26%), 0 2px 10px 0 rgb(0 0 0 / 12%);
   border-radius: 9px;
   background: var(--main-theme-orange);
+  transition: 0.4s ease-in-out;
+}
+
+.nav-button:hover {
+  background-color: var(--main-theme-orange-hover);
+  box-shadow: 0 2px 5px 2px rgb(0 0 0 / 26%), 0 2px 10px 0 rgb(0 0 0 / 12%);
 }
 
 .nav-button-img-container {
