@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/nsis-tool/static/css/main.8e3b155d.css",
-    "main.js": "/nsis-tool/static/js/main.8e3ecc64.js",
+    "main.css": "/nsis-tool/static/css/main.f59df9e1.css",
+    "main.js": "/nsis-tool/static/js/main.f91099c9.js",
     "static/js/787.22d3c70b.chunk.js": "/nsis-tool/static/js/787.22d3c70b.chunk.js",
     "service-worker.js": "/nsis-tool/service-worker.js",
     "static/media/TanagerLogo.png": "/nsis-tool/static/media/TanagerLogo.9bbf6b3c7d01d396e261.png",
@@ -12,14 +12,15 @@
     "static/media/Production.svg": "/nsis-tool/static/media/Production.de00312b253cffa6940a975b91f2fc1c.svg",
     "static/media/EnablingEnvironment.svg": "/nsis-tool/static/media/EnablingEnvironment.981644b7e676e81dba76516b95f39bdb.svg",
     "static/media/FoodTradeAndMarketing.svg": "/nsis-tool/static/media/FoodTradeAndMarketing.61015beb078e56a7c5d3d88e8e494abd.svg",
+    "static/media/arrow.svg": "/nsis-tool/static/media/arrow.46c828f5ce2ea4326290263dda101347.svg",
     "index.html": "/nsis-tool/index.html",
     "static/media/ConsumerDemand.svg": "/nsis-tool/static/media/ConsumerDemand.0c71715d99e5e7c4e0303bd662797a9d.svg",
-    "main.8e3b155d.css.map": "/nsis-tool/static/css/main.8e3b155d.css.map",
-    "main.8e3ecc64.js.map": "/nsis-tool/static/js/main.8e3ecc64.js.map",
+    "main.f59df9e1.css.map": "/nsis-tool/static/css/main.f59df9e1.css.map",
+    "main.f91099c9.js.map": "/nsis-tool/static/js/main.f91099c9.js.map",
     "787.22d3c70b.chunk.js.map": "/nsis-tool/static/js/787.22d3c70b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.8e3b155d.css",
-    "static/js/main.8e3ecc64.js"
+    "static/css/main.f59df9e1.css",
+    "static/js/main.f91099c9.js"
   ]
 }
