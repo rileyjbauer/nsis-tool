@@ -1,6 +1,6 @@
 {
   "name": "nsis-tool",
-  "homepage": "https://tanagerintl.org/nsis-tool/",
+  "homepage": "https://tanagerintl.org/tools/interactive_nsis_tool",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -33,7 +33,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "BUILD_PATH='./tools/interactive_nsis_tool' react-scripts build",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "test": "jest",

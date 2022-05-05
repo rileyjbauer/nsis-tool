@@ -11,13 +11,14 @@
   width: 100%;
   position: fixed;
   font-size: 25px;
-  padding: 0px 50px;
+  padding: 0px 20px;
   top: 0;
   z-index: 99;
 }
 
 .title-bar {
   display: flex;
+  align-items: center;
 }
 
 .content-title {
@@ -42,6 +43,16 @@
   color: var(--main-theme-light-gray);
   margin: 0px 20px;
   white-space: nowrap;
+}
+
+/* .header-bar-tanager-logo {
+  height: var(--top-bar-height);
+} */
+
+.header-bar-tanager-logo > img {
+  height: var(--top-bar-height);
+  box-sizing: border-box;
+  padding: 10px 30px 10px 0px;
 }
 
 .header-bar-title {
@@ -73,6 +84,10 @@
     display: none;
   }
 
+  .header-bar-tanager-logo > img {
+    padding: 10px 10px 10px 0px;
+  }
+
   .nav-bar {
     flex-direction: column;
     display: none;
@@ -93,8 +108,16 @@
     left: 0px;
   }
 
+  .menu-button {
+    width: 50px;
+    height: var(--top-bar-height);
+    right: 5vw;
+    display: flex;
+    align-items: center;
+  }
+
   .menu-button > svg {
-    display: block;
+    display: inherit;
   }
 
   .menu-expanded > a {

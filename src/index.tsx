@@ -38,7 +38,7 @@ function ScrollToTopWrapper({ children }: any) {
 ReactDOM.render(
   (
     <React.StrictMode>
-      <BrowserRouter basename={`/nsis-tool`}>
+      <BrowserRouter basename={'/tools/interactive_nsis_tool'}>
         <ScrollToTopWrapper>
           <Routes>
             <Route path='/' element={<App />} />
