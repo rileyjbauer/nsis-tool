@@ -33,16 +33,21 @@
   display: none;
 }
 
-/* TODO: Consider adding a nice hover-effect */
 .nav-bar {
   display: flex;
 }
 
 .nav-bar > a {
-  text-decoration: none;
+  text-decoration: solid underline transparent;
+  text-underline-offset: 6px;
   color: var(--main-theme-light-gray);
   margin: 0px 20px;
   white-space: nowrap;
+  transition: text-decoration 0.4s ease-in-out;
+}
+
+.nav-bar > a:hover {
+  text-decoration-color: var(--main-theme-white);
 }
 
 /* .header-bar-tanager-logo {
