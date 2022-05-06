@@ -1,5 +1,5 @@
 **IGNITE Nutrition-Sensitive Intervention Selection Tool**
-The Nutrition-Sensitive Intervention Selection (NSIS) Tool is an interactive webapp that provides potential nutrition interventions tailored to where one is working in the food system.
+The Nutrition-Sensitive Intervention Selection (NSIS) Tool is an interactive webapp that provides suggested nutrition integrations for over 50 common food and market systems activities.
 
 **IGNITE Overview**
 
