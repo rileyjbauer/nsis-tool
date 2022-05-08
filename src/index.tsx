@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter, Link, Route, Routes, useLocation } from 'react-router-dom';
 import { ActivityDetail } from './components/activityDetail/ActivityDetail';
@@ -30,9 +30,56 @@ function NoMatch() {
 function ScrollToTopWrapper({ children }: any) {
   const location = useLocation();
   useEffect(() => {
+    // Always scroll to top on page load
     document.documentElement.scrollTo(0, 0);
+
+    // Make sure to show service worker update even when user navigates
+    navigator.serviceWorker
+      .getRegistrations()
+      .then((regs) => regs.forEach((reg) => reg.update()));
   }, [location.pathname]);
+
   return children
+}
+
+function ServiceWorkerUpdater(): JSX.Element {
+  const [showReload, setShowReload] = useState(false);
+  const [waitingWorker, setWaitingWorker] = useState<ServiceWorker | null>(null);
+
+  const onSWUpdate = (registration: ServiceWorkerRegistration) => {
+    setShowReload(true);
+    setWaitingWorker(registration.waiting);
+  };
+
+  useEffect(() => {
+    // Learn more about service workers: https://cra.link/PWA
+    serviceWorkerRegistration.register({ onUpdate: onSWUpdate });
+  }, []);
+
+  const reloadPage = () => {
+    // Show prompt to user. If user says: "yes" then refresh
+    // TODO: Do we need to handle 'waiting' === null?
+    waitingWorker?.postMessage({ type: 'SKIP_WAITING' });
+
+    setShowReload(false);
+    // TODO: Do we actually want to reload immediately here?
+    window.location.reload();
+  }
+
+  return (
+    <div>
+      {showReload && (
+        <div className='sw-update-container'>
+          <div className='sw-update-helpbox'>
+            <p className='sw-update-text'>A newer version of this page is available, please refresh</p>
+            <button className='sw-update-refresh-button' onClick={reloadPage}>
+              REFRESH
+            </button>
+          </div>
+        </div>
+      )}
+    </div>
+  );
 }
 
 ReactDOM.render(
@@ -40,6 +87,7 @@ ReactDOM.render(
     <React.StrictMode>
       <BrowserRouter basename={'/tools/interactive_nsis_tool'}>
         <ScrollToTopWrapper>
+          <ServiceWorkerUpdater />
           <Routes>
             <Route path='/' element={<App />} />
             <Route path='welcome' element={<Welcome />} />
@@ -78,4 +126,4 @@ ReactDOM.render(
 reportWebVitals();
 
 // Learn more about service workers: https://cra.link/PWA
-serviceWorkerRegistration.register();
+// serviceWorkerRegistration.register(serviceWorkerConfig);
