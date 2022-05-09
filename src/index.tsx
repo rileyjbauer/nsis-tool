@@ -33,10 +33,13 @@ function ScrollToTopWrapper({ children }: any) {
     // Always scroll to top on page load
     document.documentElement.scrollTo(0, 0);
 
+    // TODO: Verify whether or not this is needed
     // Make sure to show service worker update even when user navigates
-    navigator.serviceWorker
-      .getRegistrations()
-      .then((regs) => regs.forEach((reg) => reg.update()));
+    if ('serviceWorker' in navigator && navigator.serviceWorker) {
+      navigator.serviceWorker
+        .getRegistrations()
+        .then((regs) => regs.forEach((reg) => reg.update()));
+    }
   }, [location.pathname]);
 
   return children
@@ -60,13 +63,11 @@ function ServiceWorkerUpdater(): JSX.Element {
   // Show prompt to user. If user hits "REFRESH" then the new service worker is
   // put in control and the page reloads
   const reloadPage = () => {
+    // We reload the page inside the serviceworker in its handler for
+    // the SKIP_WAITING event
     waitingWorker?.postMessage({ type: 'SKIP_WAITING' });
 
     setShowReload(false);
-
-    // window.location.reload();
-    // Reload
-    window.location.href = window.location.href;
   }
 
   return (
@@ -93,6 +94,8 @@ ReactDOM.render(
           <ServiceWorkerUpdater />
           <Routes>
             <Route path='/' element={<App />} />
+            {/* Ensures app loads even if the host redirects to index itself */}
+            <Route path='/index.html' element={<App />} />
             <Route path='welcome' element={<Welcome />} />
             <Route path='mainNav' element={<MainNav />} />
             <Route path='sector' element={<Sector />} />

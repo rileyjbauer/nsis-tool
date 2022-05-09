@@ -99,6 +99,11 @@ function registerValidSW(swUrl: string, config?: Config) {
           }
         };
       };
+      // This ensures that the refresh/update pop-up is shown, even if the
+      // serviceworker event is missed for whatever reason
+      if (registration.waiting && config && config.onUpdate) {
+        config.onUpdate(registration);
+      }
     })
     .catch((error) => {
       console.error('Error during service worker registration:', error);
