@@ -58,15 +58,18 @@ export function register(config?: Config) {
 }
 
 function registerValidSW(swUrl: string, config?: Config) {
+  console.log('Registering SW...');
   navigator.serviceWorker
     .register(swUrl)
     .then((registration) => {
       registration.onupdatefound = () => {
+        console.log('Service worker update found');
         const installingWorker = registration.installing;
         if (installingWorker == null) {
           return;
         }
         installingWorker.onstatechange = () => {
+          console.log('Service worker state changed', installingWorker.state);
           if (installingWorker.state === 'installed') {
             if (navigator.serviceWorker.controller) {
               // At this point, the updated precached content has been fetched,
@@ -79,6 +82,7 @@ function registerValidSW(swUrl: string, config?: Config) {
 
               // Execute callback
               if (config && config.onUpdate) {
+                console.log('Calling update!');
                 config.onUpdate(registration);
               }
             } else {

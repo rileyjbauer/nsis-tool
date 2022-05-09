@@ -6,10 +6,6 @@ import TanagerFooterLogo from '../../img/TanagerFooterLogo.png';
 import TanagerMainLogo from '../../img/TanagerMainLogo.png';
 import './App.css';
 
-interface AppProps {
-  swUpdate: (registration: ServiceWorkerRegistration) => void;
-}
-
 function App() {
   return (
     <div className='App'>

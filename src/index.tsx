@@ -47,6 +47,7 @@ function ServiceWorkerUpdater(): JSX.Element {
   const [waitingWorker, setWaitingWorker] = useState<ServiceWorker | null>(null);
 
   const onSWUpdate = (registration: ServiceWorkerRegistration) => {
+    console.log('onSWUpdate called');
     setShowReload(true);
     setWaitingWorker(registration.waiting);
   };
@@ -56,14 +57,16 @@ function ServiceWorkerUpdater(): JSX.Element {
     serviceWorkerRegistration.register({ onUpdate: onSWUpdate });
   }, []);
 
+  // Show prompt to user. If user hits "REFRESH" then the new service worker is
+  // put in control and the page reloads
   const reloadPage = () => {
-    // Show prompt to user. If user says: "yes" then refresh
-    // TODO: Do we need to handle 'waiting' === null?
     waitingWorker?.postMessage({ type: 'SKIP_WAITING' });
 
     setShowReload(false);
-    // TODO: Do we actually want to reload immediately here?
-    window.location.reload();
+
+    // window.location.reload();
+    // Reload
+    window.location.href = window.location.href;
   }
 
   return (
@@ -71,7 +74,7 @@ function ServiceWorkerUpdater(): JSX.Element {
       {showReload && (
         <div className='sw-update-container'>
           <div className='sw-update-helpbox'>
-            <p className='sw-update-text'>A newer version of this page is available, please refresh</p>
+            <p>New content available:</p>
             <button className='sw-update-refresh-button' onClick={reloadPage}>
               REFRESH
             </button>
