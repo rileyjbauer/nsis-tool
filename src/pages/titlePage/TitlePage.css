@@ -1,6 +1,6 @@
 @import url(../../Base.css);
 
-.App {
+.title-page {
   text-align: center;
   min-height: 100vh;
   display: flex;
@@ -11,28 +11,28 @@
   background: var(--main-theme-blue);
 }
 
-.App-content {
+.title-page-content {
   padding-left: 5vh;
   width: 80%;
   text-align: left;
 }
 
-.App-header {
+.title-page-header {
   display: flex;
   align-items: center;
 }
 
-.App-main-logo {
+.title-page-main-logo {
   padding-right: 40px;
 }
 
-.App-nav-button-container {
+.title-page-nav-button-container {
   display: flex;
   align-items: center;
   padding-bottom: 30px;
 }
 
-.nav-button-card.App-nav-button {
+.nav-button-card.title-page-nav-button {
   font-weight: 600;
   height: 70px;
   box-shadow: none;
@@ -43,27 +43,27 @@
   transition: 0.4s ease-in-out;
 }
 
-.nav-button-card.App-nav-button:hover {
+.nav-button-card.title-page-nav-button:hover, .nav-button-card.title-page-nav-button:active {
   background-color: var(--main-theme-orange);
 }
 
-.App-nav-button-spacer {
+.title-page-nav-button-spacer {
   margin: 15px;
 }
 
-.App-h1 {
+.title-page-h1 {
   color: var(--main-theme-white);
   max-width: 1300px;
   margin: 0;
 }
 
-.App-text {
+.title-page-text {
   font-size: 16px;
   text-align: justify;
   font-style: italic;
 }
 
-.App-hr {
+.title-page-hr {
   background-color: var(--main-theme-orange);
   border: none;
   height: 5px;
@@ -71,68 +71,68 @@
   margin: 30px 0px 20px;
 }
 
-.App-logo-div {
+.title-page-logo-div {
   display: flex;
   align-items: center;
 }
 
-.App-logo-div > img {
+.title-page-logo-div > img {
   max-width: 33%;
   width: 200px;
 }
 
-.App-link-spacer {
+.title-page-link-spacer {
   margin: 15px;
 }
 
 @media (max-width: 950px) {
-  .App {
+  .title-page {
     padding-top: 4vh;
   }
 
-  .App-main-logo {
+  .title-page-main-logo {
     padding-right: 10px;
   }
 
-  .App-main-logo > img{
+  .title-page-main-logo > img{
     height: 140px;
   }
 
-  .App-h1 {
+  .title-page-h1 {
     max-width: 700px;
     font-size: 24px;
   }
 
-  .App-text {
+  .title-page-text {
     max-width: 700px;
     font-size: 14px;
     text-align: left;
   }
 
-  .App-start-link {
+  .title-page-start-link {
     font-size: 14px;
   }
 
-  .App-link-spacer {
+  .title-page-link-spacer {
     margin: 10px;
   }
 
-  .App-content {
+  .title-page-content {
     padding: 0 5vh;
     text-align: center;
   }
 
-  .App-nav-button-container {
+  .title-page-nav-button-container {
     flex-direction: column;
   }
 
-  .App-nav-button {
+  .title-page-nav-button {
     height: 44px;
     width: 140px;
     margin: 20px;
   }
 
-  .App-nav-button-spacer {
+  .title-page-nav-button-spacer {
     display: none;
   }
 }

@@ -1,10 +1,10 @@
-import React from 'react';
 import { render, screen } from '@testing-library/react';
-import App from './App';
+import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
+import TitlePage from './TitlePage';
 
 test('renders home page', () => {
-  render(<BrowserRouter><App /></BrowserRouter>);
+  render(<BrowserRouter><TitlePage /></BrowserRouter>);
   const linkElement = screen.getByText(/FOOD SYSTEMS NUTRITION-SENSITIVE INTERVENTION SELECTION DESIGN TOOL/i);
   expect(linkElement).toBeInTheDocument();
 });

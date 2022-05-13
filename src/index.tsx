@@ -12,7 +12,7 @@ import { InterventionsList } from './pages/lists/InterventionsList';
 import { MainNav } from './pages/MainNav/MainNav';
 import { SectorAreaPageTemplate } from './pages/sectorAreaPageTemplate/SectorAreaPageTemplate';
 import { Sector } from './pages/sectors/Sector';
-import App from './pages/titlePage/App';
+import TitlePage from './pages/titlePage/TitlePage';
 import { Welcome } from './pages/welcome/Welcome';
 import reportWebVitals from './reportWebVitals';
 
@@ -34,9 +34,9 @@ ReactDOM.render(
         <ScrollToTopWrapper>
           <ServiceWorkerUpdater />
           <Routes>
-            <Route path='/' element={<App />} />
+            <Route path='/' element={<TitlePage />} />
             {/* Ensures app loads even if the host redirects to index itself */}
-            <Route path='/index.html' element={<App />} />
+            <Route path='/index.html' element={<TitlePage />} />
             <Route path='welcome' element={<Welcome />} />
             <Route path='mainNav' element={<MainNav />} />
             <Route path='sector' element={<Sector />} />
