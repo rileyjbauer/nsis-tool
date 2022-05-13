@@ -1,7 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter, Link, Route, Routes, useLocation } from 'react-router-dom';
+import { BrowserRouter, Link, Route, Routes } from 'react-router-dom';
 import { ActivityDetail } from './components/activityDetail/ActivityDetail';
+import { ScrollToTopWrapper } from './components/ScrollToTopWrapper';
+import { ServiceWorkerUpdater } from './components/ServiceWorkerUpdater';
 import './index.css';
 import { GenderIntegrationTemplate } from './pages/genderIntegrations/GenderIntegrationTemplate';
 import { InterventionTemplate } from './pages/interventions/InterventionTemplate';
@@ -13,7 +15,6 @@ import { Sector } from './pages/sectors/Sector';
 import App from './pages/titlePage/App';
 import { Welcome } from './pages/welcome/Welcome';
 import reportWebVitals from './reportWebVitals';
-import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 
 function NoMatch() {
   return (
@@ -22,66 +23,6 @@ function NoMatch() {
       <p>
         <Link to="/">Go to the home page</Link>
       </p>
-    </div>
-  );
-}
-
-// Ensures that each time the user navigates, the app scrolls to the top of the page
-function ScrollToTopWrapper({ children }: any) {
-  const location = useLocation();
-  useEffect(() => {
-    // Always scroll to top on page load
-    document.documentElement.scrollTo(0, 0);
-
-    // TODO: Verify whether or not this is needed
-    // Make sure to show service worker update even when user navigates
-    if ('serviceWorker' in navigator && navigator.serviceWorker) {
-      navigator.serviceWorker
-        .getRegistrations()
-        .then((regs) => regs.forEach((reg) => reg.update()));
-    }
-  }, [location.pathname]);
-
-  return children
-}
-
-function ServiceWorkerUpdater(): JSX.Element {
-  const [showReload, setShowReload] = useState(false);
-  const [waitingWorker, setWaitingWorker] = useState<ServiceWorker | null>(null);
-
-  const onSWUpdate = (registration: ServiceWorkerRegistration) => {
-    console.log('onSWUpdate called');
-    setShowReload(true);
-    setWaitingWorker(registration.waiting);
-  };
-
-  useEffect(() => {
-    // Learn more about service workers: https://cra.link/PWA
-    serviceWorkerRegistration.register({ onUpdate: onSWUpdate });
-  }, []);
-
-  // Show prompt to user. If user hits "REFRESH" then the new service worker is
-  // put in control and the page reloads
-  const reloadPage = () => {
-    // We reload the page inside the serviceworker in its handler for
-    // the SKIP_WAITING event
-    waitingWorker?.postMessage({ type: 'SKIP_WAITING' });
-
-    setShowReload(false);
-  }
-
-  return (
-    <div>
-      {showReload && (
-        <div className='sw-update-container'>
-          <div className='sw-update-helpbox'>
-            <p>New content available:</p>
-            <button className='sw-update-refresh-button' onClick={reloadPage}>
-              REFRESH
-            </button>
-          </div>
-        </div>
-      )}
     </div>
   );
 }
