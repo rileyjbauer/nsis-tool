@@ -77,7 +77,9 @@ self.addEventListener('message', (event) => {
 
     // Wait until the new here to reload the page to ensure the new
     // serviceworker is activated
-    window.location.href = window.location.href;
+    if (window && window.location) {
+      window.location.href = window.location.href;
+    }
   }
 });
 
