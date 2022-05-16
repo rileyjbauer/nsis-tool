@@ -66,7 +66,7 @@ export function InterventionsList() {
 
         <label className='InputForm-label'>
           <span className='InputForm-span'>Search:</span>
-          <input name='searchField' className='InputForm-text-field' type='text' onChange={(event) => setSearchTerm(event.currentTarget.value)} value={searchTerm} />
+          <input name='searchField' className='InputForm-text-field' type='text' autoComplete='off' onChange={(event) => setSearchTerm(event.currentTarget.value)} value={searchTerm} />
         </label>
 
         <button className='list-searchbar-reset-button' onClick={reset}>
