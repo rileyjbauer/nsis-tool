@@ -32,7 +32,6 @@
 }
 
 .InputForm {
-  /* width: 100%; */
   padding: 0px 30px;
 }
 
@@ -55,4 +54,18 @@
   border-radius: 4px;
   height: 25px;
   outline-style: none;
+}
+
+@media (max-width: 800px) {
+  .list-searchbar {
+    flex-direction: column;
+    align-items: normal;
+    padding: 10px 0px;
+  }
+
+  .InputForm-label {
+    flex-direction: column;
+    align-items: normal;
+    padding-bottom: 10px;
+  }
 }
