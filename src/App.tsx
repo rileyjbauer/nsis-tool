@@ -1,5 +1,5 @@
 
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { BrowserRouter, Link, Route, Routes } from 'react-router-dom';
 import { ActivityDetail } from './components/activityDetail/ActivityDetail';
 import { ScrollToTopWrapper } from './components/ScrollToTopWrapper';
@@ -41,11 +41,50 @@ export type CartContext = {
 
 export const CartContext = React.createContext({} as CartContext);
 
+const STORAGE_KEY = 'cart';
+
+// Needed to stringify Map object
+function replacer(key: any, value: any) {
+  if (value instanceof Map) {
+    return {
+      dataType: 'Map',
+      value: Array.from(value.entries()),
+    };
+  } else {
+    return value;
+  }
+}
+
+// Needed to parse stringified Map object
+function reviver(key: any, value: any) {
+  if (typeof value === 'object' && value !== null) {
+    if (value.dataType === 'Map') {
+      return new Map(value.value);
+    }
+  }
+  return value;
+}
+
 export function App(): JSX.Element {
-  const [cartState, setCart] = useState({
-    nutritionInterventions: new Map<number, string>(),
-    genderIntegrations: new Map<number, string>(),
+  const [cartState, setCart] = useState(() => {
+    const savedCartState = window?.localStorage?.getItem(STORAGE_KEY);
+    return (savedCartState
+      ? JSON.parse(savedCartState, reviver) as Cart
+      : {
+        nutritionInterventions: new Map<number, string>(),
+        genderIntegrations: new Map<number, string>(),
+      }
+    );
   });
+
+  useEffect(() => {
+    if (cartState) {
+      window?.localStorage?.setItem(
+        STORAGE_KEY,
+        JSON.stringify(cartState, replacer)
+      );
+    }
+  }, [cartState]);
 
   const context = {
     cart: cartState,
