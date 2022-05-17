@@ -64,13 +64,14 @@ export function GenderIntegrationTemplate() {
       {relatedInterventions.length > 0 && (
         <div>
           <h4>Relevant Nutrition Interventions</h4>
-          <ul>
+          <ul className='integration-template-related-ul'>
             {relatedInterventions.map(
               (relatedIntervention, i) =>
-                <li key={i}>
+                <li key={i} className='integration-template-related-li'>
                   <Link to={`/interventions/${relatedIntervention.id}`}>
-                    {`#${relatedIntervention.id}: ${relatedIntervention.title}`}
+                    {`#${relatedIntervention.id}:`}
                   </Link>
+                  <p className='no-top-margin'>{relatedIntervention.title}</p>
                 </li>)}
           </ul>
         </div>)}

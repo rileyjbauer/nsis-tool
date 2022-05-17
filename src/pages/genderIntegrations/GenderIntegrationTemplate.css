@@ -10,3 +10,15 @@
   font-size: 24px;
   margin: 0px;
 }
+
+.integration-template-related-ul {
+  padding-left: 10px;
+}
+
+.integration-template-related-li {
+  display: flex;
+}
+
+.integration-template-related-li > a {
+  padding-right: 10px;
+}
