@@ -73,13 +73,14 @@ export function InterventionTemplate() {
       {thisIntervention.relatedGenderIntegrationIds.length > 0 && (
         <div>
           <h4>Important Gender Integrations</h4>
-          <ul>
+          <ul className='intervention-template-related-ul'>
             {thisIntervention.relatedGenderIntegrationIds.map(
               (id, i) =>
-                <li key={i}>
+                <li key={i} className='intervention-template-related-li'>
                   <Link to={`/genderIntegrations/${id}`}>
-                    {`#${id}: ${GenderIntegrations.genderIntegrations.find((genderIntegration) => genderIntegration.id === id)?.integration}`}
+                    {`#${id}:`}
                   </Link>
+                  <p className='no-top-margin'>{GenderIntegrations.genderIntegrations.find((genderIntegration) => genderIntegration.id === id)?.integration}</p>
                 </li>)}
           </ul>
         </div>)}
