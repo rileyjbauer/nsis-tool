@@ -1,6 +1,7 @@
 import { Link, useParams } from 'react-router-dom';
 import { BasicPage } from '../../components/basicPage/BasicPage';
 import { ErrorElement } from '../../components/ErrorElement';
+import GenderIntegrations from '../../data/gender-integrations.json';
 import Interventions from '../../data/interventions.json';
 import './InterventionTemplate.css';
 
@@ -15,7 +16,7 @@ type Intervention = {
   foodEnvironmentDomainsAffected: string[];
 }
 
-interface RelatedInterventions {
+interface IdAndTitle {
   id: number;
   title: string;
 }
@@ -35,7 +36,7 @@ export function InterventionTemplate() {
   }
 
   // Map the related interventions to their title
-  const relatedInterventions = Interventions.interventions.reduce<RelatedInterventions[]>((prev, current) => {
+  const relatedInterventions = Interventions.interventions.reduce<IdAndTitle[]>((prev, current) => {
     if (thisIntervention.relatedInterventionIds.includes(current.id)) {
       prev.push({ id: current.id, title: current.title });
     }
@@ -65,9 +66,22 @@ export function InterventionTemplate() {
             {thisIntervention.stepsForOperationalizing.map((step, i) => <li key={i}>{step}</li>)}
           </ol>
         </div>)}
+      {thisIntervention.relatedGenderIntegrationIds.length > 0 && (
+        <div>
+          <h4>Important Gender Integrations</h4>
+          <ul>
+            {thisIntervention.relatedGenderIntegrationIds.map(
+              (id, i) =>
+                <li key={i}>
+                  <Link to={`/genderIntegrations/${id}`}>
+                    {`#${id}: ${GenderIntegrations.genderIntegrations.find((genderIntegration) => genderIntegration.id === id)?.integration}`}
+                  </Link>
+                </li>)}
+          </ul>
+        </div>)}
       {relatedInterventions.length > 0 && (
         <div>
-          <h4>Related Interventions</h4>
+          <h4>Related Nutrition Interventions</h4>
           <ul>
             {relatedInterventions.map(
               (relatedIntervention, i) =>

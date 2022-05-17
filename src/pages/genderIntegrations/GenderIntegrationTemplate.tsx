@@ -1,7 +1,8 @@
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { BasicPage } from '../../components/basicPage/BasicPage';
 import { ErrorElement } from '../../components/ErrorElement';
 import GenderIntegrations from '../../data/gender-integrations.json';
+import NutritionInterventions from '../../data/interventions.json';
 import './GenderIntegrationTemplate.css';
 
 type GenderIntegration = {
@@ -9,6 +10,11 @@ type GenderIntegration = {
   integration: string;
   keyConsiderations: string[];
   transformative: string;
+}
+
+interface IdAndTitle {
+  id: number;
+  title: string;
 }
 
 export function GenderIntegrationTemplate() {
@@ -24,6 +30,14 @@ export function GenderIntegrationTemplate() {
       <ErrorElement message={`Error: Unable to find gender integration with ID: ${genderIntegrationId}`} />
     );
   }
+
+  // Map the related interventions to their title
+  const relatedInterventions = NutritionInterventions.interventions.reduce<IdAndTitle[]>((prev, current) => {
+    if (current.relatedGenderIntegrationIds.includes(genderIntegrationId)) {
+      prev.push({ id: current.id, title: current.title });
+    }
+    return prev;
+  }, []);
 
   const content =
     <div className='integration-template-container'>
@@ -42,6 +56,19 @@ export function GenderIntegrationTemplate() {
         <div>
           <h4>Transformative</h4>
           <p>{thisIntegration.transformative}</p>
+        </div>)}
+      {relatedInterventions.length > 0 && (
+        <div>
+          <h4>Relevant Nutrition Interventions</h4>
+          <ul>
+            {relatedInterventions.map(
+              (relatedIntervention, i) =>
+                <li key={i}>
+                  <Link to={`/interventions/${relatedIntervention.id}`}>
+                    {`#${relatedIntervention.id}: ${relatedIntervention.title}`}
+                  </Link>
+                </li>)}
+          </ul>
         </div>)}
     </div>
   return (
