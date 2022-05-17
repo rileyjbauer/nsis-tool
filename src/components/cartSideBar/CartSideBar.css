@@ -1,0 +1,46 @@
+@import url('../../Base.css');
+
+.cart-side-bar {
+  width: var(--cart-side-bar-width);
+  position: fixed;
+  right: 0px;
+  top: var(--top-bar-height);
+  bottom: var(--bottom-bar-height);
+  background-color: white;
+  transition: 0.4s ease-in-out;
+}
+
+.cart-side-bar.closed {
+  transform: translate(var(--cart-side-bar-width));
+}
+
+.cart-side-bar-content {
+  height: 100%;
+  padding: 20px;
+  overflow: scroll;
+}
+
+.cart-side-bar-back-button {
+  background: none;
+  padding: 0px;
+  position: relative;
+  left: -5px;
+}
+
+.cart-side-bar-item {
+  display: flex;
+  align-items: flex-start;
+}
+
+.cart-side-bar-remove-item-button {
+  background: none;
+}
+
+.cart-side-bar-link {
+  padding-right: 10px;
+}
+
+.cart-side-bar-text {
+  font-size: 16px;
+  margin-top: 0px;
+}

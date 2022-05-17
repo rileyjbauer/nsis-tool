@@ -7,6 +7,8 @@
   justify-content: space-between;
   position: fixed;
   bottom: 0;
+  height: var(--bottom-bar-height);
+  z-index: 99;
 }
 
 .arrow-button {

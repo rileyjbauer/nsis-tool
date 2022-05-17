@@ -1,11 +1,12 @@
 import { Link, useParams } from 'react-router-dom';
+import { AddToCartFab } from '../../components/addToCartFab/AddToCartFab';
 import { BasicPage } from '../../components/basicPage/BasicPage';
 import { ErrorElement } from '../../components/ErrorElement';
 import GenderIntegrations from '../../data/gender-integrations.json';
 import NutritionInterventions from '../../data/interventions.json';
 import './GenderIntegrationTemplate.css';
 
-type GenderIntegration = {
+export type GenderIntegration = {
   id: number;
   integration: string;
   keyConsiderations: string[];
@@ -41,6 +42,9 @@ export function GenderIntegrationTemplate() {
 
   const content =
     <div className='integration-template-container'>
+
+      <AddToCartFab genderIntegration={thisIntegration} />
+
       <h2>Suggested Gender Integration</h2>
       <h3 className='integration-heading'>
         {`#${thisIntegration.id}: ${thisIntegration.integration}`}

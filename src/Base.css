@@ -11,7 +11,9 @@
   --top-bar-height: 80px;
   --top-bar-padding-top: 10px;
   --top-bar-padding-bottom: 10px;
+  --bottom-bar-height: 60px;
   --mobile-top-bar-height: 80px;
+  --cart-side-bar-width: 300px;
 }
 
 h1 {
@@ -53,12 +55,20 @@ p, ul, ol {
   font-size: 20px;
 }
 
+a, a:visited, a:active {
+  color: var(--main-theme-orange);
+}
+
 html {
   font-family: Arial, Helvetica, sans-serif;
 }
 
 .non-underlined-link {
   text-decoration: none;
+}
+
+.no-top-margin {
+  margin-top: 0px;
 }
 
 .margin-10 {

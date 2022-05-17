@@ -9,3 +9,15 @@
   font-size: 24px;
   margin: 0px;
 }
+
+.intervention-template-related-ul {
+  padding-left: 10px;
+}
+
+.intervention-template-related-li {
+  display: flex;
+}
+
+.intervention-template-related-li > a {
+  padding-right: 10px;
+}
