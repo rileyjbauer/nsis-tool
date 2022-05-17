@@ -1,11 +1,12 @@
 import { Link, useParams } from 'react-router-dom';
+import { AddToCartFab } from '../../components/addToCartFab/AddToCartFab';
 import { BasicPage } from '../../components/basicPage/BasicPage';
 import { ErrorElement } from '../../components/ErrorElement';
 import GenderIntegrations from '../../data/gender-integrations.json';
 import Interventions from '../../data/interventions.json';
 import './InterventionTemplate.css';
 
-type Intervention = {
+export type Intervention = {
   id: number;
   title: string;
   rationale?: string;
@@ -45,6 +46,9 @@ export function InterventionTemplate() {
 
   const content =
     <div className='intervention-template-container'>
+
+      <AddToCartFab nutritionIntervention={thisIntervention} />
+
       <h2>Suggested Nutrition-Sensitive Intervention</h2>
       <h3 className='intervention-heading'>
         {`#${thisIntervention.id}: ${thisIntervention.title}`}
@@ -82,13 +86,14 @@ export function InterventionTemplate() {
       {relatedInterventions.length > 0 && (
         <div>
           <h4>Related Nutrition Interventions</h4>
-          <ul>
+          <ul className='intervention-template-related-ul'>
             {relatedInterventions.map(
               (relatedIntervention, i) =>
-                <li key={i}>
+                <li key={i} className='intervention-template-related-li'>
                   <Link to={`/interventions/${relatedIntervention.id}`}>
-                    {`#${relatedIntervention.id}: ${relatedIntervention.title}`}
+                    {`#${relatedIntervention.id}:`}
                   </Link>
+                  <p className='no-top-margin'>{relatedIntervention.title}</p>
                 </li>)}
           </ul>
         </div>)}

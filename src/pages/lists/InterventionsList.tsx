@@ -73,6 +73,17 @@ export function InterventionsList() {
           Reset
         </button>
       </div>
+      {/* <CartContext.Consumer>
+        {(cartContext) => {
+          return (
+            <div className='Add-to-cart-fab'>
+              <button onClick={() => cartContext.addIntervention(thisIntervention.id, thisIntervention.title)}>
+                Add
+              </button>
+            </div>
+          );
+        }}
+      </CartContext.Consumer> */}
       {filteredInterventions.map((intervention, i) => {
         if (intervention.title) {
           return (
