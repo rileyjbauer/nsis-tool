@@ -10,7 +10,7 @@
 }
 
 .welcome-helpbox-container {
-  z-index: 99;
+  z-index: 999;
   position: absolute;
 }
 
@@ -22,7 +22,6 @@
   height: 125px;
   background: aliceblue;
   position: fixed;
-  z-index: 99;
   border-radius: 14px;
   bottom: 85px;
   left: 65px;

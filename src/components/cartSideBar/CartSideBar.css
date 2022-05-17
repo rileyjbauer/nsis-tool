@@ -15,6 +15,7 @@
 }
 
 .cart-side-bar-content {
+  box-sizing: border-box;
   height: 100%;
   padding: 20px;
   overflow: scroll;
