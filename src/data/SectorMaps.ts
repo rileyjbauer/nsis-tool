@@ -145,7 +145,7 @@ export const FOOD_TRADE_PAGE_MAP: SectorMap = {
     activities: [
       {
         activityTitle: 'Farm-level Marketing/Offtake Enhanced',
-        interventionIds: [8, 47, 27],
+        interventionIds: [26, 47, 27],
         genderIntegrationIds: [13],
       },
       {
@@ -235,7 +235,7 @@ export const FOOD_PROCESSING_PAGE_MAP: SectorMap = {
     activities: [
       {
         activityTitle: 'Food Processors And Retailers\' Marketing Strategies Developed',
-        interventionIds: [29],
+        interventionIds: [30],
         genderIntegrationIds: [17],
       },
     ],
@@ -390,7 +390,7 @@ export const CONSUMER_DEMAND_PAGE_MAP: SectorMap = {
       },
       {
         activityTitle: 'Household Budgeting Training',
-        interventionIds: [19],
+        interventionIds: [68],
         genderIntegrationIds: [7],
       },
     ],
@@ -405,7 +405,7 @@ export const CONSUMER_DEMAND_PAGE_MAP: SectorMap = {
       },
       {
         activityTitle: 'Integrate Nutrition Messaging In Output Market Development Activities',
-        interventionIds: [52],
+        interventionIds: [53],
         genderIntegrationIds: [3],
       },
     ],

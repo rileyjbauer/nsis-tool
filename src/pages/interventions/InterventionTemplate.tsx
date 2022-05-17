@@ -11,6 +11,7 @@ type Intervention = {
   operationalizing?: string;
   stepsForOperationalizing: string[];
   relatedInterventionIds: number[];
+  relatedGenderIntegrationIds: number[];
   foodEnvironmentDomainsAffected: string[];
 }
 
