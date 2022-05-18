@@ -19,7 +19,7 @@ const options: Option[] = [
   { value: 'Convenience', label: 'Convenience' },
   { value: 'Desirability', label: 'Desirability' },
   { value: 'Price', label: 'Price' },
-  { value: 'Women\'s Empowerment', label: 'Women\'s empowerment' }
+  { value: 'Women\'s empowerment', label: 'Women\'s Empowerment' }
 ];
 
 type ShowPrompt = {
