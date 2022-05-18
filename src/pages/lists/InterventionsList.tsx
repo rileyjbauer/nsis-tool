@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Select, { OnChangeValue } from 'react-select';
 import { CartContext } from '../../App';
+import { AddRelatedGenderIntegrationsPrompt, showAddRelatedGenderIntegrationsPrompt } from '../../components/AddRelatedGenderIntegrationsPrompt/AddRelatedGenderIntegrations';
 import { BasicPage } from '../../components/basicPage/BasicPage';
 import Interventions from '../../data/interventions.json';
 import './List.css';
@@ -19,11 +20,20 @@ const options: Option[] = [
   { value: 'Desirability', label: 'Desirability' },
   { value: 'Price', label: 'Price' },
   { value: 'Women\'s Empowerment', label: 'Women\'s empowerment' }
-]
+];
+
+type ShowPrompt = {
+  show: boolean;
+  relatedGenderIntegrationIds: number[];
+}
 
 export function InterventionsList() {
   const [searchTerm, setSearchTerm] = useState('');
   const [filterTerms, setFilterTerms] = useState([] as Option[]);
+  const [showPrompt, setShowPrompt] = useState({
+    show: false,
+    relatedGenderIntegrationIds: [],
+  } as ShowPrompt);
 
   function handleFilterChange(options: OnChangeValue<Option, true>): void {
     setFilterTerms(options as Option[]);
@@ -54,8 +64,8 @@ export function InterventionsList() {
   const content = (
     <div className='list-container'>
       <div className='list-searchbar'>
-        <label className='InputForm-label'>
-          <span className='InputForm-span'>Filter by food domain:</span>
+        <label className='list-searchbar-label'>
+          <span className='list-searchbar-span'>Filter by food domain:</span>
           <Select
             isMulti
             name='Food Domains'
@@ -65,40 +75,58 @@ export function InterventionsList() {
           />
         </label>
 
-        <label className='InputForm-label'>
-          <span className='InputForm-span'>Search:</span>
-          <input name='searchField' className='InputForm-text-field' type='text' autoComplete='off' onChange={(event) => setSearchTerm(event.currentTarget.value)} value={searchTerm} />
+        <label className='list-searchbar-label'>
+          <span className='list-searchbar-span'>Search:</span>
+          <input name='searchField' className='list-searchbar-text-field' type='text' autoComplete='off' onChange={(event) => setSearchTerm(event.currentTarget.value)} value={searchTerm} />
         </label>
 
         <button className='simple-button' onClick={reset}>
           Reset
         </button>
       </div>
-      {filteredInterventions.map((intervention, i) => {
-        if (intervention.title) {
-          return (
-            <div key={i}>
-              <span className='list-row'>
-                <Link to={`/interventions/${intervention.id}`}>
-                  {`#${intervention.id}`}
-                </Link>
-                <div className='list-item-title'>{intervention.title}</div>
-                <CartContext.Consumer>
-                  {(cartContext) => {
-                    return (
-                      <button className='simple-button' onClick={() => cartContext.addIntervention(intervention.id, intervention.title)}>
+      <CartContext.Consumer>
+        {(cartContext) => {
+          return (<>
+            {filteredInterventions.map((intervention, i) => {
+              if (intervention.title) {
+                return (
+                  <div key={i}>
+                    <span className='list-row'>
+                      <Link to={`/interventions/${intervention.id}`}>
+                        {`#${intervention.id}`}
+                      </Link>
+                      <div className='list-item-title'>{intervention.title}</div>
+
+                      <button className='simple-button' onClick={() => {
+                        cartContext.addIntervention(intervention.id, intervention.title);
+                        setShowPrompt({
+                          show: showAddRelatedGenderIntegrationsPrompt(
+                            intervention.relatedGenderIntegrationIds,
+                            cartContext.cart.genderIntegrations
+                          ),
+                          relatedGenderIntegrationIds: intervention.relatedGenderIntegrationIds
+                        });
+                      }}>
                         Add
                       </button>
-                    );
-                  }}
-                </CartContext.Consumer>
-              </span>
-              <hr />
-            </div>
-          );
-        }
-        return <div key={i} />;
-      })}
+                    </span>
+                    <hr />
+                  </div>
+                );
+              }
+              return <div key={i} />;
+            })}
+          </>);
+        }}
+      </CartContext.Consumer>
+      {
+        showPrompt.show && (
+          <AddRelatedGenderIntegrationsPrompt
+            relatedGenderIntegrationIds={showPrompt.relatedGenderIntegrationIds}
+            dismiss={() => setShowPrompt({ show: false, relatedGenderIntegrationIds: [] })}
+          />
+        )
+      }
     </div>
   );
 
