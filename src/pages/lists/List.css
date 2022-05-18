@@ -1,5 +1,6 @@
-.title {
+.list-item-title {
   padding-left: 20px;
+  width: 100%;
 }
 
 .list-container {
@@ -22,13 +23,6 @@
   padding: 20px;
   align-items: center;
   border-bottom: solid 1px var(--main-theme-dark-gray);
-}
-
-.list-searchbar-reset-button {
-  border-radius: 4px;
-  height: 30px;
-  width: 60px;
-  background: var(--main-theme-light-gray);
 }
 
 .InputForm {

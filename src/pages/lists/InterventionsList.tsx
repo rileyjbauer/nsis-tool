@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Select, { OnChangeValue } from 'react-select';
+import { CartContext } from '../../App';
 import { BasicPage } from '../../components/basicPage/BasicPage';
 import Interventions from '../../data/interventions.json';
 import './List.css';
@@ -69,21 +70,10 @@ export function InterventionsList() {
           <input name='searchField' className='InputForm-text-field' type='text' autoComplete='off' onChange={(event) => setSearchTerm(event.currentTarget.value)} value={searchTerm} />
         </label>
 
-        <button className='list-searchbar-reset-button' onClick={reset}>
+        <button className='simple-button' onClick={reset}>
           Reset
         </button>
       </div>
-      {/* <CartContext.Consumer>
-        {(cartContext) => {
-          return (
-            <div className='Add-to-cart-fab'>
-              <button onClick={() => cartContext.addIntervention(thisIntervention.id, thisIntervention.title)}>
-                Add
-              </button>
-            </div>
-          );
-        }}
-      </CartContext.Consumer> */}
       {filteredInterventions.map((intervention, i) => {
         if (intervention.title) {
           return (
@@ -92,7 +82,16 @@ export function InterventionsList() {
                 <Link to={`/interventions/${intervention.id}`}>
                   {`#${intervention.id}`}
                 </Link>
-                <div className='title'>{intervention.title}</div>
+                <div className='list-item-title'>{intervention.title}</div>
+                <CartContext.Consumer>
+                  {(cartContext) => {
+                    return (
+                      <button className='simple-button' onClick={() => cartContext.addIntervention(intervention.id, intervention.title)}>
+                        Add
+                      </button>
+                    );
+                  }}
+                </CartContext.Consumer>
               </span>
               <hr />
             </div>

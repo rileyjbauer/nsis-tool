@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { CartContext } from '../../App';
 import { BasicPage } from '../../components/basicPage/BasicPage';
 import GenderIntegrations from '../../data/gender-integrations.json';
 import './List.css';
@@ -22,7 +23,7 @@ export function GenderIntegrationsList() {
           <input name='searchField' className='InputForm-text-field' type='text' autoComplete='off' onChange={(event) => setSearchTerm(event.currentTarget.value)} value={searchTerm} />
         </label>
 
-        <button className='list-searchbar-reset-button' onClick={reset}>
+        <button className='simple-button' onClick={reset}>
           Reset
         </button>
       </div>
@@ -35,7 +36,18 @@ export function GenderIntegrationsList() {
                 <Link to={`/genderIntegrations/${genderIntegration.id}`}>
                   {`#${genderIntegration.id}`}
                 </Link>
-                <div className='title'>{genderIntegration.integration}</div>
+                <div className='list-item-title'>
+                  {genderIntegration.integration}
+                </div>
+                <CartContext.Consumer>
+                  {(cartContext) => {
+                    return (
+                      <button className='simple-button' onClick={() => cartContext.addIntegration(genderIntegration.id, genderIntegration.integration)}>
+                        Add
+                      </button>
+                    );
+                  }}
+                </CartContext.Consumer>
               </span>
               <hr />
             </div>
