@@ -7,13 +7,58 @@
   position: fixed;
   top: calc(var(--top-bar-height) + 30px);
   right: 20px;
-  height: 40px;
-  width: 40px;
-  background-color: var(--main-theme-gray);
+  height: 60px;
+  width: 60px;
+  background-color: var(--main-theme-dark-gray);
   border-radius: 50%;
+}
+
+.add-to-cart-fab:hover {
+  background-color: var(--main-theme-gray);
+}
+
+.add-to-cart-fab:active {
+  background-color: var(--main-theme-light-gray);
 }
 
 .add-to-cart-fab > button {
   background: none;
   color: var(--main-theme-white);
+}
+
+.add-to-cart-prompt {
+  position: fixed;
+  top: calc(var(--top-bar-height) + 100px);
+  right: 40px;
+  width: 300px;
+  background: var(--main-theme-white);
+  border-radius: 10px;
+  box-shadow: 0 2px 5px 0 rgb(0 0 0 / 26%), 0 2px 10px 0 rgb(0 0 0 / 12%);
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.add-to-cart-prompt-ul {
+  padding-left: 10px;
+}
+
+.add-to-cart-prompt-li, .add-to-cart-prompt-li > p {
+  display: flex;
+  font-size: 14px;
+}
+
+.add-to-cart-prompt-li > a {
+  padding-right: 10px;
+}
+
+.add-to-cart-prompt-button-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+@media (max-width: 630px) {
+  .add-to-cart-prompt {
+    right: 10vw;
+    width: 80vw;
+  }
 }

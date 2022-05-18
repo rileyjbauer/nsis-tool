@@ -60,7 +60,7 @@
   font-size: 30px;
 }
 
-@media (max-width: 950px) {
+@media (max-width: 1000px) {
   .nav-container {
     grid-template-columns: repeat(2, 1fr);
   }

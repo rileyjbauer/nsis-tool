@@ -13,7 +13,7 @@
   max-width: 850px;
 }
 
-@media (max-width: 950px) {
+@media (max-width: 1000px) {
   .sector-container {
     padding-left: 16px;
   }
