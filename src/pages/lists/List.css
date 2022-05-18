@@ -21,7 +21,7 @@
   z-index: 2;
   padding: 20px;
   align-items: center;
-  border-bottom: solid 1px var(--main-theme-gray);
+  border-bottom: solid 1px var(--main-theme-dark-gray);
 }
 
 .list-searchbar-reset-button {

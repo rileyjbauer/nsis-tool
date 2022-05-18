@@ -4,7 +4,8 @@
   --main-theme-orange: #fe8200;
   --main-theme-orange-hover: #ff9c33;
   --main-theme-teal: #2eccd3;
-  --main-theme-gray: #666666;
+  --main-theme-dark-gray: #666666;
+  --main-theme-gray: #918f8f;
   --main-theme-light-gray: #d7d7d7;
   --main-theme-very-light-gray: #eeeeee;
   --left-nav-width: 150px;
@@ -39,7 +40,7 @@ h2 {
 }
 
 h3 {
-  color: var(--main-theme-gray);
+  color: var(--main-theme-dark-gray);
   font-size: 24px;
   font-weight: normal;
   margin-top: 0px;
@@ -51,7 +52,7 @@ h4 {
 }
 
 p, ul, ol {
-  color: var(--main-theme-gray);
+  color: var(--main-theme-dark-gray);
   font-size: 20px;
 }
 
@@ -100,6 +101,21 @@ thead {
 button {
   border: none;
   cursor: pointer;
+}
+
+.simple-button {
+  height: 24px;
+  border-radius: 4px;
+  border: 1px solid var(--main-theme-dark-gray);
+  background: var(--main-theme-very-light-gray);
+}
+
+.simple-button:hover {
+  background: var(--main-theme-light-gray);
+}
+
+.simple-button:active {
+  background: var(--main-theme-dark-gray);
 }
 
 .nav-button-card {

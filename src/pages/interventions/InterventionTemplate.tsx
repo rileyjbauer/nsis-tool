@@ -2,8 +2,8 @@ import { Link, useParams } from 'react-router-dom';
 import { AddToCartFab } from '../../components/addToCartFab/AddToCartFab';
 import { BasicPage } from '../../components/basicPage/BasicPage';
 import { ErrorElement } from '../../components/ErrorElement';
-import GenderIntegrations from '../../data/gender-integrations.json';
 import Interventions from '../../data/interventions.json';
+import { getGenderIntegrationTitleFromId } from '../../Utils';
 import './InterventionTemplate.css';
 
 export type Intervention = {
@@ -80,7 +80,7 @@ export function InterventionTemplate() {
                   <Link to={`/genderIntegrations/${id}`}>
                     {`#${id}:`}
                   </Link>
-                  <p className='no-top-margin'>{GenderIntegrations.genderIntegrations.find((genderIntegration) => genderIntegration.id === id)?.integration}</p>
+                  <p className='no-top-margin'>{getGenderIntegrationTitleFromId(id)}</p>
                 </li>)}
           </ul>
         </div>)}

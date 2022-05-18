@@ -39,7 +39,7 @@
   text-decoration: solid underline transparent;
   text-underline-offset: 6px;
   color: var(--main-theme-light-gray);
-  margin: 0px 20px;
+  margin: 0px 10px;
   white-space: nowrap;
   transition: text-decoration 0.4s ease-in-out;
 }
@@ -89,7 +89,7 @@
   height: 60px;
 }
 
-@media (max-width: 950px) {
+@media (max-width: 1000px) {
   .header-bar {
     padding: 0px 20px;
   }

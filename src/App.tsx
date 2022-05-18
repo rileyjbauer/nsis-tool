@@ -37,6 +37,7 @@ export type CartContext = {
   removeIntervention: (id: number) => void,
   addIntegration: (id: number, title: string) => void,
   removeIntegration: (id: number) => void,
+  clearCart: () => void,
 }
 
 export const CartContext = React.createContext({} as CartContext);
@@ -77,6 +78,7 @@ export function App(): JSX.Element {
     );
   });
 
+  // Place cart state into local storage, if it exists
   useEffect(() => {
     if (cartState) {
       window?.localStorage?.setItem(
@@ -90,35 +92,53 @@ export function App(): JSX.Element {
     cart: cartState,
     // TODO: Clean these up, probably with ... or something
     addIntervention: (id: number, title: string) => {
-      const newVal = new Map<number, string>(cartState.nutritionInterventions);
-      newVal.set(id, title);
-      setCart({
-        nutritionInterventions: newVal,
-        genderIntegrations: cartState.genderIntegrations,
+      setCart((previousState) => {
+        // Create new Map so React knows the state has changed
+        const newVal = new Map<number, string>(previousState.nutritionInterventions);
+        newVal.set(id, title);
+        return {
+          nutritionInterventions: newVal,
+          genderIntegrations: cartState.genderIntegrations,
+        }
       });
     },
     removeIntervention: (id: number) => {
-      const newVal = new Map<number, string>(cartState.nutritionInterventions);
-      newVal.delete(id);
-      setCart({
-        nutritionInterventions: newVal,
-        genderIntegrations: cartState.genderIntegrations,
+      setCart((previousState) => {
+        // Create new Map so React knows the state has changed
+        const newVal = new Map<number, string>(previousState.nutritionInterventions);
+        newVal.delete(id);
+        return {
+          nutritionInterventions: newVal,
+          genderIntegrations: cartState.genderIntegrations,
+        }
       });
     },
     addIntegration: (id: number, title: string) => {
-      const newVal = new Map<number, string>(cartState.genderIntegrations);
-      newVal.set(id, title);
-      setCart({
-        nutritionInterventions: cartState.nutritionInterventions,
-        genderIntegrations: newVal,
+      setCart((previousState) => {
+        // Create new Map so React knows the state has changed
+        const newVal = new Map<number, string>(previousState.genderIntegrations);
+        newVal.set(id, title);
+        return {
+          nutritionInterventions: cartState.nutritionInterventions,
+          genderIntegrations: newVal,
+        }
       });
     },
     removeIntegration: (id: number) => {
-      const newVal = new Map<number, string>(cartState.genderIntegrations);
-      newVal.delete(id);
+      setCart((previousState) => {
+        // Create new Map so React knows the state has changed
+        const newVal = new Map<number, string>(previousState.genderIntegrations);
+        newVal.delete(id);
+        return {
+          nutritionInterventions: cartState.nutritionInterventions,
+          genderIntegrations: newVal,
+        }
+      });
+    },
+    clearCart: () => {
       setCart({
-        nutritionInterventions: cartState.nutritionInterventions,
-        genderIntegrations: newVal,
+        nutritionInterventions: new Map<number, string>(),
+        genderIntegrations: new Map<number, string>(),
       });
     },
   };

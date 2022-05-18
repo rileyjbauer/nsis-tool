@@ -1,7 +1,9 @@
+import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import CloseIcon from '@mui/icons-material/Close';
 import { Link } from 'react-router-dom';
 import { CartContext } from '../../App';
 import './CartSideBar.css';
+
 
 interface CartSideBarProps {
   expanded: boolean;
@@ -13,7 +15,7 @@ export function CartSideBar(props: CartSideBarProps): JSX.Element {
     <div className={`cart-side-bar ${props.expanded ? '' : 'closed'}`}>
       <div className='cart-side-bar-content'>
         <button className='cart-side-bar-back-button' onClick={() => props.setExpanded(!props.expanded)}>
-          <CloseIcon sx={{ fontSize: 40 }} />
+          <ChevronRightIcon sx={{ fontSize: 40 }} />
         </button>
 
         <CartContext.Consumer>
@@ -59,6 +61,12 @@ export function CartSideBar(props: CartSideBarProps): JSX.Element {
                     )
                     : <p>No gender integrations selected</p>
                 }
+                <span className='cart-side-bar-button-container'>
+                  <button className='simple-button'>Save</button>
+                  <button className='simple-button' onClick={() => cartContext.clearCart()}>
+                    Empty Cart
+                  </button>
+                </span>
               </>
             );
           }}

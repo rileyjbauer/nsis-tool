@@ -13,7 +13,6 @@ export function Welcome() {
 
   // before render, add scroll listener. clean-up afterward.
   useEffect(() => {
-
     // what to do when user starts scrolling
     const onScroll = () => {
       const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
