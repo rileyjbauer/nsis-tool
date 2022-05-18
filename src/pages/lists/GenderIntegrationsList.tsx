@@ -18,9 +18,9 @@ export function GenderIntegrationsList() {
   const content = (
     <div className='list-container'>
       <div className='list-searchbar'>
-        <label className='InputForm-label'>
-          <span className='InputForm-span'>Search:</span>
-          <input name='searchField' className='InputForm-text-field' type='text' autoComplete='off' onChange={(event) => setSearchTerm(event.currentTarget.value)} value={searchTerm} />
+        <label className='list-searchbar-label'>
+          <span className='list-searchbar-span'>Search:</span>
+          <input name='searchField' className='list-searchbar-text-field' type='text' autoComplete='off' onChange={(event) => setSearchTerm(event.currentTarget.value)} value={searchTerm} />
         </label>
 
         <button className='simple-button' onClick={reset}>

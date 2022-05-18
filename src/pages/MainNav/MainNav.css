@@ -101,5 +101,6 @@
     background: var(--main-theme-white);
     color: var(--main-theme-orange);
     font-size: 28px;
+    border-radius: 8px;
   }
 }

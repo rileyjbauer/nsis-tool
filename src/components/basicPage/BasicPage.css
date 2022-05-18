@@ -163,3 +163,17 @@
     height: 20px;
   }
 }
+
+@media (max-width: 650px) {
+  .header-bar {
+    height: var(--mobile-top-bar-height);
+  }
+
+  .menu-expanded {
+    top: var(--mobile-top-bar-height);
+  }
+
+  .page-content {
+    margin-top: calc(var(--mobile-top-bar-height) + var(--top-bar-padding-top) + var(--top-bar-padding-bottom));
+  }
+}
