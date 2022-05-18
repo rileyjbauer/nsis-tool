@@ -76,6 +76,10 @@ html {
   margin: 10px;
 }
 
+.margin-left-10 {
+  margin-left: 10px;
+}
+
 .padding-10 {
   padding: 10px;
 }
@@ -100,6 +104,9 @@ thead {
 
 button {
   border: none;
+}
+
+button:enabled {
   cursor: pointer;
 }
 
@@ -110,11 +117,11 @@ button {
   background: var(--main-theme-very-light-gray);
 }
 
-.simple-button:hover {
+.simple-button:hover:enabled {
   background: var(--main-theme-light-gray);
 }
 
-.simple-button:active {
+.simple-button:active:enabled {
   background: var(--main-theme-dark-gray);
 }
 

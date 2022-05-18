@@ -97,7 +97,7 @@ export function InterventionsList() {
                       </Link>
                       <div className='list-item-title'>{intervention.title}</div>
 
-                      <button className='simple-button' onClick={() => {
+                      <button className='simple-button margin-left-10' disabled={cartContext.cart.nutritionInterventions.has(intervention.id)} onClick={() => {
                         cartContext.addIntervention(intervention.id, intervention.title);
                         setShowPrompt({
                           show: showAddRelatedGenderIntegrationsPrompt(
@@ -107,7 +107,7 @@ export function InterventionsList() {
                           relatedGenderIntegrationIds: intervention.relatedGenderIntegrationIds
                         });
                       }}>
-                        Add
+                        {cartContext.cart.nutritionInterventions.has(intervention.id) ? 'Added' : 'Add'}
                       </button>
                     </span>
                     <hr />

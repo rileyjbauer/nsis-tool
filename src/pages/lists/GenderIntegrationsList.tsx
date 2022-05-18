@@ -42,8 +42,8 @@ export function GenderIntegrationsList() {
                 <CartContext.Consumer>
                   {(cartContext) => {
                     return (
-                      <button className='simple-button' onClick={() => cartContext.addIntegration(genderIntegration.id, genderIntegration.integration)}>
-                        Add
+                      <button className='simple-button margin-left-10' disabled={cartContext.cart.genderIntegrations.has(genderIntegration.id)} onClick={() => cartContext.addIntegration(genderIntegration.id, genderIntegration.integration)}>
+                        {cartContext.cart.genderIntegrations.has(genderIntegration.id) ? 'Added' : 'Add'}
                       </button>
                     );
                   }}

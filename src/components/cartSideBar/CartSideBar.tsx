@@ -62,8 +62,10 @@ export function CartSideBar(props: CartSideBarProps): JSX.Element {
                     : <p>No gender integrations selected</p>
                 }
                 <span className='cart-side-bar-button-container'>
-                  <button className='simple-button'>Save</button>
-                  <button className='simple-button' onClick={() => cartContext.clearCart()}>
+                  <button className='simple-button' disabled={cartContext.cart.nutritionInterventions.size === 0 && cartContext.cart.genderIntegrations.size === 0}>
+                    Save
+                  </button>
+                  <button className='simple-button' disabled={cartContext.cart.nutritionInterventions.size === 0 && cartContext.cart.genderIntegrations.size === 0} onClick={() => cartContext.clearCart()}>
                     Empty Cart
                   </button>
                 </span>
