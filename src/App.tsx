@@ -10,6 +10,7 @@ import { InterventionTemplate } from './pages/interventions/InterventionTemplate
 import { GenderIntegrationsList } from './pages/lists/GenderIntegrationsList';
 import { InterventionsList } from './pages/lists/InterventionsList';
 import { MainNav } from './pages/MainNav/MainNav';
+import { Print } from './pages/print/Print';
 import { SectorAreaPageTemplate } from './pages/sectorAreaPageTemplate/SectorAreaPageTemplate';
 import { Sector } from './pages/sectors/Sector';
 import TitlePage from './pages/titlePage/TitlePage';
@@ -172,6 +173,8 @@ export function App(): JSX.Element {
 
               {/* All Gender Integrations */}
               <Route path='genderIntegrationsList' element={<GenderIntegrationsList />} />
+
+              <Route path='print' element={<Print />} />
 
               {/* Catch all other paths and display placeholder page */}
               <Route path="*" element={<NoMatch />} />

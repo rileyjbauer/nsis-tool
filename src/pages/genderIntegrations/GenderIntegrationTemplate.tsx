@@ -18,7 +18,44 @@ interface IdAndTitle {
   title: string;
 }
 
-export function GenderIntegrationTemplate() {
+interface GenderIntegrationCoreProps {
+  genderIntegration?: GenderIntegration;
+  genderIntegrationId?: number;
+}
+
+export function GenderIntegrationCore(props: GenderIntegrationCoreProps): JSX.Element {
+  let thisGenderIntegration: GenderIntegration | undefined;
+  if (props.genderIntegration) {
+    thisGenderIntegration = props.genderIntegration;
+  } else if (props.genderIntegrationId) {
+    thisGenderIntegration = GenderIntegrations.genderIntegrations.find((integration) => integration.id === props.genderIntegrationId);
+  }
+  if (thisGenderIntegration === undefined) {
+    return <ErrorElement message={`No gender integration found with id: ${props.genderIntegrationId}`} />
+  }
+
+  return (
+    <div>
+      <h3 className='integration-heading'>
+        {`#${thisGenderIntegration.id}: ${thisGenderIntegration.integration}`}
+      </h3>
+      {thisGenderIntegration.keyConsiderations.length > 0 && (
+        <div>
+          <h4>Key Considerations</h4>
+          <ol>
+            {thisGenderIntegration.keyConsiderations.map((consideration, i) => <li key={i}>{consideration}</li>)}
+          </ol>
+        </div>)}
+      {thisGenderIntegration.transformative && (
+        <div>
+          <h4>Transformative</h4>
+          <p>{thisGenderIntegration.transformative}</p>
+        </div>)}
+    </div>
+  );
+}
+
+export function GenderIntegrationTemplate(): JSX.Element {
   const params = useParams();
   const genderIntegrationId = Number(params.genderIntegrationId);
 
@@ -46,21 +83,9 @@ export function GenderIntegrationTemplate() {
       <AddToCartFab genderIntegration={thisIntegration} />
 
       <h2>Suggested Gender Integration</h2>
-      <h3 className='integration-heading'>
-        {`#${thisIntegration.id}: ${thisIntegration.integration}`}
-      </h3>
-      {thisIntegration.keyConsiderations.length > 0 && (
-        <div>
-          <h4>Key Considerations</h4>
-          <ol>
-            {thisIntegration.keyConsiderations.map((consideration, i) => <li key={i}>{consideration}</li>)}
-          </ol>
-        </div>)}
-      {thisIntegration.transformative && (
-        <div>
-          <h4>Transformative</h4>
-          <p>{thisIntegration.transformative}</p>
-        </div>)}
+
+      <GenderIntegrationCore genderIntegration={thisIntegration} />
+
       {relatedInterventions.length > 0 && (
         <div>
           <h4>Relevant Nutrition Interventions</h4>

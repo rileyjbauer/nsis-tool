@@ -19,31 +19,29 @@ export function AddToCartFab(props: AddToCartFabProps): JSX.Element {
       {(cartContext) => {
         return (
           <div>
-            <div className='add-to-cart-fab'>
-              <button onClick={() => {
-                if (props.nutritionIntervention) {
-                  cartContext.addIntervention(
-                    props.nutritionIntervention.id,
-                    props.nutritionIntervention.title
-                  );
+            <button className='floating-button' onClick={() => {
+              if (props.nutritionIntervention) {
+                cartContext.addIntervention(
+                  props.nutritionIntervention.id,
+                  props.nutritionIntervention.title
+                );
 
-                  setShowPrompt(
-                    showAddRelatedGenderIntegrationsPrompt(
-                      props.nutritionIntervention.relatedGenderIntegrationIds,
-                      cartContext.cart.genderIntegrations
-                    )
-                  );
+                setShowPrompt(
+                  showAddRelatedGenderIntegrationsPrompt(
+                    props.nutritionIntervention.relatedGenderIntegrationIds,
+                    cartContext.cart.genderIntegrations
+                  )
+                );
 
-                } else if (props.genderIntegration) {
-                  cartContext.addIntegration(
-                    props.genderIntegration.id,
-                    props.genderIntegration.integration
-                  );
-                }
-              }}>
-                <AddShoppingCartRoundedIcon />
-              </button>
-            </div>
+              } else if (props.genderIntegration) {
+                cartContext.addIntegration(
+                  props.genderIntegration.id,
+                  props.genderIntegration.integration
+                );
+              }
+            }}>
+              <AddShoppingCartRoundedIcon />
+            </button>
             {
               showPrompt && (
                 <AddRelatedGenderIntegrationsPrompt

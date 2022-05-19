@@ -11,7 +11,7 @@ const ACTIVITY_DETAIL_PARAMS = {
   genderIntegrationIds: 'genderIntegrationIds',
 };
 
-export function makeQueryString(activity: Activity): URLSearchParams {
+export function makeActivityDetailQueryString(activity: Activity): URLSearchParams {
   const params = new URLSearchParams();
   activity.interventionIds.forEach((id) => {
     params.append(ACTIVITY_DETAIL_PARAMS.interventionIds, String(id));

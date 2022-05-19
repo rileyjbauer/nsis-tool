@@ -1,0 +1,7 @@
+@import url('../../Base.css');
+
+.print-document-container {
+  max-width: 960px;
+  margin: auto;
+  padding: 20px;
+}

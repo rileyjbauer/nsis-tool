@@ -2,6 +2,7 @@ import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import CloseIcon from '@mui/icons-material/Close';
 import { Link } from 'react-router-dom';
 import { CartContext } from '../../App';
+import { makePrintQueryString } from '../../pages/print/Print';
 import './CartSideBar.css';
 
 
@@ -62,9 +63,16 @@ export function CartSideBar(props: CartSideBarProps): JSX.Element {
                     : <p>No gender integrations selected</p>
                 }
                 <span className='cart-side-bar-button-container'>
-                  <button className='simple-button' disabled={cartContext.cart.nutritionInterventions.size === 0 && cartContext.cart.genderIntegrations.size === 0}>
-                    Save
-                  </button>
+                  <Link to={'/print?' + makePrintQueryString(
+                    {
+                      nutritionInterventionIds: Array.from(cartContext.cart.nutritionInterventions.keys()),
+                      genderIntegrationIds: Array.from(cartContext.cart.genderIntegrations.keys()),
+                    }
+                  )}>
+                    <button className='simple-button' disabled={cartContext.cart.nutritionInterventions.size === 0 && cartContext.cart.genderIntegrations.size === 0}>
+                      Save
+                    </button>
+                  </Link>
                   <button className='simple-button' disabled={cartContext.cart.nutritionInterventions.size === 0 && cartContext.cart.genderIntegrations.size === 0} onClick={() => cartContext.clearCart()}>
                     Empty Cart
                   </button>
