@@ -1,7 +1,7 @@
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import { useEffect, useState } from 'react';
 import { Link, Outlet, useSearchParams } from 'react-router-dom';
-import { makeQueryString } from '../../components/activityDetail/ActivityDetail';
+import { makeActivityDetailQueryString } from '../../components/activityDetail/ActivityDetail';
 import { BasicPage } from '../../components/basicPage/BasicPage';
 import { ErrorElement } from '../../components/ErrorElement';
 import { MASTER_SECTOR_MAP } from '../../data/SectorMaps';
@@ -23,7 +23,7 @@ export interface SectorAreaTemplateProps {
 }
 
 function getURL(thisSectorKey: string, thisSectorAreaKey: string, activity: Activity, navButtonSelected: number): string {
-  let params = makeQueryString(activity);
+  let params = makeActivityDetailQueryString(activity);
   params.append(SECTOR_PARAM, thisSectorKey);
   params.append(SECTOR_AREA_PARAM, thisSectorAreaKey);
   params.append(SELECTED_ACTIVITY_PARAM, navButtonSelected + '');

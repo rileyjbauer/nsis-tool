@@ -49,7 +49,6 @@ export function InterventionsList() {
     filteredInterventions = Interventions.interventions.filter(
       (intervention) => {
         for (let i = 0; i < filterTerms.length; i++) {
-          console.log(filterTerms[i].value);
           if (!intervention.foodEnvironmentDomainsAffected.includes(filterTerms[i].value)) {
             return false;
           }

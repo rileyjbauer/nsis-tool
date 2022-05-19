@@ -22,7 +22,48 @@ interface IdAndTitle {
   title: string;
 }
 
-export function InterventionTemplate() {
+interface InterventionCoreProps {
+  nutritionIntervention?: Intervention;
+  nutritionInterventionId?: number;
+}
+
+export function InterventionCore(props: InterventionCoreProps): JSX.Element {
+  let thisIntervention: Intervention | undefined;
+  if (props.nutritionIntervention) {
+    thisIntervention = props.nutritionIntervention;
+  } else if (props.nutritionInterventionId) {
+    thisIntervention = Interventions.interventions.find((intervention) => intervention.id === props.nutritionInterventionId);
+  }
+  if (thisIntervention === undefined) {
+    return <ErrorElement message={`No nutrition intervention found with id: ${props.nutritionInterventionId}`} />
+  }
+  return (
+    <div>
+      <h3 className='intervention-heading'>
+        {`#${thisIntervention.id}: ${thisIntervention.title}`}
+      </h3>
+      {thisIntervention.rationale && (
+        <div>
+          <h4>Rationale</h4>
+          <p>{thisIntervention.rationale}</p>
+        </div>)}
+      {thisIntervention.operationalizing && (
+        <div>
+          <h4>Operationalizing</h4>
+          <p>{thisIntervention.operationalizing}</p>
+        </div>)}
+      {thisIntervention.stepsForOperationalizing.length > 0 && (
+        <div>
+          <h4>Steps for Operationalizing</h4>
+          <ol>
+            {thisIntervention.stepsForOperationalizing.map((step, i) => <li key={i}>{step}</li>)}
+          </ol>
+        </div>)}
+    </div>
+  );
+}
+
+export function InterventionTemplate(): JSX.Element {
   const params = useParams();
   const interventionID = Number(params.interventionId);
 
@@ -50,26 +91,9 @@ export function InterventionTemplate() {
       <AddToCartFab nutritionIntervention={thisIntervention} />
 
       <h2>Suggested Nutrition-Sensitive Intervention</h2>
-      <h3 className='intervention-heading'>
-        {`#${thisIntervention.id}: ${thisIntervention.title}`}
-      </h3>
-      {thisIntervention.rationale && (
-        <div>
-          <h4>Rationale</h4>
-          <p>{thisIntervention.rationale}</p>
-        </div>)}
-      {thisIntervention.operationalizing && (
-        <div>
-          <h4>Operationalizing</h4>
-          <p>{thisIntervention.operationalizing}</p>
-        </div>)}
-      {thisIntervention.stepsForOperationalizing.length > 0 && (
-        <div>
-          <h4>Steps for Operationalizing</h4>
-          <ol>
-            {thisIntervention.stepsForOperationalizing.map((step, i) => <li key={i}>{step}</li>)}
-          </ol>
-        </div>)}
+
+      <InterventionCore nutritionIntervention={thisIntervention} />
+
       {thisIntervention.relatedGenderIntegrationIds.length > 0 && (
         <div>
           <h4>Important Gender Integrations</h4>
