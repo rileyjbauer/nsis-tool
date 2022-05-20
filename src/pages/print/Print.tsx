@@ -34,24 +34,26 @@ export function Print(): JSX.Element {
   const [searchParams, setSearchParams] = useSearchParams();
 
   // IDs of nutrition interventions to be printed
+  const interventionIdParam = searchParams.get(PRINT_PARAMS.nutritionInterventionIds);
   const nutritionInterventionIds =
-    searchParams.get(PRINT_PARAMS.nutritionInterventionIds)
-      ?.split(',')
-      .map((id) => Number(id))
-    || [];
+    interventionIdParam && interventionIdParam.length > 0
+      ? interventionIdParam.split(',')
+        .map((id) => Number(id))
+      : [];
 
   // IDs of gender integrations to be printed
   // TODO: is this casting strings to numbers?
   const genderIntegrationIdSet = new Set<number>();
-  searchParams.get(PRINT_PARAMS.genderIntegrationIds)
-    ?.split(',')
-    .forEach((id) => genderIntegrationIdSet.add(Number(id)));
+  const integrationParam = searchParams.get(PRINT_PARAMS.genderIntegrationIds);
+  if (integrationParam && integrationParam.length > 0) {
+    integrationParam.split(',').forEach(
+      (id) => genderIntegrationIdSet.add(Number(id)));
+  }
 
   // Gender Integrations that will be listed WITH nutrition interventions
   // and therefore do NOT need to be listed separately at the bottom of
   // the document
   const relatedGenderIntegrationIds = [] as number[];
-
 
   const displayInterventions = [] as DisplayInterventionAndRelatedIds[];
 
@@ -76,24 +78,28 @@ export function Print(): JSX.Element {
       <button className='floating-button' onClick={window.print}>
         <PrintIcon />
       </button>
-      <h1>Nutrition-Sensitive Interventions</h1>
-      {displayInterventions.map(
-        (displayIntervention) => {
-          return (
-            <div key={displayIntervention.interventionId}>
-              <h2>Nutrition-Sensitive Intervention</h2>
-              <InterventionCore nutritionInterventionId={displayIntervention.interventionId} />
-              {displayIntervention.includedRelatedIntegrationIds.length > 0 && (
-                <>
-                  <h3>Important Related Gender Integrations</h3>
-                  {displayIntervention.includedRelatedIntegrationIds.map(
-                    (id) => <GenderIntegrationCore genderIntegrationId={id} key={id} />
+      {nutritionInterventionIds.length > 0 && (
+        <>
+          <h1>Nutrition-Sensitive Interventions</h1>
+          {displayInterventions.map(
+            (displayIntervention) => {
+              return (
+                <div key={displayIntervention.interventionId}>
+                  <h2>Nutrition-Sensitive Intervention</h2>
+                  <InterventionCore nutritionInterventionId={displayIntervention.interventionId} />
+                  {displayIntervention.includedRelatedIntegrationIds.length > 0 && (
+                    <>
+                      <h3>Important Related Gender Integrations</h3>
+                      {displayIntervention.includedRelatedIntegrationIds.map(
+                        (id) => <GenderIntegrationCore genderIntegrationId={id} key={id} />
+                      )}
+                    </>
                   )}
-                </>
-              )}
-            </div>
-          )
-        }
+                </div>
+              )
+            }
+          )}
+        </>
       )}
       {genderIntegrationIdSet.size > 0 && (
         <>
