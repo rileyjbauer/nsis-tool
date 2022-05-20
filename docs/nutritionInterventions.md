@@ -13,7 +13,8 @@ The file itself is structured like so:
       "rationale": string,
       "operationalizing": string,
       "stepsForOperationalizing": string[],
-      "relatedInterventionIds": string[],
+      "relatedInterventionIds": number[],
+      "relatedGenderIntegrationIds": number[],
       "foodEnvironmentDomainsAffected": string[]
     },
     ...
@@ -203,6 +204,11 @@ The following examples are **NOT** valid inputs.
   ],
 }
 ```
+
+#### `relatedGenderIntegrationIds`
+\- (Optional) A comma-separated list of `ids` of Gender Integrations related to this intervention. Can be left as [], or given a list of ids (numbers) referencing the related interventions. The ids do not have to be in ascending order, but it might make it easier to keep track of them.
+
+Valid and invalid values are exactly as above with [`relatedInterventionIds`](#relatedInterventionIds)
 
 #### `foodEnvironmentDomainsAffected`
 \- A list of one or more parts of the food environment affected by this intervention. Place each domain within "" inside the [], and separated by commas **except** for the last step which cannot be followed by a comma.
