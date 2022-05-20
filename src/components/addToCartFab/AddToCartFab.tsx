@@ -19,27 +19,29 @@ export function AddToCartFab(props: AddToCartFabProps): JSX.Element {
       {(cartContext) => {
         return (
           <div>
-            <button className='floating-button' onClick={() => {
-              if (props.nutritionIntervention) {
-                cartContext.addIntervention(
-                  props.nutritionIntervention.id,
-                  props.nutritionIntervention.title
-                );
+            <button className='floating-button'
+              aria-label={`Add this ${props.nutritionIntervention ? 'nutrition intervention' : 'gender integration'} to cart`}
+              onClick={() => {
+                if (props.nutritionIntervention) {
+                  cartContext.addIntervention(
+                    props.nutritionIntervention.id,
+                    props.nutritionIntervention.title
+                  );
 
-                setShowPrompt(
-                  showAddRelatedGenderIntegrationsPrompt(
-                    props.nutritionIntervention.relatedGenderIntegrationIds,
-                    cartContext.cart.genderIntegrations
-                  )
-                );
+                  setShowPrompt(
+                    showAddRelatedGenderIntegrationsPrompt(
+                      props.nutritionIntervention.relatedGenderIntegrationIds,
+                      cartContext.cart.genderIntegrations
+                    )
+                  );
 
-              } else if (props.genderIntegration) {
-                cartContext.addIntegration(
-                  props.genderIntegration.id,
-                  props.genderIntegration.integration
-                );
-              }
-            }}>
+                } else if (props.genderIntegration) {
+                  cartContext.addIntegration(
+                    props.genderIntegration.id,
+                    props.genderIntegration.integration
+                  );
+                }
+              }}>
               <AddShoppingCartRoundedIcon />
             </button>
             {

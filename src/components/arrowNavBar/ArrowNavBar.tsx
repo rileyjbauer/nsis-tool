@@ -1,5 +1,5 @@
 import ArrowBackwardIcon from '@mui/icons-material/ArrowBack';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import './ArrowNavBar.css';
 
 interface ArrowNavBarProps {
@@ -10,23 +10,12 @@ interface ArrowNavBarProps {
 export function ArrowNavBar(props: ArrowNavBarProps) {
   const navigate = useNavigate();
 
-  let backButton: JSX.Element;
-  if (props.back) {
-    backButton =
-      (<Link to={props.back} className="arrow-button">
-        <ArrowBackwardIcon sx={{ fontSize: 55 }} />
-      </Link>);
-  } else {
-    // Just navigate backwards using default browers "Back" behavior
-    backButton =
-      (<div className='arrow-button' onClick={() => navigate(-1)}>
-        <ArrowBackwardIcon sx={{ fontSize: 55 }} />
-      </div>);
-  }
-
   return (
-    <div className="arrow-bar">
-      {backButton}
+    <div className='arrow-bar'>
+      {/* If no 'Back' destination is specified, just navigate backwards using default browers 'Back' behavior */}
+      <button className='arrow-button' onClick={() => props.back ? navigate(props.back) : navigate(-1)} aria-label='Go back'>
+        <ArrowBackwardIcon sx={{ fontSize: 55 }} />
+      </button>
     </div>
   );
 }

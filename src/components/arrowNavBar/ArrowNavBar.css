@@ -11,8 +11,9 @@
   z-index: 99;
 }
 
-.arrow-button, .arrow-button:visited {
+.arrow-button, .arrow-button:visited, .arrow-button:active {
   color: var(--main-theme-white);
   cursor: pointer;
   padding: 0px 20px;
+  background: none;
 }
