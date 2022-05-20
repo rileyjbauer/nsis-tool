@@ -65,12 +65,12 @@ export function Welcome() {
       {helpBoxDisplayed && (
         <div className='welcome-helpbox-container' style={{ opacity: scrollVal / 100 }}>
           <div className='welcome-helpbox'>
-            <button className='welcome-helpbox-dismiss-button' onClick={() => setHelpBoxDisplayed(false)}>
+            <button className='welcome-helpbox-dismiss-button' onClick={() => setHelpBoxDisplayed(false)} disabled={scrollVal < 20} aria-label='Dismiss floating info box'>
               <CloseIcon sx={{ fontSize: 18 }} />
             </button>
             <p className='welcome-helpbox-text'>Click here at any time to go back!</p>
           </div>
-          <img src={ArrowSVG} className='welcome-arrow' />
+          <img src={ArrowSVG} className='welcome-arrow' alt='Arrow pointing to back button' />
         </div>
       )}
     </div>

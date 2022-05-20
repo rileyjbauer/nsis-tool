@@ -25,10 +25,13 @@
   padding-left: 30px;
 }
 
+.menu-button {
+  display: none;
+}
+
 .menu-button > svg {
   color: var(--main-theme-white);
   font-size: 50px;
-  display: none;
 }
 
 .nav-bar {
@@ -125,11 +128,13 @@
     position: fixed;
     top: var(--top-bar-height);
     left: 0px;
+    z-index: 99;
   }
 
   .menu-button {
     display: flex;
     align-items: center;
+    background: none;
   }
 
   .header-bar-cart-button {
@@ -165,6 +170,10 @@
 @media (max-width: 650px) {
   .header-bar {
     height: var(--mobile-top-bar-height);
+  }
+
+  .header-bar-title {
+    font-size: 36px;
   }
 
   .menu-expanded {

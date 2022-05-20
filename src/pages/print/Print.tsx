@@ -75,7 +75,7 @@ export function Print(): JSX.Element {
 
   return (
     <div className='print-document-container'>
-      <button className='floating-button' onClick={window.print}>
+      <button className='floating-button' onClick={window.print} aria-label='Print page'>
         <PrintIcon />
       </button>
       {nutritionInterventionIds.length > 0 && (

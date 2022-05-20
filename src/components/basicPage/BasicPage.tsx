@@ -18,6 +18,10 @@ interface BasicPageProps {
 export function BasicPage(props: BasicPageProps) {
   const [menuExpanded, setMenuExpanded] = useState(false);
   const [sideBarExpanded, setSideBarExpanded] = useState(false);
+  // This state variable is used to allow the sidebar to transition in
+  // and out while also removing it entirely from the DOM after it hides itself
+  // primarily for accessibility reasons.
+  const [hideSideBarAfterTransition, setHideSideBarAfterTransition] = useState(true);
 
   return (
     <div>
@@ -30,11 +34,13 @@ export function BasicPage(props: BasicPageProps) {
             <h1 className='header-bar-title'>NSIS Tool</h1>
           </Link>
         </span>
-        <div className={`nav-bar ${menuExpanded ? 'menu-expanded' : ''}`}>
-          <Link to='/mainNav'>Start Over</Link>
-          <Link to='/interventionsList'>All Nutrition Interventions</Link>
-          <Link to='/genderIntegrationsList'>All Gender Integrations</Link>
-        </div>
+        {!menuExpanded && (
+          <div className='nav-bar'>
+            <Link to='/mainNav'>Start Over</Link>
+            <Link to='/interventionsList'>All Nutrition Interventions</Link>
+            <Link to='/genderIntegrationsList'>All Gender Integrations</Link>
+          </div>
+        )}
 
         <div className='header-bar-nav-container'>
           <CartContext.Consumer>
@@ -42,7 +48,21 @@ export function BasicPage(props: BasicPageProps) {
               return (
                 <div className='header-bar-cart-container'>
                   {cartContext.cart.nutritionInterventions.size + cartContext.cart.genderIntegrations.size}
-                  <button className='header-bar-cart-button' onClick={() => setSideBarExpanded(!sideBarExpanded)}>
+                  <button
+                    className='header-bar-cart-button'
+                    aria-label='Open cart sidebar'
+                    onClick={() => {
+                      if (!sideBarExpanded) {
+                        setHideSideBarAfterTransition(sideBarExpanded);
+                      }
+                      // We wait 10ms here so that
+                      // setHideSideBarAfterTransition can cause the sidebar to
+                      // be recreated before its state is set to 'expanded'
+                      // This allows the sidebar to exist briefly off the side
+                      // of the screen before sliding back into view, instead
+                      // of just immediately appearing in its fully open state
+                      setTimeout(() => setSideBarExpanded(!sideBarExpanded), 10);
+                    }}>
                     <ShoppingCartOutlinedIcon />
                   </button>
                 </div>
@@ -50,12 +70,28 @@ export function BasicPage(props: BasicPageProps) {
             }}
           </CartContext.Consumer>
 
-          <div className='menu-button'>
-            <MenuIcon sx={{ fontSize: 50 }} onClick={() => setMenuExpanded(!menuExpanded)} />
-          </div>
+          <button className='menu-button' onClick={() => setMenuExpanded(!menuExpanded)} aria-label='Expand menu' >
+            <MenuIcon />
+          </button>
+
+          {/* By placing this here as well as above and controlling via the menuExpanded state variable, we allow the menu items to be reached in the logical tabbing order */}
+          {menuExpanded && (
+            <div className='nav-bar menu-expanded'>
+              <Link to='/mainNav'>Start Over</Link>
+              <Link to='/interventionsList'>All Nutrition Interventions</Link>
+              <Link to='/genderIntegrationsList'>All Gender Integrations</Link>
+            </div>
+          )}
+
         </div>
 
-        <CartSideBar expanded={sideBarExpanded} setExpanded={setSideBarExpanded} />
+        {!hideSideBarAfterTransition && (
+          <CartSideBar
+            expanded={sideBarExpanded}
+            setExpanded={setSideBarExpanded}
+            setHideSideBarAfterTransition={setHideSideBarAfterTransition}
+          />
+        )}
 
       </div>
       <div className='page-content' onClick={() => setMenuExpanded(false)}>
