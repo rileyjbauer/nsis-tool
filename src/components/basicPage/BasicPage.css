@@ -59,6 +59,8 @@
 .header-bar-cart-button {
   background: none;
   color: var(--main-theme-white);
+  position: relative;
+  top: 2px;
 }
 
 .header-bar-nav-container {
@@ -94,6 +96,7 @@
 @media (max-width: 1000px) {
   .header-bar {
     padding: 0px 20px;
+    height: var(--mobile-top-bar-height);
   }
 
   .header-hr {
@@ -141,11 +144,6 @@
     margin-bottom: 10px;
     width: 180px;
     padding: 10px 20px;
-  }
-
-  .header-bar {
-    height: var(--mobile-top-bar-height);
-    font-size: 15px;
   }
 
   .content {
