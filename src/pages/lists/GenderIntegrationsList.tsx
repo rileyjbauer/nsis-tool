@@ -13,7 +13,7 @@ export function GenderIntegrationsList() {
   }
 
   const filteredIntegrations = GenderIntegrations.genderIntegrations.filter(
-    (integration) => integration.integration.includes(searchTerm));
+    (integration) => integration.integration.toLowerCase().includes(searchTerm.toLowerCase()));
 
   const content = (
     <div className='list-container'>
