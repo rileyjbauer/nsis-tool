@@ -58,7 +58,7 @@ export function InterventionsList() {
     );
   }
   filteredInterventions = filteredInterventions.filter(
-    (intervention) => intervention.title.includes(searchTerm));
+    (intervention) => intervention.title.toLowerCase().includes(searchTerm.toLowerCase()));
 
   const content = (
     <div className='list-container'>
