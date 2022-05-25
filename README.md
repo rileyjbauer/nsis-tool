@@ -26,3 +26,33 @@ The data that makes up the NSIS Tool is located primarily with in the `/src/data
 How to edit each of these files is explained next and followed by examples.
 
 > **Note:** The placement of commas is important when editing these files. Each explanation also indicates where to place and avoid placing commas.
+
+# Updating the App:
+
+## Prerequisites:
+- Install [npm](https://nodejs.org/en/download/)
+- Install [git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+- Install some kind of [sftp](https://www.ssh.com/academy/ssh/sftp#sftp-client-for-windows-and-mac)
+
+## Steps to Update
+> **Note:** Unless otherwise stated, these are to be entered into a terminal/command line:
+
+1. Open a terminal and navigate to the directory you want to work in, e.g.
+`cd ~/projects/tanager-nsis-tool`
+
+2. From the directory of your computer where you want to work with the code, run:
+`git clone https://github.com/rileyjbauer/nsis-tool.git`
+
+3. Install all Node dependencies with npm
+`npm install`
+
+4. Make any desired changes, referring to `Editing the Data` above. Local changes can be viewed by running `npm start` and navigating in a web browser to: `http://localhost:3000/tools/interactive_nsis_tool/`
+
+5. When satisfied with your changes, build a minified production version of the app using: `npm run build`.
+This result of this will be placed into `your_nsis_tool_root_directory/tools/interactive_nsis_tool`
+
+6. Using some form of `SFTP`, connect to the staging (or production) site
+
+7. Delete `tools/interactive_nsis_tool` from the server
+
+8. Move the entire `your_nsis_tool_root_directory/tools/interactive_nsis_tool` from your computer to the `tools` directory on the server
