@@ -18,12 +18,11 @@ The location and format of this data is described below in [Editing the Data](#E
 
 ## Editing the Data
 
-The data that makes up the NSIS Tool is located primarily with in the `/src/data` directory where it is split into three different files:
-* [`interventions.json`](#interventions.json)
-* [`gender-integrations.json`](gender-integrations.json)
-* [`SectorMaps.ts`](SectorMaps.ts)
-
-How to edit each of these files is explained next and followed by examples.
+The data that makes up the NSIS Tool is located primarily with in the `/src/data` directory where it is split into three different files.
+The following links take you to documentation explaining each of these three data files in detail.
+* [interventions.json](https://github.com/rileyjbauer/nsis-tool/blob/master/docs/nutritionInterventions.md)
+* [gender-integrations.json](https://github.com/rileyjbauer/nsis-tool/blob/master/docs/genderIntegrations.md)
+* [SectorMaps.ts](https://github.com/rileyjbauer/nsis-tool/blob/master/docs/SectorMaps.md)
 
 > **Note:** The placement of commas is important when editing these files. Each explanation also indicates where to place and avoid placing commas.
 
