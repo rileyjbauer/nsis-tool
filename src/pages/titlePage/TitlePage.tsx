@@ -42,18 +42,18 @@ export function TitlePage() {
           </div>
 
         </div>
-      </div>
-      <div className='title-page-content'>
-        <h2 className='title-page-text'>
-          The NSIS tool was developed for the Impacting Gender & Nutrition through Innovative Technical Exchange in Agriculture (IGNITE) mechanism, a five-year investment funded by the Bill & Melinda Gates Foundation and
-          implemented by Tanager to improve household nutrition and women’s empowerment by
-          strengthening African institutions’ ability to integrate nutrition and gender into their way of doing
-          business and their agriculture interventions.
-        </h2>
-        <div className='title-page-logo-div'>
-          <img src={TanagerFooterLogo} alt='Tanager' />
-          <img src={LateriteLogo} alt='Laterite' />
-          <img src={SixtyDecibelsLogo} alt='Sixty Decibels' />
+        <div className='title-page-content'>
+          <h2 className='title-page-text'>
+            The NSIS tool was developed for the Impacting Gender & Nutrition through Innovative Technical Exchange in Agriculture (IGNITE) mechanism, a five-year investment funded by the Bill & Melinda Gates Foundation and
+            implemented by Tanager to improve household nutrition and women’s empowerment by
+            strengthening African institutions’ ability to integrate nutrition and gender into their way of doing
+            business and their agriculture interventions.
+          </h2>
+          <div className='title-page-logo-div'>
+            <img src={TanagerFooterLogo} alt='Tanager' />
+            <img src={LateriteLogo} alt='Laterite' />
+            <img src={SixtyDecibelsLogo} alt='Sixty Decibels' />
+          </div>
         </div>
       </div>
     </div>

@@ -2,13 +2,18 @@
 
 .arrow-bar {
   width: 100%;
-  display: flex;
   background: var(--main-theme-blue);
-  justify-content: space-between;
   position: fixed;
   bottom: 0;
   height: var(--bottom-bar-height);
   z-index: 99;
+}
+
+.arrow-bar-content {
+  display: flex;
+  justify-content: space-between;
+  max-width: var(--main-content-max-width);
+  margin: auto;
 }
 
 .arrow-button, .arrow-button:visited, .arrow-button:active {

@@ -26,63 +26,65 @@ export function BasicPage(props: BasicPageProps) {
   return (
     <div>
       <div className='header-bar'>
-        <span className='title-bar'>
-          <a href='https://tanagerintl.org' className='header-bar-tanager-logo' >
-            <img src={TanagerMainLogo} alt='tanager, an ACDI/VOCA affiliate' />
-          </a>
-          <Link to='/' style={{ textDecoration: 'none' }}>
-            <h1 className='header-bar-title'>NSIS Tool</h1>
-          </Link>
-        </span>
-        {!menuExpanded && (
-          <div className='nav-bar'>
-            <Link to='/mainNav'>Start Over</Link>
-            <Link to='/interventionsList'>All Nutrition Interventions</Link>
-            <Link to='/genderIntegrationsList'>All Gender Integrations</Link>
-          </div>
-        )}
-
-        <div className='header-bar-nav-container'>
-          <CartContext.Consumer>
-            {(cartContext) => {
-              return (
-                <div className='header-bar-cart-container'>
-                  {cartContext.cart.nutritionInterventions.size + cartContext.cart.genderIntegrations.size}
-                  <button
-                    className='header-bar-cart-button'
-                    aria-label='Open cart sidebar'
-                    onClick={() => {
-                      if (!sideBarExpanded) {
-                        setHideSideBarAfterTransition(sideBarExpanded);
-                      }
-                      // We wait 10ms here so that
-                      // setHideSideBarAfterTransition can cause the sidebar to
-                      // be recreated before its state is set to 'expanded'
-                      // This allows the sidebar to exist briefly off the side
-                      // of the screen before sliding back into view, instead
-                      // of just immediately appearing in its fully open state
-                      setTimeout(() => setSideBarExpanded(!sideBarExpanded), 10);
-                    }}>
-                    <ShoppingCartOutlinedIcon />
-                  </button>
-                </div>
-              );
-            }}
-          </CartContext.Consumer>
-
-          <button className='menu-button' onClick={() => setMenuExpanded(!menuExpanded)} aria-label='Expand menu' >
-            <MenuIcon />
-          </button>
-
-          {/* By placing this here as well as above and controlling via the menuExpanded state variable, we allow the menu items to be reached in the logical tabbing order */}
-          {menuExpanded && (
-            <div className='nav-bar menu-expanded'>
+        <div className='header-bar-content'>
+          <span className='title-bar'>
+            <a href='https://tanagerintl.org' className='header-bar-tanager-logo' >
+              <img src={TanagerMainLogo} alt='tanager, an ACDI/VOCA affiliate' />
+            </a>
+            <Link to='/' style={{ textDecoration: 'none' }}>
+              <h1 className='header-bar-title'>NSIS Tool</h1>
+            </Link>
+          </span>
+          {!menuExpanded && (
+            <div className='nav-bar'>
               <Link to='/mainNav'>Start Over</Link>
               <Link to='/interventionsList'>All Nutrition Interventions</Link>
               <Link to='/genderIntegrationsList'>All Gender Integrations</Link>
             </div>
           )}
 
+          <div className='header-bar-nav-container'>
+            <CartContext.Consumer>
+              {(cartContext) => {
+                return (
+                  <div className='header-bar-cart-container'>
+                    {cartContext.cart.nutritionInterventions.size + cartContext.cart.genderIntegrations.size}
+                    <button
+                      className='header-bar-cart-button'
+                      aria-label='Open cart sidebar'
+                      onClick={() => {
+                        if (!sideBarExpanded) {
+                          setHideSideBarAfterTransition(sideBarExpanded);
+                        }
+                        // We wait 10ms here so that
+                        // setHideSideBarAfterTransition can cause the sidebar to
+                        // be recreated before its state is set to 'expanded'
+                        // This allows the sidebar to exist briefly off the side
+                        // of the screen before sliding back into view, instead
+                        // of just immediately appearing in its fully open state
+                        setTimeout(() => setSideBarExpanded(!sideBarExpanded), 10);
+                      }}>
+                      <ShoppingCartOutlinedIcon />
+                    </button>
+                  </div>
+                );
+              }}
+            </CartContext.Consumer>
+
+            <button className='menu-button' onClick={() => setMenuExpanded(!menuExpanded)} aria-label='Expand menu' >
+              <MenuIcon />
+            </button>
+
+            {/* By placing this here as well as above and controlling via the menuExpanded state variable, we allow the menu items to be reached in the logical tabbing order */}
+            {menuExpanded && (
+              <div className='nav-bar menu-expanded'>
+                <Link to='/mainNav'>Start Over</Link>
+                <Link to='/interventionsList'>All Nutrition Interventions</Link>
+                <Link to='/genderIntegrationsList'>All Gender Integrations</Link>
+              </div>
+            )}
+
+          </div>
         </div>
 
         {!hideSideBarAfterTransition && (

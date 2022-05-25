@@ -15,6 +15,7 @@
   --bottom-bar-height: 60px;
   --mobile-top-bar-height: 80px;
   --cart-side-bar-width: 300px;
+  --main-content-max-width: 1200px;
 }
 
 h1 {

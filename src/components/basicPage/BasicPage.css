@@ -4,16 +4,21 @@
   background-color: var(--main-theme-blue);
   box-shadow: 0 2px 5px 0 rgb(0 0 0 / 26%), 0 2px 10px 0 rgb(0 0 0 / 12%);
   box-sizing: border-box;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   height: var(--top-bar-height);
   width: 100%;
   position: fixed;
-  font-size: 25px;
-  padding: 0px 20px;
   top: 0;
   z-index: 99;
+}
+
+.header-bar-content {
+  max-width: var(--main-content-max-width);
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 25px;
+  padding: 0px 20px;
 }
 
 .title-bar {
@@ -78,11 +83,14 @@
 
 .header-bar-title {
   color: var(--main-theme-white);
-  margin: 0px;
-  width: 200px;
+  margin: 0px 10px 0px 0px;
+  white-space: nowrap;
 }
 
 .page-content {
+  max-width: var(--main-content-max-width);
+  margin-left: auto;
+  margin-right: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
