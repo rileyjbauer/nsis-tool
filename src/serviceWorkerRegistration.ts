@@ -96,6 +96,13 @@ function registerValidSW(swUrl: string, config?: Config) {
                 config.onSuccess(registration);
               }
             }
+          } else if (installingWorker.state === 'activated') {
+            // Wait until here to reload the page to ensure the new
+            // serviceworker is activated
+            if (window && window.location) {
+              console.log('Attempting to reload page with newly activated service worker');
+              window.location.reload();
+            }
           }
         };
       };

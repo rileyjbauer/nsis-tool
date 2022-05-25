@@ -74,12 +74,6 @@ registerRoute(
 self.addEventListener('message', (event) => {
   if (event.data && event.data.type === 'SKIP_WAITING') {
     self.skipWaiting();
-
-    // Wait until the new here to reload the page to ensure the new
-    // serviceworker is activated
-    if (window && window.location) {
-      window.location.href = window.location.href;
-    }
   }
 });
 
