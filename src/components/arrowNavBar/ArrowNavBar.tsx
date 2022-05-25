@@ -12,10 +12,12 @@ export function ArrowNavBar(props: ArrowNavBarProps) {
 
   return (
     <div className='arrow-bar'>
-      {/* If no 'Back' destination is specified, just navigate backwards using default browers 'Back' behavior */}
-      <button className='arrow-button' onClick={() => props.back ? navigate(props.back) : navigate(-1)} aria-label='Go back'>
-        <ArrowBackwardIcon sx={{ fontSize: 55 }} />
-      </button>
+      <div className='arrow-bar-content'>
+        {/* If no 'Back' destination is specified, just navigate backwards using default browers 'Back' behavior */}
+        <button className='arrow-button' onClick={() => props.back ? navigate(props.back) : navigate(-1)} aria-label='Go back'>
+          <ArrowBackwardIcon sx={{ fontSize: 55 }} />
+        </button>
+      </div>
     </div>
   );
 }

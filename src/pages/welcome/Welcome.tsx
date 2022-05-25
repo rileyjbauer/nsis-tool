@@ -1,33 +1,8 @@
-import CloseIcon from '@mui/icons-material/Close';
-import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { BasicPage } from '../../components/basicPage/BasicPage';
-import ArrowSVG from '../../img/arrow.svg';
 import './Welcome.css';
 
 export function Welcome() {
-  const [helpBoxDisplayed, setHelpBoxDisplayed] = useState(true);
-
-  // value used to keep track of scroll position for animation
-  const [scrollVal, setScrollVal] = useState(0);
-
-  // before render, add scroll listener. clean-up afterward.
-  useEffect(() => {
-    // what to do when user starts scrolling
-    const onScroll = () => {
-      const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-      const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-      const scrolled = (winScroll / height) * 100;
-      setScrollVal(scrolled);
-    };
-
-    window.addEventListener('scroll', onScroll, true)
-
-    // clean-up listener
-    return () => window.removeEventListener('scroll', onScroll)
-
-  }, []);
-
   const content = (
     <div className='welcome-content'>
       <h3>
@@ -62,17 +37,6 @@ export function Welcome() {
           </div>
         </Link>
       </div>
-      {helpBoxDisplayed && (
-        <div className='welcome-helpbox-container' style={{ opacity: scrollVal / 100 }}>
-          <div className='welcome-helpbox'>
-            <button className='welcome-helpbox-dismiss-button' onClick={() => setHelpBoxDisplayed(false)} disabled={scrollVal < 20} aria-label='Dismiss floating info box'>
-              <CloseIcon sx={{ fontSize: 18 }} />
-            </button>
-            <p className='welcome-helpbox-text'>Click here at any time to go back!</p>
-          </div>
-          <img src={ArrowSVG} className='welcome-arrow' alt='Arrow pointing to back button' />
-        </div>
-      )}
     </div>
   );
 
