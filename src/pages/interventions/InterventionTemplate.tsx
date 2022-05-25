@@ -1,9 +1,10 @@
 import { Link, useParams } from 'react-router-dom';
 import { AddToCartFab } from '../../components/addToCartFab/AddToCartFab';
 import { BasicPage } from '../../components/basicPage/BasicPage';
-import { ErrorElement } from '../../components/ErrorElement';
+import { ErrorElement } from '../../components/errorElement/ErrorElement';
 import Interventions from '../../data/interventions.json';
 import { getGenderIntegrationTitleFromId } from '../../Utils';
+import { ErrorPage } from '../errorPage/ErrorPage';
 import './InterventionTemplate.css';
 
 export type Intervention = {
@@ -73,7 +74,7 @@ export function InterventionTemplate(): JSX.Element {
 
   if (!thisIntervention) {
     return (
-      <ErrorElement message={`Error: Unable to find intervention with ID: ${interventionID}`} />
+      <ErrorPage message={`Unable to find intervention with ID: ${interventionID}`} />
     );
   }
 

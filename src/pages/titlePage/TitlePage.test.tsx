@@ -5,6 +5,6 @@ import TitlePage from './TitlePage';
 
 test('renders home page', () => {
   render(<BrowserRouter><TitlePage /></BrowserRouter>);
-  const linkElement = screen.getByText(/FOOD SYSTEMS NUTRITION-SENSITIVE INTERVENTION SELECTION DESIGN TOOL/i);
+  const linkElement = screen.getByText(/Food Systems Nutrition-Sensitive Intervention Selection Tool/i);
   expect(linkElement).toBeInTheDocument();
 });

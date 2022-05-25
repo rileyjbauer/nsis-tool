@@ -1,0 +1,5 @@
+@import url('../../Base.css');
+
+.error-message {
+  color: red;
+}

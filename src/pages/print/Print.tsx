@@ -1,5 +1,6 @@
 import PrintIcon from '@mui/icons-material/Print';
 import { useSearchParams } from 'react-router-dom';
+import TanagerMainLogo from '../../img/TanagerMainLogo.png';
 import { getRelatedIntegrationIdsFromInterventionId } from '../../Utils';
 import { GenderIntegrationCore } from '../genderIntegrations/GenderIntegrationTemplate';
 import { InterventionCore } from '../interventions/InterventionTemplate';
@@ -42,7 +43,6 @@ export function Print(): JSX.Element {
       : [];
 
   // IDs of gender integrations to be printed
-  // TODO: is this casting strings to numbers?
   const genderIntegrationIdSet = new Set<number>();
   const integrationParam = searchParams.get(PRINT_PARAMS.genderIntegrationIds);
   if (integrationParam && integrationParam.length > 0) {
@@ -78,9 +78,20 @@ export function Print(): JSX.Element {
       <button className='floating-button' onClick={window.print} aria-label='Print page'>
         <PrintIcon />
       </button>
+      <div className='print-document-header'>
+        <img className='print-document-logo' src={TanagerMainLogo} alt='tanager, an ACDI/VOCA affiliate' />
+        <div>
+          <h1 className='print-document-title'>
+            Food Systems Nutrition-Sensitive
+          </h1>
+          <h1 className='print-document-title'>
+            Intervention Selection Tool
+          </h1>
+        </div>
+      </div>
       {nutritionInterventionIds.length > 0 && (
         <>
-          <h1>Nutrition-Sensitive Interventions</h1>
+          <h1 className='print-document-section-title'>Nutrition-Sensitive Interventions</h1>
           {displayInterventions.map(
             (displayIntervention) => {
               return (
@@ -103,7 +114,7 @@ export function Print(): JSX.Element {
       )}
       {genderIntegrationIdSet.size > 0 && (
         <>
-          <h1>Gender Integrations</h1>
+          <h1 className='print-document-section-title'>Gender Integrations</h1>
           {Array.from(genderIntegrationIdSet).map(
             (id) => {
               return (

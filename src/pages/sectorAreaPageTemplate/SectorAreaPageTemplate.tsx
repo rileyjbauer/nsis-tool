@@ -3,8 +3,8 @@ import { useEffect, useState } from 'react';
 import { Link, Outlet, useSearchParams } from 'react-router-dom';
 import { makeActivityDetailQueryString } from '../../components/activityDetail/ActivityDetail';
 import { BasicPage } from '../../components/basicPage/BasicPage';
-import { ErrorElement } from '../../components/ErrorElement';
 import { MASTER_SECTOR_MAP } from '../../data/SectorMaps';
+import { ErrorPage } from '../errorPage/ErrorPage';
 import { SECTOR_PARAM } from '../sectors/Sector';
 import './SectorAreaPageTemplate.css';
 
@@ -48,12 +48,12 @@ export function SectorAreaPageTemplate() {
   const thisSectorKey = searchParams.get(SECTOR_PARAM);
   // TODO: Verify that these checks are working as intended
   if (!thisSectorKey) {
-    return <ErrorElement message={`URL missing search param: ${SECTOR_PARAM}`} />
+    return <ErrorPage message={`URL missing search param: ${SECTOR_PARAM}`} />
   }
 
   const thisSectorAreaKey = searchParams.get(SECTOR_AREA_PARAM);
   if (!thisSectorAreaKey) {
-    return <ErrorElement message={`URL missing search param: ${SECTOR_AREA_PARAM}`} />
+    return <ErrorPage message={`URL missing search param: ${SECTOR_AREA_PARAM}`} />
   }
   const navButtonSelectedParam = searchParams.get(SELECTED_ACTIVITY_PARAM);
   if (navButtonSelectedParam) {

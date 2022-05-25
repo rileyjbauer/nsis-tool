@@ -8,7 +8,6 @@ export function ScrollToTopWrapper({ children }: any) {
     // Always scroll to top on page load
     document.documentElement.scrollTo(0, 0);
 
-    // TODO: Verify whether or not this is needed
     // Make sure to show service worker update even when user navigates
     if ('serviceWorker' in navigator && navigator.serviceWorker) {
       navigator.serviceWorker

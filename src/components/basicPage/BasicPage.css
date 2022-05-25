@@ -95,7 +95,7 @@
   flex-direction: column;
   align-items: center;
   background-color: var(--main-theme-white);
-  padding: 30px 0px 60px;
+  padding: 30px 20px 60px;
   margin-top: calc(var(--top-bar-height) + var(--top-bar-padding-top) + var(--top-bar-padding-bottom));
 }
 
@@ -106,7 +106,6 @@
 
 @media (max-width: 1000px) {
   .header-bar {
-    padding: 0px 20px;
     height: var(--mobile-top-bar-height);
   }
 
@@ -190,5 +189,6 @@
 
   .page-content {
     margin-top: calc(var(--mobile-top-bar-height) + var(--top-bar-padding-top) + var(--top-bar-padding-bottom));
+    padding: 0px 0px 60px;
   }
 }

@@ -91,7 +91,6 @@ export function App(): JSX.Element {
 
   const context = {
     cart: cartState,
-    // TODO: Clean these up, probably with ... or something
     addIntervention: (id: number, title: string) => {
       setCart((previousState) => {
         // Create new Map so React knows the state has changed

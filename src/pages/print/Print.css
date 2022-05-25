@@ -1,7 +1,25 @@
 @import url('../../Base.css');
 
+.print-document-header {
+  display: flex;
+  align-items: center;
+}
+
+.print-document-logo {
+  padding: 0px 30px 20px 0px;
+  height: 150px;
+}
+
+.print-document-title {
+  margin: 0px
+}
+
 .print-document-container {
   max-width: 960px;
   margin: auto;
   padding: 20px;
+}
+
+.print-document-section-title {
+  font-size: 40px;
 }

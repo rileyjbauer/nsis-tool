@@ -1,9 +1,10 @@
 import { Link, useParams } from 'react-router-dom';
 import { AddToCartFab } from '../../components/addToCartFab/AddToCartFab';
 import { BasicPage } from '../../components/basicPage/BasicPage';
-import { ErrorElement } from '../../components/ErrorElement';
+import { ErrorElement } from '../../components/errorElement/ErrorElement';
 import GenderIntegrations from '../../data/gender-integrations.json';
 import NutritionInterventions from '../../data/interventions.json';
+import { ErrorPage } from '../errorPage/ErrorPage';
 import './GenderIntegrationTemplate.css';
 
 export type GenderIntegration = {
@@ -65,7 +66,7 @@ export function GenderIntegrationTemplate(): JSX.Element {
 
   if (!thisIntegration) {
     return (
-      <ErrorElement message={`Error: Unable to find gender integration with ID: ${genderIntegrationId}`} />
+      <ErrorPage message={`Unable to find gender integration with ID: ${genderIntegrationId}`} />
     );
   }
 

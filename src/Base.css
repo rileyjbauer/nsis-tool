@@ -185,3 +185,10 @@ button:enabled {
     margin: 10px 0px;
   }
 }
+
+/* Avoid printing floating action buttons */
+@media print {
+  .floating-button {
+    display: none;
+  }
+}
